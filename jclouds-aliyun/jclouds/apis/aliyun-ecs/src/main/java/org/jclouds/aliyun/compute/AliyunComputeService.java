@@ -33,8 +33,8 @@ import javax.inject.Provider;
 import javax.inject.Singleton;
 
 import org.jclouds.Constants;
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.SecurityGroup;
 import org.jclouds.aliyun.domain.SshKeyPair;
 import org.jclouds.aliyun.domain.Zone;
@@ -78,8 +78,8 @@ import com.google.common.collect.Multimap;
 import com.google.common.util.concurrent.ListeningExecutorService;
 
 @Singleton
-public class CloudStackComputeService extends BaseComputeService {
-   protected final CloudStackApi client;
+public class AliyunComputeService extends BaseComputeService {
+   protected final AliyunApi client;
    protected final LoadingCache<ZoneAndName, SecurityGroup> securityGroupMap;
    protected final LoadingCache<String, SshKeyPair> keyPairCache;
    protected final Function<Set<? extends NodeMetadata>, Multimap<String, String>> orphanedGroupsByZoneId;
@@ -87,7 +87,7 @@ public class CloudStackComputeService extends BaseComputeService {
    protected final Supplier<LoadingCache<String, Zone>> zoneIdToZone;
 
    @Inject
-   protected CloudStackComputeService(ComputeServiceContext context, Map<String, Credentials> credentialStore,
+   protected AliyunComputeService(ComputeServiceContext context, Map<String, Credentials> credentialStore,
             @Memoized Supplier<Set<? extends Image>> images, @Memoized Supplier<Set<? extends Hardware>> sizes,
             @Memoized Supplier<Set<? extends Location>> locations, ListNodesStrategy listNodesStrategy,
             GetImageStrategy getImageStrategy, GetNodeMetadataStrategy getNodeMetadataStrategy,
@@ -101,7 +101,7 @@ public class CloudStackComputeService extends BaseComputeService {
             InitializeRunScriptOnNodeOrPlaceInBadMap.Factory initScriptRunnerFactory,
             RunScriptOnNode.Factory runScriptOnNodeFactory, InitAdminAccess initAdminAccess,
             PersistNodeCredentials persistNodeCredentials, Timeouts timeouts,
-            @Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor, CloudStackApi client,
+            @Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor, AliyunApi client,
             LoadingCache<ZoneAndName, SecurityGroup> securityGroupMap,
             LoadingCache<String, SshKeyPair> keyPairCache,
             Function<Set<? extends NodeMetadata>, Multimap<String, String>> orphanedGroupsByZoneId,
@@ -168,11 +168,11 @@ public class CloudStackComputeService extends BaseComputeService {
    }
 
    /**
-    * returns template options, as {@link CloudStackTemplateOptions}.
+    * returns template options, as {@link AliyunTemplateOptions}.
     */
    @Override
-   public CloudStackTemplateOptions templateOptions() {
-      return CloudStackTemplateOptions.class.cast(super.templateOptions());
+   public AliyunTemplateOptions templateOptions() {
+      return AliyunTemplateOptions.class.cast(super.templateOptions());
    }
    
    

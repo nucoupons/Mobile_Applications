@@ -26,7 +26,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.IPForwardingRule;
 import org.jclouds.aliyun.domain.PublicIPAddress;
@@ -46,12 +46,12 @@ public class CreatePortForwardingRulesForIP {
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult;
    private final LoadingCache<String, Set<IPForwardingRule>> getIPForwardingRulesByVirtualMachine;
 
    @Inject
-   public CreatePortForwardingRulesForIP(CloudStackApi client,
+   public CreatePortForwardingRulesForIP(AliyunApi client,
          BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult,
          LoadingCache<String, Set<IPForwardingRule>> getIPForwardingRulesByVirtualMachine) {
       this.client = checkNotNull(client, "client");

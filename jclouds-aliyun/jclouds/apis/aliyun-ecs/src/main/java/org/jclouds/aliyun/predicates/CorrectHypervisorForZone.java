@@ -24,7 +24,7 @@ import java.util.Set;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.Template;
 import org.jclouds.aliyun.domain.Zone;
 
@@ -45,7 +45,7 @@ public class CorrectHypervisorForZone implements Function<String, Predicate<Temp
    private final Supplier<Map<String, Set<String>>> hypervisorsSupplier;
 
    @Inject
-   public CorrectHypervisorForZone(CloudStackApi client) {
+   public CorrectHypervisorForZone(AliyunApi client) {
       this(Suppliers.ofInstance(new CloudStackApiToZoneToHypervisors().apply(checkNotNull(client, "client"))));
    }
 
@@ -54,10 +54,10 @@ public class CorrectHypervisorForZone implements Function<String, Predicate<Temp
    }
 
    private static class CloudStackApiToZoneToHypervisors implements
-         Function<CloudStackApi, Map<String, Set<String>>> {
+         Function<AliyunApi, Map<String, Set<String>>> {
 
       @Override
-      public Map<String, Set<String>> apply(CloudStackApi client) {
+      public Map<String, Set<String>> apply(AliyunApi client) {
          checkNotNull(client, "client");
          Builder<String, Set<String>> builder = ImmutableMap.builder();
          for (Zone zone : client.getZoneApi().listZones()) {

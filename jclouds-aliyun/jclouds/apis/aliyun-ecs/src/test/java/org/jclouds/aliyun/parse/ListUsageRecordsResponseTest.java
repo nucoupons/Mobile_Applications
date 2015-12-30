@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.Set;
 import java.util.TimeZone;
 
-import org.jclouds.aliyun.config.CloudStackParserModule;
+import org.jclouds.aliyun.config.AliyunParserModule;
 import org.jclouds.aliyun.domain.UsageRecord;
 import org.jclouds.json.BaseSetParserTest;
 import org.jclouds.json.config.GsonModule;
@@ -66,7 +66,7 @@ public class ListUsageRecordsResponseTest extends BaseSetParserTest<UsageRecord>
    
    @Override
    protected Injector injector() {
-      return Guice.createInjector(new GsonModule(), new CloudStackParserModule());
+      return Guice.createInjector(new GsonModule(), new AliyunParserModule());
    }
 
 }

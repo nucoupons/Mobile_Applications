@@ -22,7 +22,7 @@ import static org.testng.Assert.assertNull;
 
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Domain;
 import org.jclouds.aliyun.features.GlobalDomainApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
@@ -139,7 +139,7 @@ public class GlobalDomainApiExpectTest extends BaseCloudStackExpectTest<GlobalDo
    }
 
    @Override
-   protected GlobalDomainApi clientFrom(CloudStackContext context) {
+   protected GlobalDomainApi clientFrom(AliyunContext context) {
       return context.getGlobalApi().getDomainClient();
    }
 }

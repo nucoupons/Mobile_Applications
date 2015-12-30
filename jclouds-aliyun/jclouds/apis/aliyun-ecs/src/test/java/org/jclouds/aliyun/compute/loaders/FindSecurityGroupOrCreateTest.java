@@ -29,7 +29,7 @@ import java.net.UnknownHostException;
 
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.compute.loaders.FindSecurityGroupOrCreate;
 import org.jclouds.aliyun.domain.IngressRule;
 import org.jclouds.aliyun.domain.SecurityGroup;
@@ -63,7 +63,7 @@ public class FindSecurityGroupOrCreateTest {
 
    @Test
    public void testLoad() throws UnknownHostException {
-      final CloudStackApi client = createMock(CloudStackApi.class);
+      final AliyunApi client = createMock(AliyunApi.class);
       SecurityGroupApi secClient = createMock(SecurityGroupApi.class);
       ZoneApi zoneClient = createMock(ZoneApi.class);
       AsyncJobApi jobClient = createMock(AsyncJobApi.class);
@@ -104,7 +104,7 @@ public class FindSecurityGroupOrCreateTest {
             protected void configure() {
                bind(new TypeLiteral<Supplier<String>>() {
                   }).toInstance(Suppliers.ofInstance("1"));
-               bind(CloudStackApi.class).toInstance(client);
+               bind(AliyunApi.class).toInstance(client);
                bind(new TypeLiteral<CacheLoader<String, Zone>>() {}).
                   to(ZoneIdToZone.class);
                bind(new TypeLiteral<Supplier<LoadingCache<String, Zone>>>() {}).
@@ -134,7 +134,7 @@ public class FindSecurityGroupOrCreateTest {
    
    @Test
    public void testLoadAlreadyExists() throws UnknownHostException {
-      final CloudStackApi client = createMock(CloudStackApi.class);
+      final AliyunApi client = createMock(AliyunApi.class);
       SecurityGroupApi secClient = createMock(SecurityGroupApi.class);
       ZoneApi zoneClient = createMock(ZoneApi.class);
       AsyncJobApi jobClient = createMock(AsyncJobApi.class);
@@ -166,7 +166,7 @@ public class FindSecurityGroupOrCreateTest {
             protected void configure() {
                bind(new TypeLiteral<Supplier<String>>() {
                   }).toInstance(Suppliers.ofInstance("1"));
-               bind(CloudStackApi.class).toInstance(client);
+               bind(AliyunApi.class).toInstance(client);
                bind(new TypeLiteral<CacheLoader<String, Zone>>() {}).
                   to(ZoneIdToZone.class);
                bind(new TypeLiteral<Supplier<LoadingCache<String, Zone>>>() {}).
@@ -195,7 +195,7 @@ public class FindSecurityGroupOrCreateTest {
 
    @Test(expectedExceptions = IllegalArgumentException.class)
    public void testLoadZoneNoSecurityGroups() throws UnknownHostException {
-      final CloudStackApi client = createMock(CloudStackApi.class);
+      final AliyunApi client = createMock(AliyunApi.class);
       SecurityGroupApi secClient = createMock(SecurityGroupApi.class);
       ZoneApi zoneClient = createMock(ZoneApi.class);
       AsyncJobApi jobClient = createMock(AsyncJobApi.class);
@@ -228,7 +228,7 @@ public class FindSecurityGroupOrCreateTest {
             protected void configure() {
                bind(new TypeLiteral<Supplier<String>>() {
                   }).toInstance(Suppliers.ofInstance("1"));
-               bind(CloudStackApi.class).toInstance(client);
+               bind(AliyunApi.class).toInstance(client);
                bind(new TypeLiteral<CacheLoader<String, Zone>>() {}).
                   to(ZoneIdToZone.class);
                bind(new TypeLiteral<Supplier<LoadingCache<String, Zone>>>() {}).

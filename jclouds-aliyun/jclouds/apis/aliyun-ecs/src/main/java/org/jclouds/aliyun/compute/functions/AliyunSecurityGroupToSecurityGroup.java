@@ -38,7 +38,7 @@ import com.google.inject.Inject;
  * SecurityGroup object.
  */
 @Singleton
-public class CloudStackSecurityGroupToSecurityGroup implements Function<org.jclouds.aliyun.domain.SecurityGroup, SecurityGroup> {
+public class AliyunSecurityGroupToSecurityGroup implements Function<org.jclouds.aliyun.domain.SecurityGroup, SecurityGroup> {
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
@@ -46,7 +46,7 @@ public class CloudStackSecurityGroupToSecurityGroup implements Function<org.jclo
    protected final Function<IngressRule, IpPermission> ruleToPermission;
    
    @Inject
-   public CloudStackSecurityGroupToSecurityGroup(Function<IngressRule, IpPermission> ruleToPermission) {
+   public AliyunSecurityGroupToSecurityGroup(Function<IngressRule, IpPermission> ruleToPermission) {
       this.ruleToPermission = ruleToPermission;
    }
 

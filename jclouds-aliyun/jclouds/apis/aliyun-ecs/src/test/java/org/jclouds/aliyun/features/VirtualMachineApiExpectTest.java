@@ -21,7 +21,7 @@ import static org.testng.Assert.assertEquals;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.EncryptedPasswordAndPrivateKey;
 import org.jclouds.aliyun.features.VirtualMachineApi;
@@ -114,7 +114,7 @@ public class VirtualMachineApiExpectTest extends BaseCloudStackExpectTest<Virtua
    }
 
    @Override
-   protected VirtualMachineApi clientFrom(CloudStackContext context) {
+   protected VirtualMachineApi clientFrom(AliyunContext context) {
       return context.getApi().getVirtualMachineApi();
    }
 }

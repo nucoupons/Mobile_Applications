@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.SshKeyPair;
 import org.jclouds.compute.reference.ComputeServiceConstants;
 import org.jclouds.logging.Logger;
@@ -36,10 +36,10 @@ public class CreateUniqueKeyPair extends CacheLoader<String, SshKeyPair> {
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
-   protected final CloudStackApi client;
+   protected final AliyunApi client;
 
    @Inject
-   public CreateUniqueKeyPair(CloudStackApi client) {
+   public CreateUniqueKeyPair(AliyunApi client) {
       this.client = checkNotNull(client, "client");
    }
 

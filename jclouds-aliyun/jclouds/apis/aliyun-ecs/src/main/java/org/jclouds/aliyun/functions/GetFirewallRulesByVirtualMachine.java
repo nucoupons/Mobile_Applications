@@ -26,16 +26,16 @@ import java.util.Set;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.FirewallRule;
 import org.jclouds.aliyun.options.ListFirewallRulesOptions;
 
 @Singleton
 public class GetFirewallRulesByVirtualMachine extends CacheLoader<String, Set<FirewallRule>> {
-   private final CloudStackApi client;
+   private final AliyunApi client;
 
    @Inject
-   public GetFirewallRulesByVirtualMachine(CloudStackApi client) {
+   public GetFirewallRulesByVirtualMachine(AliyunApi client) {
       this.client = checkNotNull(client, "client");
    }
 

@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 import javax.inject.Singleton;
 
 import org.jclouds.aliyun.AsyncJobException;
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.logging.Logger;
 
@@ -36,13 +36,13 @@ import com.google.inject.Inject;
 @Singleton
 public class JobComplete implements Predicate<String> {
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
 
    @Resource
    protected Logger logger = Logger.NULL;
 
    @Inject
-   public JobComplete(CloudStackApi client) {
+   public JobComplete(AliyunApi client) {
       this.client = client;
    }
 

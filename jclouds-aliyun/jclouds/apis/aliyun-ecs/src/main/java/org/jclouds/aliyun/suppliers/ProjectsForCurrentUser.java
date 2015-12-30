@@ -23,7 +23,7 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.Project;
 import org.jclouds.aliyun.domain.User;
 import org.jclouds.aliyun.features.ProjectApi;
@@ -34,11 +34,11 @@ import com.google.common.base.Supplier;
 import com.google.common.collect.Maps;
 
 public class ProjectsForCurrentUser implements Supplier<Map<String, Project>> {
-   private final CloudStackApi api;
+   private final AliyunApi api;
    private final Supplier<User> currentUserSupplier;
 
    @Inject
-   public ProjectsForCurrentUser(CloudStackApi api, @Memoized Supplier<User> currentUserSupplier) {
+   public ProjectsForCurrentUser(AliyunApi api, @Memoized Supplier<User> currentUserSupplier) {
       this.api = checkNotNull(api, "api");
       this.currentUserSupplier = checkNotNull(currentUserSupplier, "currentUserSupplier");
    }

@@ -21,7 +21,7 @@ import static org.testng.Assert.assertNull;
 
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.ConfigurationEntry;
 import org.jclouds.aliyun.features.GlobalConfigurationApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
@@ -120,7 +120,7 @@ public class GlobalConfigurationApiExpectTest extends BaseCloudStackExpectTest<G
    }
 
    @Override
-   protected GlobalConfigurationApi clientFrom(CloudStackContext context) {
+   protected GlobalConfigurationApi clientFrom(AliyunContext context) {
       return context.getGlobalApi().getConfigurationApi();
    }
 }

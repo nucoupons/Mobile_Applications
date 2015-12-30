@@ -26,7 +26,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.FirewallRule;
 import org.jclouds.aliyun.domain.PublicIPAddress;
@@ -47,12 +47,12 @@ public class CreateFirewallRulesForIP {
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult;
    private final LoadingCache<String, Set<FirewallRule>> getFirewallRulesByVirtualMachine;
 
    @Inject
-   public CreateFirewallRulesForIP(CloudStackApi client,
+   public CreateFirewallRulesForIP(AliyunApi client,
          BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult,
          LoadingCache<String, Set<FirewallRule>> getFirewallRulesByVirtualMachine) {
       this.client = checkNotNull(client, "client");

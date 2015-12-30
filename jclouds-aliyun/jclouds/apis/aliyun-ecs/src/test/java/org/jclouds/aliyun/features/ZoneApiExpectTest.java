@@ -20,7 +20,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.domain.Zone;
@@ -96,7 +96,7 @@ public class ZoneApiExpectTest extends BaseCloudStackExpectTest<ZoneApi> {
    }
 
    @Override
-   protected ZoneApi clientFrom(CloudStackContext context) {
+   protected ZoneApi clientFrom(AliyunContext context) {
       return context.getApi().getZoneApi();
    }
 }

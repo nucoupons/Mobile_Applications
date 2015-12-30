@@ -16,7 +16,7 @@
  */
 package org.jclouds.aliyun;
 
-import org.jclouds.aliyun.CloudStackApiMetadata;
+import org.jclouds.aliyun.AliyunApiMetadata;
 import org.jclouds.compute.internal.BaseComputeServiceApiMetadataTest;
 import org.testng.annotations.Test;
 
@@ -24,6 +24,6 @@ import org.testng.annotations.Test;
 public class CloudStackApiMetadataTest extends BaseComputeServiceApiMetadataTest {
 
    public CloudStackApiMetadataTest() {
-      super(new CloudStackApiMetadata());
+      super(new AliyunApiMetadata());
    }
 }

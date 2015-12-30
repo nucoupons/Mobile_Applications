@@ -16,18 +16,18 @@
  */
 package org.jclouds.aliyun;
 
-import org.jclouds.aliyun.internal.CloudStackContextImpl;
+import org.jclouds.aliyun.internal.AliyunContextImpl;
 import org.jclouds.compute.ComputeServiceContext;
 
 import com.google.inject.ImplementedBy;
 
-@ImplementedBy(CloudStackContextImpl.class)
-public interface CloudStackContext extends ComputeServiceContext {
+@ImplementedBy(AliyunContextImpl.class)
+public interface AliyunContext extends ComputeServiceContext {
 
-   CloudStackApi getApi();
+   AliyunApi getApi();
 
-   CloudStackDomainApi getDomainApi();
+   AliyunDomainApi getDomainApi();
 
-   CloudStackGlobalApi getGlobalApi();
+   AliyunGlobalApi getGlobalApi();
 
 }

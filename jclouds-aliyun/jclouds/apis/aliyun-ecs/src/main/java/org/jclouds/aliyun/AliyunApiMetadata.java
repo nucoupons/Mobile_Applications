@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 package org.jclouds.aliyun;
-import static org.jclouds.aliyun.config.CloudStackProperties.AUTO_GENERATE_KEYPAIRS;
+import static org.jclouds.aliyun.config.AliyunProperties.AUTO_GENERATE_KEYPAIRS;
 import static org.jclouds.reflect.Reflection2.typeToken;
 
 import java.net.URI;
 import java.util.Properties;
 
-import org.jclouds.aliyun.compute.config.CloudStackComputeServiceContextModule;
-import org.jclouds.aliyun.config.CloudStackHttpApiModule;
-import org.jclouds.aliyun.config.CloudStackParserModule;
+import org.jclouds.aliyun.compute.config.AliyunComputeServiceContextModule;
+import org.jclouds.aliyun.config.AliyunHttpApiModule;
+import org.jclouds.aliyun.config.AliyunParserModule;
 import org.jclouds.apis.ApiMetadata;
 import org.jclouds.rest.internal.BaseHttpApiMetadata;
 
@@ -34,18 +34,18 @@ import com.google.inject.Module;
  * Implementation of {@link ApiMetadata} for Citrix/Apache CloudStack api.
  */
 @AutoService(ApiMetadata.class)
-public class CloudStackApiMetadata extends BaseHttpApiMetadata<CloudStackApi> {
+public class AliyunApiMetadata extends BaseHttpApiMetadata<AliyunApi> {
    
    @Override
    public Builder toBuilder() {
       return new Builder().fromApiMetadata(this);
    }
 
-   public CloudStackApiMetadata() {
+   public AliyunApiMetadata() {
       this(new Builder());
    }
 
-   protected CloudStackApiMetadata(Builder builder) {
+   protected AliyunApiMetadata(Builder builder) {
       super(builder);
    }
 
@@ -57,7 +57,7 @@ public class CloudStackApiMetadata extends BaseHttpApiMetadata<CloudStackApi> {
       return properties;
    }
 
-   public static class Builder extends BaseHttpApiMetadata.Builder<CloudStackApi, Builder> {
+   public static class Builder extends BaseHttpApiMetadata.Builder<AliyunApi, Builder> {
 
       @SuppressWarnings("deprecation")
       protected Builder() {
@@ -68,17 +68,17 @@ public class CloudStackApiMetadata extends BaseHttpApiMetadata<CloudStackApi> {
          .documentation(URI.create("http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html"))
          .defaultEndpoint("http://localhost:8080/client/api")
          .version("2.2")
-         .view(typeToken(CloudStackContext.class))
-         .defaultProperties(CloudStackApiMetadata.defaultProperties())
+         .view(typeToken(AliyunContext.class))
+         .defaultProperties(AliyunApiMetadata.defaultProperties())
          .defaultModules(ImmutableSet.<Class<? extends Module>> builder()
-                                     .add(CloudStackParserModule.class)
-                                     .add(CloudStackHttpApiModule.class)
-                                     .add(CloudStackComputeServiceContextModule.class).build());
+                                     .add(AliyunParserModule.class)
+                                     .add(AliyunHttpApiModule.class)
+                                     .add(AliyunComputeServiceContextModule.class).build());
       }
       
       @Override
-      public CloudStackApiMetadata build() {
-         return new CloudStackApiMetadata(this);
+      public AliyunApiMetadata build() {
+         return new AliyunApiMetadata(this);
       }
 
       @Override

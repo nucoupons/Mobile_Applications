@@ -18,7 +18,7 @@ package org.jclouds.aliyun.compute.strategy;
 
 import java.util.Map;
 
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.options.DeployVirtualMachineOptions;
 
@@ -38,6 +38,6 @@ public interface OptionsConverter {
     * @param options where the resulting set of options will be applied
     * @return same as "options" parameter
     */
-   DeployVirtualMachineOptions apply(CloudStackTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options);
+   DeployVirtualMachineOptions apply(AliyunTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options);
 
 }

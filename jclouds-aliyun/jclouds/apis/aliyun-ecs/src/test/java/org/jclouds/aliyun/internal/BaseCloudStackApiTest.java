@@ -18,8 +18,8 @@ package org.jclouds.aliyun.internal;
 
 import static org.testng.Assert.assertEquals;
 
-import org.jclouds.aliyun.CloudStackApiMetadata;
-import org.jclouds.aliyun.config.CloudStackHttpApiModule;
+import org.jclouds.aliyun.AliyunApiMetadata;
+import org.jclouds.aliyun.config.AliyunHttpApiModule;
 import org.jclouds.aliyun.filters.QuerySigner;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.providers.AnonymousProviderMetadata;
@@ -32,7 +32,7 @@ import com.google.inject.Module;
 public abstract class BaseCloudStackApiTest<T> extends BaseRestAnnotationProcessingTest<T> {
 
    @ConfiguresHttpApi
-   public static class CloudStackHttpApiModuleExtension extends CloudStackHttpApiModule {
+   public static class CloudStackHttpApiModuleExtension extends AliyunHttpApiModule {
 
    }
 
@@ -49,7 +49,7 @@ public abstract class BaseCloudStackApiTest<T> extends BaseRestAnnotationProcess
 
    @Override
    protected ProviderMetadata createProviderMetadata() {
-      return  AnonymousProviderMetadata.forApiWithEndpoint(new CloudStackApiMetadata(),
+      return  AnonymousProviderMetadata.forApiWithEndpoint(new AliyunApiMetadata(),
             "http://localhost:8080/client/api");
    }
 

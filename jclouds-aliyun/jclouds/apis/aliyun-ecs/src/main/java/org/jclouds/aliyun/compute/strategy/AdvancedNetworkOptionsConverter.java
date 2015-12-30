@@ -18,7 +18,7 @@ package org.jclouds.aliyun.compute.strategy;
 
 import com.google.common.collect.Iterables;
 
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.options.DeployVirtualMachineOptions;
 
@@ -36,7 +36,7 @@ import static org.jclouds.aliyun.predicates.NetworkPredicates.supportsStaticNAT;
  */
 public class AdvancedNetworkOptionsConverter implements OptionsConverter {
    @Override
-   public DeployVirtualMachineOptions apply(CloudStackTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options) {
+   public DeployVirtualMachineOptions apply(AliyunTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options) {
       // security groups not allowed.
       // at least one network must be given to CloudStack,
       // but jclouds will try to autodetect an appropriate network if none given.

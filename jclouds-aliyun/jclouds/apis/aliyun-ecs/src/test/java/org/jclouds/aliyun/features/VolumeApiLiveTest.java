@@ -28,7 +28,7 @@ import java.util.Set;
 
 import javax.annotation.Resource;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.DiskOffering;
 import org.jclouds.aliyun.domain.Snapshot;
@@ -242,7 +242,7 @@ public class VolumeApiLiveTest extends BaseCloudStackApiLiveTest {
       return findVolumeWithId(client, id);
    }
 
-   static Volume findVolumeWithId(final CloudStackApi client, final String id) {
+   static Volume findVolumeWithId(final AliyunApi client, final String id) {
       for (Volume v : client.getVolumeApi().listVolumes())
          if (v.getId().equals(id)) return v;
       throw new NoSuchElementException("no volume with id " + id);

@@ -16,7 +16,7 @@
  */
 package org.jclouds.aliyun.compute;
 
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.TrafficType;
 import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
@@ -98,7 +98,7 @@ public class CloudStackExperimentLiveTest extends BaseCloudStackApiLiveTest {
                vlan(vlanId).startIP("192.168.1.2").netmask("255.255.255.0").gateway("192.168.1.1"));
 
          // set options to specify this network id
-         template.getOptions().as(CloudStackTemplateOptions.class).networks(network.getId());
+         template.getOptions().as(AliyunTemplateOptions.class).networks(network.getId());
 
          // launch the VM
          nodes = view.getComputeService().createNodesInGroup(group, 1, template);

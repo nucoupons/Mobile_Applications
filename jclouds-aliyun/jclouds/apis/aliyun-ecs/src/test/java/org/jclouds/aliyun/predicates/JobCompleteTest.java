@@ -24,7 +24,7 @@ import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 import org.jclouds.aliyun.AsyncJobException;
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.aliyun.domain.AsyncJobError;
 import org.jclouds.aliyun.domain.AsyncJob.ResultCode;
@@ -38,12 +38,12 @@ import org.testng.annotations.Test;
 @Test(groups = "unit", singleThreaded = true)
 public class JobCompleteTest {
 
-   CloudStackApi client;
+   AliyunApi client;
    AsyncJobApi asyncJobClient;
 
    @BeforeMethod
    public void setUp() {
-      client = createMock(CloudStackApi.class);
+      client = createMock(AliyunApi.class);
       asyncJobClient = createMock(AsyncJobApi.class);
 
       expect(client.getAsyncJobApi()).andReturn(asyncJobClient);

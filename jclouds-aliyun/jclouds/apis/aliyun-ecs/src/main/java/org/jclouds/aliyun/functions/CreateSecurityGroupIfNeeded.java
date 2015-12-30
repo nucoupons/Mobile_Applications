@@ -28,7 +28,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.SecurityGroup;
 import org.jclouds.aliyun.domain.Zone;
 import org.jclouds.aliyun.domain.ZoneSecurityGroupNamePortsCidrs;
@@ -46,12 +46,12 @@ public class CreateSecurityGroupIfNeeded implements Function<ZoneSecurityGroupNa
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
-   protected final CloudStackApi client;
+   protected final AliyunApi client;
    protected final Supplier<LoadingCache<String, Zone>> zoneIdToZone;
    protected final Predicate<String> jobComplete;
 
    @Inject
-   public CreateSecurityGroupIfNeeded(CloudStackApi client,
+   public CreateSecurityGroupIfNeeded(AliyunApi client,
                                       Predicate<String> jobComplete,
                                       Supplier<LoadingCache<String, Zone>> zoneIdToZone) {
       this.client = checkNotNull(client, "client");
@@ -92,7 +92,7 @@ public class CreateSecurityGroupIfNeeded implements Function<ZoneSecurityGroupNa
       }
    }
 
-   private void authorizeGroupToItselfAndToTCPPortAndCidr(CloudStackApi client,
+   private void authorizeGroupToItselfAndToTCPPortAndCidr(AliyunApi client,
                                                           SecurityGroup securityGroup,
                                                           int port,
                                                           Set<String> cidrs) {

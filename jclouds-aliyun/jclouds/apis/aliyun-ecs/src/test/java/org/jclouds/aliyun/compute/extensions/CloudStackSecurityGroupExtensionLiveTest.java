@@ -16,7 +16,7 @@
  */
 package org.jclouds.aliyun.compute.extensions;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.Zone;
 import org.jclouds.compute.domain.Template;
 import org.jclouds.compute.extensions.internal.BaseSecurityGroupExtensionLiveTest;
@@ -42,7 +42,7 @@ public class CloudStackSecurityGroupExtensionLiveTest extends BaseSecurityGroupE
    public void setupContext() {
       super.setupContext();
 
-      CloudStackApi api = view.unwrapApi(CloudStackApi.class);
+      AliyunApi api = view.unwrapApi(AliyunApi.class);
       for (Zone z : api.getZoneApi().listZones()) {
          if (z.isSecurityGroupsEnabled()) {
             zone = z;

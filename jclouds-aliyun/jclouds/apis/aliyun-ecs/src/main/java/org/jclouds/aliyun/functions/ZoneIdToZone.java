@@ -18,7 +18,7 @@ package org.jclouds.aliyun.functions;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.Zone;
 import org.jclouds.aliyun.features.ZoneApi;
 
@@ -33,7 +33,7 @@ public class ZoneIdToZone extends CacheLoader<String, Zone> {
    private final ZoneApi zoneClient;
 
    @Inject
-   public ZoneIdToZone(CloudStackApi client) {
+   public ZoneIdToZone(AliyunApi client) {
       checkNotNull(client, "client");
       this.zoneClient = client.getZoneApi();
    }

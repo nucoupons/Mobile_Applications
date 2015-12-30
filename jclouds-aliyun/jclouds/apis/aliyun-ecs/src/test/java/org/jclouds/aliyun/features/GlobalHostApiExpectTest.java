@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.Set;
 import java.util.TimeZone;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.Cluster;
 import org.jclouds.aliyun.domain.Host;
@@ -370,7 +370,7 @@ public class GlobalHostApiExpectTest extends BaseCloudStackExpectTest<GlobalHost
    }
 
    @Override
-   protected GlobalHostApi clientFrom(CloudStackContext context) {
+   protected GlobalHostApi clientFrom(AliyunContext context) {
       return context.getGlobalApi().getHostClient();
    }
 }

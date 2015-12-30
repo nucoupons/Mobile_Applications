@@ -51,7 +51,7 @@ import org.jclouds.rest.annotations.Delegate;
  *
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />
  */
-public interface CloudStackApi extends Closeable {
+public interface AliyunApi extends Closeable {
    /**
     * Provides synchronous access to Zone features.
     */

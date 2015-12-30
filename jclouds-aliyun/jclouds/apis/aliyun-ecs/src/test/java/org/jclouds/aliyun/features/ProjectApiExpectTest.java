@@ -20,7 +20,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.Set;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Project;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.features.ProjectApi;
@@ -83,7 +83,7 @@ public class ProjectApiExpectTest extends BaseCloudStackExpectTest<ProjectApi> {
    }
 
    @Override
-   protected ProjectApi clientFrom(CloudStackContext context) {
+   protected ProjectApi clientFrom(AliyunContext context) {
       return context.getApi().getProjectApi();
    }
 }

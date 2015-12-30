@@ -24,7 +24,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.net.UnknownHostException;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.compute.loaders.CreateUniqueKeyPair;
 import org.jclouds.aliyun.domain.SshKeyPair;
 import org.jclouds.aliyun.features.SSHKeyPairApi;
@@ -41,7 +41,7 @@ public class CreateUniqueKeyPairTest {
 
    @Test
    public void testLoad() throws UnknownHostException {
-      final CloudStackApi client = createMock(CloudStackApi.class);
+      final AliyunApi client = createMock(AliyunApi.class);
       SSHKeyPairApi keyClient = createMock(SSHKeyPairApi.class);
 
       SshKeyPair pair = createMock(SshKeyPair.class);
@@ -57,7 +57,7 @@ public class CreateUniqueKeyPairTest {
          protected void configure() {
             bind(new TypeLiteral<Supplier<String>>() {
             }).toInstance(Suppliers.ofInstance("1"));
-            bind(CloudStackApi.class).toInstance(client);
+            bind(AliyunApi.class).toInstance(client);
          }
 
       }).getInstance(CreateUniqueKeyPair.class);

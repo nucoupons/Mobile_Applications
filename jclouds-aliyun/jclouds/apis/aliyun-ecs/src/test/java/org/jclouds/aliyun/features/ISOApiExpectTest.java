@@ -20,7 +20,7 @@ import static org.jclouds.aliyun.options.ListISOsOptions.Builder.accountInDomain
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNull;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.ISO;
 import org.jclouds.aliyun.features.ISOApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
@@ -216,7 +216,7 @@ public class ISOApiExpectTest extends BaseCloudStackExpectTest<ISOApi> {
     }
    
    @Override
-   protected ISOApi clientFrom(CloudStackContext context) {
+   protected ISOApi clientFrom(AliyunContext context) {
       return context.getApi().getISOApi();
    }
 }

@@ -24,7 +24,7 @@ import static org.jclouds.aliyun.options.AssociateIPAddressOptions.Builder.netwo
 import static org.jclouds.aliyun.options.ListPublicIPAddressesOptions.Builder.allocatedOnly;
 import static org.testng.Assert.assertEquals;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.PublicIPAddress;
@@ -46,7 +46,7 @@ public class ReuseOrAssociateNewPublicIPAddressTest {
    public void testReuseWorks() throws SecurityException, NoSuchMethodException {
 
       // create mocks
-      CloudStackApi client = createMock(CloudStackApi.class);
+      AliyunApi client = createMock(AliyunApi.class);
       BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult = createMock(BlockUntilJobCompletesAndReturnResult.class);
       AddressApi addressClient = createMock(AddressApi.class);
       expect(client.getAddressApi()).andReturn(addressClient).atLeastOnce();
@@ -72,7 +72,7 @@ public class ReuseOrAssociateNewPublicIPAddressTest {
    public void testAssociateWorks() throws SecurityException, NoSuchMethodException {
 
       // create mocks
-      CloudStackApi client = createMock(CloudStackApi.class);
+      AliyunApi client = createMock(AliyunApi.class);
       BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult = createMock(BlockUntilJobCompletesAndReturnResult.class);
       AddressApi addressClient = createMock(AddressApi.class);
       expect(client.getAddressApi()).andReturn(addressClient).atLeastOnce();

@@ -36,7 +36,7 @@ import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 import com.google.inject.AbstractModule;
 
-public class CloudStackParserModule extends AbstractModule {
+public class AliyunParserModule extends AbstractModule {
 
    @Override
    protected void configure() {

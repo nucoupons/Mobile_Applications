@@ -23,7 +23,7 @@ import java.util.NoSuchElementException;
 import javax.annotation.Resource;
 import javax.inject.Inject;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.User;
 import org.jclouds.aliyun.predicates.UserPredicates;
 import org.jclouds.domain.Credentials;
@@ -39,11 +39,11 @@ public class GetCurrentUser implements Supplier<User> {
    @Resource
    protected Logger logger = Logger.NULL;
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final Supplier<Credentials> creds;
 
    @Inject
-   public GetCurrentUser(CloudStackApi client, @Provider Supplier<Credentials> creds) {
+   public GetCurrentUser(AliyunApi client, @Provider Supplier<Credentials> creds) {
       this.client = checkNotNull(client, "client");
       this.creds = checkNotNull(creds, "creds");
    }

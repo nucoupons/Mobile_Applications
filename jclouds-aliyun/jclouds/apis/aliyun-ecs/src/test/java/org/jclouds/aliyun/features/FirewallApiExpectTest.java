@@ -24,7 +24,7 @@ import java.util.Set;
 
 import com.google.common.collect.ImmutableSet;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.FirewallRule;
 import org.jclouds.aliyun.domain.PortForwardingRule;
@@ -405,7 +405,7 @@ public class FirewallApiExpectTest extends BaseCloudStackExpectTest<FirewallApi>
       client.deleteEgressFirewallRule("2015");
    }
    @Override
-   protected FirewallApi clientFrom(CloudStackContext context) {
+   protected FirewallApi clientFrom(AliyunContext context) {
       return context.getApi().getFirewallApi();
    }
 }

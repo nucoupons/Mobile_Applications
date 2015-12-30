@@ -24,7 +24,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.compute.reference.ComputeServiceConstants;
@@ -39,11 +39,11 @@ public class BlockUntilJobCompletesAndReturnResult {
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
    
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final Predicate<String> jobComplete;
 
    @Inject
-   public BlockUntilJobCompletesAndReturnResult(CloudStackApi client, Predicate<String> jobComplete) {
+   public BlockUntilJobCompletesAndReturnResult(AliyunApi client, Predicate<String> jobComplete) {
       this.client = checkNotNull(client, "client");
       this.jobComplete = checkNotNull(jobComplete, "jobComplete");
    }

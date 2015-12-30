@@ -26,7 +26,7 @@ import static org.testng.Assert.assertTrue;
 import java.util.Map;
 import java.util.Set;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.OSType;
 import org.jclouds.aliyun.domain.Template;
 import org.jclouds.aliyun.features.GuestOSApi;
@@ -40,13 +40,13 @@ import com.google.common.collect.Maps;
 @Test(groups = "unit", singleThreaded = true)
 public class OSCategoryInTest {
 
-   private CloudStackApi client;
+   private AliyunApi client;
    private GuestOSApi guestOSClient;
    private Set<String> acceptableCategories = ImmutableSet.<String>of("Ubuntu");
 
    @BeforeMethod
    public void setUp() {
-      client = createMock(CloudStackApi.class);
+      client = createMock(AliyunApi.class);
       guestOSClient = createMock(GuestOSApi.class);
 
       expect(client.getGuestOSApi()).andReturn(guestOSClient).times(2);

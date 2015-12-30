@@ -46,8 +46,8 @@ import com.google.common.collect.ImmutableSet.Builder;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Capabilities;
 import org.jclouds.aliyun.domain.FirewallRule;
@@ -85,18 +85,18 @@ import org.jclouds.domain.LoginCredentials;
 import org.jclouds.logging.Logger;
 
 /**
- * defines the connection between the {@link CloudStackApi} implementation
+ * defines the connection between the {@link AliyunApi} implementation
  * and the jclouds {@link ComputeService}
  */
 @Singleton
-public class CloudStackComputeServiceAdapter implements
+public class AliyunComputeServiceAdapter implements
    ComputeServiceAdapter<VirtualMachine, ServiceOffering, Template, Zone> {
 
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final Predicate<String> jobComplete;
    private final Supplier<Map<String, Network>> networkSupplier;
    private final Supplier<Map<String, Project>> projectSupplier;
@@ -114,7 +114,7 @@ public class CloudStackComputeServiceAdapter implements
    private final GetLoginForProviderFromPropertiesAndStoreCredentialsOrReturnNull credentialsProvider;
 
    @Inject
-   public CloudStackComputeServiceAdapter(CloudStackApi client, Predicate<String> jobComplete,
+   public AliyunComputeServiceAdapter(AliyunApi client, Predicate<String> jobComplete,
                                           @Memoized Supplier<Map<String, Network>> networkSupplier,
                                           @Memoized Supplier<Map<String, Project>> projectSupplier,
                                           BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult,
@@ -154,7 +154,7 @@ public class CloudStackComputeServiceAdapter implements
 
       checkNotNull(template, "template was null");
       checkNotNull(template.getOptions(), "template options was null");
-      checkArgument(template.getOptions().getClass().isAssignableFrom(CloudStackTemplateOptions.class),
+      checkArgument(template.getOptions().getClass().isAssignableFrom(AliyunTemplateOptions.class),
          "options class %s should have been assignable from CloudStackTemplateOptions", template.getOptions()
          .getClass());
       Map<String, Network> networks = networkSupplier.get();
@@ -162,7 +162,7 @@ public class CloudStackComputeServiceAdapter implements
       final String zoneId = template.getLocation().getId();
       Zone zone = zoneIdToZone.get().getUnchecked(zoneId);
 
-      CloudStackTemplateOptions templateOptions = template.getOptions().as(CloudStackTemplateOptions.class);
+      AliyunTemplateOptions templateOptions = template.getOptions().as(AliyunTemplateOptions.class);
 
       checkState(optionsConverters.containsKey(zone.getNetworkType()), "no options converter configured for network type %s", zone.getNetworkType());
       DeployVirtualMachineOptions options = displayName(name).name(name);

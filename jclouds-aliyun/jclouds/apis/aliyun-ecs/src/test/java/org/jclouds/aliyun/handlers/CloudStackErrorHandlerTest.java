@@ -25,7 +25,7 @@ import static org.easymock.EasyMock.verify;
 import java.net.URI;
 
 import org.easymock.IArgumentMatcher;
-import org.jclouds.aliyun.handlers.CloudStackErrorHandler;
+import org.jclouds.aliyun.handlers.AliyunErrorHandler;
 import org.jclouds.http.HttpCommand;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
@@ -121,7 +121,7 @@ public class CloudStackErrorHandlerTest {
    private void assertCodeMakes(String method, URI uri, int statusCode, String message, String contentType,
                                 String content, Class<? extends Exception> expected) {
 
-      CloudStackErrorHandler function = Guice.createInjector().getInstance(CloudStackErrorHandler.class);
+      AliyunErrorHandler function = Guice.createInjector().getInstance(AliyunErrorHandler.class);
 
       HttpCommand command = createMock(HttpCommand.class);
       HttpRequest request = HttpRequest.builder().method(method).endpoint(uri).build();

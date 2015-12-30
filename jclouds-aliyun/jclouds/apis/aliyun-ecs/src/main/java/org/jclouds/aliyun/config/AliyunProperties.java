@@ -20,7 +20,7 @@ package org.jclouds.aliyun.config;
 /**
  * Configuration properties and constants used in CloudStack connections.
  */
-public final class CloudStackProperties {
+public final class AliyunProperties {
 
    /**
     * Type of credentials specified during {@link ComputeServiceContextBuilder#overrides}. If
@@ -46,7 +46,7 @@ public final class CloudStackProperties {
     */
    public static final String AUTO_GENERATE_KEYPAIRS = "jclouds.cloudstack.auto-generate-keypairs";
 
-   private CloudStackProperties() {
+   private AliyunProperties() {
       throw new AssertionError("intentionally unimplemented");
    }
 }

@@ -22,8 +22,8 @@ import static org.jclouds.util.Throwables2.getFirstThrowableOfType;
 
 import org.jclouds.Fallback;
 
-public final class CloudStackFallbacks {
-   private CloudStackFallbacks() {
+public final class AliyunFallbacks {
+   private AliyunFallbacks() {
    }
 
    /**

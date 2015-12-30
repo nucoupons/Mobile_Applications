@@ -33,7 +33,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import org.jclouds.Constants;
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Template;
 import org.jclouds.aliyun.domain.TemplateMetadata;
@@ -66,13 +66,13 @@ import com.google.common.util.concurrent.UncheckedTimeoutException;
  * CloudStack implementation of {@link ImageExtension}
  */
 @Singleton
-public class CloudStackImageExtension implements ImageExtension {
+public class AliyunImageExtension implements ImageExtension {
 
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final ListeningExecutorService userExecutor;
    private final Supplier<Set<? extends Location>> locations;
    private final Predicate<AtomicReference<Image>> imageAvailablePredicate;
@@ -80,7 +80,7 @@ public class CloudStackImageExtension implements ImageExtension {
    private final Predicate<String> jobComplete;
 
    @Inject
-   public CloudStackImageExtension(CloudStackApi client,
+   public AliyunImageExtension(AliyunApi client,
                                    @Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor,
                                    @Memoized Supplier<Set<? extends Location>> locations,
                                    @Named(TIMEOUT_IMAGE_AVAILABLE) Predicate<AtomicReference<Image>> imageAvailablePredicate,

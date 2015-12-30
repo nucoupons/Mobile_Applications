@@ -22,7 +22,7 @@ import static org.easymock.EasyMock.replay;
 import static org.easymock.EasyMock.verify;
 import static org.testng.Assert.assertEquals;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.aliyun.domain.AsyncJobError;
@@ -42,7 +42,7 @@ public class BlockUntilJobCompletesAndReturnResultTest {
       String id = "1";
       String jobId = "2";
 
-      CloudStackApi client = createMock(CloudStackApi.class);
+      AliyunApi client = createMock(AliyunApi.class);
       Predicate<String> jobComplete = Predicates.alwaysTrue();
       AsyncJobApi jobClient = createMock(AsyncJobApi.class);
 
@@ -66,7 +66,7 @@ public class BlockUntilJobCompletesAndReturnResultTest {
       String id = "1";
       String jobId = "2";
 
-      CloudStackApi client = createMock(CloudStackApi.class);
+      AliyunApi client = createMock(AliyunApi.class);
       // the alwaysfalse predicate should blow up with IllegalStateException
       Predicate<String> jobComplete = Predicates.alwaysFalse();
       AsyncJobApi jobClient = createMock(AsyncJobApi.class);
@@ -91,7 +91,7 @@ public class BlockUntilJobCompletesAndReturnResultTest {
       String id = "1";
       String jobId = "2";
 
-      CloudStackApi client = createMock(CloudStackApi.class);
+      AliyunApi client = createMock(AliyunApi.class);
       Predicate<String> jobComplete = Predicates.alwaysTrue();
       AsyncJobApi jobClient = createMock(AsyncJobApi.class);
 

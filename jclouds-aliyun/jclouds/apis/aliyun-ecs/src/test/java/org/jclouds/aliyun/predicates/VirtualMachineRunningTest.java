@@ -22,7 +22,7 @@ import static org.easymock.EasyMock.replay;
 import static org.easymock.EasyMock.verify;
 import static org.testng.Assert.assertEquals;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.domain.VirtualMachine.State;
 import org.jclouds.aliyun.features.VirtualMachineApi;
@@ -34,12 +34,12 @@ import org.testng.annotations.Test;
 @Test(groups = "unit", singleThreaded = true, testName = "VirtualMachineRunningTest")
 public class VirtualMachineRunningTest {
 
-   CloudStackApi client;
+   AliyunApi client;
    VirtualMachineApi virtualMachineClient;
 
    @BeforeMethod
    public void setUp() {
-      client = createMock(CloudStackApi.class);
+      client = createMock(AliyunApi.class);
       virtualMachineClient = createMock(VirtualMachineApi.class);
 
       expect(client.getVirtualMachineApi()).andReturn(virtualMachineClient);

@@ -39,7 +39,7 @@ import org.jclouds.rest.annotations.Delegate;
  *      "http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_Global_Admin.html"
  *      />
  */
-public interface CloudStackGlobalApi extends CloudStackDomainApi {
+public interface AliyunGlobalApi extends AliyunDomainApi {
 
    /**
     * Provides synchronous access to Accounts

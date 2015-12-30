@@ -20,7 +20,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.VlanIPRange;
 import org.jclouds.aliyun.features.GlobalVlanApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
@@ -164,7 +164,7 @@ public class GlobalVlanApiExpectTest extends BaseCloudStackExpectTest<GlobalVlan
    }
 
    @Override
-   protected GlobalVlanApi clientFrom(CloudStackContext context) {
+   protected GlobalVlanApi clientFrom(AliyunContext context) {
       return context.getGlobalApi().getVlanClient();
    }
 }

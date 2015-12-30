@@ -29,7 +29,7 @@ import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.PublicIPAddress;
 import org.jclouds.aliyun.filters.AuthenticationFilter;
-import org.jclouds.aliyun.functions.CloudStackFallbacks.VoidOnNotFoundOr404OrUnableToFindAccountOwner;
+import org.jclouds.aliyun.functions.AliyunFallbacks.VoidOnNotFoundOr404OrUnableToFindAccountOwner;
 import org.jclouds.aliyun.options.AssociateIPAddressOptions;
 import org.jclouds.aliyun.options.ListPublicIPAddressesOptions;
 import org.jclouds.rest.annotations.Fallback;

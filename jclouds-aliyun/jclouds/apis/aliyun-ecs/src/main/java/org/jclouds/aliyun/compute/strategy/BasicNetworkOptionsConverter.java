@@ -16,7 +16,7 @@
  */
 package org.jclouds.aliyun.compute.strategy;
 
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.options.DeployVirtualMachineOptions;
 
@@ -27,7 +27,7 @@ import java.util.Map;
  */
 public class BasicNetworkOptionsConverter implements OptionsConverter {
    @Override
-   public DeployVirtualMachineOptions apply(CloudStackTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options) {
+   public DeployVirtualMachineOptions apply(AliyunTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options) {
       // both security groups and networks are optional, and CloudStack will
       // use the zone/user's default network/security group if none given
       if (!templateOptions.getSecurityGroupIds().isEmpty()) {

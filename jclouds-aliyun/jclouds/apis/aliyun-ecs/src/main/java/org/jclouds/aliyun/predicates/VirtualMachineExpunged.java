@@ -21,7 +21,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import javax.annotation.Resource;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.logging.Logger;
 
@@ -35,13 +35,13 @@ import com.google.inject.Inject;
 @Singleton
 public class VirtualMachineExpunged implements Predicate<VirtualMachine> {
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
 
    @Resource
    protected Logger logger = Logger.NULL;
 
    @Inject
-   public VirtualMachineExpunged(CloudStackApi client) {
+   public VirtualMachineExpunged(AliyunApi client) {
       this.client = client;
    }
 

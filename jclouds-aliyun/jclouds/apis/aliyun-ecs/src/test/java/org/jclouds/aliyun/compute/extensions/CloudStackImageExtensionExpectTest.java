@@ -21,7 +21,7 @@ import static org.testng.Assert.assertEquals;
 import java.util.Map;
 import java.util.Properties;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.internal.BaseCloudStackComputeServiceContextExpectTest;
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.domain.Image;
@@ -181,11 +181,11 @@ public class CloudStackImageExtensionExpectTest extends BaseCloudStackComputeSer
 
    @Override
    public ComputeService createClient(Function<HttpRequest, HttpResponse> fn, Module module, Properties props) {
-      return clientFrom(createInjector(fn, module, props).getInstance(CloudStackContext.class));
+      return clientFrom(createInjector(fn, module, props).getInstance(AliyunContext.class));
    }
 
    @Override
-   protected ComputeService clientFrom(CloudStackContext context) {
+   protected ComputeService clientFrom(AliyunContext context) {
       return context.getComputeService();
    }
 

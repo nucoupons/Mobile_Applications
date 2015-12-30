@@ -22,7 +22,7 @@ import static org.testng.Assert.assertTrue;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.SshKeyPair;
 import org.jclouds.aliyun.features.SSHKeyPairApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
@@ -177,7 +177,7 @@ public class SSHKeyPairApiExpectTest extends BaseCloudStackExpectTest<SSHKeyPair
    }
 
    @Override
-   protected SSHKeyPairApi clientFrom(CloudStackContext context) {
+   protected SSHKeyPairApi clientFrom(AliyunContext context) {
       return context.getApi().getSSHKeyPairApi();
    }
 }

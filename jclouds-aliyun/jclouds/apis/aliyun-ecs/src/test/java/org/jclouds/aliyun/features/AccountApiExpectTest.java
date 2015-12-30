@@ -20,7 +20,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.Set;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.User;
 import org.jclouds.aliyun.features.AccountApi;
@@ -100,7 +100,7 @@ public class AccountApiExpectTest extends BaseCloudStackExpectTest<AccountApi> {
    }
 
    @Override
-   protected AccountApi clientFrom(CloudStackContext context) {
+   protected AccountApi clientFrom(AliyunContext context) {
       return context.getApi().getAccountApi();
    }
 }

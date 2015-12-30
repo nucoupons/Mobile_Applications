@@ -20,7 +20,7 @@ import static org.testng.Assert.assertNotNull;
 
 import java.util.Properties;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.features.AccountApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
 import org.jclouds.http.HttpRequest;
@@ -32,7 +32,7 @@ import com.google.common.net.HttpHeaders;
 
 /**
  * 
- * @see CloudStackProperties#CREDENTIAL_TYPE
+ * @see AliyunProperties#CREDENTIAL_TYPE
  */
 @Test(groups = "unit", testName = "PasswordAuthenticationExpectTest")
 public class PasswordAuthenticationExpectTest extends BaseCloudStackExpectTest<AccountApi> {
@@ -67,7 +67,7 @@ public class PasswordAuthenticationExpectTest extends BaseCloudStackExpectTest<A
    }
 
    @Override
-   protected AccountApi clientFrom(CloudStackContext context) {
+   protected AccountApi clientFrom(AliyunContext context) {
       return context.getApi().getAccountApi();
    }
 }

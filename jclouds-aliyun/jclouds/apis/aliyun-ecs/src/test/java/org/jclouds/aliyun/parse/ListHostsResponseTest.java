@@ -20,7 +20,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.Set;
 
-import org.jclouds.aliyun.config.CloudStackParserModule;
+import org.jclouds.aliyun.config.AliyunParserModule;
 import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.Host;
 import org.jclouds.date.internal.SimpleDateFormatDateService;
@@ -42,7 +42,7 @@ public class ListHostsResponseTest extends BaseParserTest<Set<Host>, Set<Host>> 
 
    @Override
    protected Injector injector() {
-      return Guice.createInjector(new GsonModule(), new CloudStackParserModule());
+      return Guice.createInjector(new GsonModule(), new AliyunParserModule());
    }
 
    @Override

@@ -19,7 +19,7 @@ package org.jclouds.aliyun.compute.functions;
 import static com.google.common.collect.Iterables.transform;
 import static org.testng.Assert.assertEquals;
 
-import org.jclouds.aliyun.compute.functions.CloudStackSecurityGroupToSecurityGroup;
+import org.jclouds.aliyun.compute.functions.AliyunSecurityGroupToSecurityGroup;
 import org.jclouds.aliyun.compute.functions.IngressRuleToIpPermission;
 import org.jclouds.aliyun.domain.IngressRule;
 import org.jclouds.compute.domain.SecurityGroup;
@@ -53,7 +53,7 @@ public class CloudStackSecurityGroupToSecurityGroupTest {
          .ingressRules(ImmutableSet.of(ruleToConvert))
          .build();
 
-      CloudStackSecurityGroupToSecurityGroup parser = createGroupParser();
+      AliyunSecurityGroupToSecurityGroup parser = createGroupParser();
 
       SecurityGroup group = parser.apply(origGroup);
       
@@ -64,8 +64,8 @@ public class CloudStackSecurityGroupToSecurityGroupTest {
       assertEquals(group.getIpPermissions(), ImmutableSet.copyOf(transform(origGroup.getIngressRules(), ruleConverter)));
    }
 
-   private CloudStackSecurityGroupToSecurityGroup createGroupParser() {
-      CloudStackSecurityGroupToSecurityGroup parser = new CloudStackSecurityGroupToSecurityGroup(ruleConverter);
+   private AliyunSecurityGroupToSecurityGroup createGroupParser() {
+      AliyunSecurityGroupToSecurityGroup parser = new AliyunSecurityGroupToSecurityGroup(ruleConverter);
 
       return parser;
    }

@@ -16,7 +16,7 @@
  */
 package org.jclouds.aliyun.features;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.features.VolumeApi;
 import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
@@ -56,7 +56,7 @@ public class VolumeApiExpectTest extends BaseCloudStackExpectTest<VolumeApi> {
    }
 
    @Override
-   protected VolumeApi clientFrom(CloudStackContext context) {
+   protected VolumeApi clientFrom(AliyunContext context) {
       return context.getApi().getVolumeApi();
    }
 }

@@ -25,9 +25,9 @@ import java.util.Set;
 
 import org.jclouds.Constants;
 import org.jclouds.ContextBuilder;
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.CloudStackApiMetadata;
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.AliyunApiMetadata;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.ApiKeyPair;
 import org.jclouds.aliyun.domain.User;
@@ -50,19 +50,19 @@ public class ApiKeyPairs {
     */
    public static ApiKeyPair loginToEndpointAsUsernameInDomainWithPasswordAndReturnApiKeyPair(
          URI endpoint, String username, String password, String domain) {
-      CloudStackContext context = null;
+      AliyunContext context = null;
       try {
          Properties overrides = new Properties();
          overrides.put(Constants.PROPERTY_TRUST_ALL_CERTS, "true");
          overrides.put(Constants.PROPERTY_RELAX_HOSTNAME, "true");
          overrides.put("jclouds.cloudstack.credential-type", "passwordCredentials");
          
-         context =  ContextBuilder.newBuilder(new CloudStackApiMetadata())
+         context =  ContextBuilder.newBuilder(new AliyunApiMetadata())
                .endpoint(checkNotNull(endpoint, "endpoint").toASCIIString())
                .credentials(String.format("%s/%s", checkNotNull(domain, "domain"), checkNotNull(username, "username")), password)
-               .overrides(overrides).build(CloudStackContext.class);
+               .overrides(overrides).build(AliyunContext.class);
 
-         CloudStackApi client = context.getApi();
+         AliyunApi client = context.getApi();
          Set<Account> listOfAccounts = client.getAccountApi().listAccounts();
 
          domain = (domain.equals("") || domain.equals("/")) ? "ROOT" : domain;

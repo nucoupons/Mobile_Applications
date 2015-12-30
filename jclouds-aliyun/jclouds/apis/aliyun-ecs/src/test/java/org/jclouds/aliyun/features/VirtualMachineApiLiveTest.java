@@ -32,7 +32,7 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Logger;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.aliyun.domain.GuestIPType;
@@ -81,7 +81,7 @@ public class VirtualMachineApiLiveTest extends BaseCloudStackApiLiveTest {
       }
    };
 
-   public static VirtualMachine createVirtualMachine(CloudStackApi client, String defaultTemplate,
+   public static VirtualMachine createVirtualMachine(AliyunApi client, String defaultTemplate,
          Predicate<String> jobComplete, Predicate<VirtualMachine> virtualMachineRunning) {
       Set<Network> networks = client.getNetworkApi().listNetworks(isDefault(true));
       if (!networks.isEmpty()) {
@@ -111,14 +111,14 @@ public class VirtualMachineApiLiveTest extends BaseCloudStackApiLiveTest {
    }
 
    public static VirtualMachine createVirtualMachineWithSecurityGroupInZone(String zoneId, String templateId, String groupId,
-         CloudStackApi client, Predicate<String> jobComplete,
+         AliyunApi client, Predicate<String> jobComplete,
          Predicate<VirtualMachine> virtualMachineRunning) {
       return createVirtualMachineWithOptionsInZone(new DeployVirtualMachineOptions().securityGroupId(groupId), zoneId,
             templateId, client, jobComplete, virtualMachineRunning);
    }
 
    public static VirtualMachine createVirtualMachineInNetwork(Network network, String templateId,
-         CloudStackApi client, Predicate<String> jobComplete,
+         AliyunApi client, Predicate<String> jobComplete,
          Predicate<VirtualMachine> virtualMachineRunning) {
       DeployVirtualMachineOptions options = new DeployVirtualMachineOptions();
       String zoneId = network.getZoneId();
@@ -128,7 +128,7 @@ public class VirtualMachineApiLiveTest extends BaseCloudStackApiLiveTest {
    }
 
    public static VirtualMachine createVirtualMachineInNetworkWithIp(
-         CloudStackApi client, String templateId, Set<Network> networks, Map<String, String> ipToNetwork,
+         AliyunApi client, String templateId, Set<Network> networks, Map<String, String> ipToNetwork,
          Predicate<String> jobComplete, Predicate<VirtualMachine> virtualMachineRunning) {
 
       DeployVirtualMachineOptions options = new DeployVirtualMachineOptions();
@@ -147,7 +147,7 @@ public class VirtualMachineApiLiveTest extends BaseCloudStackApiLiveTest {
    }
 
    public static VirtualMachine createVirtualMachineWithOptionsInZone(DeployVirtualMachineOptions options, String zoneId,
-         String templateId, CloudStackApi client, Predicate<String> jobComplete,
+         String templateId, AliyunApi client, Predicate<String> jobComplete,
          Predicate<VirtualMachine> virtualMachineRunning) {
       String serviceOfferingId = DEFAULT_SIZE_ORDERING.min(client.getOfferingApi().listServiceOfferings()).getId();
 

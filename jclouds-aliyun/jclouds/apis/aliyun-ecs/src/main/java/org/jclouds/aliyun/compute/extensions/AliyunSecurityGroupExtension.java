@@ -27,7 +27,7 @@ import java.util.Set;
 
 import javax.inject.Inject;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.IngressRule;
 import org.jclouds.aliyun.domain.ZoneAndName;
 import org.jclouds.aliyun.domain.ZoneSecurityGroupNamePortsCidrs;
@@ -52,8 +52,8 @@ import com.google.common.collect.Multimap;
  * An extension to compute service to allow for the manipulation of {@link org.jclouds.compute.domain.SecurityGroup}s. Implementation
  * is optional by providers.
  */
-public class CloudStackSecurityGroupExtension implements SecurityGroupExtension {
-   protected final CloudStackApi api;
+public class AliyunSecurityGroupExtension implements SecurityGroupExtension {
+   protected final AliyunApi api;
    protected final Function<org.jclouds.aliyun.domain.SecurityGroup, SecurityGroup> groupConverter;
    protected final LoadingCache<ZoneAndName, org.jclouds.aliyun.domain.SecurityGroup> groupCreator;
    protected final GroupNamingConvention.Factory namingConvention;
@@ -62,7 +62,7 @@ public class CloudStackSecurityGroupExtension implements SecurityGroupExtension 
    protected final Predicate<String> jobComplete;
 
    @Inject
-   public CloudStackSecurityGroupExtension(CloudStackApi api,
+   public AliyunSecurityGroupExtension(AliyunApi api,
                                            Function<org.jclouds.aliyun.domain.SecurityGroup, SecurityGroup> groupConverter,
                                            LoadingCache<ZoneAndName, org.jclouds.aliyun.domain.SecurityGroup> groupCreator,
                                            GroupNamingConvention.Factory namingConvention,

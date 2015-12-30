@@ -21,15 +21,15 @@ import static org.jclouds.rest.config.BinderUtils.bindHttpApi;
 import java.util.concurrent.TimeUnit;
 
 import org.jclouds.Constants;
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.CloudStackDomainApi;
-import org.jclouds.aliyun.CloudStackGlobalApi;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.AliyunDomainApi;
+import org.jclouds.aliyun.AliyunGlobalApi;
 import org.jclouds.aliyun.domain.LoginResponse;
 import org.jclouds.aliyun.features.SessionApi;
 import org.jclouds.aliyun.filters.AddSessionKeyAndJSessionIdToRequest;
 import org.jclouds.aliyun.filters.AuthenticationFilter;
 import org.jclouds.aliyun.filters.QuerySigner;
-import org.jclouds.aliyun.handlers.CloudStackErrorHandler;
+import org.jclouds.aliyun.handlers.AliyunErrorHandler;
 import org.jclouds.aliyun.handlers.InvalidateSessionAndRetryOn401AndLogoutOnClose;
 import org.jclouds.aliyun.loaders.LoginWithPasswordCredentials;
 import org.jclouds.domain.Credentials;
@@ -60,21 +60,21 @@ import com.google.inject.name.Named;
  * Configures the cloudstack connection.
  */
 @ConfiguresHttpApi
-public class CloudStackHttpApiModule extends HttpApiModule<CloudStackApi> {
+public class AliyunHttpApiModule extends HttpApiModule<AliyunApi> {
 
    @Override
    protected void configure() {
-      bind(new TypeLiteral<ApiContext<CloudStackDomainApi>>() {
-      }).to(new TypeLiteral<ApiContextImpl<CloudStackDomainApi>>() {
+      bind(new TypeLiteral<ApiContext<AliyunDomainApi>>() {
+      }).to(new TypeLiteral<ApiContextImpl<AliyunDomainApi>>() {
       });
-      bind(new TypeLiteral<ApiContext<CloudStackGlobalApi>>() {
-      }).to(new TypeLiteral<ApiContextImpl<CloudStackGlobalApi>>() {
+      bind(new TypeLiteral<ApiContext<AliyunGlobalApi>>() {
+      }).to(new TypeLiteral<ApiContextImpl<AliyunGlobalApi>>() {
       });
       bind(CredentialType.class).toProvider(CredentialTypeFromPropertyOrDefault.class);
       // session client is used directly for filters and retry handlers, so let's bind it explicitly
       bindHttpApi(binder(), SessionApi.class);
-      bindHttpApi(binder(), CloudStackDomainApi.class);
-      bindHttpApi(binder(), CloudStackGlobalApi.class);
+      bindHttpApi(binder(), AliyunDomainApi.class);
+      bindHttpApi(binder(), AliyunGlobalApi.class);
       bind(HttpRetryHandler.class).annotatedWith(ClientError.class).to(InvalidateSessionAndRetryOn401AndLogoutOnClose.class);
       
       super.configure();
@@ -88,9 +88,9 @@ public class CloudStackHttpApiModule extends HttpApiModule<CloudStackApi> {
 
    @Override
    protected void bindErrorHandlers() {
-      bind(HttpErrorHandler.class).annotatedWith(Redirection.class).to(CloudStackErrorHandler.class);
-      bind(HttpErrorHandler.class).annotatedWith(ClientError.class).to(CloudStackErrorHandler.class);
-      bind(HttpErrorHandler.class).annotatedWith(ServerError.class).to(CloudStackErrorHandler.class);
+      bind(HttpErrorHandler.class).annotatedWith(Redirection.class).to(AliyunErrorHandler.class);
+      bind(HttpErrorHandler.class).annotatedWith(ClientError.class).to(AliyunErrorHandler.class);
+      bind(HttpErrorHandler.class).annotatedWith(ServerError.class).to(AliyunErrorHandler.class);
    }
 
    @Singleton
@@ -100,7 +100,7 @@ public class CloudStackHttpApiModule extends HttpApiModule<CloudStackApi> {
        * to set a default property.
        */
       @Inject(optional = true)
-      @Named(CloudStackProperties.CREDENTIAL_TYPE)
+      @Named(AliyunProperties.CREDENTIAL_TYPE)
       String credentialType = CredentialType.API_ACCESS_KEY_CREDENTIALS.toString();
 
       @Override

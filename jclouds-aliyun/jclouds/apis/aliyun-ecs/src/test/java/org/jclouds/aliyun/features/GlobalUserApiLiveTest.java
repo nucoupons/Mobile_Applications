@@ -28,9 +28,9 @@ import static org.testng.Assert.assertNotNull;
 import java.util.Properties;
 import java.util.Set;
 
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.CloudStackContext;
-import org.jclouds.aliyun.CloudStackGlobalApi;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.AliyunContext;
+import org.jclouds.aliyun.AliyunGlobalApi;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.ApiKeyPair;
 import org.jclouds.aliyun.domain.User;
@@ -43,7 +43,7 @@ import org.testng.annotations.Test;
 @Test(groups = "live", singleThreaded = true, testName = "GlobalUserApiLiveTest")
 public class GlobalUserApiLiveTest extends BaseCloudStackApiLiveTest {
 
-   public static User createTestUser(CloudStackGlobalApi client, Account account, String prefix) {
+   public static User createTestUser(AliyunGlobalApi client, Account account, String prefix) {
       return client.getUserClient().createUser(prefix + "-user", account.getName(), "dummy2@example.com",
             base16().lowerCase().encode(md5().hashString("password", UTF_8).asBytes()), "First", "Last");
    }
@@ -84,9 +84,9 @@ public class GlobalUserApiLiveTest extends BaseCloudStackApiLiveTest {
    }
 
    private void checkAuthAsUser(ApiKeyPair keyPair) {
-      CloudStackContext context = createView(credentialsAsProperties(keyPair), setupModules());
+      AliyunContext context = createView(credentialsAsProperties(keyPair), setupModules());
 
-      CloudStackApi client = context.getApi();
+      AliyunApi client = context.getApi();
       Set<Account> accounts = client.getAccountApi().listAccounts();
 
       assert !accounts.isEmpty();

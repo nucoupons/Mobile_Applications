@@ -23,8 +23,8 @@ import static org.jclouds.util.Strings2.urlEncode;
 
 import java.util.Properties;
 
-import org.jclouds.aliyun.CloudStackApiMetadata;
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunApiMetadata;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.apis.ApiMetadata;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
@@ -44,15 +44,15 @@ public abstract class BaseCloudStackExpectTest<S> extends BaseRestApiExpectTest<
    
    @Override
    protected ApiMetadata createApiMetadata() {
-      return new CloudStackApiMetadata();
+      return new AliyunApiMetadata();
    }
 
    @Override
    public S createClient(Function<HttpRequest, HttpResponse> fn, Module module, Properties props) {
-      return clientFrom(createInjector(fn, module, props).getInstance(CloudStackContext.class));
+      return clientFrom(createInjector(fn, module, props).getInstance(AliyunContext.class));
    }
 
-   protected abstract S clientFrom(CloudStackContext context);
+   protected abstract S clientFrom(AliyunContext context);
 
    protected final HttpRequest login = HttpRequest.builder().method("GET")
       .endpoint("http://localhost:8080/client/api")

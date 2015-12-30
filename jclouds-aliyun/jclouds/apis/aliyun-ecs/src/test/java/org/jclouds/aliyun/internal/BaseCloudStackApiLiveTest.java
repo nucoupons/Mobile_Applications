@@ -31,10 +31,10 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.CloudStackContext;
-import org.jclouds.aliyun.CloudStackDomainApi;
-import org.jclouds.aliyun.CloudStackGlobalApi;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.AliyunContext;
+import org.jclouds.aliyun.AliyunDomainApi;
+import org.jclouds.aliyun.AliyunGlobalApi;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.Template;
 import org.jclouds.aliyun.domain.User;
@@ -68,7 +68,7 @@ import com.google.common.reflect.TypeToken;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 
-public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextLiveTest<CloudStackContext> {
+public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextLiveTest<AliyunContext> {
    protected String domainAdminIdentity;
    protected String domainAdminCredential;
    protected String globalAdminIdentity;
@@ -79,8 +79,8 @@ public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextL
    }
    
    @Override
-   protected TypeToken<CloudStackContext> viewType() {
-      return typeToken(CloudStackContext.class);
+   protected TypeToken<AliyunContext> viewType() {
+      return typeToken(AliyunContext.class);
    }
    
    @Override
@@ -115,12 +115,12 @@ public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextL
       }
    }
 
-   public static String defaultTemplateOrPreferredInZone(String defaultTemplate, CloudStackApi client, String zoneId) {
+   public static String defaultTemplateOrPreferredInZone(String defaultTemplate, AliyunApi client, String zoneId) {
       String templateId = defaultTemplate != null ? defaultTemplate : getTemplateForZone(client, zoneId);
       return templateId;
    }
 
-   public static String getTemplateForZone(CloudStackApi client, String zoneId) {
+   public static String getTemplateForZone(AliyunApi client, String zoneId) {
       // TODO enum, as this is way too easy to mess up.
       Set<String> acceptableCategories = ImmutableSet.of("Ubuntu", "CentOS");
 
@@ -145,9 +145,9 @@ public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextL
    protected String prefix = System.getProperty("user.name");
 
    protected ComputeService computeClient;
-   protected CloudStackContext cloudStackContext;
-   protected CloudStackApi client;
-   protected CloudStackApi adminClient;
+   protected AliyunContext cloudStackContext;
+   protected AliyunApi client;
+   protected AliyunApi adminClient;
    protected User user;
 
    protected Predicate<HostAndPort> socketTester;
@@ -164,13 +164,13 @@ public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextL
    protected ReuseOrAssociateNewPublicIPAddress reuseOrAssociate;
 
    protected boolean domainAdminEnabled;
-   protected CloudStackContext domainAdminComputeContext;
-   protected CloudStackDomainApi domainAdminClient;
+   protected AliyunContext domainAdminComputeContext;
+   protected AliyunDomainApi domainAdminClient;
    protected User domainAdminUser;
 
    protected boolean globalAdminEnabled;
-   protected CloudStackContext globalAdminComputeContext;
-   protected CloudStackGlobalApi globalAdminClient;
+   protected AliyunContext globalAdminComputeContext;
+   protected AliyunGlobalApi globalAdminClient;
    protected User globalAdminUser;
    
    protected void checkSSH(HostAndPort socket) {
@@ -192,7 +192,7 @@ public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextL
    public void setupContext() {
       super.setupContext();
       computeClient = view.getComputeService();
-      cloudStackContext = CloudStackContext.class.cast(view);
+      cloudStackContext = AliyunContext.class.cast(view);
       client = cloudStackContext.getApi();
       user = verifyCurrentUserIsOfType(identity, client.getAccountApi(), USER);
 

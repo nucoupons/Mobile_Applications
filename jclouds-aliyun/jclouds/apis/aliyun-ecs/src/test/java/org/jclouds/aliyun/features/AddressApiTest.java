@@ -23,7 +23,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.AddressApi;
-import org.jclouds.aliyun.functions.CloudStackFallbacks.VoidOnNotFoundOr404OrUnableToFindAccountOwner;
+import org.jclouds.aliyun.functions.AliyunFallbacks.VoidOnNotFoundOr404OrUnableToFindAccountOwner;
 import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
 import org.jclouds.aliyun.options.AssociateIPAddressOptions;
 import org.jclouds.aliyun.options.ListPublicIPAddressesOptions;

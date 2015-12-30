@@ -34,7 +34,7 @@ import com.google.common.collect.Sets;
  * operations on the <em>gogrid</em> provider.
  * 
  * <h2>Usage</h2> The recommended way to instantiate a
- * {@link CloudStackTemplateOptions} object is to statically import
+ * {@link AliyunTemplateOptions} object is to statically import
  * {@code CloudStackTemplateOptions.*} and invoke a static creation method
  * followed by an instance mutator (if needed):
  * <p>
@@ -46,7 +46,7 @@ import com.google.common.collect.Sets;
  * Set&lt;? extends NodeMetadata&gt; set = client.createNodesInGroup(tag, 2, templateBuilder.build());
  * </pre>
  */
-public class CloudStackTemplateOptions extends TemplateOptions implements Cloneable {
+public class AliyunTemplateOptions extends TemplateOptions implements Cloneable {
 
    protected Set<String> securityGroupIds = Sets.<String> newLinkedHashSet();
    protected Map<String, String> ipsToNetworks = Maps.<String, String>newLinkedHashMap();
@@ -61,8 +61,8 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    protected int dataDiskSize;
    
    @Override
-   public CloudStackTemplateOptions clone() {
-      CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+   public AliyunTemplateOptions clone() {
+      AliyunTemplateOptions options = new AliyunTemplateOptions();
       copyTo(options);
       return options;
    }
@@ -70,8 +70,8 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    @Override
    public void copyTo(TemplateOptions to) {
       super.copyTo(to);
-      if (to instanceof CloudStackTemplateOptions) {
-         CloudStackTemplateOptions eTo = CloudStackTemplateOptions.class.cast(to);
+      if (to instanceof AliyunTemplateOptions) {
+         AliyunTemplateOptions eTo = AliyunTemplateOptions.class.cast(to);
          eTo.securityGroupIds(this.securityGroupIds);
          eTo.ipsToNetworks(this.ipsToNetworks);
          eTo.ipOnDefaultNetwork(this.ipOnDefaultNetwork);
@@ -89,7 +89,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see org.jclouds.aliyun.options.DeployVirtualMachineOptions#diskOfferingId
     */
-   public CloudStackTemplateOptions diskOfferingId(String diskOfferingId) {
+   public AliyunTemplateOptions diskOfferingId(String diskOfferingId) {
       this.diskOfferingId = diskOfferingId;
       return this;
    }
@@ -101,7 +101,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#dataDiskSize
     */
-   public CloudStackTemplateOptions dataDiskSize(int dataDiskSize) {
+   public AliyunTemplateOptions dataDiskSize(int dataDiskSize) {
       this.dataDiskSize = dataDiskSize;
       return this;
    }
@@ -113,7 +113,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#securityGroupId
     */
-   public CloudStackTemplateOptions securityGroupId(String securityGroupId) {
+   public AliyunTemplateOptions securityGroupId(String securityGroupId) {
       this.securityGroupIds.add(securityGroupId);
       return this;
    }
@@ -121,7 +121,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#securityGroupIds
     */
-   public CloudStackTemplateOptions securityGroupIds(Iterable<String> securityGroupIds) {
+   public AliyunTemplateOptions securityGroupIds(Iterable<String> securityGroupIds) {
       Iterables.addAll(this.securityGroupIds, checkNotNull(securityGroupIds, "securityGroupIds was null"));
       return this;
    }
@@ -133,7 +133,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see #shouldGenerateKeyPair()
     */
-   public CloudStackTemplateOptions generateSecurityGroup(boolean enable) {
+   public AliyunTemplateOptions generateSecurityGroup(boolean enable) {
       this.generateSecurityGroup = enable;
       return this;
    }
@@ -150,7 +150,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
     * @see DeployVirtualMachineOptions#networkId
     */
    @Deprecated
-   public CloudStackTemplateOptions networkId(String networkId) {
+   public AliyunTemplateOptions networkId(String networkId) {
       this.networks.add(networkId);
       return this;
    }
@@ -160,7 +160,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
     * @see DeployVirtualMachineOptions#networkIds
     */
    @Deprecated
-   public CloudStackTemplateOptions networkIds(Iterable<String> networkIds) {
+   public AliyunTemplateOptions networkIds(Iterable<String> networkIds) {
       Iterables.addAll(this.networks, checkNotNull(networkIds, "networkIds was null"));
       return this;
    }
@@ -173,7 +173,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
       return this.getNetworks();
    }
 
-   public CloudStackTemplateOptions setupStaticNat(boolean setupStaticNat) {
+   public AliyunTemplateOptions setupStaticNat(boolean setupStaticNat) {
       this.setupStaticNat = setupStaticNat;
       return this;
    }
@@ -185,7 +185,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#ipOnDefaultNetwork
     */
-   public CloudStackTemplateOptions ipOnDefaultNetwork(String ipOnDefaultNetwork) {
+   public AliyunTemplateOptions ipOnDefaultNetwork(String ipOnDefaultNetwork) {
       this.ipOnDefaultNetwork = ipOnDefaultNetwork;
       return this;
    }
@@ -197,7 +197,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#ipOnDefaultNetwork(String)
     */
-   public CloudStackTemplateOptions ipsToNetworks(Map<String, String> ipsToNetworks) {
+   public AliyunTemplateOptions ipsToNetworks(Map<String, String> ipsToNetworks) {
       this.ipsToNetworks.putAll(ipsToNetworks);
       return this;
    }
@@ -209,7 +209,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#keyPair(String)
     */
-   public CloudStackTemplateOptions keyPair(String keyPair) {
+   public AliyunTemplateOptions keyPair(String keyPair) {
       this.keyPair = keyPair;
       return this;
    }
@@ -221,7 +221,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see #shouldGenerateKeyPair()
     */
-   public CloudStackTemplateOptions generateKeyPair(boolean enable) {
+   public AliyunTemplateOptions generateKeyPair(boolean enable) {
       this.generateKeyPair = enable;
       return this;
    }
@@ -236,7 +236,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
    /**
     * @see DeployVirtualMachineOptions#accountInDomain(String,String)
     */
-   public CloudStackTemplateOptions account(String account) {
+   public AliyunTemplateOptions account(String account) {
       this.account = account;
       return this;
    }
@@ -249,7 +249,7 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
     * @see DeployVirtualMachineOptions#accountInDomain(String,String)
     * @see DeployVirtualMachineOptions#domainId(String)
     */
-   public CloudStackTemplateOptions domainId(String domainId) {
+   public AliyunTemplateOptions domainId(String domainId) {
       this.domainId = domainId;
       return this;
    }
@@ -258,119 +258,119 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
       return domainId;
    }
 
-   public static final CloudStackTemplateOptions NONE = new CloudStackTemplateOptions();
+   public static final AliyunTemplateOptions NONE = new AliyunTemplateOptions();
 
    public static class Builder {
 
       /**
-       * @see CloudStackTemplateOptions#diskOfferingId
+       * @see AliyunTemplateOptions#diskOfferingId
        */
-      public static CloudStackTemplateOptions diskOfferingId(String diskOfferingId) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions diskOfferingId(String diskOfferingId) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.diskOfferingId(diskOfferingId);
       }
 
       /**
-       * @see CloudStackTemplateOptions#dataDiskSize
+       * @see AliyunTemplateOptions#dataDiskSize
        */
-      public static CloudStackTemplateOptions dataDiskSize(int dataDiskSize) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions dataDiskSize(int dataDiskSize) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.dataDiskSize(dataDiskSize);
       }
 
       /**
-       * @see CloudStackTemplateOptions#securityGroupId
+       * @see AliyunTemplateOptions#securityGroupId
        */
-      public static CloudStackTemplateOptions securityGroupId(String id) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions securityGroupId(String id) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.securityGroupId(id);
       }
 
       /**
-       * @see CloudStackTemplateOptions#securityGroupIds
+       * @see AliyunTemplateOptions#securityGroupIds
        */
-      public static CloudStackTemplateOptions securityGroupIds(Iterable<String> securityGroupIds) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions securityGroupIds(Iterable<String> securityGroupIds) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.securityGroupIds(securityGroupIds);
       }
 
       /**
-       * @see CloudStackTemplateOptions#shouldGenerateSecurityGroup() 
+       * @see AliyunTemplateOptions#shouldGenerateSecurityGroup() 
        */
-      public static CloudStackTemplateOptions generateSecurityGroup(boolean enable) {
-         return new CloudStackTemplateOptions().generateSecurityGroup(enable);
+      public static AliyunTemplateOptions generateSecurityGroup(boolean enable) {
+         return new AliyunTemplateOptions().generateSecurityGroup(enable);
       }
 
       /**
        * @deprecated See TemplateOptions#networks
-       * @see CloudStackTemplateOptions#networkId
+       * @see AliyunTemplateOptions#networkId
        */
       @Deprecated
-      public static CloudStackTemplateOptions networkId(String id) {
+      public static AliyunTemplateOptions networkId(String id) {
          return networks(id);
       }
 
       /**
        * @deprecated see TemplateOptions#networks
-       * @see CloudStackTemplateOptions#networkIds
+       * @see AliyunTemplateOptions#networkIds
        */
       @Deprecated
-      public static CloudStackTemplateOptions networkIds(Iterable<String> networkIds) {
+      public static AliyunTemplateOptions networkIds(Iterable<String> networkIds) {
          return networks(networkIds);
       }
 
       /**
-       * @see CloudStackTemplateOptions#ipOnDefaultNetwork
+       * @see AliyunTemplateOptions#ipOnDefaultNetwork
        */
-      public static CloudStackTemplateOptions ipOnDefaultNetwork(String ipAddress) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions ipOnDefaultNetwork(String ipAddress) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.ipOnDefaultNetwork(ipAddress);
       }
 
       /**
-       * @see CloudStackTemplateOptions#ipsToNetworks
+       * @see AliyunTemplateOptions#ipsToNetworks
        */
-      public static CloudStackTemplateOptions ipsToNetworks(Map<String, String> ipToNetworkMap) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions ipsToNetworks(Map<String, String> ipToNetworkMap) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.ipsToNetworks(ipToNetworkMap);
       }
 
       /**
-       * @see CloudStackTemplateOptions#setupStaticNat
+       * @see AliyunTemplateOptions#setupStaticNat
        */
-      public static CloudStackTemplateOptions setupStaticNat(boolean setupStaticNat) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions setupStaticNat(boolean setupStaticNat) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.setupStaticNat(setupStaticNat);
       }
 
       /**
-       * @see CloudStackTemplateOptions#keyPair
+       * @see AliyunTemplateOptions#keyPair
        */
-      public static CloudStackTemplateOptions keyPair(String keyPair) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions keyPair(String keyPair) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.keyPair(keyPair);
       }
 
       /**
-       * @see CloudStackTemplateOptions#shouldGenerateKeyPair() 
+       * @see AliyunTemplateOptions#shouldGenerateKeyPair() 
        */
-      public static CloudStackTemplateOptions generateKeyPair(boolean enable) {
-         return new CloudStackTemplateOptions().generateKeyPair(enable);
+      public static AliyunTemplateOptions generateKeyPair(boolean enable) {
+         return new AliyunTemplateOptions().generateKeyPair(enable);
       }
 
       /**
-       * @see CloudStackTemplateOptions#account
+       * @see AliyunTemplateOptions#account
        */
-      public static CloudStackTemplateOptions account(String account) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions account(String account) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.account(account);
       }
 
       /**
-       * @see CloudStackTemplateOptions#domainId
+       * @see AliyunTemplateOptions#domainId
        */
-      public static CloudStackTemplateOptions domainId(String domainId) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
+      public static AliyunTemplateOptions domainId(String domainId) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
          return options.domainId(domainId);
       }
 
@@ -379,57 +379,57 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
       /**
        * @see TemplateOptions#inboundPorts(int...)
        */
-      public static CloudStackTemplateOptions inboundPorts(int... ports) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.inboundPorts(ports));
+      public static AliyunTemplateOptions inboundPorts(int... ports) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.inboundPorts(ports));
       }
 
       /**
        * @see TemplateOptions#blockOnPort(int, int)
        */
-      public static CloudStackTemplateOptions blockOnPort(int port, int seconds) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.blockOnPort(port, seconds));
+      public static AliyunTemplateOptions blockOnPort(int port, int seconds) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.blockOnPort(port, seconds));
       }
 
       /**
        * @see TemplateOptions#userMetadata(Map)
        */
-      public static CloudStackTemplateOptions userMetadata(Map<String, String> userMetadata) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.userMetadata(userMetadata));
+      public static AliyunTemplateOptions userMetadata(Map<String, String> userMetadata) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.userMetadata(userMetadata));
       }
 
       /**
        * @see TemplateOptions#userMetadata(String, String)
        */
-      public static CloudStackTemplateOptions userMetadata(String key, String value) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.userMetadata(key, value));
+      public static AliyunTemplateOptions userMetadata(String key, String value) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.userMetadata(key, value));
       }
 
       /**
        * @see TemplateOptions#nodeNames(Iterable)
        */
-      public static CloudStackTemplateOptions nodeNames(Iterable<String> nodeNames) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.nodeNames(nodeNames));
+      public static AliyunTemplateOptions nodeNames(Iterable<String> nodeNames) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.nodeNames(nodeNames));
       }
 
       /**
        * @see TemplateOptions#networks(Iterable)
        */
-      public static CloudStackTemplateOptions networks(Iterable<String> networks) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.networks(networks));
+      public static AliyunTemplateOptions networks(Iterable<String> networks) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.networks(networks));
       }
 
       /**
        * @see TemplateOptions#networks(String...)
        */
-      public static CloudStackTemplateOptions networks(String... networks) {
-         CloudStackTemplateOptions options = new CloudStackTemplateOptions();
-         return CloudStackTemplateOptions.class.cast(options.networks(networks));
+      public static AliyunTemplateOptions networks(String... networks) {
+         AliyunTemplateOptions options = new AliyunTemplateOptions();
+         return AliyunTemplateOptions.class.cast(options.networks(networks));
       }
    }
 
@@ -439,71 +439,71 @@ public class CloudStackTemplateOptions extends TemplateOptions implements Clonea
     * @see TemplateOptions#blockOnPort(int, int)
     */
    @Override
-   public CloudStackTemplateOptions blockOnPort(int port, int seconds) {
-      return CloudStackTemplateOptions.class.cast(super.blockOnPort(port, seconds));
+   public AliyunTemplateOptions blockOnPort(int port, int seconds) {
+      return AliyunTemplateOptions.class.cast(super.blockOnPort(port, seconds));
    }
 
    /**
     * @see TemplateOptions#inboundPorts(int...)
     */
    @Override
-   public CloudStackTemplateOptions inboundPorts(int... ports) {
-      return CloudStackTemplateOptions.class.cast(super.inboundPorts(ports));
+   public AliyunTemplateOptions inboundPorts(int... ports) {
+      return AliyunTemplateOptions.class.cast(super.inboundPorts(ports));
    }
 
    /**
     * @see TemplateOptions#authorizePublicKey(String)
     */
    @Override
-   public CloudStackTemplateOptions authorizePublicKey(String publicKey) {
-      return CloudStackTemplateOptions.class.cast(super.authorizePublicKey(publicKey));
+   public AliyunTemplateOptions authorizePublicKey(String publicKey) {
+      return AliyunTemplateOptions.class.cast(super.authorizePublicKey(publicKey));
    }
 
    /**
     * @see TemplateOptions#installPrivateKey(String)
     */
    @Override
-   public CloudStackTemplateOptions installPrivateKey(String privateKey) {
-      return CloudStackTemplateOptions.class.cast(super.installPrivateKey(privateKey));
+   public AliyunTemplateOptions installPrivateKey(String privateKey) {
+      return AliyunTemplateOptions.class.cast(super.installPrivateKey(privateKey));
    }
 
    /**
     * {@inheritDoc}
     */
    @Override
-   public CloudStackTemplateOptions userMetadata(Map<String, String> userMetadata) {
-      return CloudStackTemplateOptions.class.cast(super.userMetadata(userMetadata));
+   public AliyunTemplateOptions userMetadata(Map<String, String> userMetadata) {
+      return AliyunTemplateOptions.class.cast(super.userMetadata(userMetadata));
    }
 
    /**
     * {@inheritDoc}
     */
    @Override
-   public CloudStackTemplateOptions userMetadata(String key, String value) {
-      return CloudStackTemplateOptions.class.cast(super.userMetadata(key, value));
+   public AliyunTemplateOptions userMetadata(String key, String value) {
+      return AliyunTemplateOptions.class.cast(super.userMetadata(key, value));
    }
 
    /**
     * {@inheritDoc}
     */
    @Override
-   public CloudStackTemplateOptions nodeNames(Iterable<String> nodeNames) {
-      return CloudStackTemplateOptions.class.cast(super.nodeNames(nodeNames));
+   public AliyunTemplateOptions nodeNames(Iterable<String> nodeNames) {
+      return AliyunTemplateOptions.class.cast(super.nodeNames(nodeNames));
    }
 
    /**
     * {@inheritDoc}
     */
    @Override
-   public CloudStackTemplateOptions networks(Iterable<String> networks) {
-      return CloudStackTemplateOptions.class.cast(super.networks(networks));
+   public AliyunTemplateOptions networks(Iterable<String> networks) {
+      return AliyunTemplateOptions.class.cast(super.networks(networks));
    }
 
    /**
     * {@inheritDoc}
     */
    @Override
-   public CloudStackTemplateOptions networks(String... networks) {
-      return CloudStackTemplateOptions.class.cast(super.networks(networks));
+   public AliyunTemplateOptions networks(String... networks) {
+      return AliyunTemplateOptions.class.cast(super.networks(networks));
    }
 }

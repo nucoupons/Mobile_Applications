@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.PublicIPAddress;
 import org.jclouds.aliyun.domain.VirtualMachine;
@@ -41,12 +41,12 @@ public class StaticNATVirtualMachineInNetwork implements Function<VirtualMachine
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final ReuseOrAssociateNewPublicIPAddress reuseOrAssociate;
    private final Network network;
 
    @Inject
-   public StaticNATVirtualMachineInNetwork(CloudStackApi client,
+   public StaticNATVirtualMachineInNetwork(AliyunApi client,
          ReuseOrAssociateNewPublicIPAddress reuseOrAssociate, @Assisted Network network) {
       this.client = checkNotNull(client, "client");
       this.reuseOrAssociate = checkNotNull(reuseOrAssociate, "reuseOrAssociate");

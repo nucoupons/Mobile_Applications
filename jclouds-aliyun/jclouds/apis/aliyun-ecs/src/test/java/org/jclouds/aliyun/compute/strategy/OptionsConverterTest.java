@@ -19,7 +19,7 @@ package org.jclouds.aliyun.compute.strategy;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.compute.strategy.AdvancedNetworkOptionsConverter;
 import org.jclouds.aliyun.compute.strategy.BasicNetworkOptionsConverter;
 import org.jclouds.aliyun.domain.Network;
@@ -44,7 +44,7 @@ public class OptionsConverterTest {
    public void testBasicNetworkOptionsConverter() {
       BasicNetworkOptionsConverter converter = new BasicNetworkOptionsConverter();
 
-      CloudStackTemplateOptions optionsIn = CloudStackTemplateOptions.Builder.securityGroupId("42").networks("46");
+      AliyunTemplateOptions optionsIn = AliyunTemplateOptions.Builder.securityGroupId("42").networks("46");
       DeployVirtualMachineOptions optionsOut = new DeployVirtualMachineOptions();
 
       DeployVirtualMachineOptions optionsOut2 = converter.apply(optionsIn, EMPTY_NETWORKS_MAP, ZONE_ID, optionsOut);
@@ -58,7 +58,7 @@ public class OptionsConverterTest {
    public void testAdvancedSecurityGroupsNotAllowed() {
       boolean exceptionThrown = false;
       AdvancedNetworkOptionsConverter converter = new AdvancedNetworkOptionsConverter();
-      CloudStackTemplateOptions optionsIn = CloudStackTemplateOptions.Builder.securityGroupId("42");
+      AliyunTemplateOptions optionsIn = AliyunTemplateOptions.Builder.securityGroupId("42");
 
       try {
          converter.apply(optionsIn, EMPTY_NETWORKS_MAP, ZONE_ID, DeployVirtualMachineOptions.NONE);
@@ -72,7 +72,7 @@ public class OptionsConverterTest {
    @Test
    public void testAdvancedExplicitNetworkSelection() {
       AdvancedNetworkOptionsConverter converter = new AdvancedNetworkOptionsConverter();
-      DeployVirtualMachineOptions optionsActual = converter.apply(CloudStackTemplateOptions.Builder.networks("42"),
+      DeployVirtualMachineOptions optionsActual = converter.apply(AliyunTemplateOptions.Builder.networks("42"),
          EMPTY_NETWORKS_MAP, ZONE_ID, DeployVirtualMachineOptions.NONE);
       DeployVirtualMachineOptions optionsExpected = DeployVirtualMachineOptions.Builder.networkId("42");
       assertEquals(optionsActual, optionsExpected);
@@ -85,7 +85,7 @@ public class OptionsConverterTest {
       Network eligibleNetwork = Network.builder()
          .id("25").zoneId(ZONE_ID).isDefault(true).services(ImmutableSet.of(firewallServiceWithStaticNat))
          .build();
-      DeployVirtualMachineOptions optionsActual = converter.apply(CloudStackTemplateOptions.NONE,
+      DeployVirtualMachineOptions optionsActual = converter.apply(AliyunTemplateOptions.NONE,
          ImmutableMap.of(eligibleNetwork.getId(), eligibleNetwork), ZONE_ID, DeployVirtualMachineOptions.NONE);
       DeployVirtualMachineOptions optionsExpected = DeployVirtualMachineOptions.Builder.networkId("25");
       assertEquals(optionsActual, optionsExpected);
@@ -96,7 +96,7 @@ public class OptionsConverterTest {
       AdvancedNetworkOptionsConverter converter = new AdvancedNetworkOptionsConverter();
       boolean exceptionThrown = false;
       try {
-         converter.apply(CloudStackTemplateOptions.NONE, EMPTY_NETWORKS_MAP, ZONE_ID, DeployVirtualMachineOptions.NONE);
+         converter.apply(AliyunTemplateOptions.NONE, EMPTY_NETWORKS_MAP, ZONE_ID, DeployVirtualMachineOptions.NONE);
       } catch (IllegalArgumentException e) {
          exceptionThrown = true;
       }
@@ -112,7 +112,7 @@ public class OptionsConverterTest {
 
       boolean exceptionThrown = false;
       try {
-         converter.apply(CloudStackTemplateOptions.NONE, ImmutableMap.of(unsuitableNetwork.getId(), unsuitableNetwork), ZONE_ID, DeployVirtualMachineOptions.NONE);
+         converter.apply(AliyunTemplateOptions.NONE, ImmutableMap.of(unsuitableNetwork.getId(), unsuitableNetwork), ZONE_ID, DeployVirtualMachineOptions.NONE);
       } catch (IllegalArgumentException e) {
          exceptionThrown = true;
       }

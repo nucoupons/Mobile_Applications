@@ -35,7 +35,7 @@ import org.jclouds.util.Strings2;
 import com.google.common.base.Throwables;
 
 @Singleton
-public class CloudStackErrorHandler implements HttpErrorHandler {
+public class AliyunErrorHandler implements HttpErrorHandler {
    @Resource
    protected Logger logger = Logger.NULL;
 

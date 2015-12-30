@@ -22,7 +22,7 @@ import static com.google.common.io.BaseEncoding.base16;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
-import org.jclouds.aliyun.CloudStackGlobalApi;
+import org.jclouds.aliyun.AliyunGlobalApi;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
 import org.testng.annotations.Test;
@@ -33,7 +33,7 @@ import org.testng.annotations.Test;
 @Test(groups = "live", singleThreaded = true, testName = "GlobalAccountApiLiveTest")
 public class GlobalAccountApiLiveTest extends BaseCloudStackApiLiveTest {
 
-   public static Account createTestAccount(CloudStackGlobalApi client, String prefix) {
+   public static Account createTestAccount(AliyunGlobalApi client, String prefix) {
       return client.getAccountApi().createAccount(prefix + "-account", Account.Type.USER, "dummy@example.com",
             "First", "Last", base16().lowerCase().encode(md5().hashString("password", UTF_8).asBytes()));
    }

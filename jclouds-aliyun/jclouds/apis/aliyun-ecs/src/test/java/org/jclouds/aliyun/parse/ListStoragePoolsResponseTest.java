@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.Set;
 import java.util.TimeZone;
 
-import org.jclouds.aliyun.config.CloudStackParserModule;
+import org.jclouds.aliyun.config.AliyunParserModule;
 import org.jclouds.aliyun.domain.StoragePool;
 import org.jclouds.json.BaseItemParserTest;
 import org.jclouds.json.config.GsonModule;
@@ -62,6 +62,6 @@ public class ListStoragePoolsResponseTest extends BaseItemParserTest<Set<Storage
    
    @Override
    protected Injector injector() {
-      return Guice.createInjector(new GsonModule(), new CloudStackParserModule());
+      return Guice.createInjector(new GsonModule(), new AliyunParserModule());
    }
 }

@@ -30,7 +30,7 @@ import org.jclouds.rest.annotations.Delegate;
  *      "http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_Domain_Admin.html"
  *      />
  */
-public interface CloudStackDomainApi extends CloudStackApi {
+public interface AliyunDomainApi extends AliyunApi {
 
    /**
     * Provides synchronous access to Resource Limits

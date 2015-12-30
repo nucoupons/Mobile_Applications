@@ -20,8 +20,8 @@ import static org.jclouds.reflect.Reflection2.typeToken;
 
 import org.jclouds.ContextBuilder;
 import org.jclouds.View;
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.CloudStackApiMetadata;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.AliyunApiMetadata;
 import org.jclouds.compute.ComputeServiceContext;
 import org.testng.annotations.Test;
 
@@ -29,8 +29,8 @@ import org.testng.annotations.Test;
 public class CloudStackContextBuilderTest {
 
    public void testAssignability() {
-      View view = ContextBuilder.newBuilder(new CloudStackApiMetadata()).credentials("foo", "bar")
+      View view = ContextBuilder.newBuilder(new AliyunApiMetadata()).credentials("foo", "bar")
               .buildView(typeToken(ComputeServiceContext.class));
-      view.unwrapApi(CloudStackApi.class);
+      view.unwrapApi(AliyunApi.class);
    }
 }

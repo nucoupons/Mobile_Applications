@@ -18,7 +18,7 @@ package org.jclouds.aliyun.compute.config;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.jclouds.Constants.PROPERTY_SESSION_INTERVAL;
-import static org.jclouds.aliyun.config.CloudStackProperties.AUTO_GENERATE_KEYPAIRS;
+import static org.jclouds.aliyun.config.AliyunProperties.AUTO_GENERATE_KEYPAIRS;
 import static org.jclouds.util.Predicates2.retry;
 
 import java.util.Map;
@@ -29,10 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.compute.extensions.CloudStackImageExtension;
-import org.jclouds.aliyun.compute.extensions.CloudStackSecurityGroupExtension;
-import org.jclouds.aliyun.compute.functions.CloudStackSecurityGroupToSecurityGroup;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.compute.extensions.AliyunImageExtension;
+import org.jclouds.aliyun.compute.extensions.AliyunSecurityGroupExtension;
+import org.jclouds.aliyun.compute.functions.AliyunSecurityGroupToSecurityGroup;
 import org.jclouds.aliyun.compute.functions.IngressRuleToIpPermission;
 import org.jclouds.aliyun.compute.functions.OrphanedGroupsByZoneId;
 import org.jclouds.aliyun.compute.functions.ServiceOfferingToHardware;
@@ -42,10 +42,10 @@ import org.jclouds.aliyun.compute.functions.VirtualMachineToNodeMetadata;
 import org.jclouds.aliyun.compute.functions.ZoneToLocation;
 import org.jclouds.aliyun.compute.loaders.CreateUniqueKeyPair;
 import org.jclouds.aliyun.compute.loaders.FindSecurityGroupOrCreate;
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.compute.strategy.AdvancedNetworkOptionsConverter;
 import org.jclouds.aliyun.compute.strategy.BasicNetworkOptionsConverter;
-import org.jclouds.aliyun.compute.strategy.CloudStackComputeServiceAdapter;
+import org.jclouds.aliyun.compute.strategy.AliyunComputeServiceAdapter;
 import org.jclouds.aliyun.compute.strategy.OptionsConverter;
 import org.jclouds.aliyun.domain.FirewallRule;
 import org.jclouds.aliyun.domain.IPForwardingRule;
@@ -105,18 +105,18 @@ import com.google.inject.TypeLiteral;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
 import com.google.inject.name.Names;
 
-public class CloudStackComputeServiceContextModule extends
+public class AliyunComputeServiceContextModule extends
          ComputeServiceAdapterContextModule<VirtualMachine, ServiceOffering, Template, Zone> {
 
    @Override
    protected void configure() {
       super.configure();
       bind(new TypeLiteral<ComputeServiceAdapter<VirtualMachine, ServiceOffering, Template, Zone>>() {
-      }).to(CloudStackComputeServiceAdapter.class);
+      }).to(AliyunComputeServiceAdapter.class);
       bind(new TypeLiteral<Function<VirtualMachine, NodeMetadata>>() {
       }).to(VirtualMachineToNodeMetadata.class);
       bind(new TypeLiteral<Function<SecurityGroup, org.jclouds.compute.domain.SecurityGroup>>() {
-      }).to(CloudStackSecurityGroupToSecurityGroup.class);
+      }).to(AliyunSecurityGroupToSecurityGroup.class);
       bind(new TypeLiteral<Function<IngressRule, IpPermission>>() {
       }).to(IngressRuleToIpPermission.class);
       bind(new TypeLiteral<Function<Template, org.jclouds.compute.domain.Image>>() {
@@ -125,7 +125,7 @@ public class CloudStackComputeServiceContextModule extends
       }).to(ServiceOfferingToHardware.class);
       bind(new TypeLiteral<Function<Zone, Location>>() {
       }).to(ZoneToLocation.class);
-      bind(TemplateOptions.class).to(CloudStackTemplateOptions.class);
+      bind(TemplateOptions.class).to(AliyunTemplateOptions.class);
       bind(new TypeLiteral<Function<Template, OperatingSystem>>() {
       }).to(TemplateToOperatingSystem.class);
       install(new FactoryModuleBuilder().build(StaticNATVirtualMachineInNetwork.Factory.class));
@@ -147,10 +147,10 @@ public class CloudStackComputeServiceContextModule extends
       }).to(OrphanedGroupsByZoneId.class);
 
       bind(new TypeLiteral<ImageExtension>() {
-      }).to(CloudStackImageExtension.class);
+      }).to(AliyunImageExtension.class);
 
       bind(new TypeLiteral<SecurityGroupExtension>() {
-      }).to(CloudStackSecurityGroupExtension.class);
+      }).to(AliyunSecurityGroupExtension.class);
 
       // to have the compute service adapter override default locations
       install(new LocationsFromComputeServiceAdapterModule<VirtualMachine, ServiceOffering, Template, Zone>() {
@@ -160,7 +160,7 @@ public class CloudStackComputeServiceContextModule extends
 
    @Override
    protected TemplateOptions provideTemplateOptions(Injector injector, TemplateOptions options) {
-      return options.as(CloudStackTemplateOptions.class)
+      return options.as(AliyunTemplateOptions.class)
          .generateKeyPair(injector.getInstance(
                   Key.get(boolean.class, Names.named(AUTO_GENERATE_KEYPAIRS))));
    }
@@ -169,7 +169,7 @@ public class CloudStackComputeServiceContextModule extends
    @Singleton
    @Memoized
    public Supplier<Map<String, String>> listOSCategories(AtomicReference<AuthorizationException> authException, @Named(PROPERTY_SESSION_INTERVAL) long seconds,
-         final CloudStackApi client) {
+         final AliyunApi client) {
       return MemoizedRetryOnTimeOutButNotOnAuthorizationExceptionSupplier.create(authException,
             new Supplier<Map<String, String>>() {
                @Override
@@ -188,7 +188,7 @@ public class CloudStackComputeServiceContextModule extends
    @Singleton
    @Memoized
    public Supplier<Map<String, OSType>> listOSTypes(AtomicReference<AuthorizationException> authException, @Named(PROPERTY_SESSION_INTERVAL) long seconds,
-         final CloudStackApi client) {
+         final AliyunApi client) {
       return MemoizedRetryOnTimeOutButNotOnAuthorizationExceptionSupplier.create(authException,
             new Supplier<Map<String, OSType>>() {
                @Override

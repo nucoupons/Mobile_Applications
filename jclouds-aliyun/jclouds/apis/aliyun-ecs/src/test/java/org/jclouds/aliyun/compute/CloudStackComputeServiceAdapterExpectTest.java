@@ -23,9 +23,9 @@ import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 import java.util.Map;
 
-import org.jclouds.aliyun.CloudStackContext;
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
-import org.jclouds.aliyun.compute.strategy.CloudStackComputeServiceAdapter;
+import org.jclouds.aliyun.AliyunContext;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
+import org.jclouds.aliyun.compute.strategy.AliyunComputeServiceAdapter;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.internal.BaseCloudStackComputeServiceContextExpectTest;
 import org.jclouds.compute.ComputeServiceAdapter.NodeAndInitialCredentials;
@@ -125,9 +125,9 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
       Injector forNode = requestsSendResponses(requestResponseMap);
 
       Template template = forNode.getInstance(TemplateBuilder.class).osFamily(OsFamily.CENTOS).build();
-      template.getOptions().as(CloudStackTemplateOptions.class).setupStaticNat(false);
+      template.getOptions().as(AliyunTemplateOptions.class).setupStaticNat(false);
 
-      CloudStackComputeServiceAdapter adapter = forNode.getInstance(CloudStackComputeServiceAdapter.class);
+      AliyunComputeServiceAdapter adapter = forNode.getInstance(AliyunComputeServiceAdapter.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
             template);
@@ -171,11 +171,11 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
 
       String privKey = Strings2.toStringAndClose(getClass().getResourceAsStream("/test"));
       Template template = forKeyPair.getInstance(TemplateBuilder.class).osFamily(OsFamily.CENTOS).build();
-      template.getOptions().as(CloudStackTemplateOptions.class).keyPair("mykeypair")
+      template.getOptions().as(AliyunTemplateOptions.class).keyPair("mykeypair")
          .setupStaticNat(false)
          .overrideLoginPrivateKey(privKey);
 
-      CloudStackComputeServiceAdapter adapter = forKeyPair.getInstance(CloudStackComputeServiceAdapter.class);
+      AliyunComputeServiceAdapter adapter = forKeyPair.getInstance(AliyunComputeServiceAdapter.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
             template);
@@ -219,10 +219,10 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
       Injector forKeyPair = requestsSendResponses(requestResponseMap);
 
       Template template = forKeyPair.getInstance(TemplateBuilder.class).osFamily(OsFamily.CENTOS).build();
-      template.getOptions().as(CloudStackTemplateOptions.class).generateKeyPair(true)
+      template.getOptions().as(AliyunTemplateOptions.class).generateKeyPair(true)
          .setupStaticNat(false);
 
-      CloudStackComputeServiceAdapter adapter = forKeyPair.getInstance(CloudStackComputeServiceAdapter.class);
+      AliyunComputeServiceAdapter adapter = forKeyPair.getInstance(AliyunComputeServiceAdapter.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
             template);
@@ -269,11 +269,11 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
          .osFamily(OsFamily.CENTOS)
          .locationId("2")
          .build();
-      template.getOptions().as(CloudStackTemplateOptions.class).keyPair("mykeypair")
+      template.getOptions().as(AliyunTemplateOptions.class).keyPair("mykeypair")
          .setupStaticNat(false)
          .overrideLoginPrivateKey(privKey);
 
-      CloudStackComputeServiceAdapter adapter = forKeyPair.getInstance(CloudStackComputeServiceAdapter.class);
+      AliyunComputeServiceAdapter adapter = forKeyPair.getInstance(AliyunComputeServiceAdapter.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
             template);
@@ -322,14 +322,14 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
               .osFamily(OsFamily.CENTOS)
               .locationId("2")
               .build();
-      template.getOptions().as(CloudStackTemplateOptions.class).keyPair("mykeypair")
+      template.getOptions().as(AliyunTemplateOptions.class).keyPair("mykeypair")
               .diskOfferingId("5678")
               .dataDiskSize(10)
               .setupStaticNat(false)
               .overrideLoginPrivateKey(privKey);
 
 
-      CloudStackComputeServiceAdapter adapter = forKeyPair.getInstance(CloudStackComputeServiceAdapter.class);
+      AliyunComputeServiceAdapter adapter = forKeyPair.getInstance(AliyunComputeServiceAdapter.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
               template);
@@ -381,13 +381,13 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
          .osFamily(OsFamily.CENTOS)
          .locationId("2")
          .build();
-      template.getOptions().as(CloudStackTemplateOptions.class).keyPair("mykeypair")
+      template.getOptions().as(AliyunTemplateOptions.class).keyPair("mykeypair")
          .setupStaticNat(false)
          .generateSecurityGroup(true)
          .overrideLoginPrivateKey(privKey);
 
-      CloudStackComputeServiceAdapter adapter = forKeyPair.getInstance(CloudStackComputeServiceAdapter.class);
-      CloudStackContext context = forKeyPair.getInstance(CloudStackContext.class);
+      AliyunComputeServiceAdapter adapter = forKeyPair.getInstance(AliyunComputeServiceAdapter.class);
+      AliyunContext context = forKeyPair.getInstance(AliyunContext.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
             template);
@@ -433,14 +433,14 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
 
       String privKey = Strings2.toStringAndClose(getClass().getResourceAsStream("/test"));
       Template template = forKeyPair.getInstance(TemplateBuilder.class).osFamily(OsFamily.CENTOS).build();
-      template.getOptions().as(CloudStackTemplateOptions.class).keyPair("mykeypair")
+      template.getOptions().as(AliyunTemplateOptions.class).keyPair("mykeypair")
          .account("account")
          .domainId("domainId")
          .setupStaticNat(false)
          .overrideLoginPrivateKey(privKey);
 
-      CloudStackComputeServiceAdapter adapter = forKeyPair.getInstance(CloudStackComputeServiceAdapter.class);
-      CloudStackContext context = forKeyPair.getInstance(CloudStackContext.class);
+      AliyunComputeServiceAdapter adapter = forKeyPair.getInstance(AliyunComputeServiceAdapter.class);
+      AliyunContext context = forKeyPair.getInstance(AliyunContext.class);
 
       NodeAndInitialCredentials<VirtualMachine> server = adapter.createNodeWithGroupEncodedIntoName("test", "test-e92",
             template);
@@ -449,7 +449,7 @@ public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackCom
    }   
    
    @Override
-   protected Injector clientFrom(CloudStackContext context) {
+   protected Injector clientFrom(AliyunContext context) {
       return context.utils().injector();
    }
 }

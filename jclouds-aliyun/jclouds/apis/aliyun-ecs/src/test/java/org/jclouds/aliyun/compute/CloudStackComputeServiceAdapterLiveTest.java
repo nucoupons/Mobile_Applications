@@ -22,8 +22,8 @@ import static org.testng.Assert.assertFalse;
 import java.util.Map;
 import java.util.Random;
 
-import org.jclouds.aliyun.compute.options.CloudStackTemplateOptions;
-import org.jclouds.aliyun.compute.strategy.CloudStackComputeServiceAdapter;
+import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
+import org.jclouds.aliyun.compute.strategy.AliyunComputeServiceAdapter;
 import org.jclouds.aliyun.domain.IPForwardingRule;
 import org.jclouds.aliyun.domain.ServiceOffering;
 import org.jclouds.aliyun.domain.VirtualMachine;
@@ -47,7 +47,7 @@ import com.google.common.net.InetAddresses;
 @Test(groups = "live", singleThreaded = true, testName = "CloudStackComputeServiceAdapterLiveTest")
 public class CloudStackComputeServiceAdapterLiveTest extends BaseCloudStackApiLiveTest {
 
-   private CloudStackComputeServiceAdapter adapter;
+   private AliyunComputeServiceAdapter adapter;
    private NodeAndInitialCredentials<VirtualMachine> vm;
 
    private String keyPairName;
@@ -59,7 +59,7 @@ public class CloudStackComputeServiceAdapterLiveTest extends BaseCloudStackApiLi
       super.setupContext();
 
       adapter = context.utils().injector().getInstance(
-            CloudStackComputeServiceAdapter.class);
+            AliyunComputeServiceAdapter.class);
 
       keyPairName = prefix + "-adapter-test-keypair";
       keyPair = SshKeys.generate();
@@ -88,7 +88,7 @@ public class CloudStackComputeServiceAdapterLiveTest extends BaseCloudStackApiLi
                   template.getLocation().getId()).isPasswordEnabled()) {
 
          // TODO: look at SecurityGroupApiLiveTest for how to do this
-         template.getOptions().as(CloudStackTemplateOptions.class).keyPair(keyPairName);
+         template.getOptions().as(AliyunTemplateOptions.class).keyPair(keyPairName);
       }
       vm = adapter.createNodeWithGroupEncodedIntoName(group, name, template);
 

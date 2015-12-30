@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.LoadBalancerRule;
 import org.jclouds.aliyun.domain.LoadBalancerRule.State;
 import org.jclouds.logging.Logger;
@@ -36,13 +36,13 @@ import com.google.common.base.Predicate;
 @Singleton
 public class LoadBalancerRuleActive implements Predicate<LoadBalancerRule> {
 
-   private final CloudStackApi client;
+   private final AliyunApi client;
 
    @Resource
    protected Logger logger = Logger.NULL;
 
    @Inject
-   public LoadBalancerRuleActive(CloudStackApi client) {
+   public LoadBalancerRuleActive(AliyunApi client) {
       this.client = client;
    }
 

@@ -22,7 +22,7 @@ import static org.testng.Assert.assertNull;
 
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Zone;
@@ -128,7 +128,7 @@ public class GlobalZoneApiExpectTest extends BaseCloudStackExpectTest<GlobalZone
    }
 
    @Override
-   protected GlobalZoneApi clientFrom(CloudStackContext context) {
+   protected GlobalZoneApi clientFrom(AliyunContext context) {
       return context.getGlobalApi().getZoneApi();
    }
 }

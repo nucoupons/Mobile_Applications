@@ -20,7 +20,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.Pod;
 import org.jclouds.aliyun.features.GlobalPodApi;
@@ -201,7 +201,7 @@ public class GlobalPodApiExpectTest extends BaseCloudStackExpectTest<GlobalPodAp
    }
 
    @Override
-   protected GlobalPodApi clientFrom(CloudStackContext context) {
+   protected GlobalPodApi clientFrom(AliyunContext context) {
       return context.getGlobalApi().getPodClient();
    }
 }

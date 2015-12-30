@@ -24,7 +24,7 @@ import java.util.Set;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.OSType;
 import org.jclouds.aliyun.domain.Template;
 
@@ -41,7 +41,7 @@ public class OSCategoryIn implements Function<Set<String>, Predicate<Template>> 
    private final Supplier<Set<OSType>> osTypesSupplier;
 
    @Inject
-   public OSCategoryIn(CloudStackApi client) {
+   public OSCategoryIn(AliyunApi client) {
       this(Suppliers.ofInstance(checkNotNull(client, "client").getGuestOSApi().listOSCategories()), Suppliers
             .ofInstance(client.getGuestOSApi().listOSTypes()));
    }

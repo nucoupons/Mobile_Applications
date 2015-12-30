@@ -24,7 +24,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.net.URI;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.LoginResponse;
 import org.jclouds.aliyun.features.SessionApi;
@@ -90,7 +90,7 @@ public class SessionApiExpectTest extends BaseCloudStackExpectTest<SessionApi> {
    }
 
    @Override
-   protected SessionApi clientFrom(CloudStackContext context) {
+   protected SessionApi clientFrom(AliyunContext context) {
       return context.getApi().getSessionApi();
    }
 }

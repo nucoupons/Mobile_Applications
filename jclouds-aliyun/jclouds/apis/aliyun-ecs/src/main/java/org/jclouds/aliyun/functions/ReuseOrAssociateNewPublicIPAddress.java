@@ -32,7 +32,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.PublicIPAddress;
@@ -44,14 +44,14 @@ import com.google.common.base.Function;
 
 @Singleton
 public class ReuseOrAssociateNewPublicIPAddress implements Function<Network, PublicIPAddress> {
-   private final CloudStackApi client;
+   private final AliyunApi client;
    private final BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult;
    @Resource
    @Named(COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
 
    @Inject
-   public ReuseOrAssociateNewPublicIPAddress(CloudStackApi client,
+   public ReuseOrAssociateNewPublicIPAddress(AliyunApi client,
          BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult) {
       this.client = checkNotNull(client, "client");
       this.blockUntilJobCompletesAndReturnResult = checkNotNull(blockUntilJobCompletesAndReturnResult,
@@ -75,7 +75,7 @@ public class ReuseOrAssociateNewPublicIPAddress implements Function<Network, Pub
             and(associatedWithNetwork(networkId), available()));
    }
 
-   public static PublicIPAddress associateIPAddressInNetwork(Network network, CloudStackApi client,
+   public static PublicIPAddress associateIPAddressInNetwork(Network network, AliyunApi client,
          BlockUntilJobCompletesAndReturnResult blockUntilJobCompletesAndReturnResult) {
       AsyncCreateResponse job = client.getAddressApi().associateIPAddressInZone(network.getZoneId(),
             networkId(network.getId()));

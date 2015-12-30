@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.jclouds.aliyun.CloudStackApi;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.domain.SecurityGroup;
 import org.jclouds.aliyun.domain.ZoneAndName;
 import org.jclouds.aliyun.domain.ZoneSecurityGroupNamePortsCidrs;
@@ -36,11 +36,11 @@ public class FindSecurityGroupOrCreate extends CacheLoader<ZoneAndName, Security
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
-   protected final CloudStackApi client;
+   protected final AliyunApi client;
    protected final Function<ZoneSecurityGroupNamePortsCidrs, SecurityGroup> groupCreator;
 
    @Inject
-   public FindSecurityGroupOrCreate(CloudStackApi client,
+   public FindSecurityGroupOrCreate(AliyunApi client,
                                     Function<ZoneSecurityGroupNamePortsCidrs, SecurityGroup> groupCreator) {
       this.client = checkNotNull(client, "client");
       this.groupCreator = checkNotNull(groupCreator, "groupCreator");

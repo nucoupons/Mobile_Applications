@@ -20,10 +20,10 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import org.jclouds.Context;
-import org.jclouds.aliyun.CloudStackApi;
-import org.jclouds.aliyun.CloudStackContext;
-import org.jclouds.aliyun.CloudStackDomainApi;
-import org.jclouds.aliyun.CloudStackGlobalApi;
+import org.jclouds.aliyun.AliyunApi;
+import org.jclouds.aliyun.AliyunContext;
+import org.jclouds.aliyun.AliyunDomainApi;
+import org.jclouds.aliyun.AliyunGlobalApi;
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.Utils;
 import org.jclouds.compute.internal.ComputeServiceContextImpl;
@@ -33,16 +33,16 @@ import org.jclouds.rest.ApiContext;
 import com.google.common.reflect.TypeToken;
 
 @Singleton
-public class CloudStackContextImpl extends ComputeServiceContextImpl implements CloudStackContext {
-   private final CloudStackApi client;
-   private final ApiContext<CloudStackDomainApi> domainContext;
-   private final ApiContext<CloudStackGlobalApi> globalContext;
+public class AliyunContextImpl extends ComputeServiceContextImpl implements AliyunContext {
+   private final AliyunApi client;
+   private final ApiContext<AliyunDomainApi> domainContext;
+   private final ApiContext<AliyunGlobalApi> globalContext;
 
    @Inject
-   CloudStackContextImpl(@Provider Context backend, @Provider TypeToken<? extends Context> backendType,
-         ComputeService computeService, Utils utils, CloudStackApi client,
-         ApiContext<CloudStackDomainApi> domainContext,
-         ApiContext<CloudStackGlobalApi> globalContext) {
+   AliyunContextImpl(@Provider Context backend, @Provider TypeToken<? extends Context> backendType,
+         ComputeService computeService, Utils utils, AliyunApi client,
+         ApiContext<AliyunDomainApi> domainContext,
+         ApiContext<AliyunGlobalApi> globalContext) {
       super(backend, backendType, computeService, utils);
       this.client = client;
       this.domainContext = domainContext;
@@ -50,17 +50,17 @@ public class CloudStackContextImpl extends ComputeServiceContextImpl implements 
    }
 
    @Override
-   public CloudStackApi getApi() {
+   public AliyunApi getApi() {
       return client;
    }
 
    @Override
-   public CloudStackDomainApi getDomainApi() {
+   public AliyunDomainApi getDomainApi() {
       return domainContext.getApi();
    }
 
    @Override
-   public CloudStackGlobalApi getGlobalApi() {
+   public AliyunGlobalApi getGlobalApi() {
       return globalContext.getApi();
    }
 

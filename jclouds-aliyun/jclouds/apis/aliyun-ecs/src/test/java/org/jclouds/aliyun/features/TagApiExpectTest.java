@@ -24,7 +24,7 @@ import java.net.URI;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 
-import org.jclouds.aliyun.CloudStackContext;
+import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.features.TagApi;
@@ -149,7 +149,7 @@ public class TagApiExpectTest extends BaseCloudStackExpectTest<TagApi> {
    }
 
    @Override
-   protected TagApi clientFrom(CloudStackContext context) {
+   protected TagApi clientFrom(AliyunContext context) {
       return context.getApi().getTagApi();
    }
 }
