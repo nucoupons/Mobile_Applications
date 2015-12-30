@@ -27,7 +27,7 @@ import org.jclouds.aliyun.domain.Template;
 import org.jclouds.aliyun.domain.TemplateFilter;
 import org.jclouds.aliyun.domain.TemplateMetadata;
 import org.jclouds.aliyun.features.TemplateApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.AccountInDomainOptions;
 import org.jclouds.aliyun.options.CreateTemplateOptions;
 import org.jclouds.aliyun.options.DeleteTemplateOptions;
@@ -55,7 +55,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "TemplateApiTest")
-public class TemplateApiTest extends BaseCloudStackApiTest<TemplateApi> {
+public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
 
    public void testCreateTemplate() throws NoSuchMethodException {
       Invokable<?, ?> method = method(TemplateApi.class, "createTemplate", TemplateMetadata.class, CreateTemplateOptions[].class);

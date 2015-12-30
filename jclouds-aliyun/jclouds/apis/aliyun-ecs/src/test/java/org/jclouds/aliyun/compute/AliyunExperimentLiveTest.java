@@ -19,7 +19,7 @@ package org.jclouds.aliyun.compute;
 import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.TrafficType;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListNetworksOptions;
 import org.jclouds.compute.RunNodesException;
 import org.jclouds.compute.domain.NodeMetadata;
@@ -39,9 +39,9 @@ import static org.jclouds.aliyun.options.CreateNetworkOptions.Builder.vlan;
 import static org.jclouds.aliyun.options.ListNetworkOfferingsOptions.Builder.specifyVLAN;
 
 @Test(groups = "live", testName = "CloudStackExperimentLiveTest")
-public class CloudStackExperimentLiveTest extends BaseCloudStackApiLiveTest {
+public class AliyunExperimentLiveTest extends BaseAliyunApiLiveTest {
 
-   public CloudStackExperimentLiveTest() {
+   public AliyunExperimentLiveTest() {
       provider = "cloudstack";
    }
 

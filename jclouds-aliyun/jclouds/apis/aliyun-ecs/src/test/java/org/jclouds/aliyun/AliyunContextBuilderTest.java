@@ -16,14 +16,21 @@
  */
 package org.jclouds.aliyun;
 
+import static org.jclouds.reflect.Reflection2.typeToken;
+
+import org.jclouds.ContextBuilder;
+import org.jclouds.View;
+import org.jclouds.aliyun.AliyunApi;
 import org.jclouds.aliyun.AliyunApiMetadata;
-import org.jclouds.compute.internal.BaseComputeServiceApiMetadataTest;
+import org.jclouds.compute.ComputeServiceContext;
 import org.testng.annotations.Test;
 
-@Test(groups = "unit", testName = "CloudStackApiMetadataTest")
-public class CloudStackApiMetadataTest extends BaseComputeServiceApiMetadataTest {
+@Test(groups = "unit", testName = "CloudStackContextBuilderTest")
+public class AliyunContextBuilderTest {
 
-   public CloudStackApiMetadataTest() {
-      super(new AliyunApiMetadata());
+   public void testAssignability() {
+      View view = ContextBuilder.newBuilder(new AliyunApiMetadata()).credentials("foo", "bar")
+              .buildView(typeToken(ComputeServiceContext.class));
+      view.unwrapApi(AliyunApi.class);
    }
 }

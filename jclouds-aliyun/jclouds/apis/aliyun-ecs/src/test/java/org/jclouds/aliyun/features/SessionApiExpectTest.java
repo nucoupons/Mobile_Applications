@@ -28,7 +28,7 @@ import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.LoginResponse;
 import org.jclouds.aliyun.features.SessionApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -39,7 +39,7 @@ import com.google.common.collect.ImmutableMultimap;
  * Tests behavior of {@code SessionApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "SessionApiExpectTest")
-public class SessionApiExpectTest extends BaseCloudStackExpectTest<SessionApi> {
+public class SessionApiExpectTest extends BaseAliyunExpectTest<SessionApi> {
 
    HttpRequest login = HttpRequest.builder().method("GET")
                                   .endpoint("http://localhost:8080/client/api")

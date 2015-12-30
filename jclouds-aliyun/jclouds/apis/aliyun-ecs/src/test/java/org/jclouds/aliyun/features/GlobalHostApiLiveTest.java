@@ -25,7 +25,7 @@ import java.util.Set;
 import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.Cluster;
 import org.jclouds.aliyun.domain.Host;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 import com.google.common.base.Strings;
@@ -34,7 +34,7 @@ import com.google.common.base.Strings;
  * Tests behavior of {@code GlobalHostApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalHostApiLiveTest")
-public class GlobalHostApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalHostApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(groups = "live", enabled = true)
    public void testListHosts() throws Exception {

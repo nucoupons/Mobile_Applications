@@ -24,7 +24,7 @@ import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.User;
 import org.jclouds.aliyun.features.AccountApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.date.internal.SimpleDateFormatDateService;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
@@ -36,7 +36,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack AccountApi
  */
 @Test(groups = "unit", testName = "AccountApiExpectTest")
-public class AccountApiExpectTest extends BaseCloudStackExpectTest<AccountApi> {
+public class AccountApiExpectTest extends BaseAliyunExpectTest<AccountApi> {
 
 
    public void testListAccountsWhenResponseIs2xx() {

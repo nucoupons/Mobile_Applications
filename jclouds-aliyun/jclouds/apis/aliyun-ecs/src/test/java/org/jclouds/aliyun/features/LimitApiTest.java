@@ -21,7 +21,7 @@ import java.io.IOException;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.aliyun.features.LimitApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListResourceLimitsOptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -34,7 +34,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code LimitApi}
  */
 @Test(groups = "unit", testName = "LimitApiTest")
-public class LimitApiTest extends BaseCloudStackApiTest<LimitApi> {
+public class LimitApiTest extends BaseAliyunApiTest<LimitApi> {
 
    public void testListResourceLimits() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(LimitApi.class, "listResourceLimits", ListResourceLimitsOptions[].class);

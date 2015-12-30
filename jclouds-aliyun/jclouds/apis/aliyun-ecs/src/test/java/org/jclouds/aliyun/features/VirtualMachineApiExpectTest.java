@@ -26,7 +26,7 @@ import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.EncryptedPasswordAndPrivateKey;
 import org.jclouds.aliyun.features.VirtualMachineApi;
 import org.jclouds.aliyun.functions.WindowsLoginCredentialsFromEncryptedData;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.encryption.internal.JCECrypto;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
@@ -36,7 +36,7 @@ import org.testng.annotations.Test;
  * Test the CloudStack VirtualMachineApiClient
  */
 @Test(groups = "unit", testName = "VirtualMachineApiExpectTest")
-public class VirtualMachineApiExpectTest extends BaseCloudStackExpectTest<VirtualMachineApi> {
+public class VirtualMachineApiExpectTest extends BaseAliyunExpectTest<VirtualMachineApi> {
 
    public void testGetPasswordForVirtualMachineWhenResponseIs2xx() throws NoSuchAlgorithmException, CertificateException {
       String privateKey = "-----BEGIN RSA PRIVATE KEY-----\n" +

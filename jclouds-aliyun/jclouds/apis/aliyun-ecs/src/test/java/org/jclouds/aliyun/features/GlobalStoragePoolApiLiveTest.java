@@ -24,7 +24,7 @@ import static org.testng.Assert.assertTrue;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.StoragePool;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 import com.google.common.base.Strings;
@@ -33,7 +33,7 @@ import com.google.common.base.Strings;
  * Tests behavior of {@code GlobalStoragePoolApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalStoragePoolApiLiveTest")
-public class GlobalStoragePoolApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalStoragePoolApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(groups = "live", enabled = true)
    public void testListStoragePools() throws Exception {

@@ -17,14 +17,14 @@
 package org.jclouds.aliyun.features;
 
 import org.jclouds.aliyun.domain.Capabilities;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code ConfigurationApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "ConfigurationApiLiveTest")
-public class ConfigurationApiLiveTest extends BaseCloudStackApiLiveTest {
+public class ConfigurationApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testListCapabilities() throws Exception {
       Capabilities response = client.getConfigurationApi().listCapabilities();

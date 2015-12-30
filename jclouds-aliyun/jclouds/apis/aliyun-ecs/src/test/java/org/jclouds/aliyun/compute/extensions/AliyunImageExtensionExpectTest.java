@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.jclouds.aliyun.AliyunContext;
-import org.jclouds.aliyun.internal.BaseCloudStackComputeServiceContextExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunComputeServiceContextExpectTest;
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.domain.Image;
 import org.jclouds.compute.domain.ImageTemplate;
@@ -37,7 +37,7 @@ import com.google.common.util.concurrent.Futures;
 import com.google.inject.Module;
 
 @Test(groups = "unit", testName = "CloudStackImageExtensionExpectTest")
-public class CloudStackImageExtensionExpectTest extends BaseCloudStackComputeServiceContextExpectTest<ComputeService> {
+public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceContextExpectTest<ComputeService> {
 
    @Override
    protected Properties setupProperties() {

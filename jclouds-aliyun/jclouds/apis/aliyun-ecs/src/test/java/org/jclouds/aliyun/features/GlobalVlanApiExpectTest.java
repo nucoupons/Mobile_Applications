@@ -23,7 +23,7 @@ import java.net.URI;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.VlanIPRange;
 import org.jclouds.aliyun.features.GlobalVlanApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.aliyun.options.CreateVlanIPRangeOptions;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
@@ -35,7 +35,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack VlanClient
  */
 @Test(groups = "unit", testName = "GlobalVlanApiExpectTest")
-public class GlobalVlanApiExpectTest extends BaseCloudStackExpectTest<GlobalVlanApi> {
+public class GlobalVlanApiExpectTest extends BaseAliyunExpectTest<GlobalVlanApi> {
 
    public void testListVlanIpRangesWhenResponseIs2xx() {
       GlobalVlanApi client = requestSendsResponse(

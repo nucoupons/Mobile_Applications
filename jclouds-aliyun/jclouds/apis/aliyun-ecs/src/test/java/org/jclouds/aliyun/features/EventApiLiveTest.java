@@ -21,14 +21,14 @@ import static org.testng.Assert.assertTrue;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.Event;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code EventApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "EventApiLiveTest")
-public class EventApiLiveTest extends BaseCloudStackApiLiveTest {
+public class EventApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testlistEventTypes() throws Exception {
       final Set<String> response = client.getEventApi().listEventTypes();

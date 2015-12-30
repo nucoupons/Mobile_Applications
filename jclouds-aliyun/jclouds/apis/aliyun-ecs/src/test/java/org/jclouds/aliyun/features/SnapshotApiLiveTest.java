@@ -31,7 +31,7 @@ import javax.annotation.Resource;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Snapshot;
 import org.jclouds.aliyun.domain.Volume;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListSnapshotsOptions;
 import org.jclouds.logging.Logger;
 import org.testng.annotations.Test;
@@ -44,7 +44,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code SnapshotApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "SnapshotApiLiveTest")
-public class SnapshotApiLiveTest extends BaseCloudStackApiLiveTest {
+public class SnapshotApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Resource Logger logger = Logger.NULL;
    

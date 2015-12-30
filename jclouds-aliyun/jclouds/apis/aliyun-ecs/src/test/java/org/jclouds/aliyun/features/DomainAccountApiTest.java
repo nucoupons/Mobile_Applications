@@ -20,7 +20,7 @@ import static org.jclouds.reflect.Reflection2.method;
 
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.DomainAccountApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.http.functions.UnwrapOnlyJsonValue;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -32,7 +32,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code DomainAccountApi}
  */
 @Test(groups = "unit", testName = "DomainAccountApiTest")
-public class DomainAccountApiTest extends BaseCloudStackApiTest<DomainAccountApi> {
+public class DomainAccountApiTest extends BaseAliyunApiTest<DomainAccountApi> {
 
    public void testEnableAccount() throws Exception {
       Invokable<?, ?> method = method(DomainAccountApi.class, "enableAccount", String.class, String.class);

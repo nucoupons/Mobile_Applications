@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.Fallbacks.VoidOnNotFoundOr404;
 import org.jclouds.aliyun.features.SecurityGroupApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.AccountInDomainOptions;
 import org.jclouds.aliyun.options.ListSecurityGroupsOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
@@ -47,7 +47,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "SecurityGroupApiTest")
-public class SecurityGroupApiTest extends BaseCloudStackApiTest<SecurityGroupApi> {
+public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
 
    public void testListSecurityGroups() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(SecurityGroupApi.class, "listSecurityGroups", ListSecurityGroupsOptions[].class);

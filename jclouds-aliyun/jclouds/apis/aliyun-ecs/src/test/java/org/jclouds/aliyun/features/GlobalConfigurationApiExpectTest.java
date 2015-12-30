@@ -24,7 +24,7 @@ import java.net.URI;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.ConfigurationEntry;
 import org.jclouds.aliyun.features.GlobalConfigurationApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -35,7 +35,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack GlobalConfigurationApi
  */
 @Test(groups = "unit", testName = "GlobalConfigurationApiExpectTest")
-public class GlobalConfigurationApiExpectTest extends BaseCloudStackExpectTest<GlobalConfigurationApi> {
+public class GlobalConfigurationApiExpectTest extends BaseAliyunExpectTest<GlobalConfigurationApi> {
 
    @Test
    public void testListConfigurationEntriesWhenResponseIs2xx() {

@@ -23,7 +23,7 @@ import java.util.Set;
 
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListZonesOptions;
 import org.testng.annotations.Test;
 
@@ -33,7 +33,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code ZoneApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "ZoneApiLiveTest")
-public class ZoneApiLiveTest extends BaseCloudStackApiLiveTest {
+public class ZoneApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testListZones() throws Exception {
       Set<Zone> response = client.getZoneApi().listZones();

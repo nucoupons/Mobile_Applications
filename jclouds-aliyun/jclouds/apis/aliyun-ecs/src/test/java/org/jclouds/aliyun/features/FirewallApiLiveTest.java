@@ -30,7 +30,7 @@ import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.PortForwardingRule;
 import org.jclouds.aliyun.domain.PublicIPAddress;
 import org.jclouds.aliyun.domain.VirtualMachine;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.CreateFirewallRuleOptions;
 import org.jclouds.logging.Logger;
 import org.testng.annotations.AfterGroups;
@@ -45,7 +45,7 @@ import com.google.common.net.HostAndPort;
  * Tests behavior of {@code FirewallApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "FirewallApiLiveTest")
-public class FirewallApiLiveTest extends BaseCloudStackApiLiveTest {
+public class FirewallApiLiveTest extends BaseAliyunApiLiveTest {
    private PublicIPAddress ip = null;
    private VirtualMachine vm;
 

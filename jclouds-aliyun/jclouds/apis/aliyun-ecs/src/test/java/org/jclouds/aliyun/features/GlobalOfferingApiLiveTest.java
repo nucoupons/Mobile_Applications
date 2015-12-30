@@ -30,7 +30,7 @@ import org.jclouds.aliyun.domain.NetworkOffering;
 import org.jclouds.aliyun.domain.NetworkOfferingAvailabilityType;
 import org.jclouds.aliyun.domain.ServiceOffering;
 import org.jclouds.aliyun.domain.StorageType;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.UpdateDiskOfferingOptions;
 import org.jclouds.aliyun.options.UpdateNetworkOfferingOptions;
 import org.jclouds.aliyun.options.UpdateServiceOfferingOptions;
@@ -43,7 +43,7 @@ import com.google.common.collect.ImmutableSet;
  * Tests behavior of {@code GlobalOfferingApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalOfferingApiLiveTest")
-public class GlobalOfferingApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalOfferingApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(groups = "live", enabled = true)
    public void testCreateServiceOffering() throws Exception {

@@ -20,7 +20,7 @@ import static org.jclouds.reflect.Reflection2.method;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.aliyun.features.GlobalHostApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListHostsOptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -32,7 +32,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code GlobalHostApi}
  */
 @Test(groups = "unit", testName = "GlobalHostApiTest")
-public class GlobalHostApiTest extends BaseCloudStackApiTest<GlobalHostApi> {
+public class GlobalHostApiTest extends BaseAliyunApiTest<GlobalHostApi> {
 
    public void testListHosts() throws Exception {
       Invokable<?, ?> method = method(GlobalHostApi.class, "listHosts", ListHostsOptions[].class);

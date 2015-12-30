@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.SshKeyPair;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.ssh.SshKeys;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -34,7 +34,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code SSHKeyPairApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "SSHKeyPairApiLiveTest")
-public class SSHKeyPairApiLiveTest extends BaseCloudStackApiLiveTest {
+public class SSHKeyPairApiLiveTest extends BaseAliyunApiLiveTest {
 
    protected String prefix = System.getProperty("user.name");
    private String keyPairName = prefix + "-jclouds-keypair";

@@ -23,7 +23,7 @@ import static org.testng.Assert.assertTrue;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.IPForwardingRule;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListIPForwardingRulesOptions;
 import org.testng.annotations.Test;
 
@@ -31,7 +31,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code NATApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "NATApiLiveTest")
-public class NATApiLiveTest extends BaseCloudStackApiLiveTest {
+public class NATApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(enabled = false)
    // takes too long

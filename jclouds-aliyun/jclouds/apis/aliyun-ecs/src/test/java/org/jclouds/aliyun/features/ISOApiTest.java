@@ -20,7 +20,7 @@ import static org.jclouds.reflect.Reflection2.method;
 import org.jclouds.aliyun.domain.ExtractMode;
 import org.jclouds.aliyun.domain.PermissionOperation;
 import org.jclouds.aliyun.features.ISOApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.AccountInDomainOptions;
 import org.jclouds.aliyun.options.DeleteISOOptions;
 import org.jclouds.aliyun.options.ExtractISOOptions;
@@ -44,7 +44,7 @@ import com.google.common.reflect.Invokable;
  */
 // NOTE:without testName, this will not call @Before* and fail w/NPE during surefire
 @Test(groups = "unit", testName = "ISOApiTest")
-public class ISOApiTest extends BaseCloudStackApiTest<ISOApi> {
+public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
 
    public void testAttachISO() throws NoSuchMethodException {
       Invokable<?, ?> method = method(ISOApi.class, "attachISO", String.class, String.class);

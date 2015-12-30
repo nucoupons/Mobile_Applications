@@ -19,7 +19,7 @@ import static org.jclouds.reflect.Reflection2.method;
 
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.GlobalOfferingApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateDiskOfferingOptions;
 import org.jclouds.aliyun.options.CreateServiceOfferingOptions;
 import org.jclouds.aliyun.options.UpdateDiskOfferingOptions;
@@ -38,7 +38,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code GlobalOfferingApi}
  */
 @Test(groups = "unit", testName = "GlobalOfferingApiTest")
-public class GlobalOfferingApiTest extends BaseCloudStackApiTest<GlobalOfferingApi> {
+public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> {
 
    HttpRequest createServiceOffering = HttpRequest.builder().method("GET")
                                                   .endpoint("http://localhost:8080/client/api")

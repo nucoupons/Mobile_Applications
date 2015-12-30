@@ -30,11 +30,11 @@ import com.google.inject.Module;
  * Live test for CloudStack {@link org.jclouds.compute.extensions.SecurityGroupExtension} implementation.
  */
 @Test(groups = "live", singleThreaded = true, testName = "CloudStackSecurityGroupExtensionLiveTest")
-public class CloudStackSecurityGroupExtensionLiveTest extends BaseSecurityGroupExtensionLiveTest {
+public class AliyunSecurityGroupExtensionLiveTest extends BaseSecurityGroupExtensionLiveTest {
 
    protected Zone zone;
 
-   public CloudStackSecurityGroupExtensionLiveTest() {
+   public AliyunSecurityGroupExtensionLiveTest() {
       provider = "cloudstack";
    }
 

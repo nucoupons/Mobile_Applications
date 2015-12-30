@@ -29,7 +29,7 @@ import org.jclouds.aliyun.domain.IngressRule;
 import org.jclouds.aliyun.domain.SecurityGroup;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.AccountInDomainOptions;
 import org.jclouds.aliyun.options.DeployVirtualMachineOptions;
 import org.jclouds.aliyun.options.ListSecurityGroupsOptions;
@@ -47,7 +47,7 @@ import com.google.common.net.HostAndPort;
  * Tests behavior of {@code SecurityGroupApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "SecurityGroupApiLiveTest")
-public class SecurityGroupApiLiveTest extends BaseCloudStackApiLiveTest {
+public class SecurityGroupApiLiveTest extends BaseAliyunApiLiveTest {
    public SecurityGroupApiLiveTest() {
       prefix += "2";
    }

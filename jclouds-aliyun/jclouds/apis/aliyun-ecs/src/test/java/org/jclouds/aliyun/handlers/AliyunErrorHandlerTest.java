@@ -37,7 +37,7 @@ import org.testng.annotations.Test;
 import com.google.inject.Guice;
 
 @Test(groups = {"unit"})
-public class CloudStackErrorHandlerTest {
+public class AliyunErrorHandlerTest {
 
    @Test
    public void test400MakesIllegalArgumentException() {

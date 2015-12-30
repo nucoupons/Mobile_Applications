@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.Fallbacks.VoidOnNotFoundOr404;
 import org.jclouds.aliyun.features.VolumeApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListVolumesOptions;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -38,7 +38,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "VolumeApiTest")
-public class VolumeApiTest extends BaseCloudStackApiTest<VolumeApi> {
+public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
 
    public void testListVolumes() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(VolumeApi.class, "listVolumes", ListVolumesOptions[].class);

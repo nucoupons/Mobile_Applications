@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.aliyun;
+package org.jclouds.aliyun.compute;
 
-import static org.jclouds.reflect.Reflection2.typeToken;
-
-import org.jclouds.ContextBuilder;
-import org.jclouds.View;
-import org.jclouds.aliyun.AliyunApi;
-import org.jclouds.aliyun.AliyunApiMetadata;
-import org.jclouds.compute.ComputeServiceContext;
+import com.google.inject.Module;
+import org.jclouds.compute.internal.BaseComputeServiceLiveTest;
+import org.jclouds.sshj.config.SshjSshClientModule;
 import org.testng.annotations.Test;
 
-@Test(groups = "unit", testName = "CloudStackContextBuilderTest")
-public class CloudStackContextBuilderTest {
+/**
+ * 
+ * Generally disabled, as it incurs higher fees.
+ */
+@Test(groups = "live", enabled = true, singleThreaded = true)
+public class AliyunComputeServiceLiveTest extends BaseComputeServiceLiveTest {
+   public AliyunComputeServiceLiveTest() {
+      provider = "cloudstack";
+   }
 
-   public void testAssignability() {
-      View view = ContextBuilder.newBuilder(new AliyunApiMetadata()).credentials("foo", "bar")
-              .buildView(typeToken(ComputeServiceContext.class));
-      view.unwrapApi(AliyunApi.class);
+   @Override
+   protected Module getSshModule() {
+      return new SshjSshClientModule();
+   }
+
+   @Override
+   public void testOptionToNotBlock() {
+      // start call blocks until we static nat, which is long enough to reach
+      // running state
    }
 }

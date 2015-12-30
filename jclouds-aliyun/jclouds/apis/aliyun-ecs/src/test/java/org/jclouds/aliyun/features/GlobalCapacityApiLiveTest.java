@@ -23,14 +23,14 @@ import static org.testng.Assert.assertTrue;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.Capacity;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code GlobalCapacityApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalCapacityApiLiveTest")
-public class GlobalCapacityApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalCapacityApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(groups = "live", enabled = true)
    public void testListCapacity() throws Exception {

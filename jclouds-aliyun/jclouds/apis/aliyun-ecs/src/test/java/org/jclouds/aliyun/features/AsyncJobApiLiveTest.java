@@ -23,14 +23,14 @@ import java.util.Set;
 
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.aliyun.domain.AsyncJob.ResultCode;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code AsyncJobApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "AsyncJobApiLiveTest")
-public class AsyncJobApiLiveTest extends BaseCloudStackApiLiveTest {
+public class AsyncJobApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(enabled = true)
    public void testListAsyncJobs() throws Exception {

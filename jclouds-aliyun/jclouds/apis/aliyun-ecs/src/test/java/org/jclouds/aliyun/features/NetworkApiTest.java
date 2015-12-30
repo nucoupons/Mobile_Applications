@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.features.NetworkApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateNetworkOptions;
 import org.jclouds.aliyun.options.ListNetworksOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
@@ -43,7 +43,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "NetworkApiTest")
-public class NetworkApiTest extends BaseCloudStackApiTest<NetworkApi> {
+public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
    public void testListNetworks() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(NetworkApi.class, "listNetworks", ListNetworksOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());

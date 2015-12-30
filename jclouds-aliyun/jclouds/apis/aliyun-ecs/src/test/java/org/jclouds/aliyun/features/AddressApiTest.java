@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.AddressApi;
 import org.jclouds.aliyun.functions.AliyunFallbacks.VoidOnNotFoundOr404OrUnableToFindAccountOwner;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.AssociateIPAddressOptions;
 import org.jclouds.aliyun.options.ListPublicIPAddressesOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
@@ -44,7 +44,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "AddressApiTest")
-public class AddressApiTest extends BaseCloudStackApiTest<AddressApi> {
+public class AddressApiTest extends BaseAliyunApiTest<AddressApi> {
    public void testListPublicIPAddresses() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(AddressApi.class, "listPublicIPAddresses", ListPublicIPAddressesOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());

@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.domain.LoadBalancerRule.Algorithm;
 import org.jclouds.aliyun.features.LoadBalancerApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateLoadBalancerRuleOptions;
 import org.jclouds.aliyun.options.ListLoadBalancerRulesOptions;
 import org.jclouds.aliyun.options.UpdateLoadBalancerRuleOptions;
@@ -42,7 +42,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "LoadBalancerApiTest")
-public class LoadBalancerApiTest extends BaseCloudStackApiTest<LoadBalancerApi> {
+public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
    public void testListLoadBalancerRules() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(LoadBalancerApi.class, "listLoadBalancerRules",
             ListLoadBalancerRulesOptions[].class);

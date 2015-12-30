@@ -43,7 +43,7 @@ import org.jclouds.aliyun.domain.ServiceOffering;
 import org.jclouds.aliyun.domain.Template;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.CreateNetworkOptions;
 import org.jclouds.aliyun.options.DeployVirtualMachineOptions;
 import org.jclouds.aliyun.options.ListNetworkOfferingsOptions;
@@ -69,7 +69,7 @@ import com.google.common.net.HostSpecifier;
  * Tests behavior of {@code VirtualMachineApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "VirtualMachineApiLiveTest")
-public class VirtualMachineApiLiveTest extends BaseCloudStackApiLiveTest {
+public class VirtualMachineApiLiveTest extends BaseAliyunApiLiveTest {
    private static final Logger logger = Logger.getAnonymousLogger();
 
    private VirtualMachine vm = null;

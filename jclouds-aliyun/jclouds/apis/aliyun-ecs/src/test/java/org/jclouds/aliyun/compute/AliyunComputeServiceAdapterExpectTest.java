@@ -27,7 +27,7 @@ import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.compute.options.AliyunTemplateOptions;
 import org.jclouds.aliyun.compute.strategy.AliyunComputeServiceAdapter;
 import org.jclouds.aliyun.domain.VirtualMachine;
-import org.jclouds.aliyun.internal.BaseCloudStackComputeServiceContextExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunComputeServiceContextExpectTest;
 import org.jclouds.compute.ComputeServiceAdapter.NodeAndInitialCredentials;
 import org.jclouds.compute.domain.OsFamily;
 import org.jclouds.compute.domain.Template;
@@ -45,7 +45,7 @@ import com.google.inject.Injector;
  * Tests the compute service abstraction of the cloudstack api.
  */
 @Test(groups = "unit")
-public class CloudStackComputeServiceAdapterExpectTest extends BaseCloudStackComputeServiceContextExpectTest<Injector> {
+public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServiceContextExpectTest<Injector> {
    HttpResponse deployVMResponse = HttpResponse.builder().statusCode(200)
          .payload(payloadFromResource("/deployvirtualmachineresponse.json"))
          .build();

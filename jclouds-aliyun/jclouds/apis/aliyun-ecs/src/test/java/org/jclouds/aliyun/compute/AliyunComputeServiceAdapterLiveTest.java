@@ -27,7 +27,7 @@ import org.jclouds.aliyun.compute.strategy.AliyunComputeServiceAdapter;
 import org.jclouds.aliyun.domain.IPForwardingRule;
 import org.jclouds.aliyun.domain.ServiceOffering;
 import org.jclouds.aliyun.domain.VirtualMachine;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.predicates.TemplatePredicates;
 import org.jclouds.compute.ComputeServiceAdapter.NodeAndInitialCredentials;
 import org.jclouds.compute.domain.Template;
@@ -45,7 +45,7 @@ import com.google.common.net.HostAndPort;
 import com.google.common.net.InetAddresses;
 
 @Test(groups = "live", singleThreaded = true, testName = "CloudStackComputeServiceAdapterLiveTest")
-public class CloudStackComputeServiceAdapterLiveTest extends BaseCloudStackApiLiveTest {
+public class AliyunComputeServiceAdapterLiveTest extends BaseAliyunApiLiveTest {
 
    private AliyunComputeServiceAdapter adapter;
    private NodeAndInitialCredentials<VirtualMachine> vm;

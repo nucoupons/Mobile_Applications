@@ -22,7 +22,7 @@ import java.io.IOException;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.aliyun.features.GlobalAlertApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListAlertsOptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -36,7 +36,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "GlobalAlertApiTest")
-public class GlobalAlertApiTest extends BaseCloudStackApiTest<GlobalAlertApi> {
+public class GlobalAlertApiTest extends BaseAliyunApiTest<GlobalAlertApi> {
 
    public void testListAlerts() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(GlobalAlertApi.class, "listAlerts", ListAlertsOptions[].class);

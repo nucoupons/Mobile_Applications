@@ -28,7 +28,7 @@ import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.Cluster;
 import org.jclouds.aliyun.domain.Host;
 import org.jclouds.aliyun.features.GlobalHostApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.aliyun.options.AddClusterOptions;
 import org.jclouds.aliyun.options.AddHostOptions;
 import org.jclouds.aliyun.options.AddSecondaryStorageOptions;
@@ -45,7 +45,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack GlobalHostApi
  */
 @Test(groups = "unit", testName = "GlobalConfigurationApiExpectTest")
-public class GlobalHostApiExpectTest extends BaseCloudStackExpectTest<GlobalHostApi> {
+public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi> {
 
    @Test
    public void testListHostsWhenResponseIs2xx() {

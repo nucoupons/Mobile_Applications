@@ -24,7 +24,7 @@ import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.Pod;
 import org.jclouds.aliyun.features.GlobalPodApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.aliyun.options.CreatePodOptions;
 import org.jclouds.aliyun.options.UpdatePodOptions;
 import org.jclouds.http.HttpRequest;
@@ -38,7 +38,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack PodClient
  */
 @Test(groups = "unit", testName = "GlobalPodApiExpectTest")
-public class GlobalPodApiExpectTest extends BaseCloudStackExpectTest<GlobalPodApi> {
+public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {
 
    public void testListPodsWhenResponseIs2xx() {
       GlobalPodApi client = requestSendsResponse(

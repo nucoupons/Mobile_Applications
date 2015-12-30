@@ -30,7 +30,7 @@ import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.ApiKeyPair;
 import org.jclouds.aliyun.domain.LoginResponse;
 import org.jclouds.aliyun.domain.User;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.util.ApiKeyPairs;
 import org.jclouds.rest.AuthorizationException;
 import org.testng.annotations.Test;
@@ -39,7 +39,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code SessionApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "SessionApiLiveTest")
-public class SessionApiLiveTest extends BaseCloudStackApiLiveTest {
+public class SessionApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testCreateContextUsingUserAndPasswordAuthentication() {

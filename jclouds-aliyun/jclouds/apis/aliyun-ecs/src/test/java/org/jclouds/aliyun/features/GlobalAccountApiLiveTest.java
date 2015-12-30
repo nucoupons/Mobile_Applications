@@ -24,14 +24,14 @@ import static org.testng.Assert.assertNotNull;
 
 import org.jclouds.aliyun.AliyunGlobalApi;
 import org.jclouds.aliyun.domain.Account;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code GlobalAccountApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalAccountApiLiveTest")
-public class GlobalAccountApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalAccountApiLiveTest extends BaseAliyunApiLiveTest {
 
    public static Account createTestAccount(AliyunGlobalApi client, String prefix) {
       return client.getAccountApi().createAccount(prefix + "-account", Account.Type.USER, "dummy@example.com",

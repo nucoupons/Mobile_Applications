@@ -22,7 +22,7 @@ import static org.testng.Assert.assertNotNull;
 
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableList;
@@ -31,7 +31,7 @@ import com.google.common.collect.ImmutableList;
  * Tests behavior of {@code GlobalZoneApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalZoneApiLiveTest")
-public class GlobalZoneApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalZoneApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testCreateUpdateDeleteZone() {

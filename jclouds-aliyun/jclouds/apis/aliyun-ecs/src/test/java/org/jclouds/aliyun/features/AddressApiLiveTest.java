@@ -25,7 +25,7 @@ import java.util.Set;
 
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.PublicIPAddress;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListPublicIPAddressesOptions;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeGroups;
@@ -37,7 +37,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code AddressApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "AddressApiLiveTest")
-public class AddressApiLiveTest extends BaseCloudStackApiLiveTest {
+public class AddressApiLiveTest extends BaseAliyunApiLiveTest {
    private boolean networksEnabled;
 
    @BeforeGroups(groups = "live")

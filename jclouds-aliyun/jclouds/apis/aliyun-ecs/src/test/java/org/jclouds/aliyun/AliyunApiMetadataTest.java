@@ -14,27 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.aliyun.compute.extensions;
+package org.jclouds.aliyun;
 
-import org.jclouds.compute.extensions.internal.BaseImageExtensionLiveTest;
-import org.jclouds.sshj.config.SshjSshClientModule;
+import org.jclouds.aliyun.AliyunApiMetadata;
+import org.jclouds.compute.internal.BaseComputeServiceApiMetadataTest;
 import org.testng.annotations.Test;
 
-import com.google.inject.Module;
+@Test(groups = "unit", testName = "CloudStackApiMetadataTest")
+public class AliyunApiMetadataTest extends BaseComputeServiceApiMetadataTest {
 
-/**
- * Live test for CloudStack {@link ImageExtension} implementation.
- */
-@Test(groups = "live", singleThreaded = true, testName = "CloudStackImageExtensionLiveTest")
-public class CloudStackImageExtensionLiveTest extends BaseImageExtensionLiveTest {
-
-   public CloudStackImageExtensionLiveTest() {
-      provider = "cloudstack";
+   public AliyunApiMetadataTest() {
+      super(new AliyunApiMetadata());
    }
-
-   @Override
-   protected Module getSshModule() {
-      return new SshjSshClientModule();
-   }
-
 }

@@ -37,7 +37,7 @@ import org.jclouds.aliyun.domain.TemplateMetadata;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.domain.Volume;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.CreateTemplateOptions;
 import org.jclouds.aliyun.options.ListNetworksOptions;
 import org.jclouds.aliyun.options.ListVolumesOptions;
@@ -53,7 +53,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code TemplateApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "TemplateApiLiveTest")
-public class TemplateApiLiveTest extends BaseCloudStackApiLiveTest {
+public class TemplateApiLiveTest extends BaseAliyunApiLiveTest {
 
    private static final String IMPORT_VHD_URL = "http://www.frontiertown.co.uk/jclouds/empty.vhd";
    private VirtualMachine vmForCreation;

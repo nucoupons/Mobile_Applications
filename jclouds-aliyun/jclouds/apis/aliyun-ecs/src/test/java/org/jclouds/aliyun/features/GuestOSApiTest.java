@@ -25,7 +25,7 @@ import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.GuestOSApi;
 import org.jclouds.aliyun.functions.ParseIdToNameEntryFromHttpResponse;
 import org.jclouds.aliyun.functions.ParseIdToNameFromHttpResponse;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListOSTypesOptions;
 import org.jclouds.functions.IdentityFunction;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
@@ -41,7 +41,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "GuestOSApiTest")
-public class GuestOSApiTest extends BaseCloudStackApiTest<GuestOSApi> {
+public class GuestOSApiTest extends BaseAliyunApiTest<GuestOSApi> {
 
    public void testGetOSCategory() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(GuestOSApi.class, "getOSCategory", String.class);

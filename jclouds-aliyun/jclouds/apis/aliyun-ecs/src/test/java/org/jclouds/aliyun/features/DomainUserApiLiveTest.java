@@ -28,14 +28,14 @@ import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.AsyncJob;
 import org.jclouds.aliyun.domain.User;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code DomainUserApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "DomainUserApiLiveTest")
-public class DomainUserApiLiveTest extends BaseCloudStackApiLiveTest {
+public class DomainUserApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testListUsers() {

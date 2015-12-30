@@ -14,20 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.aliyun.compute;
+package org.jclouds.aliyun.compute.extensions;
 
-import com.google.inject.Module;
-import org.jclouds.compute.internal.BaseComputeServiceLiveTest;
+import org.jclouds.compute.extensions.internal.BaseImageExtensionLiveTest;
 import org.jclouds.sshj.config.SshjSshClientModule;
 import org.testng.annotations.Test;
 
+import com.google.inject.Module;
+
 /**
- * 
- * Generally disabled, as it incurs higher fees.
+ * Live test for CloudStack {@link ImageExtension} implementation.
  */
-@Test(groups = "live", enabled = true, singleThreaded = true)
-public class CloudStackComputeServiceLiveTest extends BaseComputeServiceLiveTest {
-   public CloudStackComputeServiceLiveTest() {
+@Test(groups = "live", singleThreaded = true, testName = "CloudStackImageExtensionLiveTest")
+public class AliyunImageExtensionLiveTest extends BaseImageExtensionLiveTest {
+
+   public AliyunImageExtensionLiveTest() {
       provider = "cloudstack";
    }
 
@@ -36,9 +37,4 @@ public class CloudStackComputeServiceLiveTest extends BaseComputeServiceLiveTest
       return new SshjSshClientModule();
    }
 
-   @Override
-   public void testOptionToNotBlock() {
-      // start call blocks until we static nat, which is long enough to reach
-      // running state
-   }
 }

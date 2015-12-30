@@ -23,7 +23,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.ZoneApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListZonesOptions;
 import org.jclouds.functions.IdentityFunction;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
@@ -40,7 +40,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "ZoneApiTest")
-public class ZoneApiTest extends BaseCloudStackApiTest<ZoneApi> {
+public class ZoneApiTest extends BaseAliyunApiTest<ZoneApi> {
    public void testListZones() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(ZoneApi.class, "listZones", ListZonesOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());

@@ -16,13 +16,13 @@
  */
 package org.jclouds.aliyun.features;
 
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code DomainLimitApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "DomainLimitApiLiveTest")
-public class DomainLimitApiLiveTest extends BaseCloudStackApiLiveTest {
+public class DomainLimitApiLiveTest extends BaseAliyunApiLiveTest {
 
 }

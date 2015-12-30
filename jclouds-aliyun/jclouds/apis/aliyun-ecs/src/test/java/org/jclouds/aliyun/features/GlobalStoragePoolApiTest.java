@@ -19,7 +19,7 @@ package org.jclouds.aliyun.features;
 import static org.jclouds.reflect.Reflection2.method;
 
 import org.jclouds.aliyun.features.GlobalStoragePoolApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListStoragePoolsOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
@@ -32,7 +32,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code GlobalStoragePoolApi}
  */
 @Test(groups = "unit", testName = "GlobalStoragePoolApiTest")
-public class GlobalStoragePoolApiTest extends BaseCloudStackApiTest<GlobalStoragePoolApi> {
+public class GlobalStoragePoolApiTest extends BaseAliyunApiTest<GlobalStoragePoolApi> {
 
    public void testListStoragePools() throws NoSuchMethodException {
       Invokable<?, ?> method = method(GlobalStoragePoolApi.class, "listStoragePools", ListStoragePoolsOptions[].class);

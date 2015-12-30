@@ -21,7 +21,7 @@ import static org.jclouds.reflect.Reflection2.method;
 import java.io.IOException;
 
 import org.jclouds.aliyun.features.ConfigurationApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -35,7 +35,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "ConfigurationApiTest")
-public class ConfigurationApiTest extends BaseCloudStackApiTest<ConfigurationApi> {
+public class ConfigurationApiTest extends BaseAliyunApiTest<ConfigurationApi> {
 
    public void testListCapabilities() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(ConfigurationApi.class, "listCapabilities");

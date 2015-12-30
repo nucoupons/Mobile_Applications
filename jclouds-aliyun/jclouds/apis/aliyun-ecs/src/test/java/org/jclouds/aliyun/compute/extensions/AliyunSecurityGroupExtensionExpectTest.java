@@ -27,7 +27,7 @@ import java.util.Set;
 
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.compute.functions.ZoneToLocationTest;
-import org.jclouds.aliyun.internal.BaseCloudStackComputeServiceContextExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunComputeServiceContextExpectTest;
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.domain.SecurityGroup;
 import org.jclouds.compute.domain.SecurityGroupBuilder;
@@ -51,7 +51,7 @@ import com.google.common.util.concurrent.UncheckedExecutionException;
 import com.google.inject.Module;
 
 @Test(groups = "unit", testName = "CloudStackSecurityGroupExtensionExpectTest")
-public class CloudStackSecurityGroupExtensionExpectTest extends BaseCloudStackComputeServiceContextExpectTest<ComputeService> {
+public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeServiceContextExpectTest<ComputeService> {
 
    protected final HttpResponse addRuleResponse = HttpResponse.builder().statusCode(200)
            .payload(payloadFromResource("/authorizesecuritygroupingressresponse.json"))

@@ -26,7 +26,7 @@ import java.util.TimeZone;
 
 import org.jclouds.aliyun.domain.JobResult;
 import org.jclouds.aliyun.domain.UsageRecord;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.GenerateUsageRecordsOptions;
 import org.jclouds.aliyun.options.ListUsageRecordsOptions;
 import org.testng.annotations.Test;
@@ -35,7 +35,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code GlobalUsageApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalUsageApiLiveTest")
-public class GlobalUsageApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalUsageApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test(groups = "live", enabled = true)
    public void testListUsage() {

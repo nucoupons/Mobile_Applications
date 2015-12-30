@@ -33,7 +33,7 @@ import org.jclouds.aliyun.domain.DiskOffering;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.domain.Volume;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.CreateTagsOptions;
 import org.jclouds.aliyun.options.DeleteTagsOptions;
 import org.jclouds.aliyun.options.ListTagsOptions;
@@ -47,7 +47,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code TagApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "TagApiLiveTest")
-public class TagApiLiveTest extends BaseCloudStackApiLiveTest {
+public class TagApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Resource Logger logger = Logger.NULL;
 

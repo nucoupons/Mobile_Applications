@@ -22,7 +22,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.jclouds.aliyun.features.GlobalUsageApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.GenerateUsageRecordsOptions;
 import org.jclouds.aliyun.options.ListUsageRecordsOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
@@ -36,7 +36,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code GlobalUsageApi}
  */
 @Test(groups = "unit", testName = "GlobalUsageApiTest")
-public class GlobalUsageApiTest extends BaseCloudStackApiTest<GlobalUsageApi> {
+public class GlobalUsageApiTest extends BaseAliyunApiTest<GlobalUsageApi> {
 
    public void testGenerateUsageRecords() throws Exception {
       Calendar c = Calendar.getInstance();

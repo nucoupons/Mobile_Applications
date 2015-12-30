@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.VoidOnNotFoundOr404;
 import org.jclouds.aliyun.domain.Snapshot;
 import org.jclouds.aliyun.domain.SnapshotPolicySchedule;
 import org.jclouds.aliyun.features.SnapshotApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateSnapshotOptions;
 import org.jclouds.aliyun.options.ListSnapshotPoliciesOptions;
 import org.jclouds.aliyun.options.ListSnapshotsOptions;
@@ -50,7 +50,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "SnapshotApiTest")
-public class SnapshotApiTest extends BaseCloudStackApiTest<SnapshotApi> {
+public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
 
    public void testCreateSnapshot() throws NoSuchMethodException {
       Invokable<?, ?> method = method(SnapshotApi.class, "createSnapshot", String.class, CreateSnapshotOptions[].class);

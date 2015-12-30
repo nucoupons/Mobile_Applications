@@ -21,14 +21,14 @@ import static org.testng.Assert.assertNotEquals;
 import static org.testng.Assert.assertNotNull;
 
 import org.jclouds.aliyun.domain.Project;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code ProjectApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "ProjectApiLiveTest")
-public class ProjectApiLiveTest extends BaseCloudStackApiLiveTest {
+public class ProjectApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testListAccounts() throws Exception {

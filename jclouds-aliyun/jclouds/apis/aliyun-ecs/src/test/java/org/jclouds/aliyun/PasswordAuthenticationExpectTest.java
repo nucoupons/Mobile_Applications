@@ -22,7 +22,7 @@ import java.util.Properties;
 
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.features.AccountApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.jclouds.util.Strings2;
@@ -35,7 +35,7 @@ import com.google.common.net.HttpHeaders;
  * @see AliyunProperties#CREDENTIAL_TYPE
  */
 @Test(groups = "unit", testName = "PasswordAuthenticationExpectTest")
-public class PasswordAuthenticationExpectTest extends BaseCloudStackExpectTest<AccountApi> {
+public class PasswordAuthenticationExpectTest extends BaseAliyunExpectTest<AccountApi> {
 
    /**
     * this reflects the properties that a user would pass to createContext

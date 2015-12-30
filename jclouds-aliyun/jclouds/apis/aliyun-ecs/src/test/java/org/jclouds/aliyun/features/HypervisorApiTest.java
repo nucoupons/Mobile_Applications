@@ -23,7 +23,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.aliyun.features.HypervisorApi;
 import org.jclouds.aliyun.functions.ParseNamesFromHttpResponse;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
 import org.testng.annotations.Test;
 
@@ -35,7 +35,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "HypervisorApiTest")
-public class HypervisorApiTest extends BaseCloudStackApiTest<HypervisorApi> {
+public class HypervisorApiTest extends BaseAliyunApiTest<HypervisorApi> {
 
    public void testListHypervisors() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(HypervisorApi.class, "listHypervisors");

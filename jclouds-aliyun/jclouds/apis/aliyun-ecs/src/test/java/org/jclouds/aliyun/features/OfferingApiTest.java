@@ -24,7 +24,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.OfferingApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListDiskOfferingsOptions;
 import org.jclouds.aliyun.options.ListNetworkOfferingsOptions;
 import org.jclouds.aliyun.options.ListServiceOfferingsOptions;
@@ -42,7 +42,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "OfferingApiTest")
-public class OfferingApiTest extends BaseCloudStackApiTest<OfferingApi> {
+public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
    public void testListDiskOfferings() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(OfferingApi.class, "listDiskOfferings", ListDiskOfferingsOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());

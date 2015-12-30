@@ -29,7 +29,7 @@ import org.jclouds.rest.internal.BaseRestAnnotationProcessingTest;
 
 import com.google.inject.Module;
 
-public abstract class BaseCloudStackApiTest<T> extends BaseRestAnnotationProcessingTest<T> {
+public abstract class BaseAliyunApiTest<T> extends BaseRestAnnotationProcessingTest<T> {
 
    @ConfiguresHttpApi
    public static class CloudStackHttpApiModuleExtension extends AliyunHttpApiModule {

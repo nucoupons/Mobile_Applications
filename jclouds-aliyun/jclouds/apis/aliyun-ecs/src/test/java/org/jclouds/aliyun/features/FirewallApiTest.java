@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.VoidOnNotFoundOr404;
 import org.jclouds.aliyun.domain.PortForwardingRule;
 import org.jclouds.aliyun.features.FirewallApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListPortForwardingRulesOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
@@ -41,7 +41,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "FirewallApiTest")
-public class FirewallApiTest extends BaseCloudStackApiTest<FirewallApi> {
+public class FirewallApiTest extends BaseAliyunApiTest<FirewallApi> {
    public void testListPortForwardingRules() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(FirewallApi.class, "listPortForwardingRules",
             ListPortForwardingRulesOptions[].class);

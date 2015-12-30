@@ -28,7 +28,7 @@ import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.features.TagApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.aliyun.options.CreateTagsOptions;
 import org.jclouds.aliyun.options.DeleteTagsOptions;
 import org.jclouds.http.HttpRequest;
@@ -39,7 +39,7 @@ import org.testng.annotations.Test;
  * Test the CloudStack TagApi
  */
 @Test(groups = "unit", testName = "TagApiExpectTest")
-public class TagApiExpectTest extends BaseCloudStackExpectTest<TagApi> {
+public class TagApiExpectTest extends BaseAliyunExpectTest<TagApi> {
 
 
    public void testListTagsWhenResponseIs2xx() {

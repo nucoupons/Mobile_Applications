@@ -19,7 +19,7 @@ package org.jclouds.aliyun.features;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.features.VolumeApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -35,7 +35,7 @@ import static org.testng.Assert.assertNotNull;
 *
 */
 @Test(groups = "unit", testName = "VolumeApiExpectTest")
-public class VolumeApiExpectTest extends BaseCloudStackExpectTest<VolumeApi> {
+public class VolumeApiExpectTest extends BaseAliyunExpectTest<VolumeApi> {
 
    public void testCreateVolumeFromCustomDiskOffering() throws NoSuchAlgorithmException, CertificateException {
       VolumeApi client = requestSendsResponse(

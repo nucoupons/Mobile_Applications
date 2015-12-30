@@ -27,7 +27,7 @@ import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Zone;
 import org.jclouds.aliyun.features.GlobalZoneApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -39,7 +39,7 @@ import com.google.common.collect.ImmutableMultimap;
  * Test the CloudStack GlobalZoneApi
  */
 @Test(groups = "unit", testName = "GlobalZoneApiExpectTest")
-public class GlobalZoneApiExpectTest extends BaseCloudStackExpectTest<GlobalZoneApi> {
+public class GlobalZoneApiExpectTest extends BaseAliyunExpectTest<GlobalZoneApi> {
 
    HttpRequest createZone = HttpRequest.builder().method("GET")
                                        .endpoint("http://localhost:8080/client/api")

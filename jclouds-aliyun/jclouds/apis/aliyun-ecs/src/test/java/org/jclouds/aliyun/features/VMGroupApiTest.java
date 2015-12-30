@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.Fallbacks.VoidOnNotFoundOr404;
 import org.jclouds.aliyun.features.VMGroupApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateVMGroupOptions;
 import org.jclouds.aliyun.options.ListVMGroupsOptions;
 import org.jclouds.aliyun.options.UpdateVMGroupOptions;
@@ -44,7 +44,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "VMGroupApiTest")
-public class VMGroupApiTest extends BaseCloudStackApiTest<VMGroupApi> {
+public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
 
    public void testListVMGroups() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(VMGroupApi.class, "listInstanceGroups", ListVMGroupsOptions[].class);

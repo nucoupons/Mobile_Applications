@@ -25,7 +25,7 @@ import java.net.URI;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Domain;
 import org.jclouds.aliyun.features.GlobalDomainApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -34,7 +34,7 @@ import org.testng.annotations.Test;
  * Test the CloudStack GlobalDomainApi
  */
 @Test(groups = "unit", testName = "GlobalDomainApiExpectTest")
-public class GlobalDomainApiExpectTest extends BaseCloudStackExpectTest<GlobalDomainApi> {
+public class GlobalDomainApiExpectTest extends BaseAliyunExpectTest<GlobalDomainApi> {
 
    public void testCreateDomainWhenResponseIs2xx() {
       GlobalDomainApi client = requestSendsResponse(

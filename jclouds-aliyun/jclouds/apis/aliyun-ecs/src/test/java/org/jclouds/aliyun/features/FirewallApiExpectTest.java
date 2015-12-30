@@ -30,7 +30,7 @@ import org.jclouds.aliyun.domain.FirewallRule;
 import org.jclouds.aliyun.domain.PortForwardingRule;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.features.FirewallApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -39,7 +39,7 @@ import org.testng.annotations.Test;
  * Test the CloudStack FirewallApi
  */
 @Test(groups = "unit", testName = "FirewallApiExpectTest")
-public class FirewallApiExpectTest extends BaseCloudStackExpectTest<FirewallApi> {
+public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
 
    public void testListFirewallRulesWhenResponseIs2xx() {
       FirewallApi client = requestSendsResponse(

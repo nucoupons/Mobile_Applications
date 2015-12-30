@@ -24,9 +24,9 @@ import org.jclouds.http.HttpResponse;
  * Base class for writing CloudStack Expect tests with the ComputeService
  * abstraction
  */
-public abstract class BaseCloudStackComputeServiceContextExpectTest<T> extends BaseCloudStackExpectTest<T> {
+public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseAliyunExpectTest<T> {
    
-   public BaseCloudStackComputeServiceContextExpectTest() {
+   public BaseAliyunComputeServiceContextExpectTest() {
       // to match the api key name in listaccountsresponse.json
       identity = "APIKEY";
    }

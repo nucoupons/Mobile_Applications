@@ -23,7 +23,7 @@ import java.util.Set;
 
 import org.jclouds.aliyun.domain.VMGroup;
 import org.jclouds.aliyun.features.VMGroupApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListVMGroupsOptions;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.Test;
@@ -34,7 +34,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code VMGroupApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "VMGroupApiLiveTest")
-public class VMGroupApiLiveTest extends BaseCloudStackApiLiveTest {
+public class VMGroupApiLiveTest extends BaseAliyunApiLiveTest {
 
    private VMGroup groupCreated;
 

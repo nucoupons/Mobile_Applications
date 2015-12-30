@@ -25,7 +25,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.OSType;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListOSTypesOptions;
 import org.testng.annotations.Test;
 
@@ -33,7 +33,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code GuestOSApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GuestOSApiLiveTest")
-public class GuestOSApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GuestOSApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testListOSTypes() throws Exception {
       Set<OSType> response = client.getGuestOSApi().listOSTypes();

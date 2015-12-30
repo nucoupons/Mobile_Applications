@@ -68,13 +68,13 @@ import com.google.common.reflect.TypeToken;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 
-public class BaseCloudStackApiLiveTest extends BaseGenericComputeServiceContextLiveTest<AliyunContext> {
+public class BaseAliyunApiLiveTest extends BaseGenericComputeServiceContextLiveTest<AliyunContext> {
    protected String domainAdminIdentity;
    protected String domainAdminCredential;
    protected String globalAdminIdentity;
    protected String globalAdminCredential;
 
-   public BaseCloudStackApiLiveTest() {
+   public BaseAliyunApiLiveTest() {
       provider = "cloudstack";
    }
    

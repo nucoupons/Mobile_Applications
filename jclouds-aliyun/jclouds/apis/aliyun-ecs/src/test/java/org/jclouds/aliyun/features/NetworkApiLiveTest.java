@@ -36,7 +36,7 @@ import org.jclouds.aliyun.domain.GuestIPType;
 import org.jclouds.aliyun.domain.Network;
 import org.jclouds.aliyun.domain.NetworkOffering;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.predicates.NetworkOfferingPredicates;
 import org.jclouds.aliyun.predicates.ZonePredicates;
 import org.testng.annotations.BeforeGroups;
@@ -46,7 +46,7 @@ import org.testng.annotations.Test;
  * Tests behavior of {@code NetworkApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "NetworkApiLiveTest")
-public class NetworkApiLiveTest extends BaseCloudStackApiLiveTest {
+public class NetworkApiLiveTest extends BaseAliyunApiLiveTest {
 
    private boolean networksSupported;
    private Zone zone;

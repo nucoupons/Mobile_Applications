@@ -50,7 +50,7 @@ import static org.testng.Assert.fail;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "CloudStackTemplateOptionsTest")
-public class CloudStackTemplateOptionsTest {
+public class AliyunTemplateOptionsTest {
    //TODO: test clone();
    
    @Test

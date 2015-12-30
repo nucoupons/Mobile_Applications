@@ -27,7 +27,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.Domain;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 import com.google.common.base.Function;
@@ -38,7 +38,7 @@ import com.google.common.collect.Sets;
  * Tests behavior of {@code DomainDomainApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "DomainDomainApiLiveTest")
-public class DomainDomainApiLiveTest extends BaseCloudStackApiLiveTest {
+public class DomainDomainApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testListDomains() {

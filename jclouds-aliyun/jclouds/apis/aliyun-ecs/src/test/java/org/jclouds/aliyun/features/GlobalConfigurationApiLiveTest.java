@@ -23,7 +23,7 @@ import static org.testng.Assert.assertEquals;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.ConfigurationEntry;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 import org.testng.collections.Sets;
 
@@ -36,7 +36,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code GlobalConfigurationApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalConfigurationApiLiveTest")
-public class GlobalConfigurationApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalConfigurationApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testListConfigurationEntries() {

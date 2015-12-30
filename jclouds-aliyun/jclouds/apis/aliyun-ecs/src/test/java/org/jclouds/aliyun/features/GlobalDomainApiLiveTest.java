@@ -23,7 +23,7 @@ import static org.testng.Assert.assertNull;
 
 import org.jclouds.aliyun.domain.Domain;
 import org.jclouds.aliyun.features.GlobalDomainApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -33,7 +33,7 @@ import com.google.common.base.Predicate;
  * Tests behavior of {@code GlobalDomainApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalDomainApiLiveTest")
-public class GlobalDomainApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalDomainApiLiveTest extends BaseAliyunApiLiveTest {
 
    private GlobalDomainApi domainClient;
    private Domain rootDomain;

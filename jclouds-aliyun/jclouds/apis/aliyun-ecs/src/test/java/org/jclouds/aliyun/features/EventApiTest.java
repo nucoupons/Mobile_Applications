@@ -23,7 +23,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.aliyun.features.EventApi;
 import org.jclouds.aliyun.functions.ParseEventTypesFromHttpResponse;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListEventsOptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -37,7 +37,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "EventApiTest")
-public class EventApiTest extends BaseCloudStackApiTest<EventApi> {
+public class EventApiTest extends BaseAliyunApiTest<EventApi> {
 
    public void testListEventTypes() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(EventApi.class, "listEventTypes");

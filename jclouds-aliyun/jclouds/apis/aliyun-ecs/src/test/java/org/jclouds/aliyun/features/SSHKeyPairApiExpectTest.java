@@ -25,7 +25,7 @@ import java.net.URI;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.SshKeyPair;
 import org.jclouds.aliyun.features.SSHKeyPairApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.jclouds.ssh.SshKeys;
@@ -39,7 +39,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack SSHKeyPairApi
  */
 @Test(groups = "unit", testName = "SSHKeyPairApiExpectTest")
-public class SSHKeyPairApiExpectTest extends BaseCloudStackExpectTest<SSHKeyPairApi> {
+public class SSHKeyPairApiExpectTest extends BaseAliyunExpectTest<SSHKeyPairApi> {
 
    @Test
    public void testListAndGetSSHKeyPairsWhenResponseIs2xx() {

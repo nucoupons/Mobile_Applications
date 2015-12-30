@@ -29,7 +29,7 @@ import org.jclouds.aliyun.domain.ISOPermissions;
 import org.jclouds.aliyun.domain.OSType;
 import org.jclouds.aliyun.domain.Zone;
 import org.jclouds.aliyun.features.ISOApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.DeleteISOOptions;
 import org.jclouds.aliyun.options.ListISOsOptions;
 import org.jclouds.aliyun.options.RegisterISOOptions;
@@ -45,7 +45,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@link ISOApi} and {@link ISOApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "ISOApiLiveTest")
-public class ISOApiLiveTest extends BaseCloudStackApiLiveTest {
+public class ISOApiLiveTest extends BaseAliyunApiLiveTest {
     
    private static final String isoName = "jcloudsTestISO";
    private static final String url = System.getProperty("test.cloudstack.iso-url", "http://archive.ubuntu.com/ubuntu/dists/maverick/main/installer-i386/current/images/netboot/mini.iso");

@@ -24,7 +24,7 @@ import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
 import org.jclouds.aliyun.features.VirtualMachineApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.AssignVirtualMachineOptions;
 import org.jclouds.aliyun.options.ListVirtualMachinesOptions;
 import org.jclouds.aliyun.options.StopVirtualMachineOptions;
@@ -42,7 +42,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "VirtualMachineApiTest")
-public class VirtualMachineApiTest extends BaseCloudStackApiTest<VirtualMachineApi> {
+public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> {
    public void testListVirtualMachines() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(VirtualMachineApi.class, "listVirtualMachines",
             ListVirtualMachinesOptions[].class);

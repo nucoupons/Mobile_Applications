@@ -20,7 +20,7 @@ import static org.jclouds.reflect.Reflection2.method;
 
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.GlobalUserApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateUserOptions;
 import org.jclouds.aliyun.options.UpdateUserOptions;
 import org.jclouds.http.HttpRequest;
@@ -35,7 +35,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code GlobalUserApi}
  */
 @Test(groups = "unit", testName = "GlobalUserApiTest")
-public class GlobalUserApiTest extends BaseCloudStackApiTest<GlobalUserApi> {
+public class GlobalUserApiTest extends BaseAliyunApiTest<GlobalUserApi> {
 
    HttpRequest createUser = HttpRequest.builder().method("GET")
                                        .endpoint("http://localhost:8080/client/api")

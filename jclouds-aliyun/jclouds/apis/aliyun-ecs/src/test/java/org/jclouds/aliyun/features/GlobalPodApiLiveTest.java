@@ -28,7 +28,7 @@ import org.jclouds.aliyun.domain.AllocationState;
 import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Pod;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.CreatePodOptions;
 import org.jclouds.aliyun.options.ListPodsOptions;
 import org.jclouds.aliyun.options.UpdatePodOptions;
@@ -42,7 +42,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code GlobalPodApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalPodApiLiveTest")
-public class GlobalPodApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalPodApiLiveTest extends BaseAliyunApiLiveTest {
 
    private Zone zone;
    private Pod pod;

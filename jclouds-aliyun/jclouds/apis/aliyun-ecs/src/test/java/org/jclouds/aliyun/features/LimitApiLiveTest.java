@@ -19,14 +19,14 @@ package org.jclouds.aliyun.features;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.ResourceLimit;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code LimitApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "LimitApiLiveTest")
-public class LimitApiLiveTest extends BaseCloudStackApiLiveTest {
+public class LimitApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testListResourceLimits() {
       final Set<ResourceLimit> resourceLimits = client.getLimitApi().listResourceLimits();

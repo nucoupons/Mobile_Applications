@@ -37,7 +37,7 @@ import org.jclouds.aliyun.domain.PublicIPAddress;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.domain.LoadBalancerRule.Algorithm;
 import org.jclouds.aliyun.domain.LoadBalancerRule.State;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.predicates.LoadBalancerRuleActive;
 import org.jclouds.ssh.SshException;
 import org.testng.annotations.AfterGroups;
@@ -52,7 +52,7 @@ import com.google.common.net.HostAndPort;
  * Tests behavior of {@code LoadBalancerApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "LoadBalancerApiLiveTest")
-public class LoadBalancerApiLiveTest extends BaseCloudStackApiLiveTest {
+public class LoadBalancerApiLiveTest extends BaseAliyunApiLiveTest {
    private PublicIPAddress ip = null;
    private VirtualMachine vm;
    private LoadBalancerRule rule;

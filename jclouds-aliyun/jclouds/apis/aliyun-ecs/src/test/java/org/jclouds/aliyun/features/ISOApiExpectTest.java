@@ -23,7 +23,7 @@ import static org.testng.Assert.assertNull;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.ISO;
 import org.jclouds.aliyun.features.ISOApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.aliyun.options.RegisterISOOptions;
 import org.jclouds.date.internal.SimpleDateFormatDateService;
 import org.jclouds.http.HttpRequest;
@@ -37,7 +37,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack ISOApi
  */
 @Test(groups = "unit", testName = "ISOApiExpectTest")
-public class ISOApiExpectTest extends BaseCloudStackExpectTest<ISOApi> {
+public class ISOApiExpectTest extends BaseAliyunExpectTest<ISOApi> {
    
    private static final ISO iso1 = ISO.builder()
                                       .id("018e0928-8205-4d8e-9329-f731a9ccd488")

@@ -24,7 +24,7 @@ import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Project;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.features.ProjectApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -35,7 +35,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack ProjectApi
  */
 @Test(groups = "unit", testName = "ProjectApiExpectTest")
-public class ProjectApiExpectTest extends BaseCloudStackExpectTest<ProjectApi> {
+public class ProjectApiExpectTest extends BaseAliyunExpectTest<ProjectApi> {
 
 
    public void testListProjectsWhenResponseIs2xx() {

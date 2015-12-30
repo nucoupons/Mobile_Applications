@@ -36,9 +36,9 @@ import com.google.inject.Module;
 /**
  * Base class for writing CloudStack Rest Client Expect tests
  */
-public abstract class BaseCloudStackExpectTest<S> extends BaseRestApiExpectTest<S> {
+public abstract class BaseAliyunExpectTest<S> extends BaseRestApiExpectTest<S> {
 
-   public BaseCloudStackExpectTest() {
+   public BaseAliyunExpectTest() {
       provider = "cloudstack";
    }
    

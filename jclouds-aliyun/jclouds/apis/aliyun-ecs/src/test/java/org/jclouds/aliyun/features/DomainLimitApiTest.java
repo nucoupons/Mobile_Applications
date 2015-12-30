@@ -23,7 +23,7 @@ import java.io.IOException;
 import org.jclouds.aliyun.domain.ResourceLimit;
 import org.jclouds.aliyun.domain.ResourceLimit.ResourceType;
 import org.jclouds.aliyun.features.DomainLimitApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
 import org.jclouds.rest.internal.GeneratedHttpRequest;
@@ -35,7 +35,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code DomainLimitApi}
  */
 @Test(groups = "unit", testName = "DomainLimitApiTest")
-public class DomainLimitApiTest extends BaseCloudStackApiTest<DomainLimitApi> {
+public class DomainLimitApiTest extends BaseAliyunApiTest<DomainLimitApi> {
 
    public void testUpdateResourceLimit() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(DomainLimitApi.class, "updateResourceLimit", ResourceLimit.class);

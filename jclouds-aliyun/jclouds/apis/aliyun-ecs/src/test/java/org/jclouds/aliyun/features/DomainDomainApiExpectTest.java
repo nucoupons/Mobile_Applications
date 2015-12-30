@@ -25,7 +25,7 @@ import java.net.URI;
 import org.jclouds.aliyun.AliyunContext;
 import org.jclouds.aliyun.domain.Domain;
 import org.jclouds.aliyun.features.DomainDomainApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -36,7 +36,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack DomainDomainApi
  */
 @Test(groups = "unit", testName = "DomainDomainApiExpectTest")
-public class DomainDomainApiExpectTest extends BaseCloudStackExpectTest<DomainDomainApi> {
+public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomainApi> {
 
    public void testListDomainsWhenResponseIs2xx() {
       DomainDomainApi client = requestSendsResponse(

@@ -29,7 +29,7 @@ import org.jclouds.aliyun.domain.NetworkOffering;
 import org.jclouds.aliyun.domain.TrafficType;
 import org.jclouds.aliyun.domain.VlanIPRange;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.CreateVlanIPRangeOptions;
 import org.jclouds.aliyun.options.ListVlanIPRangesOptions;
 import org.jclouds.aliyun.predicates.NetworkOfferingPredicates;
@@ -46,7 +46,7 @@ import com.google.common.collect.Sets;
  * Tests behavior of {@code GlobalVlanApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "GlobalVlanApiLiveTest")
-public class GlobalVlanApiLiveTest extends BaseCloudStackApiLiveTest {
+public class GlobalVlanApiLiveTest extends BaseAliyunApiLiveTest {
 
    private Network network;
    private boolean usingExistingNetwork;

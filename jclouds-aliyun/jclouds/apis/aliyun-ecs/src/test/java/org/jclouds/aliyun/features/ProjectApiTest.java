@@ -22,7 +22,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.ProjectApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListProjectsOptions;
 import org.jclouds.functions.IdentityFunction;
 import org.jclouds.http.functions.ParseFirstJsonValueNamed;
@@ -39,7 +39,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "ProjectApiTest")
-public class ProjectApiTest extends BaseCloudStackApiTest<ProjectApi> {
+public class ProjectApiTest extends BaseAliyunApiTest<ProjectApi> {
 
    public void testListProjects() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(ProjectApi.class, "listProjects", ListProjectsOptions[].class);

@@ -28,7 +28,7 @@ import com.google.common.reflect.Invokable;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.features.TagApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateTagsOptions;
 import org.jclouds.aliyun.options.DeleteTagsOptions;
 import org.jclouds.aliyun.options.ListTagsOptions;
@@ -44,7 +44,7 @@ import org.testng.annotations.Test;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "TagApiTest")
-public class TagApiTest extends BaseCloudStackApiTest<TagApi> {
+public class TagApiTest extends BaseAliyunApiTest<TagApi> {
    public void testListTags() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(TagApi.class, "listTags", ListTagsOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());

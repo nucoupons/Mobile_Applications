@@ -21,7 +21,7 @@ import static org.jclouds.reflect.Reflection2.method;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.features.GlobalAccountApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateAccountOptions;
 import org.jclouds.aliyun.options.UpdateAccountOptions;
 import org.jclouds.http.HttpRequest;
@@ -36,7 +36,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code GlobalAccountApi}
  */
 @Test(groups = "unit", testName = "GlobalAccountApiTest")
-public class GlobalAccountApiTest extends BaseCloudStackApiTest<GlobalAccountApi> {
+public class GlobalAccountApiTest extends BaseAliyunApiTest<GlobalAccountApi> {
 
    HttpRequest create = HttpRequest.builder().method("GET")
                                    .endpoint("http://localhost:8080/client/api")

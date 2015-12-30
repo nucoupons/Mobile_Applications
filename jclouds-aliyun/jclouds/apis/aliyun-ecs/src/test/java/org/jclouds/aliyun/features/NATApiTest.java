@@ -23,7 +23,7 @@ import java.io.IOException;
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.aliyun.features.NATApi;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.CreateIPForwardingRuleOptions;
 import org.jclouds.aliyun.options.ListIPForwardingRulesOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
@@ -42,7 +42,7 @@ import com.google.common.reflect.Invokable;
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
 @Test(groups = "unit", testName = "NATApiTest")
-public class NATApiTest extends BaseCloudStackApiTest<NATApi> {
+public class NATApiTest extends BaseAliyunApiTest<NATApi> {
    public void testListIPForwardingRules() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(NATApi.class, "listIPForwardingRules", ListIPForwardingRulesOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());

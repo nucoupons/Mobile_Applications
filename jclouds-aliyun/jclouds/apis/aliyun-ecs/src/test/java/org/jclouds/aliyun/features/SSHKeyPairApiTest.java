@@ -27,7 +27,7 @@ import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.Fallbacks.VoidOnNotFoundOr404;
 import org.jclouds.aliyun.features.SSHKeyPairApi;
 import org.jclouds.aliyun.filters.QuerySigner;
-import org.jclouds.aliyun.internal.BaseCloudStackApiTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiTest;
 import org.jclouds.aliyun.options.ListSSHKeyPairsOptions;
 import org.jclouds.fallbacks.MapHttp4xxCodesToExceptions;
 import org.jclouds.functions.IdentityFunction;
@@ -44,7 +44,7 @@ import com.google.common.reflect.Invokable;
  * Tests behavior of {@code SSHKeyPairApi}
  */
 @Test(groups = "unit", testName = "SSHKeyPairApiTest")
-public class SSHKeyPairApiTest extends BaseCloudStackApiTest<SSHKeyPairApi> {
+public class SSHKeyPairApiTest extends BaseAliyunApiTest<SSHKeyPairApi> {
 
    public void testListSSHKeyPairs() throws SecurityException, NoSuchMethodException, IOException {
       Invokable<?, ?> method = method(SSHKeyPairApi.class, "listSSHKeyPairs", ListSSHKeyPairsOptions[].class);

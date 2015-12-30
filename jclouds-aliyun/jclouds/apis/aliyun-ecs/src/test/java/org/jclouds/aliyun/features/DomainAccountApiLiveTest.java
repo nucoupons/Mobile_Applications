@@ -24,14 +24,14 @@ import static org.testng.Assert.assertTrue;
 import org.jclouds.aliyun.domain.Account;
 import org.jclouds.aliyun.domain.AsyncCreateResponse;
 import org.jclouds.aliyun.domain.AsyncJob;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code DomainAccountApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "DomainAccountApiLiveTest")
-public class DomainAccountApiLiveTest extends BaseCloudStackApiLiveTest {
+public class DomainAccountApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Test
    public void testEnableDisableAccount() {

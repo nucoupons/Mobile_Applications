@@ -25,7 +25,7 @@ import org.jclouds.aliyun.domain.NetworkType;
 import org.jclouds.aliyun.domain.Tag;
 import org.jclouds.aliyun.domain.Zone;
 import org.jclouds.aliyun.features.ZoneApi;
-import org.jclouds.aliyun.internal.BaseCloudStackExpectTest;
+import org.jclouds.aliyun.internal.BaseAliyunExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
@@ -36,7 +36,7 @@ import com.google.common.collect.ImmutableSet;
  * Test the CloudStack ZoneApi
  */
 @Test(groups = "unit", testName = "ZoneApiExpectTest")
-public class ZoneApiExpectTest extends BaseCloudStackExpectTest<ZoneApi> {
+public class ZoneApiExpectTest extends BaseAliyunExpectTest<ZoneApi> {
 
 
    public void testListZonesWhenResponseIs2xx() {

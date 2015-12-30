@@ -35,7 +35,7 @@ import org.jclouds.aliyun.domain.Snapshot;
 import org.jclouds.aliyun.domain.VirtualMachine;
 import org.jclouds.aliyun.domain.Volume;
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListVolumesOptions;
 import org.jclouds.logging.Logger;
 import org.testng.annotations.BeforeMethod;
@@ -48,7 +48,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code VolumeApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "VolumeApiLiveTest")
-public class VolumeApiLiveTest extends BaseCloudStackApiLiveTest {
+public class VolumeApiLiveTest extends BaseAliyunApiLiveTest {
 
    @Resource Logger logger = Logger.NULL;
 

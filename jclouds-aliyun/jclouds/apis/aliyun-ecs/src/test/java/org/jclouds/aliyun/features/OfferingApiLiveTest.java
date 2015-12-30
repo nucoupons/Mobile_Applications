@@ -27,7 +27,7 @@ import org.jclouds.aliyun.domain.NetworkOffering;
 import org.jclouds.aliyun.domain.ServiceOffering;
 import org.jclouds.aliyun.domain.StorageType;
 import org.jclouds.aliyun.domain.TrafficType;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.jclouds.aliyun.options.ListDiskOfferingsOptions;
 import org.jclouds.aliyun.options.ListNetworkOfferingsOptions;
 import org.jclouds.aliyun.options.ListServiceOfferingsOptions;
@@ -41,7 +41,7 @@ import com.google.common.collect.Iterables;
  * Tests behavior of {@code OfferingApi}
  */
 @Test(groups = "live", singleThreaded = true, testName = "OfferingApiLiveTest")
-public class OfferingApiLiveTest extends BaseCloudStackApiLiveTest {
+public class OfferingApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testListDiskOfferings() throws Exception {
       Set<DiskOffering> response = client.getOfferingApi().listDiskOfferings();

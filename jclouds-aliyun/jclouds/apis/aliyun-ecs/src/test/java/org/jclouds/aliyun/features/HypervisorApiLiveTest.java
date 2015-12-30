@@ -21,14 +21,14 @@ import static org.testng.Assert.assertTrue;
 import java.util.Set;
 
 import org.jclouds.aliyun.domain.Zone;
-import org.jclouds.aliyun.internal.BaseCloudStackApiLiveTest;
+import org.jclouds.aliyun.internal.BaseAliyunApiLiveTest;
 import org.testng.annotations.Test;
 
 /**
  * Tests behavior of {@code HypervisorApiLiveTest}
  */
 @Test(groups = "live", singleThreaded = true, testName = "HypervisorApiLiveTest")
-public class HypervisorApiLiveTest extends BaseCloudStackApiLiveTest {
+public class HypervisorApiLiveTest extends BaseAliyunApiLiveTest {
 
    public void testListHypervisors() throws Exception {
       Set<String> response = client.getHypervisorApi().listHypervisors();
