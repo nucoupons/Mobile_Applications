@@ -59,7 +59,6 @@ public class AliyunApiMetadata extends BaseHttpApiMetadata<AliyunApi> {
 
    public static class Builder extends BaseHttpApiMetadata.Builder<AliyunApi, Builder> {
 
-      @SuppressWarnings("deprecation")
       protected Builder() {
          id("aliyun-ecs")
          .name("Aliyun ecs API")

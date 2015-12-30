@@ -105,6 +105,7 @@ public class AliyunComputeServiceAdapter implements
    private final CreatePortForwardingRulesForIP setupPortForwardingRulesForIP;
    private final CreateFirewallRulesForIP setupFirewallRulesForIP;
    private final LoadingCache<String, Set<IPForwardingRule>> vmToRules;
+   @SuppressWarnings("unused")
    private final Map<String, Credentials> credentialStore;
    private final Map<NetworkType, ? extends OptionsConverter> optionsConverters;
    private final Supplier<LoadingCache<String, Zone>> zoneIdToZone;

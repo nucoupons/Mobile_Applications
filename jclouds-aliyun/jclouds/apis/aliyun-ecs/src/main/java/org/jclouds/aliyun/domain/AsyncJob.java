@@ -108,6 +108,7 @@ public class AsyncJob<S> {
       return new ConcreteBuilder<T>();
    }
 
+   @SuppressWarnings("rawtypes")
    public Builder toBuilder() {
       return new ConcreteBuilder<S>().fromAsyncJob(this);
    }
@@ -233,7 +234,8 @@ public class AsyncJob<S> {
          return self();
       }
 
-      public AsyncJob build() {
+      @SuppressWarnings("rawtypes")
+	  public AsyncJob build() {
          return new AsyncJob<S>(accountId, cmd, created, id, instanceId, instanceType, progress, result, resultCode,
                resultType, status, userId, error);
       }
@@ -255,7 +257,8 @@ public class AsyncJob<S> {
                .error(in.getError());
       }
 
-      public static Builder<?, Object> fromAsyncJobUntyped(AsyncJob<?> in) {
+      @SuppressWarnings({ "unchecked", "rawtypes" })
+	  public static Builder<?, Object> fromAsyncJobUntyped(AsyncJob<?> in) {
          return new ConcreteBuilder().fromAsyncJob(in);
       }
    }

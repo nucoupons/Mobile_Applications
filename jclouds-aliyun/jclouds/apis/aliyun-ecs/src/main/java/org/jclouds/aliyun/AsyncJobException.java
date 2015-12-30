@@ -18,7 +18,12 @@ package org.jclouds.aliyun;
 
 public class AsyncJobException extends RuntimeException {
 
-   public AsyncJobException() {
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public AsyncJobException() {
    }
 
    public AsyncJobException(String s) {

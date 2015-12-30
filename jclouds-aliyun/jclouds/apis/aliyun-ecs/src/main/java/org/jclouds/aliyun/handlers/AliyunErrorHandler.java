@@ -86,7 +86,8 @@ public class AliyunErrorHandler implements HttpErrorHandler {
       }
    }
 
-   public String parseMessage(HttpResponse response) {
+   @SuppressWarnings("deprecation")
+  public String parseMessage(HttpResponse response) {
       if (response.getPayload() == null)
          return null;
       try {

@@ -36,6 +36,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import com.google.common.base.Joiner;
+
 import org.jclouds.crypto.Crypto;
 import org.jclouds.domain.Credentials;
 import org.jclouds.http.HttpException;
@@ -58,6 +59,7 @@ import com.google.common.io.ByteProcessor;
  * 
  * @see <a href= "http://download.cloud.com/releases/2.2.0/api/user/2.2api_security_details.html" />
  */
+@SuppressWarnings("deprecation")
 @Singleton
 public class QuerySigner implements AuthenticationFilter, RequestSigner {
 

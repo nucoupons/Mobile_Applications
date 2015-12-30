@@ -87,7 +87,7 @@ public class ParseTypedAsyncJob implements Function<AsyncJob<Map<String, JsonBal
       AsyncJob<?> result = toParse;
       if (toParse.getResult() != null) {
          if (toParse.getResult().size() == 1) {
-            @SuppressWarnings({"unchecked", "rawtypes"})
+            @SuppressWarnings({"rawtypes"})
             Builder<?, Object> builder = AsyncJob.Builder.fromAsyncJobUntyped((AsyncJob) toParse);
             if (toParse.getResult().containsKey("success")) {
                builder.result(null);
@@ -112,7 +112,7 @@ public class ParseTypedAsyncJob implements Function<AsyncJob<Map<String, JsonBal
             }
             result = builder.build();
          } else if (toParse.getResult().containsKey("errorcode")) {
-            @SuppressWarnings({"unchecked", "rawtypes"})
+            @SuppressWarnings({"rawtypes"})
             Builder<?, Object> builder = AsyncJob.Builder.fromAsyncJobUntyped((AsyncJob) toParse);
             builder.result(null);  // avoid classcastexceptions
             builder.error(AsyncJobError.builder().errorCode(ErrorCode.fromValue(toParse.getResult().get("errorcode").toString()))
