@@ -50,7 +50,7 @@ import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.UncheckedExecutionException;
 import com.google.inject.Module;
 
-@Test(groups = "unit", testName = "CloudStackSecurityGroupExtensionExpectTest")
+@Test(groups = "unit", testName = "AliyunSecurityGroupExtensionExpectTest")
 public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeServiceContextExpectTest<ComputeService> {
 
    protected final HttpResponse addRuleResponse = HttpResponse.builder().statusCode(200)

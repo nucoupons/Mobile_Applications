@@ -37,10 +37,10 @@ import org.jclouds.rest.annotations.SelectJson;
 import org.jclouds.rest.annotations.Unwrap;
 
 /**
- * Provides synchronous access to cloudstack via their REST API.
+ * Provides synchronous access to aliyun via their REST API.
  * <p/>
  * 
- * @see <a href="http://cloudstack.apache.org/docs/api/apidocs-4.3/TOC_Root_Admin.html" />
+ * @see <a href="http://aliyun.apache.org/docs/api/apidocs-4.3/TOC_Root_Admin.html" />
  */
 @RequestFilters(AuthenticationFilter.class)
 @QueryParams(keys = "response", values = "json")

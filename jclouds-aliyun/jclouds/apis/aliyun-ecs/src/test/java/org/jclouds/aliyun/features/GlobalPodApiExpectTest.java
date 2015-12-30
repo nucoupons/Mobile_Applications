@@ -35,7 +35,7 @@ import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack PodClient
+ * Test the Aliyun PodClient
  */
 @Test(groups = "unit", testName = "GlobalPodApiExpectTest")
 public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {

@@ -3,8 +3,8 @@
     "virtualmachine": [
         {
             "id": "fee2ccb3-c1f2-4e7b-8465-42b390e10dff",
-            "name": "cloudstack-r-611",
-            "displayname": "cloudstack-r-611",
+            "name": "aliyun-r-611",
+            "displayname": "aliyun-r-611",
             "account": "jcloud2",
             "domainid": "ea66e3a5-d007-42e8-a0de-ec5ce778a1d7",
             "domain": "jCloud",

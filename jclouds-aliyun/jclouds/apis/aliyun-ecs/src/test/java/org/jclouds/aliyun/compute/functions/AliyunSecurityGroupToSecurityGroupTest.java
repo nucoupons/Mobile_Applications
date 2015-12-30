@@ -28,7 +28,7 @@ import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableSet;
 
-@Test(groups = "unit", testName = "CloudStackSecurityGroupToSecurityGroupTest")
+@Test(groups = "unit", testName = "AliyunSecurityGroupToSecurityGroupTest")
 public class AliyunSecurityGroupToSecurityGroupTest {
 
    private static final IngressRuleToIpPermission ruleConverter = new IngressRuleToIpPermission();

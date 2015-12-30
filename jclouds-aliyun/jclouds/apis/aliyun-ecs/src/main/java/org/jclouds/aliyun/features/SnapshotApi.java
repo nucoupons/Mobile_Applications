@@ -46,7 +46,7 @@ import org.jclouds.rest.annotations.SelectJson;
 import org.jclouds.rest.annotations.Unwrap;
 
 /**
- * Provides synchronous access to CloudStack Snapshot features.
+ * Provides synchronous access to Aliyun Snapshot features.
  * <p/>
  * 
  * @see http://download.cloud.com/releases/2.2.0/api/TOC_User.html

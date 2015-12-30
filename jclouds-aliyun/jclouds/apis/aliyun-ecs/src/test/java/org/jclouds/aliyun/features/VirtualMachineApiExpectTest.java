@@ -33,7 +33,7 @@ import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
 
 /**
- * Test the CloudStack VirtualMachineApiClient
+ * Test the Aliyun VirtualMachineApiClient
  */
 @Test(groups = "unit", testName = "VirtualMachineApiExpectTest")
 public class VirtualMachineApiExpectTest extends BaseAliyunExpectTest<VirtualMachineApi> {

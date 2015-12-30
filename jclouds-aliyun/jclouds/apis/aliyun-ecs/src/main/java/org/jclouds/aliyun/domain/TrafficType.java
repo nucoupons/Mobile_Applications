@@ -30,7 +30,7 @@ public enum TrafficType {
     */
    PUBLIC,
    /**
-    * VM-to-VM traffic and VMs are assigned a virtual IP created by CloudStack
+    * VM-to-VM traffic and VMs are assigned a virtual IP created by Aliyun
     */
    GUEST,
    /**

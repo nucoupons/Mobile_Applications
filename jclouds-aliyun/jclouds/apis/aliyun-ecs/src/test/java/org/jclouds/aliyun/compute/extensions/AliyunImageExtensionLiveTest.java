@@ -23,13 +23,13 @@ import org.testng.annotations.Test;
 import com.google.inject.Module;
 
 /**
- * Live test for CloudStack {@link ImageExtension} implementation.
+ * Live test for Aliyun {@link ImageExtension} implementation.
  */
-@Test(groups = "live", singleThreaded = true, testName = "CloudStackImageExtensionLiveTest")
+@Test(groups = "live", singleThreaded = true, testName = "AliyunImageExtensionLiveTest")
 public class AliyunImageExtensionLiveTest extends BaseImageExtensionLiveTest {
 
    public AliyunImageExtensionLiveTest() {
-      provider = "cloudstack";
+      provider = "aliyun";
    }
 
    @Override

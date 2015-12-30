@@ -30,7 +30,7 @@ import com.google.common.base.Objects.ToStringHelper;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Represents a storage pool in CloudStack
+ * Represents a storage pool in Aliyun
  */
 public class StoragePool implements Comparable<StoragePool> {
 

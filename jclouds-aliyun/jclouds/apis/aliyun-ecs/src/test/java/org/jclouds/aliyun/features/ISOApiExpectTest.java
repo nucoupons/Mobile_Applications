@@ -34,7 +34,7 @@ import org.testng.annotations.Test;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack ISOApi
+ * Test the Aliyun ISOApi
  */
 @Test(groups = "unit", testName = "ISOApiExpectTest")
 public class ISOApiExpectTest extends BaseAliyunExpectTest<ISOApi> {

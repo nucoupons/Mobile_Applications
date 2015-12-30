@@ -31,7 +31,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 
 /**
- * Represents a usage record from CloudStack
+ * Represents a usage record from Aliyun
  */
 public class UsageRecord {
 

@@ -29,7 +29,7 @@ import com.google.common.base.Function;
 
 
 /**
- * A function for transforming a CloudStack-specific IngressRule into a generic
+ * A function for transforming a Aliyun-specific IngressRule into a generic
  * IpPermission object.
  */
 public class IngressRuleToIpPermission implements Function<IngressRule, IpPermission> {

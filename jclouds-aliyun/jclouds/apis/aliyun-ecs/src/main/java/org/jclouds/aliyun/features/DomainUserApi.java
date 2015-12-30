@@ -37,7 +37,7 @@ import org.jclouds.rest.annotations.SelectJson;
 import org.jclouds.rest.annotations.Unwrap;
 
 /**
- * Provides synchronous access to CloudStack User features available to Domain
+ * Provides synchronous access to Aliyun User features available to Domain
  * Admin users.
  *
  * @see <a href=

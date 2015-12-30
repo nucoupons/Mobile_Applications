@@ -42,7 +42,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.inject.Injector;
 
 /**
- * Tests the compute service abstraction of the cloudstack api.
+ * Tests the compute service abstraction of the aliyun api.
  */
 @Test(groups = "unit")
 public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServiceContextExpectTest<Injector> {

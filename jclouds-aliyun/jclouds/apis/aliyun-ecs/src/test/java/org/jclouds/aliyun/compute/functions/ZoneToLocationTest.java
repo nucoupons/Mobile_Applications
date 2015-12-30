@@ -40,7 +40,7 @@ import com.google.common.collect.Iterables;
 @Test(singleThreaded = true, groups = "unit")
 public class ZoneToLocationTest {
 
-   public static final JustProvider justProvider = new JustProvider("cloudstack", Suppliers.ofInstance(URI.create("foo")),
+   public static final JustProvider justProvider = new JustProvider("aliyun", Suppliers.ofInstance(URI.create("foo")),
             ImmutableSet.<String> of());
    public static final ZoneToLocation function = new ZoneToLocation(justProvider);
    public static final Location one = new LocationBuilder().parent(Iterables.get(justProvider.get(), 0)).scope(LocationScope.ZONE)

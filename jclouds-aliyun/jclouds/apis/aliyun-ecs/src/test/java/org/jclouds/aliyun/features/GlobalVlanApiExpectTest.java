@@ -32,7 +32,7 @@ import org.testng.annotations.Test;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack VlanClient
+ * Test the Aliyun VlanClient
  */
 @Test(groups = "unit", testName = "GlobalVlanApiExpectTest")
 public class GlobalVlanApiExpectTest extends BaseAliyunExpectTest<GlobalVlanApi> {

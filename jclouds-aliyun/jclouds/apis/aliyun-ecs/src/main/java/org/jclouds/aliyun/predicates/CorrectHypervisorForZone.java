@@ -46,14 +46,14 @@ public class CorrectHypervisorForZone implements Function<String, Predicate<Temp
 
    @Inject
    public CorrectHypervisorForZone(AliyunApi client) {
-      this(Suppliers.ofInstance(new CloudStackApiToZoneToHypervisors().apply(checkNotNull(client, "client"))));
+      this(Suppliers.ofInstance(new AliyunApiToZoneToHypervisors().apply(checkNotNull(client, "client"))));
    }
 
    public CorrectHypervisorForZone(Supplier<Map<String, Set<String>>> hypervisorsSupplier) {
       this.hypervisorsSupplier = checkNotNull(hypervisorsSupplier, "hypervisorsSupplier");
    }
 
-   private static class CloudStackApiToZoneToHypervisors implements
+   private static class AliyunApiToZoneToHypervisors implements
          Function<AliyunApi, Map<String, Set<String>>> {
 
       @Override

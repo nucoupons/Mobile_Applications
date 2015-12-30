@@ -90,7 +90,7 @@ public class AliyunSecurityGroupExtension implements SecurityGroupExtension {
 
    /**
     * Note that for the time being, security groups are not scoped by location in
-    * CloudStack, so this will simply return listSecurityGroups().
+    * Aliyun, so this will simply return listSecurityGroups().
     *
     * @param location
     * @return security groups

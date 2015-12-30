@@ -61,7 +61,7 @@ public class ParseTypedAsyncJob implements Function<AsyncJob<Map<String, JsonBal
 
    @Inject(optional = true)
    @VisibleForTesting
-   @Named("jclouds.cloudstack.jobresult-type-map")
+   @Named("jclouds.aliyun.jobresult-type-map")
    Map<String, Class<?>> typeMap = ImmutableMap.<String, Class<?>>builder()
       .put("user", User.class)
       .put("account", Account.class)
@@ -105,7 +105,7 @@ public class ParseTypedAsyncJob implements Function<AsyncJob<Map<String, JsonBal
                   builder.result(json.fromJson(entry.getValue().toString(), typeMap.get(entry.getKey())));
                } else {
                   logger.warn(
-                     "type key %s not configured.  please override default for Map<String, Class<?>> bound to name jclouds.cloudstack.jobresult-type-map",
+                     "type key %s not configured.  please override default for Map<String, Class<?>> bound to name jclouds.aliyun.jobresult-type-map",
                      entry.getKey());
                   builder.result(entry.getValue().toString());
                }

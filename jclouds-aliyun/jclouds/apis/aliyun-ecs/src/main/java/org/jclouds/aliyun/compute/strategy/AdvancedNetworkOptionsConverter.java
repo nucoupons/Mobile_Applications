@@ -38,7 +38,7 @@ public class AdvancedNetworkOptionsConverter implements OptionsConverter {
    @Override
    public DeployVirtualMachineOptions apply(AliyunTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options) {
       // security groups not allowed.
-      // at least one network must be given to CloudStack,
+      // at least one network must be given to Aliyun,
       // but jclouds will try to autodetect an appropriate network if none given.
       checkArgument(templateOptions.getSecurityGroupIds().isEmpty(), "security groups cannot be specified for locations (zones) that use advanced networking");
       if (!templateOptions.getNetworks().isEmpty()) {

@@ -32,7 +32,7 @@ import com.google.inject.Module;
 public abstract class BaseAliyunApiTest<T> extends BaseRestAnnotationProcessingTest<T> {
 
    @ConfiguresHttpApi
-   public static class CloudStackHttpApiModuleExtension extends AliyunHttpApiModule {
+   public static class AliyunHttpApiModuleExtension extends AliyunHttpApiModule {
 
    }
 
@@ -44,7 +44,7 @@ public abstract class BaseAliyunApiTest<T> extends BaseRestAnnotationProcessingT
 
    @Override
    protected Module createModule() {
-      return new CloudStackHttpApiModuleExtension();
+      return new AliyunHttpApiModuleExtension();
    }
 
    @Override

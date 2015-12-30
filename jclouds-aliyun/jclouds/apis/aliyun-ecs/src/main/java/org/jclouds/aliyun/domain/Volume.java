@@ -55,7 +55,7 @@ public class Volume {
        */
       DESTROYED,
       /**
-       * the volume has failed somehow, e.g. during creation (in cloudstack development)
+       * the volume has failed somehow, e.g. during creation (in aliyun development)
        */
       FAILED,
 

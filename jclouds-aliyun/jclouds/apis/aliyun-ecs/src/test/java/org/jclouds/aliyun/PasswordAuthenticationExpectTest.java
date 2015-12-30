@@ -43,7 +43,7 @@ public class PasswordAuthenticationExpectTest extends BaseAliyunExpectTest<Accou
    @Override
    protected Properties setupProperties() {
       Properties contextProperties = super.setupProperties();
-      contextProperties.setProperty("jclouds.cloudstack.credential-type", "passwordCredentials");
+      contextProperties.setProperty("jclouds.aliyun.credential-type", "passwordCredentials");
       return contextProperties;
    }
 

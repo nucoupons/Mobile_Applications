@@ -28,7 +28,7 @@ import org.testng.annotations.Test;
 @Test(groups = "live", enabled = true, singleThreaded = true)
 public class AliyunComputeServiceLiveTest extends BaseComputeServiceLiveTest {
    public AliyunComputeServiceLiveTest() {
-      provider = "cloudstack";
+      provider = "aliyun";
    }
 
    @Override

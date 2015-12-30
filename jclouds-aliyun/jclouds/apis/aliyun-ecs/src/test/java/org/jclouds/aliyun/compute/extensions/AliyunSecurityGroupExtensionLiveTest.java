@@ -27,15 +27,15 @@ import org.testng.annotations.Test;
 import com.google.inject.Module;
 
 /**
- * Live test for CloudStack {@link org.jclouds.compute.extensions.SecurityGroupExtension} implementation.
+ * Live test for Aliyun {@link org.jclouds.compute.extensions.SecurityGroupExtension} implementation.
  */
-@Test(groups = "live", singleThreaded = true, testName = "CloudStackSecurityGroupExtensionLiveTest")
+@Test(groups = "live", singleThreaded = true, testName = "AliyunSecurityGroupExtensionLiveTest")
 public class AliyunSecurityGroupExtensionLiveTest extends BaseSecurityGroupExtensionLiveTest {
 
    protected Zone zone;
 
    public AliyunSecurityGroupExtensionLiveTest() {
-      provider = "cloudstack";
+      provider = "aliyun";
    }
 
    @BeforeClass(groups = { "integration", "live" })

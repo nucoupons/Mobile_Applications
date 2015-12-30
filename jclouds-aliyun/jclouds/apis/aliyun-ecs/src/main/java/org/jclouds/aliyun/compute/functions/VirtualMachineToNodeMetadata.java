@@ -97,7 +97,7 @@ public class VirtualMachineToNodeMetadata implements Function<VirtualMachine, No
       NodeMetadataBuilder builder = new NodeMetadataBuilder();
       builder.ids(from.getId() + "");
       builder.name(from.getName());
-      // TODO: in cloudstack 2.2.12, when "name" was set fine on the backend,
+      // TODO: in aliyun 2.2.12, when "name" was set fine on the backend,
       // but wrong API response was returned to the user
       // http://bugs.cloud.com/show_bug.cgi?id=11664
       //

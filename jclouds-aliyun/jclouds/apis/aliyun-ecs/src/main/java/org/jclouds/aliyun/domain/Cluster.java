@@ -28,7 +28,7 @@ import com.google.common.base.Objects;
 import com.google.common.base.Objects.ToStringHelper;
 
 /**
- * Represents a CloudStack Cluster.
+ * Represents a Aliyun Cluster.
  */
 public class Cluster implements Comparable<Cluster> {
 

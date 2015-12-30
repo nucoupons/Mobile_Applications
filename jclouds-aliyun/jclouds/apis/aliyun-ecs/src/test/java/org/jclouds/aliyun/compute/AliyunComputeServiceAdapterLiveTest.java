@@ -44,7 +44,7 @@ import com.google.common.collect.Maps;
 import com.google.common.net.HostAndPort;
 import com.google.common.net.InetAddresses;
 
-@Test(groups = "live", singleThreaded = true, testName = "CloudStackComputeServiceAdapterLiveTest")
+@Test(groups = "live", singleThreaded = true, testName = "AliyunComputeServiceAdapterLiveTest")
 public class AliyunComputeServiceAdapterLiveTest extends BaseAliyunApiLiveTest {
 
    private AliyunComputeServiceAdapter adapter;

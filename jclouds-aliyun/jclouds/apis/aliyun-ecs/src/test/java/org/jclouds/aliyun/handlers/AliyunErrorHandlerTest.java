@@ -41,31 +41,31 @@ public class AliyunErrorHandlerTest {
 
    @Test
    public void test400MakesIllegalArgumentException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 400, "", "Bad Request",
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 400, "", "Bad Request",
          IllegalArgumentException.class);
    }
 
    @Test
    public void test401MakesAuthorizationException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 401, "", "Unauthorized",
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 401, "", "Unauthorized",
          AuthorizationException.class);
    }
 
    @Test
    public void test404MakesResourceNotFoundException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 404, "", "Not Found",
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 404, "", "Not Found",
          ResourceNotFoundException.class);
    }
 
    @Test
    public void test405MakesIllegalArgumentException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 405, "", "Method Not Allowed",
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 405, "", "Method Not Allowed",
          IllegalArgumentException.class);
    }
 
    @Test
    public void test431MakesIllegalStateException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 431, "", "Method Not Allowed",
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 431, "", "Method Not Allowed",
          IllegalStateException.class);
    }
 
@@ -82,12 +82,12 @@ public class AliyunErrorHandlerTest {
 
    @Test
    public void test409MakesIllegalStateException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 409, "", "Conflict", IllegalStateException.class);
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 409, "", "Conflict", IllegalStateException.class);
    }
 
    @Test
    public void test531MakesAuthorizationException() {
-      assertCodeMakes("GET", URI.create("https://cloudstack.com/foo"), 531, "", "Unauthorized",
+      assertCodeMakes("GET", URI.create("https://aliyun.com/foo"), 531, "", "Unauthorized",
          AuthorizationException.class);
    }
 

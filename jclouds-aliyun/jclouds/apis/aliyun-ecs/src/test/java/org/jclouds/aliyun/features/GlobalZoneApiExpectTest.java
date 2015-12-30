@@ -36,7 +36,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultimap;
 
 /**
- * Test the CloudStack GlobalZoneApi
+ * Test the Aliyun GlobalZoneApi
  */
 @Test(groups = "unit", testName = "GlobalZoneApiExpectTest")
 public class GlobalZoneApiExpectTest extends BaseAliyunExpectTest<GlobalZoneApi> {

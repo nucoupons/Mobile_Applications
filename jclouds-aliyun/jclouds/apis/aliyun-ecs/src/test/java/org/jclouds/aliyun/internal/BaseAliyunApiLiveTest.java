@@ -75,7 +75,7 @@ public class BaseAliyunApiLiveTest extends BaseGenericComputeServiceContextLiveT
    protected String globalAdminCredential;
 
    public BaseAliyunApiLiveTest() {
-      provider = "cloudstack";
+      provider = "aliyun";
    }
    
    @Override

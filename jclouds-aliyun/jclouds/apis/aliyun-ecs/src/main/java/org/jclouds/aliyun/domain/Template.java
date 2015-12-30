@@ -80,8 +80,8 @@ public class Template implements Comparable<Template> {
       UPLOAD_IN_PROGRESS, UNRECOGNIZED;
 
       public static Status fromValue(String state) {
-         // Statuses are in free text form. These are the ones in CloudStack 3.0.4 source
-         // https://github.com/CloudStack/CloudStack/blob/e2e76c70ec51bfb35d755371f6c33856cef8a277/server/src/com/cloud/api/ApiResponseHelper.java#L1968
+         // Statuses are in free text form. These are the ones in Aliyun 3.0.4 source
+         // https://github.com/Aliyun/Aliyun/blob/e2e76c70ec51bfb35d755371f6c33856cef8a277/server/src/com/cloud/api/ApiResponseHelper.java#L1968
          if (Strings.isNullOrEmpty(state)) { return UNKNOWN; }
          else if (state.equals("Processing")) { return DOWNLOAD_IN_PROGRESS; }
          else if (state.endsWith("% Downloaded")) { return DOWNLOAD_IN_PROGRESS; }
@@ -668,8 +668,8 @@ public class Template implements Comparable<Template> {
    /**
     * Retrieve the status of the template.
     *
-    * <p>Note that in CloudStack 2.2.x through to at least 3.0.4, the possible status values are
-    * not well defined by CloudStack. CloudStack returns a plain-text English string for UI
+    * <p>Note that in Aliyun 2.2.x through to at least 3.0.4, the possible status values are
+    * not well defined by Aliyun. Aliyun returns a plain-text English string for UI
     * display, which jclouds attempts to parse into an enumeration, but the mapping is incomplete.
     * This method should be reliable for the common cases, but it is possible (particularly for
     * error statuses) that this method will return UNRECOGNIZED.</p>

@@ -46,7 +46,7 @@ public class Capabilities {
       protected boolean supportELB;
 
       /**
-       * @see Capabilities#getCloudStackVersion()
+       * @see Capabilities#getAliyunVersion()
        */
       public T cloudStackVersion(String cloudStackVersion) {
          this.cloudStackVersion = cloudStackVersion;
@@ -91,7 +91,7 @@ public class Capabilities {
 
       public T fromCapabilities(Capabilities in) {
          return this
-               .cloudStackVersion(in.getCloudStackVersion())
+               .cloudStackVersion(in.getAliyunVersion())
                .securityGroupsEnabled(in.isSecurityGroupsEnabled())
                .canShareTemplates(in.canShareTemplates())
                .firewallRuleUiEnabled(in.isFirewallRuleUiEnabled())
@@ -113,7 +113,7 @@ public class Capabilities {
    private final boolean supportELB;
 
    @ConstructorProperties({
-         "cloudstackversion", "securitygroupsenabled", "userpublictemplateenabled", "firewallRuleUiEnabled", "supportELB"
+         "aliyunversion", "securitygroupsenabled", "userpublictemplateenabled", "firewallRuleUiEnabled", "supportELB"
    })
    protected Capabilities(@Nullable String cloudStackVersion, boolean securityGroupsEnabled, boolean canShareTemplates,
                           boolean firewallRuleUiEnabled, boolean supportELB) {
@@ -128,7 +128,7 @@ public class Capabilities {
     * @return version of the cloud stack
     */
    @Nullable
-   public String getCloudStackVersion() {
+   public String getAliyunVersion() {
       return this.cloudStackVersion;
    }
 

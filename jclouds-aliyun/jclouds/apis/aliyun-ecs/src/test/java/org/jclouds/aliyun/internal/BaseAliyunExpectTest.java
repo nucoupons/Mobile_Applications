@@ -34,12 +34,12 @@ import com.google.common.base.Function;
 import com.google.inject.Module;
 
 /**
- * Base class for writing CloudStack Rest Client Expect tests
+ * Base class for writing Aliyun Rest Client Expect tests
  */
 public abstract class BaseAliyunExpectTest<S> extends BaseRestApiExpectTest<S> {
 
    public BaseAliyunExpectTest() {
-      provider = "cloudstack";
+      provider = "aliyun";
    }
    
    @Override

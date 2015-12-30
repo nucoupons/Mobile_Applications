@@ -29,7 +29,7 @@ import org.jclouds.http.options.BaseHttpRequestOptions;
  * Options used to control how tags are created.
  *
  * @see <a
- *      href="http://cloudstack.apache.org/docs/api/apidocs-4.3/root_admin/createTags.html"
+ *      href="http://aliyun.apache.org/docs/api/apidocs-4.3/root_admin/createTags.html"
  *      />
  */
 public class CreateTagsOptions extends BaseHttpRequestOptions {

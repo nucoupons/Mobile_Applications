@@ -25,7 +25,7 @@ import org.jclouds.aliyun.AliyunApiMetadata;
 import org.jclouds.compute.ComputeServiceContext;
 import org.testng.annotations.Test;
 
-@Test(groups = "unit", testName = "CloudStackContextBuilderTest")
+@Test(groups = "unit", testName = "AliyunContextBuilderTest")
 public class AliyunContextBuilderTest {
 
    public void testAssignability() {

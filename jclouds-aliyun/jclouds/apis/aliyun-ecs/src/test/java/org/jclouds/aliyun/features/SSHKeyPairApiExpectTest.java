@@ -36,7 +36,7 @@ import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack SSHKeyPairApi
+ * Test the Aliyun SSHKeyPairApi
  */
 @Test(groups = "unit", testName = "SSHKeyPairApiExpectTest")
 public class SSHKeyPairApiExpectTest extends BaseAliyunExpectTest<SSHKeyPairApi> {

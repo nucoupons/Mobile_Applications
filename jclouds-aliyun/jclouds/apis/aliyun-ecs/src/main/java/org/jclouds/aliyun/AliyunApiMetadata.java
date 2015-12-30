@@ -31,7 +31,7 @@ import com.google.auto.service.AutoService;
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.Module;
 /**
- * Implementation of {@link ApiMetadata} for Citrix/Apache CloudStack api.
+ * Implementation of {@link ApiMetadata} for Citrix/Apache Aliyun api.
  */
 @AutoService(ApiMetadata.class)
 public class AliyunApiMetadata extends BaseHttpApiMetadata<AliyunApi> {

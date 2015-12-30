@@ -36,7 +36,7 @@ import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
 
 /**
- * Test the CloudStack FirewallApi
+ * Test the Aliyun FirewallApi
  */
 @Test(groups = "unit", testName = "FirewallApiExpectTest")
 public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {

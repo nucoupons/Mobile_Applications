@@ -37,7 +37,7 @@ import org.jclouds.rest.annotations.RequestFilters;
 import org.jclouds.rest.annotations.SelectJson;
 
 /**
- * Provides synchronous access to CloudStack usage features.
+ * Provides synchronous access to Aliyun usage features.
  * <p/>
  *
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_Global_Admin.html" />

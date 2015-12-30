@@ -48,7 +48,7 @@ import com.google.common.collect.Iterables;
 public class ISOApiLiveTest extends BaseAliyunApiLiveTest {
     
    private static final String isoName = "jcloudsTestISO";
-   private static final String url = System.getProperty("test.cloudstack.iso-url", "http://archive.ubuntu.com/ubuntu/dists/maverick/main/installer-i386/current/images/netboot/mini.iso");
+   private static final String url = System.getProperty("test.aliyun.iso-url", "http://archive.ubuntu.com/ubuntu/dists/maverick/main/installer-i386/current/images/netboot/mini.iso");
 
    public void testListPublicISOs() throws Exception {
       Set<ISO> response = client.getISOApi().listISOs(ListISOsOptions.Builder.isPublic());

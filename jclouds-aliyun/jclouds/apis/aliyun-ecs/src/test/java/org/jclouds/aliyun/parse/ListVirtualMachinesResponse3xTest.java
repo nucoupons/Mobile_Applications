@@ -44,8 +44,8 @@ public class ListVirtualMachinesResponse3xTest extends BaseSetParserTest<Virtual
       return ImmutableSet.of(VirtualMachine
             .builder()
             .id("fee2ccb3-c1f2-4e7b-8465-42b390e10dff")
-            .name("cloudstack-r-611")
-            .displayName("cloudstack-r-611")
+            .name("aliyun-r-611")
+            .displayName("aliyun-r-611")
             .account("jcloud2")
             .domainId("ea66e3a5-d007-42e8-a0de-ec5ce778a1d7")
             .domain("jCloud")

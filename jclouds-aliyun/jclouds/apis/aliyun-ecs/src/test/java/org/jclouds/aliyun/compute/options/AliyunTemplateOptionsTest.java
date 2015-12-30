@@ -44,12 +44,12 @@ import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 /**
- * Tests possible uses of {@code CloudStackTemplateOptions} and
- * {@code CloudStackTemplateOptions.Builder.*}.
+ * Tests possible uses of {@code AliyunTemplateOptions} and
+ * {@code AliyunTemplateOptions.Builder.*}.
  */
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
-@Test(groups = "unit", testName = "CloudStackTemplateOptionsTest")
+@Test(groups = "unit", testName = "AliyunTemplateOptionsTest")
 public class AliyunTemplateOptionsTest {
    //TODO: test clone();
    

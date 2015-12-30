@@ -57,7 +57,7 @@ import com.google.inject.TypeLiteral;
 import com.google.inject.name.Named;
 
 /**
- * Configures the cloudstack connection.
+ * Configures the aliyun connection.
  */
 @ConfiguresHttpApi
 public class AliyunHttpApiModule extends HttpApiModule<AliyunApi> {

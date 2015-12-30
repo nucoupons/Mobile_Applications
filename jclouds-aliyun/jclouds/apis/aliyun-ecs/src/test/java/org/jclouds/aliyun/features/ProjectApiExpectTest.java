@@ -32,7 +32,7 @@ import org.testng.annotations.Test;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack ProjectApi
+ * Test the Aliyun ProjectApi
  */
 @Test(groups = "unit", testName = "ProjectApiExpectTest")
 public class ProjectApiExpectTest extends BaseAliyunExpectTest<ProjectApi> {

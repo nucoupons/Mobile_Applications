@@ -38,11 +38,11 @@ import static com.google.common.collect.Sets.newTreeSet;
 import static org.jclouds.aliyun.options.CreateNetworkOptions.Builder.vlan;
 import static org.jclouds.aliyun.options.ListNetworkOfferingsOptions.Builder.specifyVLAN;
 
-@Test(groups = "live", testName = "CloudStackExperimentLiveTest")
+@Test(groups = "live", testName = "AliyunExperimentLiveTest")
 public class AliyunExperimentLiveTest extends BaseAliyunApiLiveTest {
 
    public AliyunExperimentLiveTest() {
-      provider = "cloudstack";
+      provider = "aliyun";
    }
 
    protected void deleteNetworksInZoneWithVlanId(String zoneId, String vlanId) {

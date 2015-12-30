@@ -27,7 +27,7 @@ public final class AliyunFallbacks {
    }
 
    /**
-    * CloudStack is currently sending 431 errors with the text "Unable to find account owner for ip ". In this case, we
+    * Aliyun is currently sending 431 errors with the text "Unable to find account owner for ip ". In this case, we
     * have to ignore as there's no means for us to avoid the problem, or action to take.
     */
    public static final class VoidOnNotFoundOr404OrUnableToFindAccountOwner implements Fallback<Void> {

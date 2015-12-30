@@ -36,7 +36,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.util.concurrent.Futures;
 import com.google.inject.Module;
 
-@Test(groups = "unit", testName = "CloudStackImageExtensionExpectTest")
+@Test(groups = "unit", testName = "AliyunImageExtensionExpectTest")
 public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceContextExpectTest<ComputeService> {
 
    @Override

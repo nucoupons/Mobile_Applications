@@ -155,7 +155,7 @@ public class AliyunComputeServiceAdapter implements
       checkNotNull(template, "template was null");
       checkNotNull(template.getOptions(), "template options was null");
       checkArgument(template.getOptions().getClass().isAssignableFrom(AliyunTemplateOptions.class),
-         "options class %s should have been assignable from CloudStackTemplateOptions", template.getOptions()
+         "options class %s should have been assignable from AliyunTemplateOptions", template.getOptions()
          .getClass());
       Map<String, Network> networks = networkSupplier.get();
 
@@ -279,7 +279,7 @@ public class AliyunComputeServiceAdapter implements
                 logger.trace("<< static NATed IPAddress(%s) to virtualMachine(%s)", ip.getId(), vm.getId());
                 vm = client.getVirtualMachineApi().getVirtualMachine(vm.getId());
                 List<Integer> ports = Ints.asList(templateOptions.getInboundPorts());
-                if (capabilities.getCloudStackVersion().startsWith("2")) {
+                if (capabilities.getAliyunVersion().startsWith("2")) {
                    logger.debug(">> setting up IP forwarding for IPAddress(%s) rules(%s)", ip.getId(), ports);
                    Set<IPForwardingRule> rules = setupPortForwardingRulesForIP.apply(ip, ports);
                    logger.trace("<< setup %d IP forwarding rules on IPAddress(%s)", rules.size(), ip.getId());

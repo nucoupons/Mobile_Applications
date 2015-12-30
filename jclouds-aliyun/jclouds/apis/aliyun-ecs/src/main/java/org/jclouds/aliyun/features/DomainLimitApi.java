@@ -30,7 +30,7 @@ import org.jclouds.rest.annotations.RequestFilters;
 import org.jclouds.rest.annotations.SelectJson;
 
 /**
- * Provides synchronous access to CloudStack Limit features available to Domain
+ * Provides synchronous access to Aliyun Limit features available to Domain
  * Admin users.
  * 
  * @see <a href=

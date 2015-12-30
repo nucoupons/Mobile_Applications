@@ -33,7 +33,7 @@ import org.testng.annotations.Test;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack ZoneApi
+ * Test the Aliyun ZoneApi
  */
 @Test(groups = "unit", testName = "ZoneApiExpectTest")
 public class ZoneApiExpectTest extends BaseAliyunExpectTest<ZoneApi> {

@@ -28,7 +28,7 @@ import java.util.Map;
 public class BasicNetworkOptionsConverter implements OptionsConverter {
    @Override
    public DeployVirtualMachineOptions apply(AliyunTemplateOptions templateOptions, Map<String, Network> networks, String zoneId, DeployVirtualMachineOptions options) {
-      // both security groups and networks are optional, and CloudStack will
+      // both security groups and networks are optional, and Aliyun will
       // use the zone/user's default network/security group if none given
       if (!templateOptions.getSecurityGroupIds().isEmpty()) {
          options.securityGroupIds(templateOptions.getSecurityGroupIds());

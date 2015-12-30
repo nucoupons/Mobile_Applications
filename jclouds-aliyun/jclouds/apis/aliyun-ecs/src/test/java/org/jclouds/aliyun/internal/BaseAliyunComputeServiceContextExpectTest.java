@@ -21,7 +21,7 @@ import org.jclouds.http.HttpResponse;
 
 
 /**
- * Base class for writing CloudStack Expect tests with the ComputeService
+ * Base class for writing Aliyun Expect tests with the ComputeService
  * abstraction
  */
 public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseAliyunExpectTest<T> {

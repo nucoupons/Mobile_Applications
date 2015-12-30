@@ -42,7 +42,7 @@ import org.testng.annotations.Test;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * Test the CloudStack GlobalHostApi
+ * Test the Aliyun GlobalHostApi
  */
 @Test(groups = "unit", testName = "GlobalConfigurationApiExpectTest")
 public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi> {

@@ -39,7 +39,7 @@ import org.jclouds.rest.annotations.RequestFilters;
 import org.jclouds.rest.annotations.SelectJson;
 
 /**
- * Provides synchronous access to CloudStack Pod features available to Global
+ * Provides synchronous access to Aliyun Pod features available to Global
  * Admin users.
  *
  * @see <a href=

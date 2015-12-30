@@ -18,7 +18,7 @@ package org.jclouds.aliyun.config;
 
 
 /**
- * Configuration properties and constants used in CloudStack connections.
+ * Configuration properties and constants used in Aliyun connections.
  */
 public final class AliyunProperties {
 
@@ -35,16 +35,16 @@ public final class AliyunProperties {
     * </ul>
     * 
     * @see CredentialType
-    * @see <a href="http://docs.cloud.com/CloudStack_Documentation/Customizing_the_CloudStack_UI#Cross_Site_Request_Forgery_%28CSRF%29"
+    * @see <a href="http://docs.cloud.com/Aliyun_Documentation/Customizing_the_Aliyun_UI#Cross_Site_Request_Forgery_%28CSRF%29"
     *      />
     */
-   public static final String CREDENTIAL_TYPE = "jclouds.cloudstack.credential-type";
+   public static final String CREDENTIAL_TYPE = "jclouds.aliyun.credential-type";
 
    /**
     * Whenever a node is created, automatically generate keypairs for groups, as needed, also
     * delete the keypair(s) when the last node in the group is destroyed.
     */
-   public static final String AUTO_GENERATE_KEYPAIRS = "jclouds.cloudstack.auto-generate-keypairs";
+   public static final String AUTO_GENERATE_KEYPAIRS = "jclouds.aliyun.auto-generate-keypairs";
 
    private AliyunProperties() {
       throw new AssertionError("intentionally unimplemented");

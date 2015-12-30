@@ -21,7 +21,7 @@ import org.jclouds.http.HttpRequestFilter;
 import com.google.inject.ImplementedBy;
 
 /**
- * Marker interface that determines how we authenticate http requests in cloudstack. default to sign
+ * Marker interface that determines how we authenticate http requests in aliyun. default to sign
  * requests as opposed to login.
  */
 @ImplementedBy(QuerySigner.class)

@@ -29,7 +29,7 @@ public class ConfigurationApiLiveTest extends BaseAliyunApiLiveTest {
    public void testListCapabilities() throws Exception {
       Capabilities response = client.getConfigurationApi().listCapabilities();
       assert null != response;
-      assert null != response.getCloudStackVersion();
+      assert null != response.getAliyunVersion();
    }
 
 }

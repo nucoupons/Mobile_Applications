@@ -24,13 +24,13 @@ import org.jclouds.aliyun.options.DeployVirtualMachineOptions;
 
 /**
  * Convert template options into DeployVirtualMachineOptions. Expressed as an interface, because in
- * CloudStack different zone network types have different requirements when it comes to networks and
+ * Aliyun different zone network types have different requirements when it comes to networks and
  * security groups.
  */
 public interface OptionsConverter {
 
    /**
-    * Convert a CloudStackTemplateOptions and apply to a DeployVirtualMachineOptions instance.
+    * Convert a AliyunTemplateOptions and apply to a DeployVirtualMachineOptions instance.
     *
     * @param templateOptions the input set of options
     * @param networks the networks available

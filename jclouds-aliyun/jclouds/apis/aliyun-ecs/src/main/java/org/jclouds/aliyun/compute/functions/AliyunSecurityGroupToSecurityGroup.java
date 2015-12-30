@@ -34,7 +34,7 @@ import com.google.inject.Inject;
 
 
 /**
- * A function for transforming a CloudStack-specific SecurityGroup into a generic
+ * A function for transforming a Aliyun-specific SecurityGroup into a generic
  * SecurityGroup object.
  */
 @Singleton

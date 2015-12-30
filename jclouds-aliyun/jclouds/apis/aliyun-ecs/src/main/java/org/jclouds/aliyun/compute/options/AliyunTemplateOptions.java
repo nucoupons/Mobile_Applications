@@ -35,12 +35,12 @@ import com.google.common.collect.Sets;
  * 
  * <h2>Usage</h2> The recommended way to instantiate a
  * {@link AliyunTemplateOptions} object is to statically import
- * {@code CloudStackTemplateOptions.*} and invoke a static creation method
+ * {@code AliyunTemplateOptions.*} and invoke a static creation method
  * followed by an instance mutator (if needed):
  * <p>
  * 
  * <pre>
- * import static org.jclouds.compute.options.CloudStackTemplateOptions.Builder.*;
+ * import static org.jclouds.compute.options.AliyunTemplateOptions.Builder.*;
  * ComputeService client = // get connection
  * templateBuilder.options(inboundPorts(22, 80, 8080, 443));
  * Set&lt;? extends NodeMetadata&gt; set = client.createNodesInGroup(tag, 2, templateBuilder.build());

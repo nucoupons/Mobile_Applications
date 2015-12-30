@@ -20,7 +20,7 @@ import static com.google.common.base.CaseFormat.UPPER_CAMEL;
 import static com.google.common.base.CaseFormat.UPPER_UNDERSCORE;
 
 /**
- * Represents the allocationstate field used in several CloudStack domain objects.
+ * Represents the allocationstate field used in several Aliyun domain objects.
  */
 public enum AllocationState {
    DISABLED,

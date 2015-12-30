@@ -20,7 +20,7 @@ import org.jclouds.aliyun.AliyunApiMetadata;
 import org.jclouds.compute.internal.BaseComputeServiceApiMetadataTest;
 import org.testng.annotations.Test;
 
-@Test(groups = "unit", testName = "CloudStackApiMetadataTest")
+@Test(groups = "unit", testName = "AliyunApiMetadataTest")
 public class AliyunApiMetadataTest extends BaseComputeServiceApiMetadataTest {
 
    public AliyunApiMetadataTest() {

@@ -33,7 +33,7 @@ import org.jclouds.rest.annotations.RequestFilters;
 import org.jclouds.rest.annotations.SelectJson;
 
 /**
- * Provides synchronous access to CloudStack Account features available to Global
+ * Provides synchronous access to Aliyun Account features available to Global
  * Admin users.
  *
  * @see <a href=

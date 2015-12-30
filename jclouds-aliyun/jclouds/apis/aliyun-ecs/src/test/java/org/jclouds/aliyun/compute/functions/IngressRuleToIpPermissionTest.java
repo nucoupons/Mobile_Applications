@@ -28,7 +28,7 @@ import com.google.common.collect.ImmutableSet;
 
 
 /**
- * Tests for the function for transforming a cloudstack specific IngressRule into a generic
+ * Tests for the function for transforming a aliyun specific IngressRule into a generic
  * IpPermission object.
  */
 public class IngressRuleToIpPermissionTest {

@@ -60,7 +60,7 @@ public class QuerySignerTest {
    @Test
    void testCreateStringToSignWithBrackets() {
       // This test asserts that key *names* are not URL-encoded - only values
-      // should be encoded, according to "CloudStack API Developer’s Guide".
+      // should be encoded, according to "Aliyun API Developer’s Guide".
       QuerySigner filter = INJECTOR.getInstance(QuerySigner.class);
 
       assertEquals(

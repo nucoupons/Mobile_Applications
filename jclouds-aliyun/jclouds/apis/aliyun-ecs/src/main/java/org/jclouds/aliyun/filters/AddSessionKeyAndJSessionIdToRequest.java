@@ -29,7 +29,7 @@ import com.google.common.net.HttpHeaders;
 
 /**
  * 
- * @see <a href="http://docs.cloud.com/CloudStack_Documentation/Customizing_the_CloudStack_UI#Cross_Site_Request_Forgery_%28CSRF%29"
+ * @see <a href="http://docs.cloud.com/Aliyun_Documentation/Customizing_the_Aliyun_UI#Cross_Site_Request_Forgery_%28CSRF%29"
  *      />
  */
 @Singleton

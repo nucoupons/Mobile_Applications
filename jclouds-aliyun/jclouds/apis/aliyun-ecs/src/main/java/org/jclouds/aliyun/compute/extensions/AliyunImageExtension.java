@@ -63,7 +63,7 @@ import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.UncheckedTimeoutException;
 
 /**
- * CloudStack implementation of {@link ImageExtension}
+ * Aliyun implementation of {@link ImageExtension}
  */
 @Singleton
 public class AliyunImageExtension implements ImageExtension {
@@ -107,7 +107,7 @@ public class AliyunImageExtension implements ImageExtension {
    @Override
    public ListenableFuture<Image> createImage(ImageTemplate template) {
       checkState(template instanceof CloneImageTemplate,
-               " cloudstack only currently supports creating images through cloning.");
+               " aliyun only currently supports creating images through cloning.");
       CloneImageTemplate cloneTemplate = (CloneImageTemplate) template;
 
       VirtualMachine vm = client.getVirtualMachineApi().getVirtualMachine(cloneTemplate.getSourceNodeId());

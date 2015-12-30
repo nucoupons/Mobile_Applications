@@ -31,7 +31,7 @@ import org.jclouds.rest.annotations.RequestFilters;
 import org.jclouds.rest.annotations.ResponseParser;
 
 /**
- * Provides synchronous access to cloudstack via their REST API.
+ * Provides synchronous access to aliyun via their REST API.
  * <p/>
  * 
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />

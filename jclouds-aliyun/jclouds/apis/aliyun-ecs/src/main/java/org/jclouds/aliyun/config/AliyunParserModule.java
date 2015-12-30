@@ -40,21 +40,21 @@ public class AliyunParserModule extends AbstractModule {
 
    @Override
    protected void configure() {
-      bind(DateAdapter.class).to(CloudStackDateAdapter.class);
+      bind(DateAdapter.class).to(AliyunDateAdapter.class);
       bind(IterableTypeAdapterFactory.class).to(CommaDelimitedOKIterableTypeAdapterFactory.class);
    }
 
    /**
-    * Data adapter for the date formats used by CloudStack.
+    * Data adapter for the date formats used by Aliyun.
     * 
-    * Essentially this is a workaround for the CloudStack getUsage() API call returning a corrupted form of ISO-8601
+    * Essentially this is a workaround for the Aliyun getUsage() API call returning a corrupted form of ISO-8601
     * dates, which have an unexpected pair of apostrophes, like 2011-12-12'T'00:00:00+00:00
     * 
     */
-   public static class CloudStackDateAdapter extends Iso8601DateAdapter {
+   public static class AliyunDateAdapter extends Iso8601DateAdapter {
 
       @Inject
-      private CloudStackDateAdapter(DateService dateService) {
+      private AliyunDateAdapter(DateService dateService) {
          super(dateService);
       }
 
@@ -92,7 +92,7 @@ public class AliyunParserModule extends AbstractModule {
          @SuppressWarnings("unchecked")
          @Override
          public Iterable<E> read(JsonReader in) throws IOException {
-            // HACK as cloudstack changed a field from String to Set!
+            // HACK as aliyun changed a field from String to Set!
             if (in.peek() == JsonToken.STRING) {
                String val = Strings.emptyToNull(in.nextString());
                return (Iterable<E>) (val != null ? Splitter.on(',').split(val) : ImmutableSet.of());

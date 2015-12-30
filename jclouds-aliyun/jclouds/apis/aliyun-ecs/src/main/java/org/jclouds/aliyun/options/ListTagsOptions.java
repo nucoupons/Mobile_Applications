@@ -24,7 +24,7 @@ import org.jclouds.aliyun.domain.Tag;
  * Options used to control what tags are returned
  * 
  * @see <a href=
- *      "http://cloudstack.apache.org/docs/api/apidocs-4.3/root_admin/listTags.html"
+ *      "http://aliyun.apache.org/docs/api/apidocs-4.3/root_admin/listTags.html"
  *      />
  */
 public class ListTagsOptions extends AccountInDomainOptions {

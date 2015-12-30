@@ -23,7 +23,7 @@ import org.jclouds.aliyun.features.DomainUserApi;
 import org.jclouds.rest.annotations.Delegate;
 
 /**
- * Provides synchronous access to CloudStack.
+ * Provides synchronous access to Aliyun.
  * <p/>
  * 
  * @see <a href=

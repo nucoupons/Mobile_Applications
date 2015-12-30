@@ -35,10 +35,10 @@ import org.jclouds.aliyun.domain.User;
 public class ApiKeyPairs {
 
    /**
-    * Retrieve the API key pair for a given CloudStack user
+    * Retrieve the API key pair for a given Aliyun user
     *
     * @param endpoint
-    *          CloudStack API endpoint (e.g. http://72.52.126.25/client/api/)
+    *          Aliyun API endpoint (e.g. http://72.52.126.25/client/api/)
     * @param username
     *          User account name
     * @param password
@@ -55,7 +55,7 @@ public class ApiKeyPairs {
          Properties overrides = new Properties();
          overrides.put(Constants.PROPERTY_TRUST_ALL_CERTS, "true");
          overrides.put(Constants.PROPERTY_RELAX_HOSTNAME, "true");
-         overrides.put("jclouds.cloudstack.credential-type", "passwordCredentials");
+         overrides.put("jclouds.aliyun.credential-type", "passwordCredentials");
          
          context =  ContextBuilder.newBuilder(new AliyunApiMetadata())
                .endpoint(checkNotNull(endpoint, "endpoint").toASCIIString())

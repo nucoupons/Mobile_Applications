@@ -63,7 +63,7 @@ public class UpdateClusterOptions extends BaseHttpRequestOptions {
    }
 
    /**
-    * @param managedState whether this cluster is managed by cloudstack
+    * @param managedState whether this cluster is managed by aliyun
     */
    public UpdateClusterOptions managedState(Cluster.ManagedState managedState) {
       this.queryParameters.replaceValues("managedstate", ImmutableSet.<String>of(managedState.toString()));
@@ -101,7 +101,7 @@ public class UpdateClusterOptions extends BaseHttpRequestOptions {
       }
 
       /**
-       * @param managedState whether this cluster is managed by cloudstack
+       * @param managedState whether this cluster is managed by aliyun
        */
       public static UpdateClusterOptions managedState(Cluster.ManagedState managedState) {
          return new UpdateClusterOptions().managedState(managedState);

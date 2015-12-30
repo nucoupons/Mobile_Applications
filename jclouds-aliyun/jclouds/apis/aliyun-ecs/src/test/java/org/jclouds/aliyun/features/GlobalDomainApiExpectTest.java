@@ -31,7 +31,7 @@ import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
 
 /**
- * Test the CloudStack GlobalDomainApi
+ * Test the Aliyun GlobalDomainApi
  */
 @Test(groups = "unit", testName = "GlobalDomainApiExpectTest")
 public class GlobalDomainApiExpectTest extends BaseAliyunExpectTest<GlobalDomainApi> {

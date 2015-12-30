@@ -31,7 +31,7 @@ import java.security.cert.CertificateException;
 import static org.testng.Assert.assertNotNull;
 
 /**
-* Test the CloudStack VolumeApi
+* Test the Aliyun VolumeApi
 *
 */
 @Test(groups = "unit", testName = "VolumeApiExpectTest")

@@ -221,7 +221,7 @@ public class CreateNetworkOptions extends AccountInDomainOptions {
     * Specify the domain that will own the network. Any user in the domain can then use this
     * network.
     *
-    * CloudStack requires that when using this option, you also specify isShared(true).
+    * Aliyun requires that when using this option, you also specify isShared(true).
     *
     * Changes or deletions to this network must be done by a domain admin in the same domain, or a
     * global admin.

@@ -46,7 +46,7 @@ import org.jclouds.aliyun.features.ZoneApi;
 import org.jclouds.rest.annotations.Delegate;
 
 /**
- * Provides synchronous access to CloudStack.
+ * Provides synchronous access to Aliyun.
  * <p/>
  *
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />

@@ -36,7 +36,7 @@ import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
 
 /**
- * Test the CloudStack TagApi
+ * Test the Aliyun TagApi
  */
 @Test(groups = "unit", testName = "TagApiExpectTest")
 public class TagApiExpectTest extends BaseAliyunExpectTest<TagApi> {
