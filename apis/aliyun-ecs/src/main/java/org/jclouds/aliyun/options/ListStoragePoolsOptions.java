@@ -72,7 +72,7 @@ public class ListStoragePoolsOptions extends BaseHttpRequestOptions {
       }
    }
 
-   ListStoragePoolsOptions() {}
+   public ListStoragePoolsOptions() {}
    
    public ListStoragePoolsOptions clusterId(String clusterId) {
       this.queryParameters.replaceValues("clusterid", ImmutableSet.of(clusterId + ""));

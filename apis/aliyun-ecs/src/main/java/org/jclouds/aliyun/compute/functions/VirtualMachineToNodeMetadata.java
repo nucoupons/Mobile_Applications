@@ -80,6 +80,7 @@ public class VirtualMachineToNodeMetadata implements Function<VirtualMachine, No
    private final GroupNamingConvention nodeNamingConvention;
 
    @Inject
+   public
    VirtualMachineToNodeMetadata(@Memoized Supplier<Set<? extends Location>> locations,
          @Memoized Supplier<Set<? extends Image>> images,
          LoadingCache<String, Set<IPForwardingRule>> getIPForwardingRulesByVirtualMachine,

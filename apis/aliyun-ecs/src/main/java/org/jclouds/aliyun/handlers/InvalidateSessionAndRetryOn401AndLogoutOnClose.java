@@ -40,7 +40,7 @@ public class InvalidateSessionAndRetryOn401AndLogoutOnClose extends BackoffLimit
    private final SessionApi sessionClient;
 
    @Inject
-   protected InvalidateSessionAndRetryOn401AndLogoutOnClose(LoadingCache<Credentials, LoginResponse> authenticationResponseCache,
+   public InvalidateSessionAndRetryOn401AndLogoutOnClose(LoadingCache<Credentials, LoginResponse> authenticationResponseCache,
                                                             SessionApi sessionClient) {
       this.authenticationResponseCache = authenticationResponseCache;
       this.sessionClient = sessionClient;
