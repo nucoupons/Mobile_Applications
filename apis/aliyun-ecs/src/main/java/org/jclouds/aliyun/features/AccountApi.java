@@ -19,10 +19,8 @@ package org.jclouds.aliyun.features;
 import java.util.Set;
 
 import javax.inject.Named;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
@@ -42,7 +40,7 @@ import org.jclouds.rest.annotations.SelectJson;
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />
  */
 @RequestFilters(AuthenticationFilter.class)
-@QueryParams(keys = "response", values = "json")
+@QueryParams(keys = { "Format", "Version" }, values = { "json", "2014-05-26" })
 public interface AccountApi {
    /**
     * Lists Accounts
@@ -53,9 +51,8 @@ public interface AccountApi {
     */
    @Named("listAccounts")
    @GET
-   @QueryParams(keys = { "command", "listAll" }, values = { "listAccounts", "true" })
+   @QueryParams(keys = { "Action", "listAll" }, values = { "CreateInstance", "true" })
    @SelectJson("account")
-   @Consumes(MediaType.APPLICATION_JSON)
    @Fallback(EmptySetOnNotFoundOr404.class)
    Set<Account> listAccounts(ListAccountsOptions... options);
 
@@ -68,10 +65,9 @@ public interface AccountApi {
     */
    @Named("listAccounts")
    @GET
-   @QueryParams(keys = { "command", "listAll" }, values = { "listAccounts", "true" })
+   @QueryParams(keys = { "Action", "listAll" }, values = { "CreateInstance", "true" })
    @SelectJson("account")
    @OnlyElement
-   @Consumes(MediaType.APPLICATION_JSON)
    @Fallback(NullOnNotFoundOr404.class)
    Account getAccount(@QueryParam("id") String id);
 

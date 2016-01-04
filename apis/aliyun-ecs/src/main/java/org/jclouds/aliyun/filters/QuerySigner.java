@@ -29,14 +29,14 @@ import static org.jclouds.util.Strings2.toInputStream;
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.util.Map;
+import java.util.Random;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import com.google.common.base.Joiner;
-
+import org.jclouds.aliyun.util.Timestamps;
 import org.jclouds.crypto.Crypto;
 import org.jclouds.domain.Credentials;
 import org.jclouds.http.HttpException;
@@ -49,6 +49,7 @@ import org.jclouds.rest.RequestSigner;
 import org.jclouds.util.Strings2;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Joiner;
 import com.google.common.base.Supplier;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSortedSet;
@@ -94,7 +95,7 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
 
    @VisibleForTesting
    void addSignature(Multimap<String, String> params, String signature) {
-      params.replaceValues("signature", ImmutableList.of(signature));
+      params.replaceValues("Signature", ImmutableList.of(signature));
    }
 
    @VisibleForTesting
@@ -130,8 +131,13 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
 
    @VisibleForTesting
    void addSigningParams(Multimap<String, String> params) {
-      params.replaceValues("apiKey", ImmutableList.of(creds.get().identity));
-      params.removeAll("signature");
+     // params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
+      params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
+      params.replaceValues("SignatureMethod",ImmutableList.of( "HMAC-SHA1"));
+      params.replaceValues("Timestamp", ImmutableList.of(Timestamps.getCurrent()));
+      params.replaceValues("SignatureVersion",ImmutableList.of( "1.0"));
+      params.replaceValues("SignatureNonce",ImmutableList.of(String.valueOf(new Random().nextInt())));
+      params.removeAll("Signature");
    }
 
    public String createStringToSign(HttpRequest input) {

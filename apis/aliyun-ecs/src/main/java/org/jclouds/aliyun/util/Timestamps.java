@@ -11,12 +11,12 @@ public class Timestamps {
 	private static final SimpleDateFormat df = new SimpleDateFormat(
 			ISO8601_DATE_FORMAT);
 
-	public String getCurrent() {
+	public static  String getCurrent() {
 		df.setTimeZone(new SimpleTimeZone(0, "GMT"));
 		return df.format(new Date());
 	}
 
-	public String get(Date date) {
+	public static String get(Date date) {
 		df.setTimeZone(new SimpleTimeZone(0, "GMT"));
 		return df.format(date);
 	}
