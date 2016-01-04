@@ -43,7 +43,7 @@ public class GlobalConfigurationApiExpectTest extends BaseAliyunExpectTest<Globa
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listConfigurations&listAll=true&apiKey=identity&signature=%2BJ9mTuw%2BZXaumzMAJAXgZQaO2cc%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -67,7 +67,7 @@ public class GlobalConfigurationApiExpectTest extends BaseAliyunExpectTest<Globa
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listConfigurations&listAll=true&apiKey=identity&signature=%2BJ9mTuw%2BZXaumzMAJAXgZQaO2cc%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -84,7 +84,7 @@ public class GlobalConfigurationApiExpectTest extends BaseAliyunExpectTest<Globa
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=updateConfiguration&name=expunge.delay&value=11&" +
                   "apiKey=identity&signature=I2yG35EhfgIXYObeLfU3cvf%2BPeE%3D"))
             .addHeader("Accept", "application/json")
@@ -107,7 +107,7 @@ public class GlobalConfigurationApiExpectTest extends BaseAliyunExpectTest<Globa
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=updateConfiguration&name=expunge.delay&value=11&" +
                   "apiKey=identity&signature=I2yG35EhfgIXYObeLfU3cvf%2BPeE%3D"))
             .addHeader("Accept", "application/json")

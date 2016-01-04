@@ -46,7 +46,7 @@ public class ZoneApiTest extends BaseAliyunApiTest<ZoneApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listZones&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listZones&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -56,7 +56,7 @@ public class ZoneApiTest extends BaseAliyunApiTest<ZoneApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listZones&listAll=true&apiKey=identity&signature=8iHCtck0qfxFTqJ8reyAObRf31I%3D HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listZones&listAll=true&apiKey=identity&signature=8iHCtck0qfxFTqJ8reyAObRf31I%3D HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -74,7 +74,7 @@ public class ZoneApiTest extends BaseAliyunApiTest<ZoneApi> {
             .id("6")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listZones&listAll=true&available=true&domainid=5&id=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listZones&listAll=true&available=true&domainid=5&id=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -91,7 +91,7 @@ public class ZoneApiTest extends BaseAliyunApiTest<ZoneApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(6));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listZones&listAll=true&id=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listZones&listAll=true&id=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

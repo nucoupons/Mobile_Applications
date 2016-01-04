@@ -46,7 +46,7 @@ public class AsyncJobApiTest extends BaseAliyunApiTest<AsyncJobApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(11l));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=queryAsyncJobResult&jobid=11 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=queryAsyncJobResult&jobid=11 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -63,7 +63,7 @@ public class AsyncJobApiTest extends BaseAliyunApiTest<AsyncJobApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listAsyncJobs&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listAsyncJobs&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -81,7 +81,7 @@ public class AsyncJobApiTest extends BaseAliyunApiTest<AsyncJobApi> {
             ListAsyncJobsOptions.Builder.accountInDomain("adrian", "5")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listAsyncJobs&listAll=true&account=adrian&domainid=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listAsyncJobs&listAll=true&account=adrian&domainid=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 

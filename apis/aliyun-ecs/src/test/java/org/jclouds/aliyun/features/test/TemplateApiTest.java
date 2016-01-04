@@ -61,7 +61,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "createTemplate", TemplateMetadata.class, CreateTemplateOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(TemplateMetadata.builder().name("thename").osTypeId("10").displayText("description").build()));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=createTemplate&name=thename&ostypeid=10&displaytext=description HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=createTemplate&name=thename&ostypeid=10&displaytext=description HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -76,7 +76,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "createTemplate", TemplateMetadata.class, CreateTemplateOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(TemplateMetadata.builder().name("thename").osTypeId("10").displayText("description").build(), CreateTemplateOptions.Builder.bits(32).isFeatured(true).isPublic(true).passwordEnabled(true).requiresHVM(true).snapshotId("11").volumeId("12")));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=createTemplate&bits=32&isfeatured=true&ispublic=true&passwordenabled=true&requireshvm=true&snapshotid=11&volumeid=12&name=thename&ostypeid=10&displaytext=description HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=createTemplate&bits=32&isfeatured=true&ispublic=true&passwordenabled=true&requireshvm=true&snapshotid=11&volumeid=12&name=thename&ostypeid=10&displaytext=description HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -88,7 +88,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
    }
 
    HttpRequest registerTemplate = HttpRequest.builder().method("GET")
-                                             .endpoint("http://localhost:8080/client/api")
+                                             .endpoint("https://ecs.aliyuncs.com/")
                                              .addQueryParam("response", "json")
                                              .addQueryParam("command", "registerTemplate")
                                              .addQueryParam("format", "QCOW2")
@@ -115,7 +115,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
    }
 
    HttpRequest registerTemplateOptions = HttpRequest.builder().method("GET")
-                                                    .endpoint("http://localhost:8080/client/api")
+                                                    .endpoint("https://ecs.aliyuncs.com/")
                                                     .addQueryParam("response", "json")
                                                     .addQueryParam("command", "registerTemplate")
                                                     .addQueryParam("format", "QCOW2")
@@ -155,7 +155,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "updateTemplate", String.class, UpdateTemplateOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=updateTemplate&id=17 HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=updateTemplate&id=17 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -170,7 +170,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "updateTemplate", String.class, UpdateTemplateOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17, UpdateTemplateOptions.Builder.bootable(true).displayText("description").format(Template.Format.VHD).name("thename").osTypeId("12").passwordEnabled(true)));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=updateTemplate&id=17&bootable=true&displaytext=description&format=VHD&name=thename&ostypeid=12&passwordenabled=true HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=updateTemplate&id=17&bootable=true&displaytext=description&format=VHD&name=thename&ostypeid=12&passwordenabled=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -182,7 +182,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
    }
 
    HttpRequest copyTemplate = HttpRequest.builder().method("GET")
-                                         .endpoint("http://localhost:8080/client/api")
+                                         .endpoint("https://ecs.aliyuncs.com/")
                                          .addQueryParam("response", "json")
                                          .addQueryParam("command", "copyTemplate")
                                          .addQueryParam("id", "17")
@@ -208,7 +208,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "deleteTemplate", String.class, DeleteTemplateOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=deleteTemplate&id=17 HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=deleteTemplate&id=17 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -223,7 +223,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "deleteTemplate", String.class, DeleteTemplateOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17, DeleteTemplateOptions.Builder.zoneId("8")));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=deleteTemplate&id=17&zoneid=8 HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=deleteTemplate&id=17&zoneid=8 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -239,7 +239,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listTemplates&listAll=true&templatefilter=executable HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listTemplates&listAll=true&templatefilter=executable HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -261,7 +261,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listTemplates&listAll=true&account=adrian&domainid=6&hypervisor=xen&templatefilter=featured HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listTemplates&listAll=true&account=adrian&domainid=6&hypervisor=xen&templatefilter=featured HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -279,7 +279,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listTemplates&listAll=true&templatefilter=executable&id=5&zoneid=1 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listTemplates&listAll=true&templatefilter=executable&id=5&zoneid=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -296,7 +296,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "updateTemplatePermissions", String.class, UpdateTemplatePermissionsOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=updateTemplatePermissions&id=17 HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=updateTemplatePermissions&id=17 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -311,7 +311,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "updateTemplatePermissions", String.class, UpdateTemplatePermissionsOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17, UpdateTemplatePermissionsOptions.Builder.accounts(ImmutableSet.of("5", "6")).isExtractable(true).isFeatured(true).isPublic(true).op(UpdateTemplatePermissionsOptions.Operation.add)));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=updateTemplatePermissions&id=17&accounts=5,6&isextractable=true&isfeatured=true&ispublic=true&op=add HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=updateTemplatePermissions&id=17&accounts=5,6&isextractable=true&isfeatured=true&ispublic=true&op=add HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -326,7 +326,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "listTemplatePermissions", String.class, AccountInDomainOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=listTemplatePermissions&listAll=true&id=17 HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=listTemplatePermissions&listAll=true&id=17 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -341,7 +341,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
       Invokable<?, ?> method = method(TemplateApi.class, "listTemplatePermissions", String.class, AccountInDomainOptions[].class);
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(17, AccountInDomainOptions.Builder.accountInDomain("fred", "8")));
 
-      assertRequestLineEquals(httpRequest, "GET http://localhost:8080/client/api?response=json&command=listTemplatePermissions&listAll=true&id=17&account=fred&domainid=8 HTTP/1.1");
+      assertRequestLineEquals(httpRequest, "GET https://ecs.aliyuncs.com/?response=json&command=listTemplatePermissions&listAll=true&id=17&account=fred&domainid=8 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -353,7 +353,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
    }
 
    HttpRequest extractTemplate = HttpRequest.builder().method("GET")
-                                            .endpoint("http://localhost:8080/client/api")
+                                            .endpoint("https://ecs.aliyuncs.com/")
                                             .addQueryParam("response", "json")
                                             .addQueryParam("command", "extractTemplate")
                                             .addQueryParam("id", "3")
@@ -376,7 +376,7 @@ public class TemplateApiTest extends BaseAliyunApiTest<TemplateApi> {
    }
 
    HttpRequest extractTemplateOptions = HttpRequest.builder().method("GET")
-                                                   .endpoint("http://localhost:8080/client/api")
+                                                   .endpoint("https://ecs.aliyuncs.com/")
                                                    .addQueryParam("response", "json")
                                                    .addQueryParam("command", "extractTemplate")
                                                    .addQueryParam("id", "3")

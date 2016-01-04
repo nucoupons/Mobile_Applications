@@ -45,7 +45,7 @@ public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listPods&listAll=true&apiKey=identity&signature=MuowIOuZqOpKTPVQOfrDZEmpepw%3D"))
             .headers(
                ImmutableMultimap.<String, String>builder()
@@ -88,7 +88,7 @@ public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listPods&listAll=true&apiKey=identity&signature=MuowIOuZqOpKTPVQOfrDZEmpepw%3D"))
             .headers(
                ImmutableMultimap.<String, String>builder()
@@ -103,7 +103,7 @@ public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {
    }
 
    HttpRequest createPod = HttpRequest.builder().method("GET")
-                                      .endpoint("http://localhost:8080/client/api")
+                                      .endpoint("https://ecs.aliyuncs.com/")
                                       .addQueryParam("response", "json")
                                       .addQueryParam("command", "createPod")
                                       .addQueryParam("name", "richard-pod")
@@ -147,7 +147,7 @@ public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=updatePod&id=7&netmask=255.255.255.128&name=richard-updatepod&startip=172.21.0.129&endip=172.21.0.250&gateway=172.21.0.254&allocationstate=Disabled&apiKey=identity&signature=QpdbRyyF/xJ78ioJWhPKXEWhthY%3D"))
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=updatePod&id=7&netmask=255.255.255.128&name=richard-updatepod&startip=172.21.0.129&endip=172.21.0.250&gateway=172.21.0.254&allocationstate=Disabled&apiKey=identity&signature=QpdbRyyF/xJ78ioJWhPKXEWhthY%3D"))
             .headers(
                ImmutableMultimap.<String, String>builder()
                   .put("Accept", "application/json")
@@ -187,7 +187,7 @@ public class GlobalPodApiExpectTest extends BaseAliyunExpectTest<GlobalPodApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=deletePod&id=3&apiKey=identity&signature=rm4ItuAL1Ztnj%2BHFFvBFzvHAIog%3D"))
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=deletePod&id=3&apiKey=identity&signature=rm4ItuAL1Ztnj%2BHFFvBFzvHAIog%3D"))
             .headers(
                ImmutableMultimap.<String, String>builder()
                   .put("Accept", "application/json")

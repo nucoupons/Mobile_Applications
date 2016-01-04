@@ -41,7 +41,7 @@ import org.jclouds.rest.annotations.SelectJson;
  */
 @RequestFilters(AuthenticationFilter.class)
 @QueryParams(keys = { "Format", "Version" }, values = { "json", "2014-05-26" })
-public interface AccountApi {
+public interface AccountApi{
    /**
     * Lists Accounts
     * 

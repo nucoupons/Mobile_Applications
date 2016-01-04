@@ -42,7 +42,7 @@ public class HypervisorApiTest extends BaseAliyunApiTest<HypervisorApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listHypervisors&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listHypervisors&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -59,7 +59,7 @@ public class HypervisorApiTest extends BaseAliyunApiTest<HypervisorApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(11));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listHypervisors&listAll=true&zoneid=11 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listHypervisors&listAll=true&zoneid=11 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 

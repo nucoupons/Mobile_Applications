@@ -55,7 +55,7 @@ public abstract class BaseAliyunExpectTest<S> extends BaseRestApiExpectTest<S> {
    protected abstract S clientFrom(AliyunContext context);
 
    protected final HttpRequest login = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "login")
       .addQueryParam("username", "identity")
@@ -73,7 +73,7 @@ public abstract class BaseAliyunExpectTest<S> extends BaseRestApiExpectTest<S> {
       .build();
 
    protected final HttpRequest logout = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "logout")
       .addQueryParam("sessionkey", urlEncode(sessionKey))

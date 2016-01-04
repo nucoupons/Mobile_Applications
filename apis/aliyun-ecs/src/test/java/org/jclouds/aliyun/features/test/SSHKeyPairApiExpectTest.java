@@ -51,7 +51,7 @@ public class SSHKeyPairApiExpectTest extends BaseAliyunExpectTest<SSHKeyPairApi>
       SSHKeyPairApi client = requestSendsResponse(HttpRequest.builder()
          .method("GET")
          .endpoint(
-            URI.create("http://localhost:8080/client/api?response=json&" +
+            URI.create("https://ecs.aliyuncs.com/?response=json&" +
                "command=listSSHKeyPairs&listAll=true&apiKey=identity&signature=5d2J9u%2BdKpkQsadDbl9i9OcUSLQ%3D"))
             .addHeader("Accept", "application/json")
          .build(), response);
@@ -63,7 +63,7 @@ public class SSHKeyPairApiExpectTest extends BaseAliyunExpectTest<SSHKeyPairApi>
       client = requestSendsResponse(HttpRequest.builder()
          .method("GET")
          .endpoint(
-            URI.create("http://localhost:8080/client/api?response=json&command=listSSHKeyPairs&listAll=true&" +
+            URI.create("https://ecs.aliyuncs.com/?response=json&command=listSSHKeyPairs&listAll=true&" +
                "name=jclouds-keypair&apiKey=identity&signature=hJIVCFOHhdOww3aq19tFHpeD2HI%3D"))
             .addHeader("Accept", "application/json")
          .build(), response);
@@ -79,7 +79,7 @@ public class SSHKeyPairApiExpectTest extends BaseAliyunExpectTest<SSHKeyPairApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=createSSHKeyPair&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=createSSHKeyPair&" +
                   "name=jclouds-keypair&apiKey=identity&signature=8wk32PZF44jrBLH2HLel22%2BqMC4%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -155,7 +155,7 @@ public class SSHKeyPairApiExpectTest extends BaseAliyunExpectTest<SSHKeyPairApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=registerSSHKeyPair&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=registerSSHKeyPair&" +
                   "name=jclouds-keypair&publickey=" + Strings2.urlEncode(publicKey, '/') +
                   "&apiKey=identity&signature=g/6BXLnnvOMlKQBp1yM7GKlvfus%3D"))
             .headers(

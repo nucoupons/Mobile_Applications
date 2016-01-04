@@ -41,8 +41,8 @@ public class QuerySignerTest {
    public static final Injector INJECTOR = ContextBuilder
          .newBuilder(
                AnonymousProviderMetadata.forApiOnEndpoint(IntegrationTestClient.class,
-                     "http://localhost:8080/client/api"))
-         .credentials("apiKey", "secretKey")
+                     "https://ecs.aliyuncs.com/"))
+         .credentials("bnF9nNdDFCTwM5mF", "fdsfdsf")
          .apiVersion("2.2")
          .modules(ImmutableList.<Module> of(new MockModule(), new NullLoggingModule())).buildInjector();
 
@@ -53,8 +53,8 @@ public class QuerySignerTest {
 
       assertEquals(
             filter.createStringToSign(HttpRequest.builder().method("GET")
-                  .endpoint("http://localhost:8080/client/api?command=listZones").build()),
-            "apikey=apikey&command=listzones");
+                  .endpoint("https://ecs.aliyuncs.com/?Action=DescribeInstances").build()),
+            "apikey=apikey&Action=DescribeInstances");
    }
 
    @Test
@@ -65,7 +65,7 @@ public class QuerySignerTest {
 
       assertEquals(
             filter.createStringToSign(HttpRequest.builder().method("GET")
-                  .endpoint("http://localhost:8080/client/api?command=deployVirtualMachine&iptonetworklist[0].ip=127.0.0.1&iptonetworklist[0].networkid=1").build()),
+                  .endpoint("https://ecs.aliyuncs.com/?command=deployVirtualMachine&iptonetworklist[0].ip=127.0.0.1&iptonetworklist[0].networkid=1").build()),
             "apikey=apikey&command=deployvirtualmachine&iptonetworklist[0].ip=127.0.0.1&iptonetworklist[0].networkid=1");
    }
 
@@ -76,21 +76,21 @@ public class QuerySignerTest {
       assertEquals(
                filter.filter(
                         HttpRequest.builder().method("GET")
-                                 .endpoint("http://localhost:8080/client/api?command=listZones").build())
+                                 .endpoint("https://ecs.aliyuncs.com/?command=listZones").build())
                         .getRequestLine(),
-               "GET http://localhost:8080/client/api?command=listZones&apiKey=apiKey&signature=2UG8AcnMaozL3BINdjgkJ%2BRzjEY%3D HTTP/1.1");
+               "GET https://ecs.aliyuncs.com/?command=listZones&apiKey=apiKey&signature=2UG8AcnMaozL3BINdjgkJ%2BRzjEY%3D HTTP/1.1");
    }
 
    @Test
    void testFilterTwice() {
       QuerySigner filter = INJECTOR.getInstance(QuerySigner.class);
       HttpRequest request = HttpRequest.builder().method("GET")
-               .endpoint("http://localhost:8080/client/api?command=listZones").build();
+               .endpoint("https://ecs.aliyuncs.com/?command=listZones").build();
       for (int i = 0; i < 2; i++) {
          request = filter.filter(request);
          assertEquals(
                request.getRequestLine(),
-               "GET http://localhost:8080/client/api?command=listZones&apiKey=apiKey&signature=2UG8AcnMaozL3BINdjgkJ%2BRzjEY%3D HTTP/1.1");
+               "GET https://ecs.aliyuncs.com/?command=listZones&apiKey=apiKey&signature=2UG8AcnMaozL3BINdjgkJ%2BRzjEY%3D HTTP/1.1");
       }
    }
 }

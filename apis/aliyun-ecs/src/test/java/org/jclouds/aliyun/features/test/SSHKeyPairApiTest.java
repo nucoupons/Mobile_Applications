@@ -51,7 +51,7 @@ public class SSHKeyPairApiTest extends BaseAliyunApiTest<SSHKeyPairApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSSHKeyPairs&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSSHKeyPairs&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -68,7 +68,7 @@ public class SSHKeyPairApiTest extends BaseAliyunApiTest<SSHKeyPairApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListSSHKeyPairsOptions.Builder.name("jclouds")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSSHKeyPairs&listAll=true&name=jclouds HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSSHKeyPairs&listAll=true&name=jclouds HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -85,7 +85,7 @@ public class SSHKeyPairApiTest extends BaseAliyunApiTest<SSHKeyPairApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("jclouds-keypair"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSSHKeyPairs&listAll=true&name=jclouds-keypair HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSSHKeyPairs&listAll=true&name=jclouds-keypair HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -103,7 +103,7 @@ public class SSHKeyPairApiTest extends BaseAliyunApiTest<SSHKeyPairApi> {
       String publicKey = URLEncoder.encode(SshKeys.generate().get("public"), "UTF-8");
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("jclouds-keypair", publicKey));
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=registerSSHKeyPair&name=jclouds-keypair&publickey="
+            "GET https://ecs.aliyuncs.com/?response=json&command=registerSSHKeyPair&name=jclouds-keypair&publickey="
                   + publicKey
                   + " HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
@@ -123,7 +123,7 @@ public class SSHKeyPairApiTest extends BaseAliyunApiTest<SSHKeyPairApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("jclouds-keypair"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteSSHKeyPair&name=jclouds-keypair HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteSSHKeyPair&name=jclouds-keypair HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 

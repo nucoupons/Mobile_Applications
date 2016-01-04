@@ -50,7 +50,7 @@ public class TagApiTest extends BaseAliyunApiTest<TagApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listTags&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listTags&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -69,7 +69,7 @@ public class TagApiTest extends BaseAliyunApiTest<TagApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listTags&listAll=true&account=adrian&domainid=6&resourcetype=Template HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listTags&listAll=true&account=adrian&domainid=6&resourcetype=Template HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -90,7 +90,7 @@ public class TagApiTest extends BaseAliyunApiTest<TagApi> {
       ));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=createTags&resourceids=1&resourcetype=Template&"
+            "GET https://ecs.aliyuncs.com/?response=json&command=createTags&resourceids=1&resourcetype=Template&"
                   + urlEncode("tags[0].key") + "=some-tag&" + urlEncode("tags[0].value") + "=some-value HTTP/1.1");
                   assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
@@ -111,7 +111,7 @@ public class TagApiTest extends BaseAliyunApiTest<TagApi> {
       ));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteTags&resourceids=1&resourcetype=Template&"
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteTags&resourceids=1&resourcetype=Template&"
                   + urlEncode("tags[0].key") + "=some-tag&" + urlEncode("tags[0].value") + "=some-value HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);

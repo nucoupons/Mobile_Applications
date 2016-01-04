@@ -45,7 +45,7 @@ public class TagApiExpectTest extends BaseAliyunExpectTest<TagApi> {
    public void testListTagsWhenResponseIs2xx() {
       TagApi client = requestSendsResponse(
             HttpRequest.builder().method("GET")
-                  .endpoint("http://localhost:8080/client/api")
+                  .endpoint("https://ecs.aliyuncs.com/")
                   .addQueryParam("response", "json")
                   .addQueryParam("command", "listTags")
                   .addQueryParam("listAll", "true")
@@ -78,7 +78,7 @@ public class TagApiExpectTest extends BaseAliyunExpectTest<TagApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-                  URI.create("http://localhost:8080/client/api?response=json&" +
+                  URI.create("https://ecs.aliyuncs.com/?response=json&" +
                         "command=listTags&listAll=true&apiKey=identity&signature=amvtC2a0VHzzDF5SUAIOZpXHd0A%3D")
             )
             .addHeader("Accept", "application/json")
@@ -93,7 +93,7 @@ public class TagApiExpectTest extends BaseAliyunExpectTest<TagApi> {
    public void testCreateTagsWhenResponseIs2xx() {
       TagApi client = requestSendsResponse(
             HttpRequest.builder().method("GET")
-                  .endpoint("http://localhost:8080/client/api")
+                  .endpoint("https://ecs.aliyuncs.com/")
                   .addQueryParam("response", "json")
                   .addQueryParam("command", "createTags")
                   .addQueryParam("resourcetype", "Template")
@@ -122,7 +122,7 @@ public class TagApiExpectTest extends BaseAliyunExpectTest<TagApi> {
    public void testDeleteTagsWhenResponseIs2xx() {
       TagApi client = requestSendsResponse(
             HttpRequest.builder().method("GET")
-                  .endpoint("http://localhost:8080/client/api")
+                  .endpoint("https://ecs.aliyuncs.com/")
                   .addQueryParam("response", "json")
                   .addQueryParam("command", "deleteTags")
                   .addQueryParam("resourcetype", "Template")

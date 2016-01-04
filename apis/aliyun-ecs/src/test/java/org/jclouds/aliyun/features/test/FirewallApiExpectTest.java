@@ -46,7 +46,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=listFirewallRules&listAll=true&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=listFirewallRules&listAll=true&" +
                   "apiKey=identity&signature=9%2BtdTXe2uYLzAexPNgrMy5Tq8hE%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -76,7 +76,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=listFirewallRules&listAll=true&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=listFirewallRules&listAll=true&" +
                   "apiKey=identity&signature=9%2BtdTXe2uYLzAexPNgrMy5Tq8hE%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -92,7 +92,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=listFirewallRules&listAll=true&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=listFirewallRules&listAll=true&" +
                   "id=2017&apiKey=identity&signature=6coh9Qdwla94TN1Dl008WlhzZUY%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -113,7 +113,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=listFirewallRules&listAll=true&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=listFirewallRules&listAll=true&" +
                   "id=4&apiKey=identity&signature=rYd8gr7ptdSZlIehBEMQEKsm07Q%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -129,7 +129,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&command=createFirewallRule&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&command=createFirewallRule&" +
                   "ipaddressid=2&protocol=TCP&apiKey=identity&signature=d0MZ/yhQPAaV%2BYQmfZsQtQL2C28%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -148,7 +148,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=deleteFirewallRule&id=2015&apiKey=identity&signature=/T5FAO2yGPctaPmg7TEtIEFW3EU%3D"))
             .build(),
          HttpResponse.builder()
@@ -164,7 +164,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listPortForwardingRules&listAll=true&apiKey=identity&signature=8SXGJZWdcJfVz4V90Pyod12x9dM%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -194,7 +194,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listPortForwardingRules&listAll=true&apiKey=identity&signature=8SXGJZWdcJfVz4V90Pyod12x9dM%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -210,7 +210,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listPortForwardingRules&listAll=true&id=15&apiKey=identity&signature=JL63p6cJzbb9vaffeV4u60IGlWE%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -234,7 +234,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listPortForwardingRules&listAll=true&id=4&apiKey=identity&signature=4blbBVn2%2BZfF8HwoglbmtYoDAjs%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -248,7 +248,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
    public void testCreatePortForwardingRuleForVirtualMachine() {
       FirewallApi client = requestSendsResponse(
          HttpRequest.builder().method("GET")
-                    .endpoint("http://localhost:8080/client/api")
+                    .endpoint("https://ecs.aliyuncs.com/")
                     .addQueryParam("response", "json")
                     .addQueryParam("command", "createPortForwardingRule")
                     .addQueryParam("ipaddressid", "2")
@@ -276,7 +276,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=deletePortForwardingRule&id=2015&apiKey=identity&signature=2UE7KB3wm5ocmR%2BGMNFKPKfiDo8%3D"))
             .build(),
          HttpResponse.builder()
@@ -292,7 +292,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&command=listEgressFirewallRules&listAll=true&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&command=listEgressFirewallRules&listAll=true&" +
                                       "apiKey=identity&signature=j3OpRXs7mEwVKs9KIb4ncRKVO9A%3D"))
                       .addHeader("Accept", "application/json")
                       .build(),
@@ -322,7 +322,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&command=listEgressFirewallRules&listAll=true&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&command=listEgressFirewallRules&listAll=true&" +
                                       "apiKey=identity&signature=j3OpRXs7mEwVKs9KIb4ncRKVO9A%3D"))
                       .addHeader("Accept", "application/json")
                       .build(),
@@ -338,7 +338,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&command=listEgressFirewallRules&listAll=true&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&command=listEgressFirewallRules&listAll=true&" +
                                       "id=2017&apiKey=identity&signature=Hi1K5VA3yd3mk0AmgJ2F6y%2BVzMo%3D"))
                       .addHeader("Accept", "application/json")
                       .build(),
@@ -359,7 +359,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&command=listEgressFirewallRules&listAll=true&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&command=listEgressFirewallRules&listAll=true&" +
                                       "id=4&apiKey=identity&signature=dzb5azKxXZsuGrNRJbRHfna7FMo%3D"))
                       .addHeader("Accept", "application/json")
                       .build(),
@@ -375,7 +375,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&command=createEgressFirewallRule&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&command=createEgressFirewallRule&" +
                                       "networkid=2&protocol=TCP&apiKey=identity&signature=I/OJEqiLp8ZHlZskKUiT5uTRE3M%3D"))
                       .addHeader("Accept", "application/json")
                       .build(),
@@ -394,7 +394,7 @@ public class FirewallApiExpectTest extends BaseAliyunExpectTest<FirewallApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&" +
                                       "command=deleteEgressFirewallRule&id=2015&apiKey=identity&signature=S119WNmamKwc5d9qvvkIJznXytg%3D"))
                       .build(),
               HttpResponse.builder()

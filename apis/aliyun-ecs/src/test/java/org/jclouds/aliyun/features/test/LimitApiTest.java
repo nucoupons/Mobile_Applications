@@ -41,7 +41,7 @@ public class LimitApiTest extends BaseAliyunApiTest<LimitApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listResourceLimits&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listResourceLimits&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -58,7 +58,7 @@ public class LimitApiTest extends BaseAliyunApiTest<LimitApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListResourceLimitsOptions.Builder.account("jclouds" , "23")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listResourceLimits&listAll=true&account=jclouds&domainid=23 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listResourceLimits&listAll=true&account=jclouds&domainid=23 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

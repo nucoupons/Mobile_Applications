@@ -49,7 +49,7 @@ public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listLoadBalancerRules&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listLoadBalancerRules&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -67,7 +67,7 @@ public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListLoadBalancerRulesOptions.Builder.publicIPId("3")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listLoadBalancerRules&listAll=true&publicipid=3 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listLoadBalancerRules&listAll=true&publicipid=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -80,7 +80,7 @@ public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
    }
 
    HttpRequest createLoadBalancerRule = HttpRequest.builder().method("GET")
-                                                   .endpoint("http://localhost:8080/client/api")
+                                                   .endpoint("https://ecs.aliyuncs.com/")
                                                    .addQueryParam("response", "json")
                                                    .addQueryParam("command", "createLoadBalancerRule")
                                                    .addQueryParam("publicipid", "6")
@@ -111,7 +111,7 @@ public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=updateLoadBalancerRule&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=updateLoadBalancerRule&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -127,7 +127,7 @@ public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteLoadBalancerRule&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteLoadBalancerRule&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -146,7 +146,7 @@ public class LoadBalancerApiTest extends BaseAliyunApiTest<LoadBalancerApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listLoadBalancerRuleInstances&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listLoadBalancerRuleInstances&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

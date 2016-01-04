@@ -66,7 +66,6 @@ public class AliyunApiMetadata extends BaseHttpApiMetadata<AliyunApi> {
          .credentialName("Secret Key")
          .documentation(URI.create("http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html"))
          .defaultEndpoint("https://ecs.aliyuncs.com/")
-         .defaultIdentity("AccessKeyId")
          .version("2.2")
          .view(typeToken(AliyunContext.class))
          .defaultProperties(AliyunApiMetadata.defaultProperties())

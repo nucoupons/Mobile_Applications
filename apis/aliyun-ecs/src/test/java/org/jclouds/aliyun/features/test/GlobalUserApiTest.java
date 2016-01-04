@@ -38,7 +38,7 @@ import com.google.common.reflect.Invokable;
 public class GlobalUserApiTest extends BaseAliyunApiTest<GlobalUserApi> {
 
    HttpRequest createUser = HttpRequest.builder().method("GET")
-                                       .endpoint("http://localhost:8080/client/api")
+                                       .endpoint("https://ecs.aliyuncs.com/")
                                        .addQueryParam("response", "json")
                                        .addQueryParam("command", "createUser")
                                        .addQueryParam("username", "user")
@@ -70,7 +70,7 @@ public class GlobalUserApiTest extends BaseAliyunApiTest<GlobalUserApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(42L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateUser&id=42 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateUser&id=42 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -86,7 +86,7 @@ public class GlobalUserApiTest extends BaseAliyunApiTest<GlobalUserApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(42L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteUser&id=42 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteUser&id=42 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

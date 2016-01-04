@@ -42,7 +42,7 @@ public class VolumeApiExpectTest extends BaseAliyunExpectTest<VolumeApi> {
               HttpRequest.builder()
                       .method("GET")
                       .endpoint(
-                              URI.create("http://localhost:8080/client/api?response=json&" +
+                              URI.create("https://ecs.aliyuncs.com/?response=json&" +
                                       "command=createVolume&name=VolumeApiExpectTest-jclouds-volume&diskofferingid=0473f5dd-bca5-4af4-a9b6-db9e8a88a2f6&zoneid=6f9a2921-b22a-4149-8b71-6ffc275a2177&size=1&apiKey=identity&signature=%2BoEjGobVFLr58k19LeAE81bZkKM%3D"))
                       .addHeader("Accept", "application/json")
                       .build(),

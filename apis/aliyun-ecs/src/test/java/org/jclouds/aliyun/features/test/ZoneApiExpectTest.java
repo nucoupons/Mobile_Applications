@@ -42,7 +42,7 @@ public class ZoneApiExpectTest extends BaseAliyunExpectTest<ZoneApi> {
    public void testListZonesWhenResponseIs2xx() {
       ZoneApi client = requestSendsResponse(
          HttpRequest.builder().method("GET")
-                    .endpoint("http://localhost:8080/client/api")
+                    .endpoint("https://ecs.aliyuncs.com/")
                     .addQueryParam("response", "json")
                     .addQueryParam("command", "listZones")
                     .addQueryParam("listAll", "true")
@@ -84,7 +84,7 @@ public class ZoneApiExpectTest extends BaseAliyunExpectTest<ZoneApi> {
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listZones&listAll=true&apiKey=identity&signature=8iHCtck0qfxFTqJ8reyAObRf31I%3D"))
             .addHeader("Accept", "application/json")
             .build(),

@@ -131,8 +131,8 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
 
    @VisibleForTesting
    void addSigningParams(Multimap<String, String> params) {
-     // params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
-      params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
+      params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
+      //params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
       params.replaceValues("SignatureMethod",ImmutableList.of( "HMAC-SHA1"));
       params.replaceValues("Timestamp", ImmutableList.of(Timestamps.getCurrent()));
       params.replaceValues("SignatureVersion",ImmutableList.of( "1.0"));

@@ -50,7 +50,7 @@ public class AddressApiTest extends BaseAliyunApiTest<AddressApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listPublicIpAddresses&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listPublicIpAddresses&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -69,7 +69,7 @@ public class AddressApiTest extends BaseAliyunApiTest<AddressApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listPublicIpAddresses&listAll=true&account=adrian&domainid=6&forvirtualnetwork=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listPublicIpAddresses&listAll=true&account=adrian&domainid=6&forvirtualnetwork=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -86,7 +86,7 @@ public class AddressApiTest extends BaseAliyunApiTest<AddressApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listPublicIpAddresses&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listPublicIpAddresses&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -105,7 +105,7 @@ public class AddressApiTest extends BaseAliyunApiTest<AddressApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(6));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=associateIpAddress&zoneid=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=associateIpAddress&zoneid=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -122,7 +122,7 @@ public class AddressApiTest extends BaseAliyunApiTest<AddressApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=disassociateIpAddress&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=disassociateIpAddress&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 

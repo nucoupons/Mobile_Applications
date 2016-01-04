@@ -39,7 +39,7 @@ import com.google.common.reflect.Invokable;
 public class GlobalAccountApiTest extends BaseAliyunApiTest<GlobalAccountApi> {
 
    HttpRequest create = HttpRequest.builder().method("GET")
-                                   .endpoint("http://localhost:8080/client/api")
+                                   .endpoint("https://ecs.aliyuncs.com/")
                                    .addQueryParam("response", "json")
                                    .addQueryParam("command", "createAccount")
                                    .addQueryParam("username", "user")
@@ -68,7 +68,7 @@ public class GlobalAccountApiTest extends BaseAliyunApiTest<GlobalAccountApi> {
    }
 
    HttpRequest update = HttpRequest.builder().method("GET")
-                                   .endpoint("http://localhost:8080/client/api")
+                                   .endpoint("https://ecs.aliyuncs.com/")
                                    .addQueryParam("response", "json")
                                    .addQueryParam("command", "updateAccount")
                                    .addQueryParam("account", "account")
@@ -97,7 +97,7 @@ public class GlobalAccountApiTest extends BaseAliyunApiTest<GlobalAccountApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(42L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteAccount&id=42 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteAccount&id=42 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

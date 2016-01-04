@@ -72,7 +72,7 @@ public class ISOApiExpectTest extends BaseAliyunExpectTest<ISOApi> {
                                       .isExtractable(false).build();
 
    HttpRequest listIsos = HttpRequest.builder().method("GET")
-                                     .endpoint("http://localhost:8080/client/api")
+                                     .endpoint("https://ecs.aliyuncs.com/")
                                      .addQueryParam("response", "json")
                                      .addQueryParam("command", "listIsos")
                                      .addQueryParam("listAll", "true")
@@ -101,7 +101,7 @@ public class ISOApiExpectTest extends BaseAliyunExpectTest<ISOApi> {
    }
    
    HttpRequest listIsosOptions = HttpRequest.builder().method("GET")
-                                            .endpoint("http://localhost:8080/client/api")
+                                            .endpoint("https://ecs.aliyuncs.com/")
                                             .addQueryParam("response", "json")
                                             .addQueryParam("command", "listIsos")
                                             .addQueryParam("listAll", "true")
@@ -132,7 +132,7 @@ public class ISOApiExpectTest extends BaseAliyunExpectTest<ISOApi> {
    }
 
    HttpRequest getIso = HttpRequest.builder().method("GET")
-                                     .endpoint("http://localhost:8080/client/api")
+                                     .endpoint("https://ecs.aliyuncs.com/")
                                      .addQueryParam("response", "json")
                                      .addQueryParam("command", "listIsos")
                                      .addQueryParam("listAll", "true")
@@ -162,7 +162,7 @@ public class ISOApiExpectTest extends BaseAliyunExpectTest<ISOApi> {
    }
 
    HttpRequest registerIso = HttpRequest.builder().method("GET")
-                                        .endpoint("http://localhost:8080/client/api")
+                                        .endpoint("https://ecs.aliyuncs.com/")
                                         .addQueryParam("response", "json")
                                         .addQueryParam("command", "registerIso")
                                         .addQueryParam("name", "ubuntu10.10")

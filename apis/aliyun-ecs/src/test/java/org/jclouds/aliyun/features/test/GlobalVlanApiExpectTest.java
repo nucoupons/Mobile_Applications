@@ -42,7 +42,7 @@ public class GlobalVlanApiExpectTest extends BaseAliyunExpectTest<GlobalVlanApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listVlanIpRanges&listAll=true&apiKey=identity&signature=xPwCeAcMp9kDGbD5oPgztLtSdnU%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -91,7 +91,7 @@ public class GlobalVlanApiExpectTest extends BaseAliyunExpectTest<GlobalVlanApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listVlanIpRanges&listAll=true&apiKey=identity&signature=xPwCeAcMp9kDGbD5oPgztLtSdnU%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -107,7 +107,7 @@ public class GlobalVlanApiExpectTest extends BaseAliyunExpectTest<GlobalVlanApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=createVlanIpRange&startip=10.22.22.51&endip=10.22.22.100&forvirtualnetwork=false&zoneid=2&vlan=untagged&account=system&domainid=1&podid=2&gateway=10.22.22.254&netmask=255.255.255.0&networkid=209&apiKey=identity&signature=XgDjPYAQNLMVCuSMGRA6QjV8mOY%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -151,7 +151,7 @@ public class GlobalVlanApiExpectTest extends BaseAliyunExpectTest<GlobalVlanApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=deleteVlanIpRange&id=1&apiKey=identity&signature=tTBbpdCndgHXdR397fbbJaN1RZU%3D"))
             .addHeader("Accept", "application/json")
             .build(),

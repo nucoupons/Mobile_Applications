@@ -43,7 +43,7 @@ public class ProjectApiExpectTest extends BaseAliyunExpectTest<ProjectApi> {
       ProjectApi client = requestSendsResponse(
          HttpRequest.builder()
             .method("GET")
-            .endpoint("http://localhost:8080/client/api?response=json&command=listProjects&listAll=true&apiKey=identity&signature=vtCqaYXfXttr6mD18Es0e22QBIQ%3D")
+            .endpoint("https://ecs.aliyuncs.com/?response=json&command=listProjects&listAll=true&apiKey=identity&signature=vtCqaYXfXttr6mD18Es0e22QBIQ%3D")
             .addHeader("Accept", "application/json")
             .build(),
          HttpResponse.builder()

@@ -48,7 +48,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listDiskOfferings&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listDiskOfferings&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -65,7 +65,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListDiskOfferingsOptions.Builder.domainId("6").id("5")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listDiskOfferings&listAll=true&domainid=6&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listDiskOfferings&listAll=true&domainid=6&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -82,7 +82,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("5"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listDiskOfferings&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listDiskOfferings&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -100,7 +100,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listNetworkOfferings&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listNetworkOfferings&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -119,7 +119,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listNetworkOfferings&listAll=true&availability=Default&isshared=true&id=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listNetworkOfferings&listAll=true&availability=Default&isshared=true&id=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -136,7 +136,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("5"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listNetworkOfferings&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listNetworkOfferings&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -154,7 +154,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listServiceOfferings&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listServiceOfferings&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -173,7 +173,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listServiceOfferings&listAll=true&virtualmachineid=4&domainid=5&id=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listServiceOfferings&listAll=true&virtualmachineid=4&domainid=5&id=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -190,7 +190,7 @@ public class OfferingApiTest extends BaseAliyunApiTest<OfferingApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("5"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listServiceOfferings&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listServiceOfferings&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

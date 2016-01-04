@@ -57,7 +57,7 @@ public class VirtualMachineApiExpectTest extends BaseAliyunExpectTest<VirtualMac
 
       VirtualMachineApi client = requestSendsResponse(
          HttpRequest.builder().method("GET")
-            .endpoint("http://localhost:8080/client/api?response=json&command=getVMPassword&id=1&apiKey=identity&signature=SVA2r1KRj4yG03rATMLPZWS%2BKnw%3D")
+            .endpoint("https://ecs.aliyuncs.com/?response=json&command=getVMPassword&id=1&apiKey=identity&signature=SVA2r1KRj4yG03rATMLPZWS%2BKnw%3D")
             .addHeader("Accept", "application/json")
             .build(),
          HttpResponse.builder()
@@ -79,7 +79,7 @@ public class VirtualMachineApiExpectTest extends BaseAliyunExpectTest<VirtualMac
    }
    
    HttpRequest deployVirtualMachineInZone =  HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "deployVirtualMachine")
       .addQueryParam("zoneid", "zone1")

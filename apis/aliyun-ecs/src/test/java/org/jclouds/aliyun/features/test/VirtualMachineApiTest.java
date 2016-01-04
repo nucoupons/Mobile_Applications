@@ -49,7 +49,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listVirtualMachines&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listVirtualMachines&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -69,7 +69,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listVirtualMachines&listAll=true&account=adrian&domainid=6&forvirtualnetwork=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listVirtualMachines&listAll=true&account=adrian&domainid=6&forvirtualnetwork=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -86,7 +86,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listVirtualMachines&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listVirtualMachines&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -104,7 +104,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=rebootVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=rebootVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -121,7 +121,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=startVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=startVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -138,7 +138,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("5"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=stopVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=stopVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -158,7 +158,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
                                                         StopVirtualMachineOptions.Builder.forced(true)));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=stopVirtualMachine&id=5&forced=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=stopVirtualMachine&id=5&forced=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -175,7 +175,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=resetPasswordForVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=resetPasswordForVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -192,7 +192,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=changeServiceForVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=changeServiceForVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -209,7 +209,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=updateVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=updateVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -226,7 +226,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=destroyVirtualMachine&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=destroyVirtualMachine&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -246,7 +246,7 @@ public class VirtualMachineApiTest extends BaseAliyunApiTest<VirtualMachineApi> 
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=assignVirtualMachine&virtualmachineid=abcd&account=adrian&domainid=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=assignVirtualMachine&virtualmachineid=abcd&account=adrian&domainid=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

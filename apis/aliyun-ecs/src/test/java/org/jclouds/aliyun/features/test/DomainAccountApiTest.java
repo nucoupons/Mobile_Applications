@@ -39,7 +39,7 @@ public class DomainAccountApiTest extends BaseAliyunApiTest<DomainAccountApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("goo", "2"));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=enableAccount&account=goo&domainid=2 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=enableAccount&account=goo&domainid=2 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -55,7 +55,7 @@ public class DomainAccountApiTest extends BaseAliyunApiTest<DomainAccountApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("1", "2", true));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=disableAccount&account=1&domainid=2&lock=true HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=disableAccount&account=1&domainid=2&lock=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

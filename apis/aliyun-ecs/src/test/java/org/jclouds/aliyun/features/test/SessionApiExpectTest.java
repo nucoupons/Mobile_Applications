@@ -42,7 +42,7 @@ import com.google.common.collect.ImmutableMultimap;
 public class SessionApiExpectTest extends BaseAliyunExpectTest<SessionApi> {
 
    HttpRequest login = HttpRequest.builder().method("GET")
-                                  .endpoint("http://localhost:8080/client/api")
+                                  .endpoint("https://ecs.aliyuncs.com/")
                                   .addQueryParam("response", "json")
                                   .addQueryParam("command", "login")
                                   .addQueryParam("username", "jclouds")
@@ -77,7 +77,7 @@ public class SessionApiExpectTest extends BaseAliyunExpectTest<SessionApi> {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
          .endpoint(
-            URI.create("http://localhost:8080/client/api?response=json&command=logout&sessionkey=dummy-session-key"))
+            URI.create("https://ecs.aliyuncs.com/?response=json&command=logout&sessionkey=dummy-session-key"))
          .build();
 
       SessionApi client = requestSendsResponse(request,

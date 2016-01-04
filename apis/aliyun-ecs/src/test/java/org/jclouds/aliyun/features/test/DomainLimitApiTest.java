@@ -44,7 +44,7 @@ public class DomainLimitApiTest extends BaseAliyunApiTest<DomainLimitApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=updateResourceLimit&resourcetype=3&account=foo&domainid=100&max=101 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=updateResourceLimit&resourcetype=3&account=foo&domainid=100&max=101 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

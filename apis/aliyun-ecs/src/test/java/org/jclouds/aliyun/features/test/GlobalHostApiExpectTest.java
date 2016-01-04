@@ -51,7 +51,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testListHostsWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=listHosts&listAll=true&apiKey=identity&signature=NnYyyEy30G3V2dcIt7w4WZ68AU8%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=listHosts&listAll=true&apiKey=identity&signature=NnYyyEy30G3V2dcIt7w4WZ68AU8%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/listhostsresponse.json"))
@@ -85,7 +85,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testListHostsEmptyOn404() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=listHosts&listAll=true&apiKey=identity&signature=NnYyyEy30G3V2dcIt7w4WZ68AU8%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=listHosts&listAll=true&apiKey=identity&signature=NnYyyEy30G3V2dcIt7w4WZ68AU8%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder().statusCode(404).build();
       GlobalHostApi client = requestSendsResponse(request, response);
@@ -94,7 +94,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    }
 
    HttpRequest addHost = HttpRequest.builder().method("GET")
-                                    .endpoint("http://localhost:8080/client/api")
+                                    .endpoint("https://ecs.aliyuncs.com/")
                                     .addQueryParam("response", "json")
                                     .addQueryParam("command", "addHost")
                                     .addQueryParam("zoneid", "1")
@@ -131,7 +131,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testUpdateHostWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=updateHost&id=1&allocationstate=Enabled&hosttags=&oscategoryid=5&apiKey=identity&signature=qTxNq9yQG8S108giqS/ROFzgev8%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=updateHost&id=1&allocationstate=Enabled&hosttags=&oscategoryid=5&apiKey=identity&signature=qTxNq9yQG8S108giqS/ROFzgev8%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/updatehostresponse.json"))
@@ -147,7 +147,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    }
 
    HttpRequest updateHostPassword = HttpRequest.builder().method("GET")
-                                               .endpoint("http://localhost:8080/client/api")
+                                               .endpoint("https://ecs.aliyuncs.com/")
                                                .addQueryParam("response", "json")
                                                .addQueryParam("command", "updateHostPassword")
                                                .addQueryParam("hostid", "1")
@@ -168,7 +168,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testDeleteHostWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=deleteHost&id=1&forced=true&forcedestroylocalstorage=true&apiKey=identity&signature=ZdvO1BWBkdPiDAjsVlKtqDe6N7k%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=deleteHost&id=1&forced=true&forcedestroylocalstorage=true&apiKey=identity&signature=ZdvO1BWBkdPiDAjsVlKtqDe6N7k%3D")
          .addHeader("Accept", "application/json")
          .build();
       HttpResponse response = HttpResponse.builder()
@@ -181,7 +181,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testPrepareHostForMaintenanceWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=prepareHostForMaintenance&id=1&apiKey=identity&signature=9tDwdox/xAKmZr9kVrR6Ttnxf3U%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=prepareHostForMaintenance&id=1&apiKey=identity&signature=9tDwdox/xAKmZr9kVrR6Ttnxf3U%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/preparehostformaintenanceresponse.json"))
@@ -195,7 +195,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testCancelHostMaintenanceWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=cancelHostMaintenance&id=1&apiKey=identity&signature=9RduzuBoyRZKNTzAoVqUo9gRTfk%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=cancelHostMaintenance&id=1&apiKey=identity&signature=9RduzuBoyRZKNTzAoVqUo9gRTfk%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/cancelhostmaintenanceresponse.json"))
@@ -209,7 +209,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testReconnectHostWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=reconnectHost&id=1&apiKey=identity&signature=wJEF02vwdyOnJOTa%2BWMMK906aRU%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=reconnectHost&id=1&apiKey=identity&signature=wJEF02vwdyOnJOTa%2BWMMK906aRU%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/reconnecthostresponse.json"))
@@ -223,7 +223,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testAddSecondaryStorageWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=addSecondaryStorage&url=nfs%3A//10.26.26.165/mnt/nfs/cs_sec&zoneid=1&apiKey=identity&signature=MccRKx1yPP43ImiO70WlhVDlAIA%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=addSecondaryStorage&url=nfs%3A//10.26.26.165/mnt/nfs/cs_sec&zoneid=1&apiKey=identity&signature=MccRKx1yPP43ImiO70WlhVDlAIA%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/addsecondarystorageresponse.json"))
@@ -243,7 +243,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testListClustersWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=listClusters&listAll=true&apiKey=identity&signature=lbimqg0OKIq8sgQBpNmi4oQNFog%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=listClusters&listAll=true&apiKey=identity&signature=lbimqg0OKIq8sgQBpNmi4oQNFog%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .payload(payloadFromResource("/listclustersresponse.json"))
@@ -262,7 +262,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testListClustersEmptyOn404() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=listClusters&listAll=true&apiKey=identity&signature=lbimqg0OKIq8sgQBpNmi4oQNFog%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=listClusters&listAll=true&apiKey=identity&signature=lbimqg0OKIq8sgQBpNmi4oQNFog%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder().statusCode(404).build();
       GlobalHostApi client = requestSendsResponse(request, response);
@@ -271,7 +271,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    }
 
    HttpRequest addCluster = HttpRequest.builder().method("GET")
-                                       .endpoint("http://localhost:8080/client/api")
+                                       .endpoint("https://ecs.aliyuncs.com/")
                                        .addQueryParam("response", "json")
                                        .addQueryParam("command", "addCluster")
                                        .addQueryParam("zoneid", "1")
@@ -301,7 +301,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    }
 
    HttpRequest updateCluster = HttpRequest.builder().method("GET")
-                                       .endpoint("http://localhost:8080/client/api")
+                                       .endpoint("https://ecs.aliyuncs.com/")
                                        .addQueryParam("response", "json")
                                        .addQueryParam("command", "updateCluster")
                                        .addQueryParam("id", "1")
@@ -328,7 +328,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    }
 
    HttpRequest updateClusterPassword = HttpRequest.builder().method("GET")
-                                                  .endpoint("http://localhost:8080/client/api")
+                                                  .endpoint("https://ecs.aliyuncs.com/")
                                                   .addQueryParam("response", "json")
                                                   .addQueryParam("command", "updateHostPassword")
                                                   .addQueryParam("clusterid", "1")
@@ -349,7 +349,7 @@ public class GlobalHostApiExpectTest extends BaseAliyunExpectTest<GlobalHostApi>
    public void testDeleteClusterWhenResponseIs2xx() {
       HttpRequest request = HttpRequest.builder()
          .method("GET")
-         .endpoint("http://localhost:8080/client/api?response=json&command=deleteCluster&id=1&apiKey=identity&signature=CKH26MFgKGY7Sosd17LjBMNa3AI%3D")
+         .endpoint("https://ecs.aliyuncs.com/?response=json&command=deleteCluster&id=1&apiKey=identity&signature=CKH26MFgKGY7Sosd17LjBMNa3AI%3D")
          .addHeader("Accept", "application/json").build();
       HttpResponse response = HttpResponse.builder()
          .statusCode(200).build();

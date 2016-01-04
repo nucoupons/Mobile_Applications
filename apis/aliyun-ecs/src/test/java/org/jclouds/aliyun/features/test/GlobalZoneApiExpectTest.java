@@ -42,7 +42,7 @@ import com.google.common.collect.ImmutableMultimap;
 public class GlobalZoneApiExpectTest extends BaseAliyunExpectTest<GlobalZoneApi> {
 
    HttpRequest createZone = HttpRequest.builder().method("GET")
-                                       .endpoint("http://localhost:8080/client/api")
+                                       .endpoint("https://ecs.aliyuncs.com/")
                                        .addQueryParam("response", "json")
                                        .addQueryParam("command", "createZone")
                                        .addQueryParam("name", "test-zone")
@@ -80,7 +80,7 @@ public class GlobalZoneApiExpectTest extends BaseAliyunExpectTest<GlobalZoneApi>
       HttpRequest request = HttpRequest.builder()
          .method("GET")
          .endpoint(
-            URI.create("http://localhost:8080/client/api?response=json&command=updateZone&" +
+            URI.create("https://ecs.aliyuncs.com/?response=json&command=updateZone&" +
                "id=6&name=test-zone&dns1=8.8.8.8&apiKey=identity&signature=v19FdHKHztdT0IRloYFFn0eNbWM%3D"))
          .headers(
             ImmutableMultimap.<String, String>builder()
@@ -115,7 +115,7 @@ public class GlobalZoneApiExpectTest extends BaseAliyunExpectTest<GlobalZoneApi>
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=deleteZone&id=6&apiKey=identity&signature=TfkzSIK8kzGJnIYo3DofECyuOII%3D"))
             .addHeader("Accept", "application/json")
             .build(),

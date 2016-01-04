@@ -51,7 +51,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("3", "5"));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=attachIso&id=3&virtualmachineid=5 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=attachIso&id=3&virtualmachineid=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -67,7 +67,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=detachIso&virtualmachineid=3 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=detachIso&virtualmachineid=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -83,7 +83,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateIso&id=3 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateIso&id=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -99,7 +99,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3, UpdateISOOptions.Builder.bootable(true).displayText("robert").format("format").name("bob").osTypeId("9").passwordEnabled(true)));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateIso&id=3&bootable=true&displaytext=robert&format=format&name=bob&ostypeid=9&passwordenabled=true HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateIso&id=3&bootable=true&displaytext=robert&format=format&name=bob&ostypeid=9&passwordenabled=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -115,7 +115,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteIso&id=3 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteIso&id=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -131,7 +131,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3, DeleteISOOptions.Builder.zoneId("5")));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteIso&id=3&zoneid=5 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteIso&id=3&zoneid=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -143,7 +143,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
    }
 
    HttpRequest copyIso = HttpRequest.builder().method("GET")
-                                    .endpoint("http://localhost:8080/client/api")
+                                    .endpoint("https://ecs.aliyuncs.com/")
                                     .addQueryParam("response", "json")
                                     .addQueryParam("command", "copyIso")
                                     .addQueryParam("id", "3")
@@ -170,7 +170,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateIsoPermissions&id=3 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateIsoPermissions&id=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -186,7 +186,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3, UpdateISOPermissionsOptions.Builder.accounts(ImmutableSet.<String>of("fred", "bob")).isExtractable(true).isFeatured(true).isPublic(true).operation(PermissionOperation.add)));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateIsoPermissions&id=3&accounts=fred,bob&isextractable=true&isfeatured=true&ispublic=true&op=add HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateIsoPermissions&id=3&accounts=fred,bob&isextractable=true&isfeatured=true&ispublic=true&op=add HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -202,7 +202,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listIsoPermissions&listAll=true&id=3 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listIsoPermissions&listAll=true&id=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -218,7 +218,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(3, AccountInDomainOptions.Builder.accountInDomain("fred", "5")));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listIsoPermissions&listAll=true&id=3&account=fred&domainid=5 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listIsoPermissions&listAll=true&id=3&account=fred&domainid=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -230,7 +230,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
    }
 
    HttpRequest extractIso = HttpRequest.builder().method("GET")
-                                       .endpoint("http://localhost:8080/client/api")
+                                       .endpoint("https://ecs.aliyuncs.com/")
                                        .addQueryParam("response", "json")
                                        .addQueryParam("command", "extractIso")
                                        .addQueryParam("id", "3")
@@ -254,7 +254,7 @@ public class ISOApiTest extends BaseAliyunApiTest<ISOApi> {
    }
 
    HttpRequest extractIsoOptions = HttpRequest.builder().method("GET")
-                                              .endpoint("http://localhost:8080/client/api")
+                                              .endpoint("https://ecs.aliyuncs.com/")
                                               .addQueryParam("response", "json")
                                               .addQueryParam("command", "extractIso")
                                               .addQueryParam("id", "3")

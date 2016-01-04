@@ -46,7 +46,7 @@ public class ProjectApiTest extends BaseAliyunApiTest<ProjectApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listProjects&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listProjects&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -64,7 +64,7 @@ public class ProjectApiTest extends BaseAliyunApiTest<ProjectApi> {
             ListProjectsOptions.Builder.accountInDomain("jclouds", "123")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listProjects&listAll=true&account=jclouds&domainid=123 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listProjects&listAll=true&account=jclouds&domainid=123 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -81,7 +81,7 @@ public class ProjectApiTest extends BaseAliyunApiTest<ProjectApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("3"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listProjects&listAll=true&id=3 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listProjects&listAll=true&id=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

@@ -43,7 +43,7 @@ public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomain
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                           "command=listDomains&listAll=true&apiKey=identity&signature=sVFaGTu0DNSTVtWy3wtRt7KTx0w%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -65,7 +65,7 @@ public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomain
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                           "command=listDomains&listAll=true&apiKey=identity&signature=sVFaGTu0DNSTVtWy3wtRt7KTx0w%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -81,7 +81,7 @@ public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomain
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                           "command=listDomains&listAll=true&id=1&apiKey=identity&signature=M16YxHWKST/cIRUHvWhfWovJugU%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -99,7 +99,7 @@ public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomain
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                           "command=listDomains&listAll=true&id=1&apiKey=identity&signature=M16YxHWKST/cIRUHvWhfWovJugU%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -115,7 +115,7 @@ public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomain
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                           "command=listDomainChildren&listAll=true&id=1&isrecursive=true&apiKey=identity&signature=Jn6kFkloRvfaaivlJiHd0F5J3Jk%3D"))
             .addHeader("Accept", "application/json")
             .build(),
@@ -138,7 +138,7 @@ public class DomainDomainApiExpectTest extends BaseAliyunExpectTest<DomainDomain
          HttpRequest.builder()
             .method("GET")
             .endpoint(
-               URI.create("http://localhost:8080/client/api?response=json&" +
+               URI.create("https://ecs.aliyuncs.com/?response=json&" +
                   "command=listDomainChildren&listAll=true&id=1&isrecursive=true&apiKey=identity&" +
                           "signature=Jn6kFkloRvfaaivlJiHd0F5J3Jk%3D"))
             .addHeader("Accept", "application/json")

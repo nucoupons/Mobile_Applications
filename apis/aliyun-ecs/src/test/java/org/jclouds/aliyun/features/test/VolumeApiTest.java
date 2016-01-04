@@ -45,7 +45,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listVolumes&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listVolumes&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -61,7 +61,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(111L));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listVolumes&listAll=true&id=111 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listVolumes&listAll=true&id=111 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -73,7 +73,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
    }
 
    HttpRequest createVolumeFromSnapshot = HttpRequest.builder().method("GET")
-                                                     .endpoint("http://localhost:8080/client/api")
+                                                     .endpoint("https://ecs.aliyuncs.com/")
                                                      .addQueryParam("response", "json")
                                                      .addQueryParam("command", "createVolume")
                                                      .addQueryParam("name", "jclouds-volume")
@@ -95,7 +95,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
    }
 
    HttpRequest createVolumeFromDiskOffering = HttpRequest.builder().method("GET")
-                                                         .endpoint("http://localhost:8080/client/api")
+                                                         .endpoint("https://ecs.aliyuncs.com/")
                                                          .addQueryParam("response", "json")
                                                          .addQueryParam("command", "createVolume")
                                                          .addQueryParam("name", "jclouds-volume")
@@ -123,7 +123,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(111L, 999L));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=attachVolume&id=111&virtualmachineid=999 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=attachVolume&id=111&virtualmachineid=999 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -138,7 +138,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(111L));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=detachVolume&id=111 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=detachVolume&id=111 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -152,7 +152,7 @@ public class VolumeApiTest extends BaseAliyunApiTest<VolumeApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(111L));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteVolume&id=111 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteVolume&id=111 HTTP/1.1");
       assertPayloadEquals(httpRequest, null, null, false);
 
       assertSaxResponseParserClassEquals(method, null);

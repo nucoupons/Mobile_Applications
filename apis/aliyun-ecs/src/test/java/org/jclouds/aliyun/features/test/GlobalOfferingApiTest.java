@@ -41,7 +41,7 @@ import com.google.common.reflect.Invokable;
 public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> {
 
    HttpRequest createServiceOffering = HttpRequest.builder().method("GET")
-                                                  .endpoint("http://localhost:8080/client/api")
+                                                  .endpoint("https://ecs.aliyuncs.com/")
                                                   .addQueryParam("response", "json")
                                                   .addQueryParam("command", "createServiceOffering")
                                                   .addQueryParam("name", "name")
@@ -72,7 +72,7 @@ public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(1L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateServiceOffering&id=1 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateServiceOffering&id=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -88,7 +88,7 @@ public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(1L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteServiceOffering&id=1 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteServiceOffering&id=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -105,7 +105,7 @@ public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("name", "displayText"));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=createDiskOffering&name=name&displaytext=displayText HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=createDiskOffering&name=name&displaytext=displayText HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -122,7 +122,7 @@ public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(1L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateDiskOffering&id=1 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateDiskOffering&id=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -138,7 +138,7 @@ public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(1L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteDiskOffering&id=1 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteDiskOffering&id=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -155,7 +155,7 @@ public class GlobalOfferingApiTest extends BaseAliyunApiTest<GlobalOfferingApi> 
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(1L));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateNetworkOffering&id=1 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateNetworkOffering&id=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

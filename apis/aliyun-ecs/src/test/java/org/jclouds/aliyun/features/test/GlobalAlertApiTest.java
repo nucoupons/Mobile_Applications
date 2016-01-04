@@ -43,7 +43,7 @@ public class GlobalAlertApiTest extends BaseAliyunApiTest<GlobalAlertApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listAlerts&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listAlerts&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -60,7 +60,7 @@ public class GlobalAlertApiTest extends BaseAliyunApiTest<GlobalAlertApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListAlertsOptions.Builder.id("42").keyword("jclouds").type("TEMPLATE")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listAlerts&listAll=true&id=42&keyword=jclouds&type=TEMPLATE HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listAlerts&listAll=true&id=42&keyword=jclouds&type=TEMPLATE HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

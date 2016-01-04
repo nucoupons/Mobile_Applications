@@ -52,7 +52,7 @@ public class GlobalUsageApiTest extends BaseAliyunApiTest<GlobalUsageApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(start, end));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=generateUsageRecords&startdate=2012-01-01&enddate=2012-01-31 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=generateUsageRecords&startdate=2012-01-01&enddate=2012-01-31 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -77,7 +77,7 @@ public class GlobalUsageApiTest extends BaseAliyunApiTest<GlobalUsageApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(start, end, GenerateUsageRecordsOptions.Builder.domainId("42")));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=generateUsageRecords&startdate=2012-01-01&enddate=2012-01-31&domainid=42 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=generateUsageRecords&startdate=2012-01-01&enddate=2012-01-31&domainid=42 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -102,7 +102,7 @@ public class GlobalUsageApiTest extends BaseAliyunApiTest<GlobalUsageApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(start, end));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listUsageRecords&listAll=true&startdate=2012-01-01&enddate=2012-01-31 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listUsageRecords&listAll=true&startdate=2012-01-01&enddate=2012-01-31 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -127,7 +127,7 @@ public class GlobalUsageApiTest extends BaseAliyunApiTest<GlobalUsageApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(start, end, ListUsageRecordsOptions.Builder.accountInDomain("fred", "42").accountId("41").keyword("bob")));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listUsageRecords&listAll=true&startdate=2012-01-01&enddate=2012-01-31&account=fred&domainid=42&accountid=41&keyword=bob HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listUsageRecords&listAll=true&startdate=2012-01-01&enddate=2012-01-31&account=fred&domainid=42&accountid=41&keyword=bob HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

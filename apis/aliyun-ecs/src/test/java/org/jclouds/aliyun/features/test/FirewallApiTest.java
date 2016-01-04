@@ -48,7 +48,7 @@ public class FirewallApiTest extends BaseAliyunApiTest<FirewallApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listPortForwardingRules&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listPortForwardingRules&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -66,7 +66,7 @@ public class FirewallApiTest extends BaseAliyunApiTest<FirewallApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListPortForwardingRulesOptions.Builder.ipAddressId("3")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listPortForwardingRules&listAll=true&ipaddressid=3 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listPortForwardingRules&listAll=true&ipaddressid=3 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -86,7 +86,7 @@ public class FirewallApiTest extends BaseAliyunApiTest<FirewallApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=createPortForwardingRule&ipaddressid=6&protocol=tcp&publicport=22&virtualmachineid=7&privateport=22 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=createPortForwardingRule&ipaddressid=6&protocol=tcp&publicport=22&virtualmachineid=7&privateport=22 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -103,7 +103,7 @@ public class FirewallApiTest extends BaseAliyunApiTest<FirewallApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deletePortForwardingRule&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deletePortForwardingRule&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 

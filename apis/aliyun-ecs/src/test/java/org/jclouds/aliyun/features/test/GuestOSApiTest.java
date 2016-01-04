@@ -48,7 +48,7 @@ public class GuestOSApiTest extends BaseAliyunApiTest<GuestOSApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(11l));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listOsCategories&listAll=true&id=11 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listOsCategories&listAll=true&id=11 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -65,7 +65,7 @@ public class GuestOSApiTest extends BaseAliyunApiTest<GuestOSApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listOsCategories&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listOsCategories&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -82,7 +82,7 @@ public class GuestOSApiTest extends BaseAliyunApiTest<GuestOSApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(11l));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listOsTypes&listAll=true&id=11 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listOsTypes&listAll=true&id=11 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -100,7 +100,7 @@ public class GuestOSApiTest extends BaseAliyunApiTest<GuestOSApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listOsTypes&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listOsTypes&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -117,7 +117,7 @@ public class GuestOSApiTest extends BaseAliyunApiTest<GuestOSApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListOSTypesOptions.Builder.OSCategoryId("11")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listOsTypes&listAll=true&oscategoryid=11 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listOsTypes&listAll=true&oscategoryid=11 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

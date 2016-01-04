@@ -51,7 +51,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listInstanceGroups&listAll=true HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listInstanceGroups&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -70,7 +70,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
 
       assertRequestLineEquals(
          httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listInstanceGroups&listAll=true&account=fred&domainid=5&id=6 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listInstanceGroups&listAll=true&account=fred&domainid=5&id=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -87,7 +87,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listInstanceGroups&listAll=true&id=5 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listInstanceGroups&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -105,7 +105,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("goo"));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=createInstanceGroup&name=goo HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=createInstanceGroup&name=goo HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -122,7 +122,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("goo", CreateVMGroupOptions.Builder.account("foo").domainId("42")));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=createInstanceGroup&name=goo&account=foo&domainid=42 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=createInstanceGroup&name=goo&account=foo&domainid=42 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -139,7 +139,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5, UpdateVMGroupOptions.Builder.name("fred")));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=updateInstanceGroup&id=5&name=fred HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=updateInstanceGroup&id=5&name=fred HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -156,7 +156,7 @@ public class VMGroupApiTest extends BaseAliyunApiTest<VMGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=deleteInstanceGroup&id=5 HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=deleteInstanceGroup&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "");
       assertPayloadEquals(httpRequest, null, null, false);
 

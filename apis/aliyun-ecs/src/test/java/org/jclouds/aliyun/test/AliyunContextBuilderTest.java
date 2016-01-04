@@ -29,7 +29,7 @@ import org.testng.annotations.Test;
 public class AliyunContextBuilderTest {
 
    public void testAssignability() {
-      View view = ContextBuilder.newBuilder(new AliyunApiMetadata()).credentials("foo", "bar")
+      View view = ContextBuilder.newBuilder(new AliyunApiMetadata()).credentials("bnF9nNdDFCTwM5mF", "Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD")
               .buildView(typeToken(ComputeServiceContext.class));
       view.unwrapApi(AliyunApi.class);
    }

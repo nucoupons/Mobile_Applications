@@ -48,7 +48,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
    
    public void testCreateImage() {
       HttpRequest listVM = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "listVirtualMachines")
          .addQueryParam("listAll", "true")
@@ -63,7 +63,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
          .build();
 
       HttpRequest stopVM = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "stopVirtualMachine")
          .addQueryParam("id", "3239ade9-fd25-405c-8eda-59f0313a3fb0")
@@ -77,7 +77,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
          .build();
 
       HttpRequest stopAsyncJobResult = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "queryAsyncJobResult")
          .addQueryParam("jobid", "a7d5127b-24a2-4a44-a4a7-25a6d057b453")
@@ -91,7 +91,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
          .build();
 
       HttpRequest listVolumes = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "listVolumes")
          .addQueryParam("listAll", "true")
@@ -107,7 +107,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
 
 
       HttpRequest createTemplate = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "createTemplate")
          .addQueryParam("volumeid", "fe1ada16-57a0-40ae-b577-01a153690fb4")
@@ -124,7 +124,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
          .build();
 
       HttpRequest createAsyncJobResult = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "queryAsyncJobResult")
          .addQueryParam("jobid", "4e345230-8fcc-48a3-8a37-c5fe960df671")
@@ -138,7 +138,7 @@ public class AliyunImageExtensionExpectTest extends BaseAliyunComputeServiceCont
          .build();
 
       HttpRequest getTemplate = HttpRequest.builder().method("GET")
-         .endpoint("http://localhost:8080/client/api")
+         .endpoint("https://ecs.aliyuncs.com/")
          .addQueryParam("response", "json")
          .addQueryParam("command", "listTemplates")
          .addQueryParam("listAll", "true")

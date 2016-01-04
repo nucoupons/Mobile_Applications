@@ -54,7 +54,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSecurityGroups&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSecurityGroups&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -73,7 +73,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSecurityGroups&listAll=true&virtualmachineid=4&domainid=5&id=6 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSecurityGroups&listAll=true&virtualmachineid=4&domainid=5&id=6 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -90,7 +90,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSecurityGroups&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSecurityGroups&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -108,7 +108,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("some-name"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSecurityGroups&listAll=true&securitygroupname=some-name HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSecurityGroups&listAll=true&securitygroupname=some-name HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -126,7 +126,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("goo"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=createSecurityGroup&name=goo HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=createSecurityGroup&name=goo HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -139,7 +139,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
    }
 
    HttpRequest authorizeSecurityGroupIngress3 = HttpRequest.builder().method("GET")
-                                                           .endpoint("http://localhost:8080/client/api")
+                                                           .endpoint("https://ecs.aliyuncs.com/")
                                                            .addQueryParam("response", "json")
                                                            .addQueryParam("command", "authorizeSecurityGroupIngress")
                                                            .addQueryParam("securitygroupid", "2")
@@ -167,7 +167,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
    }
 
    HttpRequest authorizeSecurityGroupIngress4 = HttpRequest.builder().method("GET")
-                                                           .endpoint("http://localhost:8080/client/api")
+                                                           .endpoint("https://ecs.aliyuncs.com/")
                                                            .addQueryParam("response", "json")
                                                            .addQueryParam("command", "authorizeSecurityGroupIngress")
                                                            .addQueryParam("securitygroupid", "2")
@@ -200,7 +200,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
    }
 
    HttpRequest authorizeSecurityGroupIngress1 = HttpRequest.builder().method("GET")
-                                                           .endpoint("http://localhost:8080/client/api")
+                                                           .endpoint("https://ecs.aliyuncs.com/")
                                                            .addQueryParam("response", "json")
                                                            .addQueryParam("command", "authorizeSecurityGroupIngress")
                                                            .addQueryParam("protocol", "ICMP")
@@ -227,7 +227,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
    }
 
    HttpRequest authorizeSecurityGroupIngress2 = HttpRequest.builder().method("GET")
-                                                           .endpoint("http://localhost:8080/client/api")
+                                                           .endpoint("https://ecs.aliyuncs.com/")
                                                            .addQueryParam("response", "json")
                                                            .addQueryParam("command", "authorizeSecurityGroupIngress")
                                                            .addQueryParam("protocol", "ICMP")
@@ -267,7 +267,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
 
       assertRequestLineEquals(
             httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=revokeSecurityGroupIngress&id=5&account=adrian&domainid=1 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=revokeSecurityGroupIngress&id=5&account=adrian&domainid=1 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -284,7 +284,7 @@ public class SecurityGroupApiTest extends BaseAliyunApiTest<SecurityGroupApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteSecurityGroup&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteSecurityGroup&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

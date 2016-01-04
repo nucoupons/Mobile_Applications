@@ -39,7 +39,7 @@ public class GlobalHostApiTest extends BaseAliyunApiTest<GlobalHostApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-         "GET http://localhost:8080/client/api?response=json&command=listHosts&listAll=true HTTP/1.1");
+         "GET https://ecs.aliyuncs.com/?response=json&command=listHosts&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

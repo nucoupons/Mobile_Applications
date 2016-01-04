@@ -51,7 +51,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
          .build();
   
    HttpRequest queryAsyncJobResult = HttpRequest.builder().method("GET")
-        .endpoint("http://localhost:8080/client/api")
+        .endpoint("https://ecs.aliyuncs.com/")
         .addQueryParam("response", "json")
         .addQueryParam("command", "queryAsyncJobResult")
         .addQueryParam("jobid", "50006")
@@ -69,7 +69,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
         .build();
 
    HttpRequest queryAsyncJobResultAuthorizeIngress = HttpRequest.builder().method("GET")
-        .endpoint("http://localhost:8080/client/api")
+        .endpoint("https://ecs.aliyuncs.com/")
         .addQueryParam("response", "json")
         .addQueryParam("command", "queryAsyncJobResult")
         .addQueryParam("jobid", "13330fc9-8b3e-4582-aa3e-90883c041010")
@@ -83,7 +83,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
         .build();
    
    HttpRequest listCapabilitiesNotListAll = HttpRequest.builder().method("GET")
-     .endpoint("http://localhost:8080/client/api")
+     .endpoint("https://ecs.aliyuncs.com/")
      .addQueryParam("response", "json")
      .addQueryParam("command", "listCapabilities")
      .addQueryParam("apiKey", "APIKEY")      
@@ -93,7 +93,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
 
    public void testCreateNodeWithGroupEncodedIntoName() {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "1")
@@ -137,7 +137,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
 
    public void testCreateNodeWithGroupEncodedIntoNameWithKeyPair() throws IOException {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "1")
@@ -185,7 +185,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
 
    public void testCreateNodeWithGroupEncodedIntoNameWithGenerateKeyPair() throws IOException {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "1")
@@ -232,7 +232,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
    
    public void testCreateNodeWithGroupEncodedIntoNameWithKeyPairDefaultSecurityGroup() throws IOException {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "2")
@@ -283,7 +283,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
 
    public void testCreateNodeWithGroupEncodedIntoNameWithKeyPairDefaultSecurityGroupAndDisk() throws IOException {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "2")
@@ -339,7 +339,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
 
    public void testCreateNodeWithGroupEncodedIntoNameWithKeyPairGenerateSecurityGroup() throws IOException {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "2")
@@ -397,7 +397,7 @@ public class AliyunComputeServiceAdapterExpectTest extends BaseAliyunComputeServ
 
    public void testCreateNodeWithGroupEncodedIntoNameWithKeyPairAssignedToAccountAndDomain() throws IOException {
       HttpRequest deployVM = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deployVirtualMachine")
               .addQueryParam("zoneid", "1")

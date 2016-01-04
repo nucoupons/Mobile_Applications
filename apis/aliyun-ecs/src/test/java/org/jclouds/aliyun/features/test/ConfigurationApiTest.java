@@ -42,7 +42,7 @@ public class ConfigurationApiTest extends BaseAliyunApiTest<ConfigurationApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&listAll=true&command=listCapabilities HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&listAll=true&command=listCapabilities HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

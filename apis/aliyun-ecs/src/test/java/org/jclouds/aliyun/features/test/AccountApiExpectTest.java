@@ -44,7 +44,7 @@ public class AccountApiExpectTest extends BaseAliyunExpectTest<AccountApi> {
       AccountApi client = requestSendsResponse(
          HttpRequest.builder()
             .method("GET")
-            .endpoint("http://localhost:8080/client/api?response=json&command=listAccounts&listAll=true&apiKey=identity&signature=yMZYMZxzFlaUsbfxtuppMwNhpXI%3D")
+            .endpoint("https://ecs.aliyuncs.com/?response=json&command=listAccounts&listAll=true&apiKey=identity&signature=yMZYMZxzFlaUsbfxtuppMwNhpXI%3D")
             .addHeader("Accept", "application/json")
             .build(),
          HttpResponse.builder()

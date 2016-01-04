@@ -32,7 +32,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
    }
    
    protected final HttpRequest listTemplates = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listTemplates")
       .addQueryParam("listAll", "true")
@@ -48,7 +48,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
 
    protected final HttpRequest listProjects = HttpRequest.builder().method("GET")
-           .endpoint("http://localhost:8080/client/api")
+           .endpoint("https://ecs.aliyuncs.com/")
            .addQueryParam("response", "json")
            .addQueryParam("command", "listProjects")
            .addQueryParam("listAll", "true")
@@ -63,7 +63,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
            .build();
 
    protected final HttpRequest listOsTypes = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listOsTypes")
       .addQueryParam("listAll", "true")
@@ -77,7 +77,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
    
    protected final HttpRequest listOsCategories = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listOsCategories")
       .addQueryParam("listAll", "true")
@@ -91,7 +91,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
    
    protected final HttpRequest listZones = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listZones")
       .addQueryParam("listAll", "true")
@@ -105,7 +105,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
 
    protected final HttpRequest listServiceOfferings = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listServiceOfferings")
       .addQueryParam("listAll", "true")
@@ -119,7 +119,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
 
    protected final HttpRequest listAccounts = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listAccounts")
       .addQueryParam("listAll", "true")
@@ -133,7 +133,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
    
    protected final HttpRequest listNetworks = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listNetworks")
       .addQueryParam("listAll", "true")
@@ -153,7 +153,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();   
 
    protected final HttpRequest getZone = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listZones")
       .addQueryParam("listAll", "true")
@@ -168,7 +168,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
 
    protected final HttpRequest getZoneWithSecurityGroups = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listZones")
       .addQueryParam("listAll", "true")
@@ -183,7 +183,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();
    
    protected final HttpRequest listCapabilities = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("listAll", "true")      
       .addQueryParam("command", "listCapabilities")
@@ -197,7 +197,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();   
          
    protected final HttpRequest getSecurityGroup = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "listSecurityGroups")
       .addQueryParam("listAll", "true")      
@@ -212,7 +212,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();   
 
    protected final HttpRequest createSecurityGroup = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "createSecurityGroup")
       .addQueryParam("name", "jclouds-test")      
@@ -226,7 +226,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();   
 
    protected final HttpRequest authorizeIngress = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "authorizeSecurityGroupIngress")
       .addQueryParam("securitygroupid", "30")      
@@ -244,7 +244,7 @@ public abstract class BaseAliyunComputeServiceContextExpectTest<T> extends BaseA
       .build();   
 
    protected final HttpRequest createSSHKeyPair = HttpRequest.builder().method("GET")
-      .endpoint("http://localhost:8080/client/api")
+      .endpoint("https://ecs.aliyuncs.com/")
       .addQueryParam("response", "json")
       .addQueryParam("command", "createSSHKeyPair")
       .addQueryParam("name", "jclouds-test")      

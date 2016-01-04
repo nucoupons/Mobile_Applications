@@ -62,7 +62,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
            .build();
 
    protected final HttpRequest queryAsyncJobResultAuthorizeIngress = HttpRequest.builder().method("GET")
-           .endpoint("http://localhost:8080/client/api")
+           .endpoint("https://ecs.aliyuncs.com/")
            .addQueryParam("response", "json")
            .addQueryParam("command", "queryAsyncJobResult")
            .addQueryParam("jobid", "13330fc9-8b3e-4582-aa3e-90883c041010")
@@ -76,7 +76,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
            .build();
 
    protected final HttpRequest getWithRule = HttpRequest.builder().method("GET")
-           .endpoint("http://localhost:8080/client/api")
+           .endpoint("https://ecs.aliyuncs.com/")
            .addQueryParam("response", "json")
            .addQueryParam("command", "listSecurityGroups")
            .addQueryParam("listAll", "true")
@@ -99,7 +99,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testListSecurityGroups() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -132,7 +132,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testListSecurityGroupsForNode() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -166,7 +166,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testGetSecurityGroupById() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -201,7 +201,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testCreateSecurityGroup() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -239,7 +239,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
            expectedExceptionsMessageRegExp = "java.lang.IllegalArgumentException: .* does not support security groups")
    public void testCreateSecurityGroupBadZone() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -275,7 +275,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testRemoveSecurityGroup() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -290,7 +290,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
               .build();
 
       HttpRequest deleteSecurityGroup = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "deleteSecurityGroup")
               .addQueryParam("id", "13")
@@ -323,7 +323,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testRemoveSecurityGroupDoesNotExist() {
       HttpRequest listSecurityGroups = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "listSecurityGroups")
               .addQueryParam("listAll", "true")
@@ -355,7 +355,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testAddIpPermissionCidrFromIpPermission() {
       HttpRequest addRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "authorizeSecurityGroupIngress")
               .addQueryParam("securitygroupid", "13")
@@ -404,7 +404,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testAddIpPermissionCidrFromParams() {
       HttpRequest addRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "authorizeSecurityGroupIngress")
               .addQueryParam("securitygroupid", "13")
@@ -445,7 +445,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testAddIpPermissionGroupFromIpPermission() {
       HttpRequest addRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "authorizeSecurityGroupIngress")
               .addQueryParam("securitygroupid", "13")
@@ -497,7 +497,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testAddIpPermissionGroupFromParams() {
       HttpRequest addRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "authorizeSecurityGroupIngress")
               .addQueryParam("securitygroupid", "13")
@@ -544,7 +544,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testRemoveIpPermissionCidrFromIpPermission() {
       HttpRequest revokeRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "revokeSecurityGroupIngress")
               .addQueryParam("id", "6")
@@ -581,7 +581,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testRemoveIpPermissionCidrFromParams() {
       HttpRequest revokeRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "revokeSecurityGroupIngress")
               .addQueryParam("id", "6")
@@ -611,7 +611,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testRemoveIpPermissionGroupFromIpPermission() {
       HttpRequest revokeRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "revokeSecurityGroupIngress")
               .addQueryParam("id", "5")
@@ -648,7 +648,7 @@ public class AliyunSecurityGroupExtensionExpectTest extends BaseAliyunComputeSer
 
    public void testRemoveIpPermissionGroupFromParams() {
       HttpRequest revokeRule = HttpRequest.builder().method("GET")
-              .endpoint("http://localhost:8080/client/api")
+              .endpoint("https://ecs.aliyuncs.com/")
               .addQueryParam("response", "json")
               .addQueryParam("command", "revokeSecurityGroupIngress")
               .addQueryParam("id", "5")

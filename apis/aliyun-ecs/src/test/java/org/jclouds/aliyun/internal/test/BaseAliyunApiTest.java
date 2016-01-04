@@ -50,7 +50,7 @@ public abstract class BaseAliyunApiTest<T> extends BaseRestAnnotationProcessingT
    @Override
    protected ProviderMetadata createProviderMetadata() {
       return  AnonymousProviderMetadata.forApiWithEndpoint(new AliyunApiMetadata(),
-            "http://localhost:8080/client/api");
+            "https://ecs.aliyuncs.com/");
    }
 
 }

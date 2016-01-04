@@ -49,7 +49,7 @@ public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listNetworks&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listNetworks&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -67,7 +67,7 @@ public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
             .domainId("6").id("5")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listNetworks&listAll=true&type=Advanced&domainid=6&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listNetworks&listAll=true&type=Advanced&domainid=6&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -84,7 +84,7 @@ public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of("id"));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listNetworks&listAll=true&id=id HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listNetworks&listAll=true&id=id HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -98,7 +98,7 @@ public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
    }
 
    HttpRequest createNetwork = HttpRequest.builder().method("GET")
-                                          .endpoint("http://localhost:8080/client/api")
+                                          .endpoint("https://ecs.aliyuncs.com/")
                                           .addQueryParam("response", "json")
                                           .addQueryParam("command", "createNetwork")
                                           .addQueryParam("zoneid", "1")
@@ -124,7 +124,7 @@ public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
    }
 
    HttpRequest createNetworkOptions = HttpRequest.builder().method("GET")
-                                                 .endpoint("http://localhost:8080/client/api")
+                                                 .endpoint("https://ecs.aliyuncs.com/")
                                                  .addQueryParam("response", "json")
                                                  .addQueryParam("command", "createNetwork")
                                                  .addQueryParam("zoneid", "1")
@@ -158,7 +158,7 @@ public class NetworkApiTest extends BaseAliyunApiTest<NetworkApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteNetwork&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteNetwork&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 

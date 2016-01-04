@@ -57,7 +57,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=createSnapshot&volumeid=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=createSnapshot&volumeid=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -73,7 +73,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5, CreateSnapshotOptions.Builder.accountInDomain("acc", "7").policyId("9")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=createSnapshot&volumeid=5&account=acc&domainid=7&policyid=9 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=createSnapshot&volumeid=5&account=acc&domainid=7&policyid=9 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -89,7 +89,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.of());
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSnapshots&listAll=true HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSnapshots&listAll=true HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -105,7 +105,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(5));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSnapshots&listAll=true&id=5 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSnapshots&listAll=true&id=5 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -122,7 +122,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ListSnapshotsOptions.Builder.accountInDomain("acc", "7").id("5").interval(Snapshot.Interval.MONTHLY).isRecursive(true).keyword("fred").name("fred's snapshot").snapshotType(Snapshot.Type.RECURRING).volumeId("11")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSnapshots&listAll=true&account=acc&domainid=7&id=5&intervaltype=MONTHLY&isrecursive=true&keyword=fred&name=fred%27s%20snapshot&snapshottype=RECURRING&volumeid=11 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSnapshots&listAll=true&account=acc&domainid=7&id=5&intervaltype=MONTHLY&isrecursive=true&keyword=fred&name=fred%27s%20snapshot&snapshottype=RECURRING&volumeid=11 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -138,7 +138,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(14));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteSnapshot&id=14 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteSnapshot&id=14 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -150,7 +150,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
    }
 
    HttpRequest extractIso = HttpRequest.builder().method("GET")
-                                       .endpoint("http://localhost:8080/client/api")
+                                       .endpoint("https://ecs.aliyuncs.com/")
                                        .addQueryParam("response", "json")
                                        .addQueryParam("command", "createSnapshotPolicy")
                                        .addQueryParam("maxsnaps", "10")
@@ -179,7 +179,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(7));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteSnapshotPolicies&id=7 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteSnapshotPolicies&id=7 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -196,7 +196,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(ids));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=deleteSnapshotPolicies&ids=3,5,7 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=deleteSnapshotPolicies&ids=3,5,7 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -212,7 +212,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(10));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSnapshotPolicies&listAll=true&volumeid=10 HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSnapshotPolicies&listAll=true&volumeid=10 HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
@@ -228,7 +228,7 @@ public class SnapshotApiTest extends BaseAliyunApiTest<SnapshotApi> {
       GeneratedHttpRequest httpRequest = processor.createRequest(method, ImmutableList.<Object> of(10, ListSnapshotPoliciesOptions.Builder.accountInDomain("fred", "4").keyword("bob")));
 
       assertRequestLineEquals(httpRequest,
-            "GET http://localhost:8080/client/api?response=json&command=listSnapshotPolicies&listAll=true&volumeid=10&account=fred&domainid=4&keyword=bob HTTP/1.1");
+            "GET https://ecs.aliyuncs.com/?response=json&command=listSnapshotPolicies&listAll=true&volumeid=10&account=fred&domainid=4&keyword=bob HTTP/1.1");
       assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
       assertPayloadEquals(httpRequest, null, null, false);
 
