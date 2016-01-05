@@ -27,6 +27,7 @@ import static org.jclouds.http.utils.Queries.queryParser;
 import static org.jclouds.util.Strings2.toInputStream;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.util.Map;
 import java.util.Random;
@@ -83,10 +84,13 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
 
    public HttpRequest filter(HttpRequest request) throws HttpException {
       checkNotNull(request, "request must be present");
-      Multimap<String, String> decodedParams = queryParser().apply(request.getEndpoint().getRawQuery());
+      Multimap<String, String> decodedParams = queryParser().apply(request.getEndpoint().getQuery());
       addSigningParams(decodedParams);
       String stringToSign = createStringToSign(request, decodedParams);
+      
+      
       String signature = sign(stringToSign);
+      System.out.println("签名后"+ signature);
       addSignature(decodedParams, signature);
       request = request.toBuilder().endpoint(uriBuilder(request.getEndpoint()).query(decodedParams).build()).build();
       utils.logRequest(signatureLog, request, "<<");
@@ -102,8 +106,10 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
    public String sign(String toSign) {
       String signature;
       try {
-         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1(creds.get().credential.getBytes()));
+    	  System.out.println("Secret Key :" +creds.get().credential);
+         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1(("Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD"+"&").getBytes()));
          signature = base64().encode(readBytes(toInputStream(toSign), hmacSHA1));
+         
          if (signatureWire.enabled())
             signatureWire.input(toInputStream(signature));
          return signature;
@@ -120,19 +126,21 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
       // encode each parameter value first,
       ImmutableSortedSet.Builder<String> builder = ImmutableSortedSet.naturalOrder();
       for (Map.Entry<String, String> entry : decodedParams.entries())
-         builder.add(entry.getKey() + "=" + Strings2.urlEncode(entry.getValue()));
+         builder.add(Strings2.urlEncode(entry.getKey()) + "=" + Strings2.urlEncode(entry.getValue()));
       // then, lower case the entire query string
-      String stringToSign = Joiner.on('&').join(builder.build()).toLowerCase();
+      String stringToSign =Joiner.on('&').join(builder.build());
+      System.out.println("stringToSign" + stringToSign);
       if (signatureWire.enabled())
          signatureWire.output(stringToSign);
 
+      stringToSign="GET&"+URLEncoder.encode("/")+"&"+URLEncoder.encode(stringToSign);
       return stringToSign;
    }
 
    @VisibleForTesting
    void addSigningParams(Multimap<String, String> params) {
-      params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
-      //params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
+      //params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
+      params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
       params.replaceValues("SignatureMethod",ImmutableList.of( "HMAC-SHA1"));
       params.replaceValues("Timestamp", ImmutableList.of(Timestamps.getCurrent()));
       params.replaceValues("SignatureVersion",ImmutableList.of( "1.0"));
