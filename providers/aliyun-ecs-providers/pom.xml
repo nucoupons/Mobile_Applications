@@ -31,7 +31,7 @@
 	</parent>
 	<groupId>org.apache.jclouds.provider</groupId>
 	<artifactId>aliyun-ecs</artifactId>
-	<name>jclouds Amazon ecs provider</name>
+	<name>jclouds Aliyun ecs provider</name>
 	<description>ecs implementation targeted to Aliyun ecs Web Api</description>
 	<packaging>bundle</packaging>
 

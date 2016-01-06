@@ -22,9 +22,6 @@ import java.util.Properties;
 import org.jclouds.ecs.EcsApiMetadata;
 import org.jclouds.rest.internal.BaseHttpApiMetadata;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.inject.Module;
-
 public final class AliyunEcsApiMetadata extends
 		BaseHttpApiMetadata<AliyunEcsApi> {
 

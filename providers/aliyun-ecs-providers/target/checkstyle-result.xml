@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="5.7">
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\aliyun-ecs-providers\src\main\java\org\jclouds\aliyun\ecs\AliyunEcsApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\aliyun-ecs-providers\src\main\java\org\jclouds\aliyun\ecs\AliyunEcsApiMetadata.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\aliyun-ecs-providers\src\main\java\org\jclouds\aliyun\ecs\AliyunEcsProviderMetadata.java">
+</file>
 </checkstyle>

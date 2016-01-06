@@ -2,13 +2,13 @@
 *****************************************************
 Summary
 -------
-Generated at: 2016-01-07T00:03:39+08:00
+Generated at: 2016-01-07T01:14:49+08:00
 Notes: 0
 Binaries: 0
 Archives: 0
-Standards: 1
+Standards: 4
 
-Apache Licensed: 1
+Apache Licensed: 4
 Generated Documents: 0
 
 JavaDocs are generated and so license header is optional
@@ -31,6 +31,9 @@ Archives:
   Compressed archives will be marked A
   Notices, licenses etc will be marked N
   AL    pom.xml
+  AL    src/main/java/org/jclouds/aliyun/ecs/AliyunEcsApi.java
+  AL    src/main/java/org/jclouds/aliyun/ecs/AliyunEcsApiMetadata.java
+  AL    src/main/java/org/jclouds/aliyun/ecs/AliyunEcsProviderMetadata.java
  
 *****************************************************
  Printing headers for files without AL header...
