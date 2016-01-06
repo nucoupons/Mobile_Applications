@@ -25,7 +25,6 @@ import org.jclouds.rest.internal.BaseHttpApiMetadata;
 public final class AliyunEcsApiMetadata extends
 		BaseHttpApiMetadata<AliyunEcsApi> {
 
-	@Override
 	public Builder toBuilder() {
 		return new Builder().fromApiMetadata(this);
 	}
@@ -66,12 +65,10 @@ public final class AliyunEcsApiMetadata extends
 			// AWSEC2ComputeServiceContextModule.class));
 		}
 
-		@Override
 		public AliyunEcsApiMetadata build() {
 			return new AliyunEcsApiMetadata(this);
 		}
 
-		@Override
 		protected Builder self() {
 			return this;
 		}
