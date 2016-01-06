@@ -26,7 +26,5 @@ import com.google.inject.ImplementedBy;
  */
 @ImplementedBy(QuerySigner.class)
 public interface AuthenticationFilter extends HttpRequestFilter {
-	
-	
 
 }

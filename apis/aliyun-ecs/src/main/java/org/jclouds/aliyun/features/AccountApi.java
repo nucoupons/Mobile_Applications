@@ -51,7 +51,7 @@ public interface AccountApi{
     */
    @Named("listAccounts")
    @GET
-   @QueryParams(keys = { "DescribeInstances","RegionId"}, values = { "DescribeRegions","region1"})
+   @QueryParams(keys = { "Action", "listAll" }, values = { "CreateInstance", "true" })
    @SelectJson("account")
    @Fallback(EmptySetOnNotFoundOr404.class)
    Set<Account> listAccounts(ListAccountsOptions... options);
@@ -65,7 +65,7 @@ public interface AccountApi{
     */
    @Named("listAccounts")
    @GET
-   @QueryParams(keys = { "Action", "listAll" }, values = { "DescribeRegions", "true" })
+   @QueryParams(keys = { "Action", "listAll" }, values = { "CreateInstance", "true" })
    @SelectJson("account")
    @OnlyElement
    @Fallback(NullOnNotFoundOr404.class)

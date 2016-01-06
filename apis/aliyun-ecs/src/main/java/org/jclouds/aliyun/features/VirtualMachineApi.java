@@ -46,7 +46,7 @@ import org.jclouds.rest.annotations.SelectJson;
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />
  */
 @RequestFilters(AuthenticationFilter.class)
-@QueryParams(keys = { "Format", "Version" }, values = { "json", "2014-05-26" })
+@QueryParams(keys = "response", values = "json")
 public interface VirtualMachineApi {
 
    /**
@@ -59,8 +59,9 @@ public interface VirtualMachineApi {
     */
    @Named("listVirtualMachines")
    @GET
-   @QueryParams(keys = { "Action", "RegionId" }, values = { "DescribeInstances", "cn-qingdao" })
+   @QueryParams(keys = { "command", "listAll" }, values = { "listVirtualMachines", "true" })
    @SelectJson("virtualmachine")
+   @Consumes(MediaType.APPLICATION_JSON)
    @Fallback(EmptySetOnNotFoundOr404.class)
    Set<VirtualMachine> listVirtualMachines(ListVirtualMachinesOptions... options);
 
@@ -73,7 +74,7 @@ public interface VirtualMachineApi {
     */
    @Named("listVirtualMachines")
    @GET
-   @QueryParams(keys = { "Action", "listAll" }, values = { "DescribeInstances", "true" })
+   @QueryParams(keys = { "command", "listAll" }, values = { "listVirtualMachines", "true" })
    @SelectJson("virtualmachine")
    @OnlyElement
    @Consumes(MediaType.APPLICATION_JSON)
