@@ -42,7 +42,7 @@ import org.jclouds.rest.annotations.SelectJson;
  * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />
  */
 @RequestFilters(AuthenticationFilter.class)
-@QueryParams(keys = "response", values = "json")
+@QueryParams(keys = { "Format", "Version" }, values = { "json", "2014-05-26" })
 public interface ZoneApi {
 
    /**
@@ -54,7 +54,7 @@ public interface ZoneApi {
     */
    @Named("listZones")
    @GET
-   @QueryParams(keys = { "command", "listAll" }, values = { "listZones", "true" })
+   @QueryParams(keys = { "Action", "RegionId" }, values = { "DescribeZones", "cn-qingdao" })
    @SelectJson("zone")
    @Consumes(MediaType.APPLICATION_JSON)
    @Fallback(EmptySetOnNotFoundOr404.class)
@@ -69,7 +69,7 @@ public interface ZoneApi {
     */
    @Named("listZones")
    @GET
-   @QueryParams(keys = { "command", "listAll" }, values = { "listZones", "true" })
+   @QueryParams(keys = { "Action", "RegionId" }, values = { "DescribeZones", "cn-qingdao" })
    @SelectJson("zone")
    @OnlyElement
    @Consumes(MediaType.APPLICATION_JSON)
