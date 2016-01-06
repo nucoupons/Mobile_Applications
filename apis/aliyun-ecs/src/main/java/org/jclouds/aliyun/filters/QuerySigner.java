@@ -81,6 +81,7 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
       this.crypto = crypto;
       this.utils = utils;
    }
+   
 
    public HttpRequest filter(HttpRequest request) throws HttpException {
       checkNotNull(request, "request must be present");
@@ -93,6 +94,8 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
       System.out.println("签名后"+ signature);
       addSignature(decodedParams, signature);
       request = request.toBuilder().endpoint(uriBuilder(request.getEndpoint()).query(decodedParams).build()).build();
+      
+      System.out.println("签名后"+ request.getEndpoint());
       utils.logRequest(signatureLog, request, "<<");
       return request;
    }
@@ -106,8 +109,8 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
    public String sign(String toSign) {
       String signature;
       try {
-    	  System.out.println("Secret Key :" +creds.get().credential);
-         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1(("Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD"+"&").getBytes()));
+    	 
+         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1((creds.get().credential+"&").getBytes()));
          signature = base64().encode(readBytes(toInputStream(toSign), hmacSHA1));
          
          if (signatureWire.enabled())
