@@ -16,51 +16,40 @@
  */
 package org.jclouds.aliyun.ecs.config;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
-import javax.inject.Singleton;
-
 import org.jclouds.aliyun.ecs.AliyunEcsApi;
-import org.jclouds.aws.filters.FormSigner;
-import org.jclouds.aws.filters.FormSignerV4;
-import org.jclouds.date.DateService;
-import org.jclouds.ecs.EcsApi;
-import org.jclouds.ecs.config.BaseEcsHttpApiModule;
+import org.jclouds.ecs.handlers.EcsErrorHandler;
+import org.jclouds.http.HttpErrorHandler;
+import org.jclouds.http.annotation.ClientError;
+import org.jclouds.http.annotation.Redirection;
+import org.jclouds.http.annotation.ServerError;
 import org.jclouds.rest.ConfiguresHttpApi;
-
-import com.google.inject.Provides;
+import org.jclouds.rest.config.HttpApiModule;
 
 /**
  * Configures the EC2 connection.
  */
 @ConfiguresHttpApi
-public class AliyunEcsHttpApiModule extends BaseEcsHttpApiModule<AliyunEcsApi> {
+public class AliyunEcsHttpApiModule extends HttpApiModule<AliyunEcsApi> {
 
-   private final SimpleDateFormat iso8601 = new SimpleDateFormat("yyyyMMdd'T'HHmmss'Z'");
+	@Override
+	protected void configure() {
+		super.configure();
 
-   public AliyunEcsHttpApiModule() {
-      super(AliyunEcsApi.class);
-      iso8601.setTimeZone(TimeZone.getTimeZone("GMT"));
-   }
+	}
 
-   @Singleton
-   @Provides
-   EcsApi provide(AliyunEcsApi in) {
-      return in;
-   }
+	@Override
+	protected void bindErrorHandlers() {
+		bind(HttpErrorHandler.class).annotatedWith(Redirection.class).to(
+				EcsErrorHandler.class);
+		bind(HttpErrorHandler.class).annotatedWith(ClientError.class).to(
+				EcsErrorHandler.class);
+		bind(HttpErrorHandler.class).annotatedWith(ServerError.class).to(
+				EcsErrorHandler.class);
+	}
 
-  
+	@Override
+	protected void bindRetryHandlers() {
+		// TODO
+	}
 
-   @Override
-   protected void configure() {
-      bind(FormSigner.class).to(FormSignerV4.class);
-      super.configure();
-   }
-
-   @Override protected String provideTimeStamp(DateService dateService) {
-      // 20120416T155408Z not 2012-04-16T15:54:08Z
-      return iso8601.format(new Date());
-   }
 }

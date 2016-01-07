@@ -16,19 +16,37 @@
  */
 package org.jclouds.ecs.config;
 
-
-
-
 import org.jclouds.ecs.EcsApi;
+import org.jclouds.ecs.handlers.EcsErrorHandler;
+import org.jclouds.http.HttpErrorHandler;
+import org.jclouds.http.annotation.ClientError;
+import org.jclouds.http.annotation.Redirection;
+import org.jclouds.http.annotation.ServerError;
 import org.jclouds.rest.ConfiguresHttpApi;
-
+import org.jclouds.rest.config.HttpApiModule;
 
 /**
- * Configures the EC2 connection.
+ * Configures the elasticstack connection.
  */
 @ConfiguresHttpApi
-public class EcsHttpApiModule extends BaseEcsHttpApiModule<EcsApi> {
-   public EcsHttpApiModule() {
-      super(EcsApi.class);
+public class EcsHttpApiModule extends HttpApiModule<EcsApi> {
+
+   @Override
+   protected void configure() {
+      super.configure();
+    
    }
+
+   @Override
+   protected void bindErrorHandlers() {
+      bind(HttpErrorHandler.class).annotatedWith(Redirection.class).to(EcsErrorHandler.class);
+      bind(HttpErrorHandler.class).annotatedWith(ClientError.class).to(EcsErrorHandler.class);
+      bind(HttpErrorHandler.class).annotatedWith(ServerError.class).to(EcsErrorHandler.class);
+   }
+
+   @Override
+   protected void bindRetryHandlers() {
+      // TODO
+   }
+
 }
