@@ -57,7 +57,6 @@ public class AliyunEcsProviderMetadata extends BaseProviderMetadata {
    public static class Builder extends BaseProviderMetadata.Builder {
 
       protected Builder() {
-    	 
          id("aliyun-ecs")
          .name("Aliyun Elastic Compute Service (ECS)")
          .apiMetadata(new AliyunEcsApiMetadata())

@@ -16,14 +16,19 @@
  */
 package org.jclouds.aliyun.ecs.compute.config;
 
+import org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService;
+import org.jclouds.aliyun.ecs.compute.strategy.AliyunEcsListNodesStrategy;
+import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.config.BaseComputeServiceContextModule;
+import org.jclouds.ecs.compute.strategy.EcsListNodesStrategy;
 
 public class AliyunEcsComputeServiceContextModule extends
 		BaseComputeServiceContextModule {
 	@Override
 	protected void configure() {
 		super.configure();
-
+		bind(ComputeService.class).to(AliyunEcsComputeService.class);
+		bind(EcsListNodesStrategy.class).to(AliyunEcsListNodesStrategy.class);
 	}
 
 }

@@ -14,23 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.ecs.compute.config;
+package org.jclouds.aliyun.ecs.compute.strategy;
 
-import org.jclouds.compute.ComputeService;
-import org.jclouds.compute.ComputeServiceContext;
-import org.jclouds.compute.config.BaseComputeServiceContextModule;
-import org.jclouds.ecs.compute.EcsComputeService;
+import javax.inject.Singleton;
 
-/**
- * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
- */
-public class EcsComputeServiceContextModule extends
-		BaseComputeServiceContextModule {
-	@Override
-	protected void configure() {
-		super.configure();
-		  bind(ComputeService.class).to(EcsComputeService.class);
-	}
+import org.jclouds.ecs.compute.strategy.EcsListNodesStrategy;
+
+@Singleton
+public class AliyunEcsListNodesStrategy extends EcsListNodesStrategy {
 
 }

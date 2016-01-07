@@ -90,9 +90,7 @@ public class AliyunEcsComputeService extends EcsComputeService {
 			PersistNodeCredentials persistNodeCredentials,
 			Timeouts timeouts,
 			@Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor,
-
 			Optional<ImageExtension> imageExtension,
-
 			Optional<SecurityGroupExtension> securityGroupExtension) {
 
 		super(context, credentialStore, images, sizes, locations,
