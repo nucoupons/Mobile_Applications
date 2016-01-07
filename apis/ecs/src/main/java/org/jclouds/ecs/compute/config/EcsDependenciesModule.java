@@ -16,27 +16,15 @@
  */
 package org.jclouds.ecs.compute.config;
 
-import org.jclouds.compute.ComputeServiceContext;
-import org.jclouds.compute.config.BaseComputeServiceContextModule;
-import org.jclouds.ecs.compute.bind.EcsBindComputeStrategiesByClass;
-import org.jclouds.ecs.compute.bind.EcsBindComputeSuppliersByClass;
+import com.google.inject.AbstractModule;
 
-/**
- * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
- */
-public class EcsComputeServiceContextModule extends
-		BaseComputeServiceContextModule {
+public class EcsDependenciesModule extends AbstractModule {
+
 	@Override
 	protected void configure() {
-		installDependencies();
-		install(new EcsBindComputeStrategiesByClass());
-		install(new EcsBindComputeSuppliersByClass());
-		super.configure();
+		// TODO Auto-generated method stub
+		
 	}
 
-	protected void installDependencies() {
-		install(new EcsDependenciesModule());
-	}
 
 }

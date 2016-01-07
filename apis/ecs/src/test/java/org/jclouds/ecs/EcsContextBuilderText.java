@@ -14,29 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.ecs.compute.config;
+package org.jclouds.ecs;
 
+import static org.jclouds.reflect.Reflection2.typeToken;
+
+import org.jclouds.ContextBuilder;
+import org.jclouds.View;
 import org.jclouds.compute.ComputeServiceContext;
-import org.jclouds.compute.config.BaseComputeServiceContextModule;
-import org.jclouds.ecs.compute.bind.EcsBindComputeStrategiesByClass;
-import org.jclouds.ecs.compute.bind.EcsBindComputeSuppliersByClass;
+import org.testng.annotations.Test;
 
-/**
- * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
- */
-public class EcsComputeServiceContextModule extends
-		BaseComputeServiceContextModule {
-	@Override
-	protected void configure() {
-		installDependencies();
-		install(new EcsBindComputeStrategiesByClass());
-		install(new EcsBindComputeSuppliersByClass());
-		super.configure();
-	}
-
-	protected void installDependencies() {
-		install(new EcsDependenciesModule());
-	}
-
+@Test(groups = "unit", testName = "EcsContextBuilderText")
+public class EcsContextBuilderText {
+   public void testAssignability() {
+      View view = ContextBuilder.newBuilder(new EcsApiMetadata()).credentials("foo", "bar")
+              .buildView(typeToken(ComputeServiceContext.class));
+      view.unwrapApi(EcsApi.class);
+   }
 }
