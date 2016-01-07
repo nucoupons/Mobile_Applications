@@ -23,8 +23,6 @@ public class AliyunEcsDependenciesModule extends AbstractModule {
 	@Override
 	protected void configure() {
 
-		
-
 	}
 
 }

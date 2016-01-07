@@ -18,11 +18,9 @@ package org.jclouds.aliyun.ecs.compute.config;
 
 import org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService;
 import org.jclouds.aliyun.ecs.compute.bind.AliyunEcsBindComputeSuppliersByClass;
-import org.jclouds.aliyun.ecs.compute.strategy.AliyunEcsListNodesStrategy;
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.config.BaseComputeServiceContextModule;
 import org.jclouds.ecs.compute.bind.EcsBindComputeStrategiesByClass;
-import org.jclouds.ecs.compute.strategy.EcsListNodesStrategy;
 
 public class AliyunEcsComputeServiceContextModule extends
 		BaseComputeServiceContextModule {
@@ -33,7 +31,6 @@ public class AliyunEcsComputeServiceContextModule extends
 		install(new EcsBindComputeStrategiesByClass());
 		install(new AliyunEcsBindComputeSuppliersByClass());
 		bind(ComputeService.class).to(AliyunEcsComputeService.class);
-		bind(EcsListNodesStrategy.class).to(AliyunEcsListNodesStrategy.class);
 	}
 
 	protected void installDependencies() {
