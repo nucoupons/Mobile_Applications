@@ -16,9 +16,21 @@
  */
 package org.jclouds.aliyun.ecs.config;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
+import javax.inject.Singleton;
+
 import org.jclouds.aliyun.ecs.AliyunEcsApi;
+import org.jclouds.aws.filters.FormSigner;
+import org.jclouds.aws.filters.FormSignerV4;
+import org.jclouds.date.DateService;
+import org.jclouds.ecs.EcsApi;
 import org.jclouds.ecs.config.BaseEcsHttpApiModule;
 import org.jclouds.rest.ConfiguresHttpApi;
+
+import com.google.inject.Provides;
 
 /**
  * Configures the EC2 connection.
@@ -26,12 +38,29 @@ import org.jclouds.rest.ConfiguresHttpApi;
 @ConfiguresHttpApi
 public class AliyunEcsHttpApiModule extends BaseEcsHttpApiModule<AliyunEcsApi> {
 
-  
+   private final SimpleDateFormat iso8601 = new SimpleDateFormat("yyyyMMdd'T'HHmmss'Z'");
 
    public AliyunEcsHttpApiModule() {
       super(AliyunEcsApi.class);
-    
+      iso8601.setTimeZone(TimeZone.getTimeZone("GMT"));
    }
 
+   @Singleton
+   @Provides
+   EcsApi provide(AliyunEcsApi in) {
+      return in;
+   }
 
+  
+
+   @Override
+   protected void configure() {
+      bind(FormSigner.class).to(FormSignerV4.class);
+      super.configure();
+   }
+
+   @Override protected String provideTimeStamp(DateService dateService) {
+      // 20120416T155408Z not 2012-04-16T15:54:08Z
+      return iso8601.format(new Date());
+   }
 }

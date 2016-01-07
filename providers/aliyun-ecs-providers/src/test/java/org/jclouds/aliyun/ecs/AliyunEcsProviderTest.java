@@ -19,7 +19,7 @@ package org.jclouds.aliyun.ecs;
 import org.jclouds.providers.internal.BaseProviderMetadataTest;
 import org.testng.annotations.Test;
 
-@Test(groups = "unit", testName = "AliyunEcsContextBuilderTest")
+@Test(groups = "unit", testName = "AliyunEcsProviderTest")
 public class AliyunEcsProviderTest extends BaseProviderMetadataTest {
 
 	public AliyunEcsProviderTest() {

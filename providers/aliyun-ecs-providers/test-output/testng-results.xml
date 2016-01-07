@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1383" started-at="2016-01-07T15:07:44Z" finished-at="2016-01-07T15:07:45Z">
+  <suite name="Default suite" duration-ms="1328" started-at="2016-01-07T15:18:16Z" finished-at="2016-01-07T15:18:17Z">
     <groups>
       <group name="unit">
         <method signature="AliyunEcsContextBuilderTest.testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@10df8c7]" name="testAssignability" class="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="1383" started-at="2016-01-07T15:07:44Z" finished-at="2016-01-07T15:07:45Z">
+    <test name="Default test" duration-ms="1328" started-at="2016-01-07T15:18:16Z" finished-at="2016-01-07T15:18:17Z">
       <class name="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest">
-        <test-method status="FAIL" signature="testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@10df8c7]" name="testAssignability" duration-ms="1342" started-at="2016-01-07T23:07:44Z" finished-at="2016-01-07T23:07:45Z">
+        <test-method status="FAIL" signature="testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@10df8c7]" name="testAssignability" duration-ms="1283" started-at="2016-01-07T23:18:16Z" finished-at="2016-01-07T23:18:17Z">
           <exception class="com.google.inject.CreationException">
             <message>
               <![CDATA[Guice creation errors:

@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="312" started-at="2016-01-07T12:52:05Z" finished-at="2016-01-07T12:52:06Z">
+  <suite name="Default suite" duration-ms="242" started-at="2016-01-07T15:12:01Z" finished-at="2016-01-07T15:12:01Z">
     <groups>
       <group name="unit">
-        <method signature="ClientTest.test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@1237512]" name="test1" class="org.jclouds.test.aliyun.ecs.ClientTest"/>
+        <method signature="ClientTest.test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@db06de]" name="test1" class="org.jclouds.test.aliyun.ecs.ClientTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="312" started-at="2016-01-07T12:52:05Z" finished-at="2016-01-07T12:52:06Z">
+    <test name="Default test" duration-ms="242" started-at="2016-01-07T15:12:01Z" finished-at="2016-01-07T15:12:01Z">
       <class name="org.jclouds.test.aliyun.ecs.ClientTest">
-        <test-method status="FAIL" signature="test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@1237512]" name="test1" duration-ms="281" started-at="2016-01-07T20:52:05Z" finished-at="2016-01-07T20:52:06Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@db06de]" name="test1" duration-ms="222" started-at="2016-01-07T23:12:01Z" finished-at="2016-01-07T23:12:01Z">
           <exception class="java.util.NoSuchElementException">
             <message>
               <![CDATA[key [aliyun-ecs] not in the list of providers or apis: {apis=[stub]}]]>
