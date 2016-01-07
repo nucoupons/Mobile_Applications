@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--490323458\testng-customsuite.xml</span>
+                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-806527167\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -127,9 +127,17 @@
                   <a name="test1">
                   </a> <!-- test1 -->
                   <span class="method-name">test1</span>
-                  <div class="stack-trace">java.util.NoSuchElementException: key [aliyun-ecs] not in the list of providers or apis: {apis=[stub]}
-	at org.jclouds.ContextBuilder.newBuilder(ContextBuilder.java:173)
-	at org.jclouds.test.aliyun.ecs.ClientTest.test1(ClientTest.java:20)
+                  <div class="stack-trace">java.lang.NullPointerException: at index 0
+	at com.google.common.collect.ObjectArrays.checkElementNotNull(ObjectArrays.java:240)
+	at com.google.common.collect.ObjectArrays.checkElementsNotNull(ObjectArrays.java:231)
+	at com.google.common.collect.ObjectArrays.checkElementsNotNull(ObjectArrays.java:226)
+	at com.google.common.collect.ImmutableList.construct(ImmutableList.java:303)
+	at com.google.common.collect.ImmutableList.of(ImmutableList.java:98)
+	at com.google.common.collect.Iterables.concat(Iterables.java:431)
+	at org.jclouds.compute.suppliers.ImageCacheSupplier.get(ImageCacheSupplier.java:64)
+	at org.jclouds.compute.suppliers.ImageCacheSupplier.get(ImageCacheSupplier.java:45)
+	at org.jclouds.compute.internal.BaseComputeService.listImages(BaseComputeService.java:377)
+	at org.jclouds.test.aliyun.ecs.ClientTest.test1(ClientTest.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -163,7 +171,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--490323458\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-806527167\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -224,12 +232,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test1')
 data.setCell(0, 2, 'org.jclouds.test.aliyun.ecs.ClientTest')
-data.setCell(0, 3, 203);
+data.setCell(0, 3, 1794);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 203 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
