@@ -22,7 +22,9 @@ import org.jclouds.ecs.compute.EcsComputeServiceContext;
 import com.google.inject.ImplementedBy;
 
 @ImplementedBy(AliyunEcsComputeServiceContextImpl.class)
-public interface AliyunEcsComputeServiceContext extends EcsComputeServiceContext {
-	
-   AliyunEcsComputeService getComputeService();
+public interface AliyunEcsComputeServiceContext extends
+		EcsComputeServiceContext {
+
+	@Override
+	AliyunEcsComputeService getComputeService();
 }

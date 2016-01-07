@@ -2,25 +2,25 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63" started-at="2016-01-07T12:20:58Z" finished-at="2016-01-07T12:20:58Z">
+  <suite name="Default suite" duration-ms="65" started-at="2016-01-07T15:08:24Z" finished-at="2016-01-07T15:08:24Z">
     <groups>
       <group name="unit">
-        <method signature="BaseApiMetadataTest.testAllContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1664cb5]" name="testAllContains" class="org.jclouds.apis.internal.BaseApiMetadataTest"/>
-        <method signature="BaseApiMetadataTest.testTransformableToContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1664cb5]" name="testTransformableToContains" class="org.jclouds.apis.internal.BaseApiMetadataTest"/>
-        <method signature="BaseApiMetadataTest.testWithId()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1664cb5]" name="testWithId" class="org.jclouds.apis.internal.BaseApiMetadataTest"/>
+        <method signature="BaseApiMetadataTest.testAllContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1b1d7ff]" name="testAllContains" class="org.jclouds.apis.internal.BaseApiMetadataTest"/>
+        <method signature="BaseApiMetadataTest.testTransformableToContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1b1d7ff]" name="testTransformableToContains" class="org.jclouds.apis.internal.BaseApiMetadataTest"/>
+        <method signature="BaseApiMetadataTest.testWithId()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1b1d7ff]" name="testWithId" class="org.jclouds.apis.internal.BaseApiMetadataTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="63" started-at="2016-01-07T12:20:58Z" finished-at="2016-01-07T12:20:58Z">
+    <test name="Default test" duration-ms="65" started-at="2016-01-07T15:08:24Z" finished-at="2016-01-07T15:08:24Z">
       <class name="org.jclouds.ecs.EcsApiMetadataTest">
-        <test-method status="PASS" signature="testAllContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1664cb5]" name="testAllContains" duration-ms="15" started-at="2016-01-07T20:20:58Z" finished-at="2016-01-07T20:20:58Z">
+        <test-method status="PASS" signature="testAllContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1b1d7ff]" name="testAllContains" duration-ms="22" started-at="2016-01-07T23:08:24Z" finished-at="2016-01-07T23:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllContains -->
-        <test-method status="PASS" signature="testTransformableToContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1664cb5]" name="testTransformableToContains" duration-ms="0" started-at="2016-01-07T20:20:58Z" finished-at="2016-01-07T20:20:58Z">
+        <test-method status="PASS" signature="testTransformableToContains()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1b1d7ff]" name="testTransformableToContains" duration-ms="10" started-at="2016-01-07T23:08:24Z" finished-at="2016-01-07T23:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTransformableToContains -->
-        <test-method status="PASS" signature="testWithId()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1664cb5]" name="testWithId" duration-ms="16" started-at="2016-01-07T20:20:58Z" finished-at="2016-01-07T20:20:58Z">
+        <test-method status="PASS" signature="testWithId()[pri:0, instance:org.jclouds.ecs.EcsApiMetadataTest@1b1d7ff]" name="testWithId" duration-ms="10" started-at="2016-01-07T23:08:24Z" finished-at="2016-01-07T23:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWithId -->

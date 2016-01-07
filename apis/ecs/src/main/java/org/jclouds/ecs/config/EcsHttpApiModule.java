@@ -28,7 +28,6 @@ import org.jclouds.rest.ConfiguresHttpApi;
  */
 @ConfiguresHttpApi
 public class EcsHttpApiModule extends BaseEcsHttpApiModule<EcsApi> {
-
    public EcsHttpApiModule() {
       super(EcsApi.class);
    }
