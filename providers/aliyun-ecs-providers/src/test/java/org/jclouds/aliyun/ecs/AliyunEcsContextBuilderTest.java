@@ -14,20 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.ecs.compute.config;
+package org.jclouds.aliyun.ecs;
 
+import static org.jclouds.reflect.Reflection2.typeToken;
+
+import org.jclouds.ContextBuilder;
+import org.jclouds.View;
 import org.jclouds.compute.ComputeServiceContext;
-import org.jclouds.compute.config.BaseComputeServiceContextModule;
+import org.jclouds.ecs.EcsApi;
+import org.testng.annotations.Test;
 
-/**
- * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
- */
-public class EcsComputeServiceContextModule extends
-		BaseComputeServiceContextModule {
-	@Override
-	protected void configure() {
-		super.configure();
+@Test(groups = "unit", testName = "AliyunEcsContextBuilderTest")
+public class AliyunEcsContextBuilderTest {
+
+	public void testAssignability() {
+		View view = ContextBuilder.newBuilder(new AliyunEcsProviderMetadata())
+				.credentials("foo", "bar")
+				.buildView(typeToken(ComputeServiceContext.class));
+		view.unwrapApi(EcsApi.class);
+		view.unwrapApi(AliyunEcsApi.class);
 	}
 
 }

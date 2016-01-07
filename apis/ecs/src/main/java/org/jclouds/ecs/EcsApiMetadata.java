@@ -21,6 +21,7 @@ import java.util.Properties;
 
 import org.jclouds.apis.ApiMetadata;
 import org.jclouds.ecs.compute.EcsComputeServiceContext;
+import org.jclouds.ecs.compute.config.EcsComputeServiceContextModule;
 import org.jclouds.ecs.config.EcsHttpApiModule;
 import org.jclouds.rest.internal.BaseHttpApiMetadata;
 

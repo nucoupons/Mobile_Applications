@@ -14,20 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.ecs.compute.config;
+package org.jclouds.aliyun.ecs.compute.config;
 
-import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.config.BaseComputeServiceContextModule;
 
-/**
- * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
- */
-public class EcsComputeServiceContextModule extends
+public class AliyunEcsComputeServiceContextModule extends
 		BaseComputeServiceContextModule {
 	@Override
 	protected void configure() {
 		super.configure();
+
 	}
 
 }

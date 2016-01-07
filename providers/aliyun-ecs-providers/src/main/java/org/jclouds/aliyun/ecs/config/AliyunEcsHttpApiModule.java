@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.ecs.compute.config;
+package org.jclouds.aliyun.ecs.config;
 
-import org.jclouds.compute.ComputeServiceContext;
-import org.jclouds.compute.config.BaseComputeServiceContextModule;
+import org.jclouds.aliyun.ecs.AliyunEcsApi;
+import org.jclouds.ecs.config.BaseEcsHttpApiModule;
+import org.jclouds.rest.ConfiguresHttpApi;
 
 /**
- * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
+ * Configures the EC2 connection.
  */
-public class EcsComputeServiceContextModule extends
-		BaseComputeServiceContextModule {
-	@Override
-	protected void configure() {
-		super.configure();
-	}
+@ConfiguresHttpApi
+public class AliyunEcsHttpApiModule extends BaseEcsHttpApiModule<AliyunEcsApi> {
+
+  
+
+   public AliyunEcsHttpApiModule() {
+      super(AliyunEcsApi.class);
+    
+   }
+
 
 }

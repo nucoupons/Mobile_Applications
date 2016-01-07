@@ -16,14 +16,22 @@
  */
 package org.jclouds.aliyun.ecs.compute;
 
+import static org.jclouds.compute.config.ComputeServiceProperties.TIMEOUT_NODE_RUNNING;
+import static org.jclouds.compute.config.ComputeServiceProperties.TIMEOUT_NODE_SUSPENDED;
+import static org.jclouds.compute.config.ComputeServiceProperties.TIMEOUT_NODE_TERMINATED;
+
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicReference;
 
+import javax.inject.Named;
 import javax.inject.Provider;
 import javax.inject.Singleton;
 
+import org.jclouds.Constants;
+import org.jclouds.collect.Memoized;
 import org.jclouds.compute.ComputeServiceContext;
+import org.jclouds.compute.callables.RunScriptOnNode;
 import org.jclouds.compute.domain.Hardware;
 import org.jclouds.compute.domain.Image;
 import org.jclouds.compute.domain.NodeMetadata;
@@ -37,7 +45,7 @@ import org.jclouds.compute.strategy.CreateNodesInGroupThenAddToSet;
 import org.jclouds.compute.strategy.DestroyNodeStrategy;
 import org.jclouds.compute.strategy.GetImageStrategy;
 import org.jclouds.compute.strategy.GetNodeMetadataStrategy;
-import org.jclouds.compute.strategy.InitializeRunScriptOnNodeOrPlaceInBadMap.Factory;
+import org.jclouds.compute.strategy.InitializeRunScriptOnNodeOrPlaceInBadMap;
 import org.jclouds.compute.strategy.ListNodesStrategy;
 import org.jclouds.compute.strategy.RebootNodeStrategy;
 import org.jclouds.compute.strategy.ResumeNodeStrategy;
@@ -60,40 +68,43 @@ public class AliyunEcsComputeService extends EcsComputeService {
 	protected AliyunEcsComputeService(
 			ComputeServiceContext context,
 			Map<String, Credentials> credentialStore,
-			Supplier<Set<? extends Image>> images,
-			Supplier<Set<? extends Hardware>> hardwareProfiles,
-			Supplier<Set<? extends Location>> locations,
+			@Memoized Supplier<Set<? extends Image>> images,
+			@Memoized Supplier<Set<? extends Hardware>> sizes,
+			@Memoized Supplier<Set<? extends Location>> locations,
 			ListNodesStrategy listNodesStrategy,
 			GetImageStrategy getImageStrategy,
 			GetNodeMetadataStrategy getNodeMetadataStrategy,
 			CreateNodesInGroupThenAddToSet runNodesAndAddToSetStrategy,
 			RebootNodeStrategy rebootNodeStrategy,
 			DestroyNodeStrategy destroyNodeStrategy,
-			ResumeNodeStrategy resumeNodeStrategy,
-			SuspendNodeStrategy suspendNodeStrategy,
+			ResumeNodeStrategy startNodeStrategy,
+			SuspendNodeStrategy stopNodeStrategy,
 			Provider<TemplateBuilder> templateBuilderProvider,
-			Provider<TemplateOptions> templateOptionsProvider,
-			Predicate<AtomicReference<NodeMetadata>> nodeRunning,
-			Predicate<AtomicReference<NodeMetadata>> nodeTerminated,
-			Predicate<AtomicReference<NodeMetadata>> nodeSuspended,
-			Factory initScriptRunnerFactory,
+			@Named("DEFAULT") Provider<TemplateOptions> templateOptionsProvider,
+			@Named(TIMEOUT_NODE_RUNNING) Predicate<AtomicReference<NodeMetadata>> nodeRunning,
+			@Named(TIMEOUT_NODE_TERMINATED) Predicate<AtomicReference<NodeMetadata>> nodeTerminated,
+			@Named(TIMEOUT_NODE_SUSPENDED) Predicate<AtomicReference<NodeMetadata>> nodeSuspended,
+			InitializeRunScriptOnNodeOrPlaceInBadMap.Factory initScriptRunnerFactory,
+			RunScriptOnNode.Factory runScriptOnNodeFactory,
 			InitAdminAccess initAdminAccess,
-			org.jclouds.compute.callables.RunScriptOnNode.Factory runScriptOnNodeFactory,
-			PersistNodeCredentials persistNodeCredentials, Timeouts timeouts,
-			ListeningExecutorService userExecutor,
+			PersistNodeCredentials persistNodeCredentials,
+			Timeouts timeouts,
+			@Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor,
+
 			Optional<ImageExtension> imageExtension,
+
 			Optional<SecurityGroupExtension> securityGroupExtension) {
-		super(context, credentialStore, images, hardwareProfiles, locations,
+
+		super(context, credentialStore, images, sizes, locations,
 				listNodesStrategy, getImageStrategy, getNodeMetadataStrategy,
-				runNodesAndAddToSetStrategy, rebootNodeStrategy, destroyNodeStrategy,
-				resumeNodeStrategy, suspendNodeStrategy, templateBuilderProvider,
-				templateOptionsProvider, nodeRunning, nodeTerminated, nodeSuspended,
-				initScriptRunnerFactory, initAdminAccess, runScriptOnNodeFactory,
+				runNodesAndAddToSetStrategy, rebootNodeStrategy,
+				destroyNodeStrategy, startNodeStrategy, stopNodeStrategy,
+				templateBuilderProvider, templateOptionsProvider, nodeRunning,
+				nodeTerminated, nodeSuspended, initScriptRunnerFactory,
+				runScriptOnNodeFactory, initAdminAccess,
 				persistNodeCredentials, timeouts, userExecutor, imageExtension,
 				securityGroupExtension);
-		
-		
+
 	}
 
- 
 }

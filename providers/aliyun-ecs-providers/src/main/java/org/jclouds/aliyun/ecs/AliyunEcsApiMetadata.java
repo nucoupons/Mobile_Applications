@@ -19,8 +19,14 @@ package org.jclouds.aliyun.ecs;
 import java.net.URI;
 import java.util.Properties;
 
+import org.jclouds.aliyun.ecs.compute.AliyunEcsComputeServiceContext;
+import org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule;
+import org.jclouds.aliyun.ecs.config.AliyunEcsHttpApiModule;
 import org.jclouds.ecs.EcsApiMetadata;
 import org.jclouds.rest.internal.BaseHttpApiMetadata;
+
+import com.google.common.collect.ImmutableSet;
+import com.google.inject.Module;
 
 public final class AliyunEcsApiMetadata extends
 		BaseHttpApiMetadata<AliyunEcsApi> {
@@ -57,12 +63,11 @@ public final class AliyunEcsApiMetadata extends
 							URI.create("http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html"))
 					.defaultEndpoint("https://ecs.aliyuncs.com/")
 					.version("2014-05-26")
-					.defaultProperties(EcsApiMetadata.defaultProperties());
-			// .view(AWSEC2ComputeServiceContext.class)
-			// .defaultModules(ImmutableSet.<Class<? extends
-			// Module>>of(AWSEC2HttpApiModule.class,
-			// EC2ResolveImagesModule.class,
-			// AWSEC2ComputeServiceContextModule.class));
+					.defaultProperties(EcsApiMetadata.defaultProperties())
+			        .view(AliyunEcsComputeServiceContext.class)
+			.defaultModules(ImmutableSet.<Class<? extends
+			Module>>of(AliyunEcsHttpApiModule.class,
+			AliyunEcsComputeServiceContextModule.class));
 		}
 
 		public AliyunEcsApiMetadata build() {
