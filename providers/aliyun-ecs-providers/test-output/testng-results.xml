@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1263" started-at="2016-01-07T13:36:56Z" finished-at="2016-01-07T13:36:57Z">
+  <suite name="Default suite" duration-ms="1310" started-at="2016-01-07T14:12:08Z" finished-at="2016-01-07T14:12:09Z">
     <groups>
       <group name="unit">
-        <method signature="AliyunEcsContextBuilderTest.testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@47fc71]" name="testAssignability" class="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest"/>
+        <method signature="AliyunEcsContextBuilderTest.testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@10df8c7]" name="testAssignability" class="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="1263" started-at="2016-01-07T13:36:56Z" finished-at="2016-01-07T13:36:57Z">
+    <test name="Default test" duration-ms="1310" started-at="2016-01-07T14:12:08Z" finished-at="2016-01-07T14:12:09Z">
       <class name="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest">
-        <test-method status="FAIL" signature="testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@47fc71]" name="testAssignability" duration-ms="1201" started-at="2016-01-07T21:36:56Z" finished-at="2016-01-07T21:36:57Z">
+        <test-method status="FAIL" signature="testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@10df8c7]" name="testAssignability" duration-ms="1279" started-at="2016-01-07T22:12:08Z" finished-at="2016-01-07T22:12:09Z">
           <exception class="com.google.inject.CreationException">
             <message>
               <![CDATA[Guice creation errors:
@@ -50,99 +50,7 @@
     for parameter 0 at org.jclouds.aws.handlers.AWSServerErrorRetryHandler.<init>(AWSServerErrorRetryHandler.java:44)
   at org.jclouds.aws.config.AWSHttpApiModule.bindRetryHandlers(AWSHttpApiModule.java:73)
 
-6) No implementation for org.jclouds.compute.strategy.CreateNodeWithGroupEncodedIntoName was bound.
-  while locating org.jclouds.compute.strategy.CreateNodeWithGroupEncodedIntoName
-    for parameter 0 at org.jclouds.compute.strategy.impl.CreateNodesWithGroupEncodedIntoNameThenAddToSet.<init>(CreateNodesWithGroupEncodedIntoNameThenAddToSet.java:105)
-  while locating org.jclouds.compute.strategy.CreateNodesInGroupThenAddToSet
-    for parameter 8 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-7) No implementation for org.jclouds.compute.strategy.DestroyNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.DestroyNodeStrategy
-    for parameter 10 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-8) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 6 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-9) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 6 at org.jclouds.compute.domain.internal.TemplateBuilderImpl.<init>(TemplateBuilderImpl.java:136)
-  while locating com.google.inject.Provider<org.jclouds.compute.domain.TemplateBuilder>
-    for parameter 13 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-10) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 6 at org.jclouds.compute.domain.internal.TemplateBuilderImpl.<init>(TemplateBuilderImpl.java:136)
-  at org.jclouds.compute.config.BaseComputeServiceContextModule.provideTemplateOptionallyFromProperties(BaseComputeServiceContextModule.java:183)
-
-11) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicImageAvailable.<init>(AtomicImageAvailable.java:37)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.imageAvailable(ComputeServiceTimeoutsModule.java:93)
-
-12) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicImageDeleted.<init>(AtomicImageDeleted.java:34)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.serverDeleted(ComputeServiceTimeoutsModule.java:102)
-
-13) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 7 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-14) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicNodeRunning.<init>(AtomicNodeRunning.java:37)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.nodeRunning(ComputeServiceTimeoutsModule.java:59)
-
-15) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicNodeSuspended.<init>(AtomicNodeSuspended.java:37)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.serverSuspended(ComputeServiceTimeoutsModule.java:77)
-
-16) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicNodeTerminated.<init>(AtomicNodeTerminated.java:34)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.serverTerminated(ComputeServiceTimeoutsModule.java:68)
-
-17) No implementation for org.jclouds.compute.strategy.ListNodesStrategy was bound.
-  while locating org.jclouds.compute.strategy.ListNodesStrategy
-    for parameter 5 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-18) No implementation for org.jclouds.compute.strategy.ListNodesStrategy was bound.
-  while locating org.jclouds.compute.strategy.ListNodesStrategy
-    for parameter 1 at org.jclouds.compute.strategy.impl.CreateNodesWithGroupEncodedIntoNameThenAddToSet.<init>(CreateNodesWithGroupEncodedIntoNameThenAddToSet.java:105)
-  while locating org.jclouds.compute.strategy.CreateNodesInGroupThenAddToSet
-    for parameter 8 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-19) No implementation for org.jclouds.compute.strategy.RebootNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.RebootNodeStrategy
-    for parameter 9 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-20) No implementation for org.jclouds.compute.strategy.ResumeNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.ResumeNodeStrategy
-    for parameter 11 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-21) No implementation for org.jclouds.compute.strategy.SuspendNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.SuspendNodeStrategy
-    for parameter 12 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-22) No implementation for com.google.common.base.Supplier<java.util.Set<? extends org.jclouds.compute.domain.Image>> was bound.
-  at org.jclouds.compute.config.BaseComputeServiceContextModule.supplyImageCache(BaseComputeServiceContextModule.java:239)
-
-23) No implementation for com.google.common.base.Supplier<java.util.Set<? extends org.jclouds.compute.domain.Hardware>> was bound.
-  at org.jclouds.compute.config.BaseComputeServiceContextModule.supplySizeCache(BaseComputeServiceContextModule.java:289)
-
-23 errors]]>
+5 errors]]>
             </message>
             <full-stacktrace>
               <![CDATA[com.google.inject.CreationException: Guice creation errors:
@@ -182,99 +90,7 @@
     for parameter 0 at org.jclouds.aws.handlers.AWSServerErrorRetryHandler.<init>(AWSServerErrorRetryHandler.java:44)
   at org.jclouds.aws.config.AWSHttpApiModule.bindRetryHandlers(AWSHttpApiModule.java:73)
 
-6) No implementation for org.jclouds.compute.strategy.CreateNodeWithGroupEncodedIntoName was bound.
-  while locating org.jclouds.compute.strategy.CreateNodeWithGroupEncodedIntoName
-    for parameter 0 at org.jclouds.compute.strategy.impl.CreateNodesWithGroupEncodedIntoNameThenAddToSet.<init>(CreateNodesWithGroupEncodedIntoNameThenAddToSet.java:105)
-  while locating org.jclouds.compute.strategy.CreateNodesInGroupThenAddToSet
-    for parameter 8 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-7) No implementation for org.jclouds.compute.strategy.DestroyNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.DestroyNodeStrategy
-    for parameter 10 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-8) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 6 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-9) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 6 at org.jclouds.compute.domain.internal.TemplateBuilderImpl.<init>(TemplateBuilderImpl.java:136)
-  while locating com.google.inject.Provider<org.jclouds.compute.domain.TemplateBuilder>
-    for parameter 13 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-10) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 6 at org.jclouds.compute.domain.internal.TemplateBuilderImpl.<init>(TemplateBuilderImpl.java:136)
-  at org.jclouds.compute.config.BaseComputeServiceContextModule.provideTemplateOptionallyFromProperties(BaseComputeServiceContextModule.java:183)
-
-11) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicImageAvailable.<init>(AtomicImageAvailable.java:37)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.imageAvailable(ComputeServiceTimeoutsModule.java:93)
-
-12) No implementation for org.jclouds.compute.strategy.GetImageStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetImageStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicImageDeleted.<init>(AtomicImageDeleted.java:34)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.serverDeleted(ComputeServiceTimeoutsModule.java:102)
-
-13) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 7 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-14) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicNodeRunning.<init>(AtomicNodeRunning.java:37)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.nodeRunning(ComputeServiceTimeoutsModule.java:59)
-
-15) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicNodeSuspended.<init>(AtomicNodeSuspended.java:37)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.serverSuspended(ComputeServiceTimeoutsModule.java:77)
-
-16) No implementation for org.jclouds.compute.strategy.GetNodeMetadataStrategy was bound.
-  while locating org.jclouds.compute.strategy.GetNodeMetadataStrategy
-    for parameter 0 at org.jclouds.compute.predicates.AtomicNodeTerminated.<init>(AtomicNodeTerminated.java:34)
-  at org.jclouds.compute.config.ComputeServiceTimeoutsModule.serverTerminated(ComputeServiceTimeoutsModule.java:68)
-
-17) No implementation for org.jclouds.compute.strategy.ListNodesStrategy was bound.
-  while locating org.jclouds.compute.strategy.ListNodesStrategy
-    for parameter 5 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-18) No implementation for org.jclouds.compute.strategy.ListNodesStrategy was bound.
-  while locating org.jclouds.compute.strategy.ListNodesStrategy
-    for parameter 1 at org.jclouds.compute.strategy.impl.CreateNodesWithGroupEncodedIntoNameThenAddToSet.<init>(CreateNodesWithGroupEncodedIntoNameThenAddToSet.java:105)
-  while locating org.jclouds.compute.strategy.CreateNodesInGroupThenAddToSet
-    for parameter 8 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-19) No implementation for org.jclouds.compute.strategy.RebootNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.RebootNodeStrategy
-    for parameter 9 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-20) No implementation for org.jclouds.compute.strategy.ResumeNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.ResumeNodeStrategy
-    for parameter 11 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-21) No implementation for org.jclouds.compute.strategy.SuspendNodeStrategy was bound.
-  while locating org.jclouds.compute.strategy.SuspendNodeStrategy
-    for parameter 12 at org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService.<init>(AliyunEcsComputeService.java:96)
-  at org.jclouds.aliyun.ecs.compute.config.AliyunEcsComputeServiceContextModule.configure(AliyunEcsComputeServiceContextModule.java:30)
-
-22) No implementation for com.google.common.base.Supplier<java.util.Set<? extends org.jclouds.compute.domain.Image>> was bound.
-  at org.jclouds.compute.config.BaseComputeServiceContextModule.supplyImageCache(BaseComputeServiceContextModule.java:239)
-
-23) No implementation for com.google.common.base.Supplier<java.util.Set<? extends org.jclouds.compute.domain.Hardware>> was bound.
-  at org.jclouds.compute.config.BaseComputeServiceContextModule.supplySizeCache(BaseComputeServiceContextModule.java:289)
-
-23 errors
+5 errors
 	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:435)
 	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:154)
 	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:106)
