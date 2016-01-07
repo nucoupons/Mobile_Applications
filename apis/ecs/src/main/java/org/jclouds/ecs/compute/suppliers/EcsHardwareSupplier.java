@@ -23,6 +23,7 @@ import javax.inject.Singleton;
 import org.jclouds.compute.domain.Hardware;
 
 import com.google.common.base.Supplier;
+import com.google.common.collect.Sets;
 
 @Singleton
 public class EcsHardwareSupplier implements Supplier<Set<? extends Hardware>> {
@@ -30,7 +31,7 @@ public class EcsHardwareSupplier implements Supplier<Set<? extends Hardware>> {
 	@Override
 	public Set<? extends Hardware> get() {
 		// TODO Auto-generated method stub
-		return null;
+		return Sets.newLinkedHashSet(); 
 	}
 
 }

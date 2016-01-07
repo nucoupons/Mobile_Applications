@@ -27,17 +27,20 @@ import org.jclouds.compute.reference.ComputeServiceConstants;
 import org.jclouds.logging.Logger;
 
 import com.google.common.base.Supplier;
+import com.google.common.collect.Sets;
 
 @Singleton
 public class EcsImageSupplier implements Supplier<Set<? extends Image>> {
    @Resource
    @Named(ComputeServiceConstants.COMPUTE_LOGGER)
    protected Logger logger = Logger.NULL;
+   
+   
 
 	@Override
 	public Set<? extends Image> get() {
 		// TODO Auto-generated method stub
-		return null;
+		return Sets.newLinkedHashSet(); 
 	}
 
 }
