@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1638" started-at="2016-01-07T16:14:56Z" finished-at="2016-01-07T16:14:58Z">
+  <suite name="Default suite" duration-ms="2106" started-at="2016-01-10T03:57:14Z" finished-at="2016-01-10T03:57:16Z">
     <groups>
       <group name="unit">
-        <method signature="ClientTest.test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@db06de]" name="test1" class="org.jclouds.test.aliyun.ecs.ClientTest"/>
+        <method signature="ClientTest.test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@1ee8c1]" name="test1" class="org.jclouds.test.aliyun.ecs.ClientTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="1638" started-at="2016-01-07T16:14:56Z" finished-at="2016-01-07T16:14:58Z">
+    <test name="Default test" duration-ms="2106" started-at="2016-01-10T03:57:14Z" finished-at="2016-01-10T03:57:16Z">
       <class name="org.jclouds.test.aliyun.ecs.ClientTest">
-        <test-method status="FAIL" signature="test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@db06de]" name="test1" duration-ms="1606" started-at="2016-01-08T00:14:56Z" finished-at="2016-01-08T00:14:58Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@1ee8c1]" name="test1" duration-ms="2090" started-at="2016-01-10T11:57:14Z" finished-at="2016-01-10T11:57:16Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException

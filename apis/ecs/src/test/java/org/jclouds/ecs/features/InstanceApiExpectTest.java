@@ -18,7 +18,6 @@ package org.jclouds.ecs.features;
 
 import java.util.Properties;
 
-import org.jclouds.Constants;
 import org.jclouds.ecs.EcsApi;
 import org.jclouds.ecs.internal.BaseEcsApiExpectTest;
 import org.jclouds.http.HttpRequest;
@@ -34,7 +33,6 @@ public class InstanceApiExpectTest extends BaseEcsApiExpectTest<EcsApi> {
 
 	protected Properties setupProperties() {
 		Properties props = super.setupProperties();
-		props.put(Constants.PROPERTY_API_VERSION, "2010-08-31");
 		return props;
 	}
 
@@ -47,7 +45,7 @@ public class InstanceApiExpectTest extends BaseEcsApiExpectTest<EcsApi> {
 	protected final HttpResponse loginResponse = HttpResponse.builder()
 			.statusCode(200).build();
 
-	public void testFilterWhenResponseIs2xx() throws Exception {
+	public void testInstance() throws Exception {
 
 		EcsApi api = requestSendsResponse(login, loginResponse);
 		

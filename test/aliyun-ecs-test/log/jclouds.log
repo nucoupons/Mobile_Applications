@@ -4,3 +4,5 @@
 2016-01-08 00:13:49,350 DEBUG [org.jclouds.location.suppliers.fromconfig.ZoneIdsFromConfiguration] [main] no jclouds.zones configured for provider aliyun-ecs
 2016-01-08 00:14:58,008 DEBUG [org.jclouds.location.suppliers.fromconfig.RegionIdsFromConfiguration] [main] no jclouds.regions configured for provider aliyun-ecs
 2016-01-08 00:14:58,008 DEBUG [org.jclouds.location.suppliers.fromconfig.ZoneIdsFromConfiguration] [main] no jclouds.zones configured for provider aliyun-ecs
+2016-01-10 11:57:16,448 DEBUG [org.jclouds.location.suppliers.fromconfig.RegionIdsFromConfiguration] [main] no jclouds.regions configured for provider aliyun-ecs
+2016-01-10 11:57:16,448 DEBUG [org.jclouds.location.suppliers.fromconfig.ZoneIdsFromConfiguration] [main] no jclouds.zones configured for provider aliyun-ecs

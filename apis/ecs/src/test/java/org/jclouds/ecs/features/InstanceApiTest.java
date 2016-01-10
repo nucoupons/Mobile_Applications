@@ -30,11 +30,11 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.reflect.Invokable;
 
 /**
- * Tests behavior of {@code AccountApi}
+ * Tests behavior of {@code InstanceApi}
  */
 // NOTE:without testName, this will not call @Before* and fail w/NPE during
 // surefire
-@Test(groups = "unit", testName = "AccountApiTest")
+@Test(groups = "unit", testName = "InstanceApiTest")
 public class InstanceApiTest extends BaseEcsApiTest<InstanceApi> {
 
 	public void testListInstances() throws SecurityException,
@@ -50,8 +50,7 @@ public class InstanceApiTest extends BaseEcsApiTest<InstanceApi> {
 		assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
 		assertPayloadEquals(httpRequest, null, null, false);
 
-		assertResponseParserClassEquals(method, httpRequest,
-				ParseFirstJsonValueNamed.class);
+		assertResponseParserClassEquals(method, httpRequest,ParseFirstJsonValueNamed.class);
 		assertSaxResponseParserClassEquals(method, null);
 		assertFallbackClassEquals(method, EmptySetOnNotFoundOr404.class);
 

@@ -5,7 +5,7 @@
     <classes>
       <class name="org.jclouds.ecs.features.InstanceApiExpectTest">
         <methods>
-          <include name="testFilterWhenResponseIs2xx"/>
+          <include name="testInstance"/>
         </methods>
       </class> <!-- org.jclouds.ecs.features.InstanceApiExpectTest -->
     </classes>
