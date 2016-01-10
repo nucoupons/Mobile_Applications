@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2805" started-at="2016-01-10T13:41:22Z" finished-at="2016-01-10T13:41:25Z">
+  <suite name="Default suite" duration-ms="2737" started-at="2016-01-10T13:43:28Z" finished-at="2016-01-10T13:43:31Z">
     <groups>
       <group name="unit">
         <method signature="InstanceApiExpectTest.testListInstancesWhenResponseIs2xx()[pri:0, instance:org.jclouds.ecs.features.InstanceApiExpectTest@119015b]" name="testListInstancesWhenResponseIs2xx" class="org.jclouds.ecs.features.InstanceApiExpectTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="2805" started-at="2016-01-10T13:41:22Z" finished-at="2016-01-10T13:41:25Z">
+    <test name="Default test" duration-ms="2737" started-at="2016-01-10T13:43:28Z" finished-at="2016-01-10T13:43:31Z">
       <class name="org.jclouds.ecs.features.InstanceApiExpectTest">
-        <test-method status="FAIL" signature="testListInstancesWhenResponseIs2xx()[pri:0, instance:org.jclouds.ecs.features.InstanceApiExpectTest@119015b]" name="testListInstancesWhenResponseIs2xx" duration-ms="2775" started-at="2016-01-10T21:41:22Z" finished-at="2016-01-10T21:41:25Z">
+        <test-method status="FAIL" signature="testListInstancesWhenResponseIs2xx()[pri:0, instance:org.jclouds.ecs.features.InstanceApiExpectTest@119015b]" name="testListInstancesWhenResponseIs2xx" duration-ms="2706" started-at="2016-01-10T21:43:28Z" finished-at="2016-01-10T21:43:31Z">
           <exception class="org.jclouds.http.HttpResponseException">
             <message>
               <![CDATA[command: GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=DescribeRegions&RegionId=cn-qingdao HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
@@ -18,7 +18,7 @@
 ----------------------------------------
 The following request is not configured:
 ----------------------------------------
-GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=DescribeRegions&RegionId=cn-qingdao&AccessKeyId=bnF9nNdDFCTwM5mF&SignatureMethod=HMAC-SHA1&Timestamp=2016-01-10T13%3A41%3A25Z&SignatureVersion=1.0&SignatureNonce=-166195065&Signature=8JInFwzZ6DTcqNWEoze%2B9V7ykvM%3D HTTP/1.1
+GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=DescribeRegions&RegionId=cn-qingdao&AccessKeyId=bnF9nNdDFCTwM5mF&SignatureMethod=HMAC-SHA1&Timestamp=2016-01-10T13%3A43%3A31Z&SignatureVersion=1.0&SignatureNonce=-1837625731&Signature=uPAlcB5T6djQCS6SjEI6N91FP7I%3D HTTP/1.1
 Accept: application/json
 
 
@@ -37,7 +37,7 @@ Accept: application/json
 ----------------------------------------
 The following request is not configured:
 ----------------------------------------
-GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=DescribeRegions&RegionId=cn-qingdao&AccessKeyId=bnF9nNdDFCTwM5mF&SignatureMethod=HMAC-SHA1&Timestamp=2016-01-10T13%3A41%3A25Z&SignatureVersion=1.0&SignatureNonce=-166195065&Signature=8JInFwzZ6DTcqNWEoze%2B9V7ykvM%3D HTTP/1.1
+GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=DescribeRegions&RegionId=cn-qingdao&AccessKeyId=bnF9nNdDFCTwM5mF&SignatureMethod=HMAC-SHA1&Timestamp=2016-01-10T13%3A43%3A31Z&SignatureVersion=1.0&SignatureNonce=-1837625731&Signature=uPAlcB5T6djQCS6SjEI6N91FP7I%3D HTTP/1.1
 Accept: application/json
 
 

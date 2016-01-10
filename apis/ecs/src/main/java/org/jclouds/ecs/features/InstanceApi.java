@@ -24,7 +24,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.core.MediaType;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
-import org.jclouds.ecs.compute.domain.Instance;
+import org.jclouds.ecs.domain.Instance;
 import org.jclouds.ecs.filters.AuthenticationFilter;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.QueryParams;

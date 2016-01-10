@@ -21,7 +21,7 @@ import static org.testng.AssertJUnit.assertEquals;
 import java.util.Properties;
 
 import org.jclouds.ecs.EcsApi;
-import org.jclouds.ecs.compute.domain.Instance;
+import org.jclouds.ecs.domain.Instance;
 import org.jclouds.ecs.internal.BaseEcsApiExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
