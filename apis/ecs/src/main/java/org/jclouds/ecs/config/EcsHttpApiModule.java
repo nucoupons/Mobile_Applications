@@ -17,8 +17,8 @@
 package org.jclouds.ecs.config;
 
 import org.jclouds.ecs.EcsApi;
-import org.jclouds.ecs.filter.AuthenticationFilter;
-import org.jclouds.ecs.filter.QuerySigner;
+import org.jclouds.ecs.filters.AuthenticationFilter;
+import org.jclouds.ecs.filters.QuerySigner;
 import org.jclouds.ecs.handlers.EcsErrorHandler;
 import org.jclouds.http.HttpErrorHandler;
 import org.jclouds.http.annotation.ClientError;

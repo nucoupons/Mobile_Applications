@@ -43,7 +43,9 @@ public class InstanceApiExpectTest extends BaseEcsApiExpectTest<EcsApi> {
 			.addQueryParam("Timestamp", "2012-06-01T12:00:00Z").build();
 
 	protected final HttpResponse loginResponse = HttpResponse.builder()
-			.statusCode(200).build();
+			.statusCode(200)
+			.payload(payloadFromResource("/listInstance.json"))
+            .build();
 
 	public void testInstance() throws Exception {
 

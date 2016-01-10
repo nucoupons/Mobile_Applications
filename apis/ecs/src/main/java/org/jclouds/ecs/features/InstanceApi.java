@@ -24,7 +24,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.core.MediaType;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
-import org.jclouds.ecs.filter.AuthenticationFilter;
+import org.jclouds.ecs.filters.AuthenticationFilter;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.QueryParams;
 import org.jclouds.rest.annotations.RequestFilters;
@@ -49,7 +49,7 @@ public interface InstanceApi {
 	 */
 	@Named("test")
 	@GET
-	@QueryParams(keys = { "Action" }, values = { "listInstances" })
+	@QueryParams(keys = { "Action","RegionId" }, values = { "DescribeRegions","cn-qingdao" })
 	@Consumes(MediaType.APPLICATION_JSON)
 	@SelectJson("instance")
 	@Fallback(EmptySetOnNotFoundOr404.class)

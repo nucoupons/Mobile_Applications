@@ -22,7 +22,7 @@ import java.io.IOException;
 
 import org.jclouds.ecs.EcsApiMetadata;
 import org.jclouds.ecs.config.EcsHttpApiModule;
-import org.jclouds.ecs.filter.QuerySigner;
+import org.jclouds.ecs.filters.QuerySigner;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.providers.AnonymousProviderMetadata;
 import org.jclouds.providers.ProviderMetadata;

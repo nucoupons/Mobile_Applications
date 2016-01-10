@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.ecs.filter;
+package org.jclouds.ecs.filters;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Throwables.propagate;
@@ -27,6 +27,7 @@ import static org.jclouds.http.utils.Queries.queryParser;
 import static org.jclouds.util.Strings2.toInputStream;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.util.Map;
 import java.util.Random;
@@ -38,6 +39,7 @@ import javax.inject.Singleton;
 
 import org.jclouds.crypto.Crypto;
 import org.jclouds.domain.Credentials;
+import org.jclouds.ecs.utils.Timestamps;
 import org.jclouds.http.HttpException;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpUtils;
@@ -101,7 +103,7 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
    public String sign(String toSign) {
       String signature;
       try {
-         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1(creds.get().credential.getBytes()));
+         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1(("Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD"+"&").getBytes()));
          signature = base64().encode(readBytes(toInputStream(toSign), hmacSHA1));
          if (signatureWire.enabled())
             signatureWire.input(toInputStream(signature));
@@ -121,19 +123,24 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
       for (Map.Entry<String, String> entry : decodedParams.entries())
          builder.add(entry.getKey() + "=" + Strings2.urlEncode(entry.getValue()));
       // then, lower case the entire query string
-      String stringToSign = Joiner.on('&').join(builder.build()).toLowerCase();
+      String stringToSign = Joiner.on('&').join(builder.build());
       if (signatureWire.enabled())
          signatureWire.output(stringToSign);
+      
+      stringToSign="GET&"+URLEncoder.encode("/")+"&"+URLEncoder.encode(stringToSign);
+      System.out.println("------------------------------");
 
+      System.out.println(stringToSign);
+      System.out.println("------------------------------");
       return stringToSign;
    }
 
    @VisibleForTesting
    void addSigningParams(Multimap<String, String> params) {
       params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
-      //params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
+      params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
       params.replaceValues("SignatureMethod",ImmutableList.of( "HMAC-SHA1"));
-     // params.replaceValues("Timestamp", ImmutableList.of(Timestamps.getCurrent()));
+      params.replaceValues("Timestamp", ImmutableList.of(Timestamps.getCurrent()));
       params.replaceValues("SignatureVersion",ImmutableList.of( "1.0"));
       params.replaceValues("SignatureNonce",ImmutableList.of(String.valueOf(new Random().nextInt())));
       params.removeAll("Signature");
@@ -146,3 +153,4 @@ public class QuerySigner implements AuthenticationFilter, RequestSigner {
    }
 
 }
+
