@@ -48,7 +48,6 @@ public abstract class BaseEcsApiTest<T> extends
 
 	@Override
 	protected void checkFilters(HttpRequest request) {
-		System.out.println("  eeee " + request.getEndpoint());
 		assertEquals(request.getFilters().size(), 1);
 		assertEquals(request.getFilters().get(0).getClass(), QuerySigner.class);
 	}
