@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1467327853\testng-customsuite.xml</span>
+                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--970830336\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.jclouds.ecs.features.InstanceApiTest" hash-for-method="testListAccounts">testListAccounts</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.jclouds.ecs.features.InstanceApiExpectTest" hash-for-method="testFilterWhenResponseIs2xx">testFilterWhenResponseIs2xx</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -119,29 +119,42 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">org.jclouds.ecs.features.InstanceApiTest</span>
+              <span class="class-name">org.jclouds.ecs.features.InstanceApiExpectTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testListAccounts">
-                  </a> <!-- testListAccounts -->
-                  <span class="method-name">testListAccounts</span>
-                  <div class="stack-trace">com.google.inject.ConfigurationException: Guice configuration errors:
+                  <a name="testFilterWhenResponseIs2xx">
+                  </a> <!-- testFilterWhenResponseIs2xx -->
+                  <span class="method-name">testFilterWhenResponseIs2xx</span>
+                  <div class="stack-trace">org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=listInstances HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
-1) No implementation for java.lang.String annotated with @org.jclouds.date.TimeStamp() was bound.
-  while locating com.google.inject.Provider&lt;java.lang.String&gt; annotated with @org.jclouds.date.TimeStamp()
-    for parameter 3 at org.jclouds.aws.filters.FormSigner$FormSignerV2.&lt;init&gt;(FormSigner.java:90)
-  while locating org.jclouds.aws.filters.FormSigner
+----------------------------------------
+The following request is not configured:
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=listInstances&amp;AccessKeyId=identity&amp;SignatureMethod=HMAC-SHA1&amp;SignatureVersion=1.0&amp;SignatureNonce=-1953306714&amp;Signature=LcmyeUPQg8ZjK2/GVbXTCjT63BE%3D HTTP/1.1
+Accept: application/json
+Host: ecs.aliyuncs.com
 
-1 error
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:961)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1013)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.getFiltersIfAnnotated(RestAnnotationProcessor.java:465)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.apply(RestAnnotationProcessor.java:210)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.createRequest(RestAnnotationProcessor.java:173)
-	at org.jclouds.ecs.features.InstanceApiTest.testListAccounts(InstanceApiTest.java:44)
+
+----------------------------------------
+Configured requests:
+
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&amp;Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+
+]
+	at org.jclouds.ecs.handlers.EcsErrorHandler.handleError(EcsErrorHandler.java:52)
+	at org.jclouds.http.handlers.DelegatingErrorHandler.handleError(DelegatingErrorHandler.java:67)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.shouldContinue(BaseHttpCommandExecutorService.java:136)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.invoke(BaseHttpCommandExecutorService.java:105)
+	at org.jclouds.rest.internal.InvokeHttpMethod.invoke(InvokeHttpMethod.java:90)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:73)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:44)
+	at org.jclouds.reflect.FunctionalReflection$FunctionalInvocationHandler.handleInvocation(FunctionalReflection.java:117)
+	at com.google.common.reflect.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:87)
+	at com.sun.proxy.$Proxy49.listInstances(Unknown Source)
+	at org.jclouds.ecs.features.InstanceApiExpectTest.testFilterWhenResponseIs2xx(InstanceApiExpectTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -175,7 +188,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1467327853\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--970830336\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,7 +197,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.jclouds.ecs.features.InstanceApiTest&quot;/&gt;
+      &lt;class name=&quot;org.jclouds.ecs.features.InstanceApiExpectTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -212,7 +225,7 @@
               <span class="test-group-name">unit</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testListAccounts</span>
+                <span class="method-in-group-name">testFilterWhenResponseIs2xx</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -234,14 +247,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testListAccounts')
-data.setCell(0, 2, 'org.jclouds.ecs.features.InstanceApiTest')
-data.setCell(0, 3, 38);
+data.setCell(0, 1, 'testFilterWhenResponseIs2xx')
+data.setCell(0, 2, 'org.jclouds.ecs.features.InstanceApiExpectTest')
+data.setCell(0, 3, 1627);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -267,16 +280,12 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.jclouds.ecs.features.InstanceApiTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setupFactory</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">org.jclouds.ecs.features.InstanceApiExpectTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testListAccounts</span>
-                <span class="method-start">1366 ms</span>
+                <span class="method-name">testFilterWhenResponseIs2xx</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

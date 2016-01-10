@@ -52,7 +52,7 @@ public class InstanceApiExpectTest extends BaseEcsApiExpectTest<EcsApi> {
 		EcsApi api = requestSendsResponse(login, loginResponse);
 		
 		
-		api.getInstanceApi().get().test();
+		api.getInstanceApi().get().listInstances();
 		
 
 	}

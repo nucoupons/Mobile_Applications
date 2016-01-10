@@ -19,40 +19,42 @@ package org.jclouds.ecs.features;
 import java.util.Set;
 
 import javax.inject.Named;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.core.MediaType;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
-import org.jclouds.aws.filters.FormSigner;
+import org.jclouds.ecs.filter.AuthenticationFilter;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.QueryParams;
 import org.jclouds.rest.annotations.RequestFilters;
-import org.jclouds.rest.annotations.SelectJson;
-import org.jclouds.rest.annotations.SinceApiVersion;
 import org.jclouds.rest.annotations.VirtualHost;
 
-import com.sun.jna.platform.win32.Advapi32Util.Account;
+import sun.security.jca.GetInstance.Instance;
+
+
 
 /**
  * Provides access to EC2 Instance Services via their REST API.
  * <p/>
  */
-@RequestFilters(FormSigner.class)
+@RequestFilters(AuthenticationFilter.class)
 @VirtualHost
+@QueryParams(keys = { "Format", "Version" }, values = { "json", "2014-05-26" })
 public interface InstanceApi {
 
 	/**
-	 * Lists Accounts
+	 * Lists listInstances
 	 * 
 	 * @param options
 	 *            if present, how to constrain the list.
 	 * @return Accounts matching query, or empty set, if no Accounts are found
 	 */
-	@SinceApiVersion("2014-05-24")
 	@Named("test")
 	@GET
-	@QueryParams(keys = { "Action", "listAll" }, values = { "test","true" })
-	@SelectJson("account")
+	@QueryParams(keys = { "Action" }, values = { "listInstances" })
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Fallback(EmptySetOnNotFoundOr404.class)
-	Set<Account> test();
+	Set<Instance> listInstances();
 
 }

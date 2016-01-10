@@ -2,46 +2,64 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1441" started-at="2016-01-10T02:03:04Z" finished-at="2016-01-10T02:03:05Z">
+  <suite name="Default suite" duration-ms="1648" started-at="2016-01-10T03:34:08Z" finished-at="2016-01-10T03:34:10Z">
     <groups>
       <group name="unit">
-        <method signature="InstanceApiTest.testListAccounts()[pri:0, instance:org.jclouds.ecs.features.InstanceApiTest@18e0782]" name="testListAccounts" class="org.jclouds.ecs.features.InstanceApiTest"/>
+        <method signature="InstanceApiExpectTest.testFilterWhenResponseIs2xx()[pri:0, instance:org.jclouds.ecs.features.InstanceApiExpectTest@653c7e]" name="testFilterWhenResponseIs2xx" class="org.jclouds.ecs.features.InstanceApiExpectTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="1441" started-at="2016-01-10T02:03:04Z" finished-at="2016-01-10T02:03:05Z">
-      <class name="org.jclouds.ecs.features.InstanceApiTest">
-        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.ecs.features.InstanceApiTest@18e0782]" name="setupFactory" is-config="true" duration-ms="1366" started-at="2016-01-10T10:03:04Z" finished-at="2016-01-10T10:03:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupFactory -->
-        <test-method status="FAIL" signature="testListAccounts()[pri:0, instance:org.jclouds.ecs.features.InstanceApiTest@18e0782]" name="testListAccounts" duration-ms="38" started-at="2016-01-10T10:03:05Z" finished-at="2016-01-10T10:03:05Z">
-          <exception class="com.google.inject.ConfigurationException">
+    <test name="Default test" duration-ms="1648" started-at="2016-01-10T03:34:08Z" finished-at="2016-01-10T03:34:10Z">
+      <class name="org.jclouds.ecs.features.InstanceApiExpectTest">
+        <test-method status="FAIL" signature="testFilterWhenResponseIs2xx()[pri:0, instance:org.jclouds.ecs.features.InstanceApiExpectTest@653c7e]" name="testFilterWhenResponseIs2xx" duration-ms="1627" started-at="2016-01-10T11:34:08Z" finished-at="2016-01-10T11:34:10Z">
+          <exception class="org.jclouds.http.HttpResponseException">
             <message>
-              <![CDATA[Guice configuration errors:
+              <![CDATA[command: GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=listInstances HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
-1) No implementation for java.lang.String annotated with @org.jclouds.date.TimeStamp() was bound.
-  while locating com.google.inject.Provider<java.lang.String> annotated with @org.jclouds.date.TimeStamp()
-    for parameter 3 at org.jclouds.aws.filters.FormSigner$FormSignerV2.<init>(FormSigner.java:90)
-  while locating org.jclouds.aws.filters.FormSigner
+----------------------------------------
+The following request is not configured:
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=listInstances&AccessKeyId=identity&SignatureMethod=HMAC-SHA1&SignatureVersion=1.0&SignatureNonce=-1953306714&Signature=LcmyeUPQg8ZjK2/GVbXTCjT63BE%3D HTTP/1.1
+Accept: application/json
+Host: ecs.aliyuncs.com
 
-1 error]]>
+
+----------------------------------------
+Configured requests:
+
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+
+]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[com.google.inject.ConfigurationException: Guice configuration errors:
+              <![CDATA[org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=listInstances HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
-1) No implementation for java.lang.String annotated with @org.jclouds.date.TimeStamp() was bound.
-  while locating com.google.inject.Provider<java.lang.String> annotated with @org.jclouds.date.TimeStamp()
-    for parameter 3 at org.jclouds.aws.filters.FormSigner$FormSignerV2.<init>(FormSigner.java:90)
-  while locating org.jclouds.aws.filters.FormSigner
+----------------------------------------
+The following request is not configured:
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=listInstances&AccessKeyId=identity&SignatureMethod=HMAC-SHA1&SignatureVersion=1.0&SignatureNonce=-1953306714&Signature=LcmyeUPQg8ZjK2/GVbXTCjT63BE%3D HTTP/1.1
+Accept: application/json
+Host: ecs.aliyuncs.com
 
-1 error
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:961)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1013)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.getFiltersIfAnnotated(RestAnnotationProcessor.java:465)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.apply(RestAnnotationProcessor.java:210)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.createRequest(RestAnnotationProcessor.java:173)
-	at org.jclouds.ecs.features.InstanceApiTest.testListAccounts(InstanceApiTest.java:44)
+
+----------------------------------------
+Configured requests:
+
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+
+]
+	at org.jclouds.ecs.handlers.EcsErrorHandler.handleError(EcsErrorHandler.java:52)
+	at org.jclouds.http.handlers.DelegatingErrorHandler.handleError(DelegatingErrorHandler.java:67)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.shouldContinue(BaseHttpCommandExecutorService.java:136)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.invoke(BaseHttpCommandExecutorService.java:105)
+	at org.jclouds.rest.internal.InvokeHttpMethod.invoke(InvokeHttpMethod.java:90)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:73)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:44)
+	at org.jclouds.reflect.FunctionalReflection$FunctionalInvocationHandler.handleInvocation(FunctionalReflection.java:117)
+	at com.google.common.reflect.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:87)
+	at com.sun.proxy.$Proxy49.listInstances(Unknown Source)
+	at org.jclouds.ecs.features.InstanceApiExpectTest.testFilterWhenResponseIs2xx(InstanceApiExpectTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -68,11 +86,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.google.inject.ConfigurationException -->
+          </exception> <!-- org.jclouds.http.HttpResponseException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testListAccounts -->
-      </class> <!-- org.jclouds.ecs.features.InstanceApiTest -->
+        </test-method> <!-- testFilterWhenResponseIs2xx -->
+      </class> <!-- org.jclouds.ecs.features.InstanceApiExpectTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

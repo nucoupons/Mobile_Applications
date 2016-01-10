@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 10 10:03:04 CST 2016</td>
+<td>Started on:</td><td>Sun Jan 10 11:34:08 CST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1441 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1648 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,22 +75,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.jclouds.ecs.features.InstanceApiTest.testListAccounts()'><b>testListAccounts</b><br>Test class: org.jclouds.ecs.features.InstanceApiTest</td>
-<td><div><pre>com.google.inject.ConfigurationException: Guice configuration errors:
+<td title='org.jclouds.ecs.features.InstanceApiExpectTest.testFilterWhenResponseIs2xx()'><b>testFilterWhenResponseIs2xx</b><br>Test class: org.jclouds.ecs.features.InstanceApiExpectTest</td>
+<td><div><pre>org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=listInstances HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
-1) No implementation for java.lang.String annotated with @org.jclouds.date.TimeStamp() was bound.
-  while locating com.google.inject.Provider&lt;java.lang.String&gt; annotated with @org.jclouds.date.TimeStamp()
-    for parameter 3 at org.jclouds.aws.filters.FormSigner$FormSignerV2.&lt;init&gt;(FormSigner.java:90)
-  while locating org.jclouds.aws.filters.FormSigner
+----------------------------------------
+The following request is not configured:
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=listInstances&amp;AccessKeyId=identity&amp;SignatureMethod=HMAC-SHA1&amp;SignatureVersion=1.0&amp;SignatureNonce=-1953306714&amp;Signature=LcmyeUPQg8ZjK2/GVbXTCjT63BE%3D HTTP/1.1
+Accept: application/json
+Host: ecs.aliyuncs.com
 
-1 error
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:961)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1013)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.getFiltersIfAnnotated(RestAnnotationProcessor.java:465)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.apply(RestAnnotationProcessor.java:210)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.createRequest(RestAnnotationProcessor.java:173)
-	at org.jclouds.ecs.features.InstanceApiTest.testListAccounts(InstanceApiTest.java:44)
+
+----------------------------------------
+Configured requests:
+
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&amp;Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+
+]
+	at org.jclouds.ecs.handlers.EcsErrorHandler.handleError(EcsErrorHandler.java:52)
+	at org.jclouds.http.handlers.DelegatingErrorHandler.handleError(DelegatingErrorHandler.java:67)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.shouldContinue(BaseHttpCommandExecutorService.java:136)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.invoke(BaseHttpCommandExecutorService.java:105)
+	at org.jclouds.rest.internal.InvokeHttpMethod.invoke(InvokeHttpMethod.java:90)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:73)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:44)
+	at org.jclouds.reflect.FunctionalReflection$FunctionalInvocationHandler.handleInvocation(FunctionalReflection.java:117)
+	at com.google.common.reflect.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:87)
+	at com.sun.proxy.$Proxy49.listInstances(Unknown Source)
+	at org.jclouds.ecs.features.InstanceApiExpectTest.testFilterWhenResponseIs2xx(InstanceApiExpectTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,22 +128,35 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace28115056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace28115056'><pre>com.google.inject.ConfigurationException: Guice configuration errors:
+</pre></div><a href='#' onClick='toggleBox("stack-trace27793319", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace27793319'><pre>org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=listInstances HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
-1) No implementation for java.lang.String annotated with @org.jclouds.date.TimeStamp() was bound.
-  while locating com.google.inject.Provider&lt;java.lang.String&gt; annotated with @org.jclouds.date.TimeStamp()
-    for parameter 3 at org.jclouds.aws.filters.FormSigner$FormSignerV2.&lt;init&gt;(FormSigner.java:90)
-  while locating org.jclouds.aws.filters.FormSigner
+----------------------------------------
+The following request is not configured:
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=listInstances&amp;AccessKeyId=identity&amp;SignatureMethod=HMAC-SHA1&amp;SignatureVersion=1.0&amp;SignatureNonce=-1953306714&amp;Signature=LcmyeUPQg8ZjK2/GVbXTCjT63BE%3D HTTP/1.1
+Accept: application/json
+Host: ecs.aliyuncs.com
 
-1 error
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
-	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:961)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1013)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.getFiltersIfAnnotated(RestAnnotationProcessor.java:465)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.apply(RestAnnotationProcessor.java:210)
-	at org.jclouds.rest.internal.RestAnnotationProcessor.createRequest(RestAnnotationProcessor.java:173)
-	at org.jclouds.ecs.features.InstanceApiTest.testListAccounts(InstanceApiTest.java:44)
+
+----------------------------------------
+Configured requests:
+
+----------------------------------------
+GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&amp;Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+
+]
+	at org.jclouds.ecs.handlers.EcsErrorHandler.handleError(EcsErrorHandler.java:52)
+	at org.jclouds.http.handlers.DelegatingErrorHandler.handleError(DelegatingErrorHandler.java:67)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.shouldContinue(BaseHttpCommandExecutorService.java:136)
+	at org.jclouds.http.internal.BaseHttpCommandExecutorService.invoke(BaseHttpCommandExecutorService.java:105)
+	at org.jclouds.rest.internal.InvokeHttpMethod.invoke(InvokeHttpMethod.java:90)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:73)
+	at org.jclouds.rest.internal.InvokeHttpMethod.apply(InvokeHttpMethod.java:44)
+	at org.jclouds.reflect.FunctionalReflection$FunctionalInvocationHandler.handleInvocation(FunctionalReflection.java:117)
+	at com.google.common.reflect.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:87)
+	at com.sun.proxy.$Proxy49.listInstances(Unknown Source)
+	at org.jclouds.ecs.features.InstanceApiExpectTest.testFilterWhenResponseIs2xx(InstanceApiExpectTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -156,8 +182,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>0</td>
-<td>org.jclouds.ecs.features.InstanceApiTest@18e0782</td></tr>
+<td>1</td>
+<td>org.jclouds.ecs.features.InstanceApiExpectTest@653c7e</td></tr>
 </table><p>
 </body>
 </html>

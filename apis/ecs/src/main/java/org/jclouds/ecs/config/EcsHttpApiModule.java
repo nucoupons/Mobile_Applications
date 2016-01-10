@@ -17,6 +17,8 @@
 package org.jclouds.ecs.config;
 
 import org.jclouds.ecs.EcsApi;
+import org.jclouds.ecs.filter.AuthenticationFilter;
+import org.jclouds.ecs.filter.QuerySigner;
 import org.jclouds.ecs.handlers.EcsErrorHandler;
 import org.jclouds.http.HttpErrorHandler;
 import org.jclouds.http.annotation.ClientError;
@@ -27,7 +29,9 @@ import org.jclouds.location.suppliers.implicit.OnlyLocationOrFirstZone;
 import org.jclouds.rest.ConfiguresHttpApi;
 import org.jclouds.rest.config.HttpApiModule;
 
+import com.google.inject.Provides;
 import com.google.inject.Scopes;
+import com.google.inject.Singleton;
 
 /**
  * Configures the elasticstack connection.
@@ -37,6 +41,8 @@ public class EcsHttpApiModule extends HttpApiModule<EcsApi> {
 
 	@Override
 	protected void configure() {
+
+		
 		super.configure();
 
 	}
@@ -56,6 +62,14 @@ public class EcsHttpApiModule extends HttpApiModule<EcsApi> {
 				EcsErrorHandler.class);
 		bind(HttpErrorHandler.class).annotatedWith(ServerError.class).to(
 				EcsErrorHandler.class);
+	}
+
+	@Provides
+	@Singleton
+	protected AuthenticationFilter authenticationFilterForCredentialType(
+			QuerySigner querySigner) {
+		return querySigner;
+
 	}
 
 }

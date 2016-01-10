@@ -18,6 +18,8 @@ package org.jclouds.ecs.internal;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
+
 import org.jclouds.ecs.EcsApiMetadata;
 import org.jclouds.ecs.config.EcsHttpApiModule;
 import org.jclouds.ecs.filter.QuerySigner;
@@ -26,31 +28,40 @@ import org.jclouds.providers.AnonymousProviderMetadata;
 import org.jclouds.providers.ProviderMetadata;
 import org.jclouds.rest.ConfiguresHttpApi;
 import org.jclouds.rest.internal.BaseRestAnnotationProcessingTest;
+import org.testng.annotations.BeforeClass;
 
 import com.google.inject.Module;
 
-public abstract class BaseEcsApiTest<T> extends BaseRestAnnotationProcessingTest<T> {
+public abstract class BaseEcsApiTest<T> extends
+		BaseRestAnnotationProcessingTest<T> {
 
-   @ConfiguresHttpApi
-   public static class EcsHttpApiModuleExtension extends EcsHttpApiModule {
+	@BeforeClass
+	protected void setupFactory() throws IOException {
+		super.setupFactory();
 
-   }
+	}
 
-   @Override
-   protected void checkFilters(HttpRequest request) {
-      assertEquals(request.getFilters().size(), 1);
-      assertEquals(request.getFilters().get(0).getClass(), QuerySigner.class);
-   }
+	@ConfiguresHttpApi
+	public static class ApiModuleExtension extends EcsHttpApiModule {
 
-   @Override
-   protected Module createModule() {
-      return new EcsHttpApiModuleExtension();
-   }
+	}
 
-   @Override
-   protected ProviderMetadata createProviderMetadata() {
-      return  AnonymousProviderMetadata.forApiWithEndpoint(new EcsApiMetadata(),
-            "http://localhost:8080/client/api");
-   }
+	@Override
+	protected void checkFilters(HttpRequest request) {
+		System.out.println("  eeee " + request.getEndpoint());
+		assertEquals(request.getFilters().size(), 1);
+		assertEquals(request.getFilters().get(0).getClass(), QuerySigner.class);
+	}
+
+	@Override
+	protected Module createModule() {
+		return new ApiModuleExtension();
+	}
+
+	@Override
+	protected ProviderMetadata createProviderMetadata() {
+		return AnonymousProviderMetadata.forApiWithEndpoint(
+				new EcsApiMetadata(), "https://ecs.aliyuncs.com/");
+	}
 
 }

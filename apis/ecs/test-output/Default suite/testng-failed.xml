@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.jclouds.ecs.features.InstanceApiTest">
+      <class name="org.jclouds.ecs.features.InstanceApiExpectTest">
         <methods>
-          <include name="setupFactory"/>
-          <include name="testListAccounts"/>
+          <include name="testFilterWhenResponseIs2xx"/>
         </methods>
-      </class> <!-- org.jclouds.ecs.features.InstanceApiTest -->
+      </class> <!-- org.jclouds.ecs.features.InstanceApiExpectTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
