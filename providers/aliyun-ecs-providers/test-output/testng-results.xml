@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1498" started-at="2016-01-07T15:55:35Z" finished-at="2016-01-07T15:55:36Z">
+  <suite name="Default suite" duration-ms="2489" started-at="2016-01-09T12:54:35Z" finished-at="2016-01-09T12:54:37Z">
     <groups>
       <group name="unit">
         <method signature="AliyunEcsContextBuilderTest.testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@47fc71]" name="testAssignability" class="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="1498" started-at="2016-01-07T15:55:35Z" finished-at="2016-01-07T15:55:36Z">
+    <test name="Default test" duration-ms="2489" started-at="2016-01-09T12:54:35Z" finished-at="2016-01-09T12:54:37Z">
       <class name="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest">
-        <test-method status="PASS" signature="testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@47fc71]" name="testAssignability" duration-ms="1482" started-at="2016-01-07T23:55:35Z" finished-at="2016-01-07T23:55:36Z">
+        <test-method status="PASS" signature="testAssignability()[pri:0, instance:org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest@47fc71]" name="testAssignability" duration-ms="2457" started-at="2016-01-09T20:54:35Z" finished-at="2016-01-09T20:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAssignability -->

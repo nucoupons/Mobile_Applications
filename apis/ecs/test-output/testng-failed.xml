@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.jclouds.ecs.EcsContextBuilderText">
+      <class name="org.jclouds.ecs.features.InstanceApiTest">
         <methods>
-          <include name="testAssignability"/>
+          <include name="setupFactory"/>
+          <include name="testListAccounts"/>
         </methods>
-      </class> <!-- org.jclouds.ecs.EcsContextBuilderText -->
+      </class> <!-- org.jclouds.ecs.features.InstanceApiTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

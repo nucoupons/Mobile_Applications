@@ -14,29 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jclouds.aliyun.config;
+package org.jclouds.ecs.internal;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
-import com.google.common.base.CaseFormat;
-
-/**
- * Decides what type of credentials createContext is supplied with.
- */
-public enum CredentialType {
-
-   API_ACCESS_KEY_CREDENTIALS,
-
-   PASSWORD_CREDENTIALS;
-
-   @Override
-   public String toString() {
-      return CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, name());
-   }
-
-   public static CredentialType fromValue(String credentialType) {
-      return valueOf(CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, checkNotNull(credentialType,
-               "credentialType")));
-   }
+public abstract class BaseEcsApiExpectTest<T> extends BaseEcsExpectTest<T> {
 
 }

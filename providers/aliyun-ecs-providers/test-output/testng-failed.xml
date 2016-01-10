@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest">
+      <class name="org.jclouds.aliyun.ecs.AliyunEcsProviderTest">
         <methods>
-          <include name="testAssignability"/>
+          <include name="testWithId"/>
+          <include name="testTransformableToContains"/>
+          <include name="testAllContains"/>
+          <include name="testOfApiContains"/>
         </methods>
-      </class> <!-- org.jclouds.aliyun.ecs.AliyunEcsContextBuilderTest -->
+      </class> <!-- org.jclouds.aliyun.ecs.AliyunEcsProviderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
