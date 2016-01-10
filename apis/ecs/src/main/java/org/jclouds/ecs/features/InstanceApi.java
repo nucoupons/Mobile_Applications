@@ -28,18 +28,15 @@ import org.jclouds.ecs.filter.AuthenticationFilter;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.QueryParams;
 import org.jclouds.rest.annotations.RequestFilters;
-import org.jclouds.rest.annotations.VirtualHost;
+import org.jclouds.rest.annotations.SelectJson;
 
 import sun.security.jca.GetInstance.Instance;
-
-
 
 /**
  * Provides access to EC2 Instance Services via their REST API.
  * <p/>
  */
 @RequestFilters(AuthenticationFilter.class)
-@VirtualHost
 @QueryParams(keys = { "Format", "Version" }, values = { "json", "2014-05-26" })
 public interface InstanceApi {
 
@@ -54,6 +51,7 @@ public interface InstanceApi {
 	@GET
 	@QueryParams(keys = { "Action" }, values = { "listInstances" })
 	@Consumes(MediaType.APPLICATION_JSON)
+	@SelectJson("instance")
 	@Fallback(EmptySetOnNotFoundOr404.class)
 	Set<Instance> listInstances();
 
