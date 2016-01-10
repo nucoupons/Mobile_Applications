@@ -16,19 +16,24 @@
  */
 package org.jclouds.ecs.features;
 
+import static org.testng.AssertJUnit.assertEquals;
+
 import java.util.Properties;
 
 import org.jclouds.ecs.EcsApi;
+import org.jclouds.ecs.compute.domain.Instance;
 import org.jclouds.ecs.internal.BaseEcsApiExpectTest;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.HttpResponse;
 import org.testng.annotations.Test;
 
+import com.google.common.collect.ImmutableSet;
+
 /**
  *
  * @see InstanceApi
  */
-@Test(groups = "unit")
+@Test(groups = "unit", testName = "InstanceApiExpectTest")
 public class InstanceApiExpectTest extends BaseEcsApiExpectTest<EcsApi> {
 
 	protected Properties setupProperties() {
@@ -36,24 +41,22 @@ public class InstanceApiExpectTest extends BaseEcsApiExpectTest<EcsApi> {
 		return props;
 	}
 
-	protected final HttpRequest login = HttpRequest.builder().method("GET")
-			.endpoint("https://ecs.aliyuncs.com/")
-			.addQueryParam("Format", "json")
-			.addQueryParam("AccessKeyId", "Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD")
-			.addQueryParam("Timestamp", "2012-06-01T12:00:00Z").build();
+	public void testListInstancesWhenResponseIs2xx() throws Exception {
 
-	protected final HttpResponse loginResponse = HttpResponse.builder()
-			.statusCode(200)
-			.payload(payloadFromResource("/listInstance.json"))
-            .build();
+		EcsApi client = requestSendsResponse(
+				HttpRequest
+						.builder()
+						.method("GET")
+						.endpoint("https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=DescribeRegions&RegionId=cn-qingdao&AccessKeyId=bnF9nNdDFCTwM5mF&SignatureMethod=HMAC-SHA1&Timestamp=2016-01-10T13%3A40%3A34Z&SignatureVersion=1.0&SignatureNonce=1630755302&Signature=8HtY1MFN5UufDWgPWNRSJ5OjkFA%3D")
+						.addHeader("Accept", "application/json").build(),
+				HttpResponse.builder().statusCode(200)
+						.payload(payloadFromResource("/listInstance.json"))
+						.build());
 
-	public void testInstance() throws Exception {
-
-		EcsApi api = requestSendsResponse(login, loginResponse);
-		
-		
-		api.getInstanceApi().get().listInstances();
-		
-
+		assertEquals(
+				client.getInstanceApi().get().listInstances(),
+				ImmutableSet.<Instance> of(Instance.builder().account("admin")
+						.id("id").build()));
 	}
+
 }

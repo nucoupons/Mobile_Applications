@@ -24,13 +24,12 @@ import javax.ws.rs.GET;
 import javax.ws.rs.core.MediaType;
 
 import org.jclouds.Fallbacks.EmptySetOnNotFoundOr404;
+import org.jclouds.ecs.compute.domain.Instance;
 import org.jclouds.ecs.filters.AuthenticationFilter;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.QueryParams;
 import org.jclouds.rest.annotations.RequestFilters;
 import org.jclouds.rest.annotations.SelectJson;
-
-import sun.security.jca.GetInstance.Instance;
 
 /**
  * Provides access to EC2 Instance Services via their REST API.
@@ -49,7 +48,8 @@ public interface InstanceApi {
 	 */
 	@Named("test")
 	@GET
-	@QueryParams(keys = { "Action","RegionId" }, values = { "DescribeRegions","cn-qingdao" })
+	@QueryParams(keys = { "Action", "RegionId" }, values = { "DescribeRegions",
+			"cn-qingdao" })
 	@Consumes(MediaType.APPLICATION_JSON)
 	@SelectJson("instance")
 	@Fallback(EmptySetOnNotFoundOr404.class)

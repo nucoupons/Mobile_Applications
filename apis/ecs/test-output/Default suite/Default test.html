@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 10 20:05:16 CST 2016</td>
+<td>Started on:</td><td>Sun Jan 10 21:41:22 CST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2666 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2805 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,13 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.jclouds.ecs.features.InstanceApiExpectTest.testInstance()'><b>testInstance</b><br>Test class: org.jclouds.ecs.features.InstanceApiExpectTest</td>
+<td title='org.jclouds.ecs.features.InstanceApiExpectTest.testListInstancesWhenResponseIs2xx()'><b>testListInstancesWhenResponseIs2xx</b><br>Test class: org.jclouds.ecs.features.InstanceApiExpectTest</td>
 <td><div><pre>org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
 ----------------------------------------
 The following request is not configured:
 ----------------------------------------
-GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao&amp;AccessKeyId=bnF9nNdDFCTwM5mF&amp;SignatureMethod=HMAC-SHA1&amp;Timestamp=2016-01-10T12%3A05%3A18Z&amp;SignatureVersion=1.0&amp;SignatureNonce=-1853069535&amp;Signature=Q6vdfMBdCo2w4fYEze4bqnZtMYI%3D HTTP/1.1
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao&amp;AccessKeyId=bnF9nNdDFCTwM5mF&amp;SignatureMethod=HMAC-SHA1&amp;Timestamp=2016-01-10T13%3A41%3A25Z&amp;SignatureVersion=1.0&amp;SignatureNonce=-166195065&amp;Signature=8JInFwzZ6DTcqNWEoze%2B9V7ykvM%3D HTTP/1.1
 Accept: application/json
 
 
@@ -89,7 +89,8 @@ Accept: application/json
 Configured requests:
 
 ----------------------------------------
-GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&amp;Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao&amp;AccessKeyId=bnF9nNdDFCTwM5mF&amp;SignatureMethod=HMAC-SHA1&amp;Timestamp=2016-01-10T13%3A40%3A34Z&amp;SignatureVersion=1.0&amp;SignatureNonce=1630755302&amp;Signature=8HtY1MFN5UufDWgPWNRSJ5OjkFA%3D HTTP/1.1
+Accept: application/json
 
 ]
 	at org.jclouds.ecs.handlers.EcsErrorHandler.handleError(EcsErrorHandler.java:52)
@@ -102,7 +103,7 @@ GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qc
 	at org.jclouds.reflect.FunctionalReflection$FunctionalInvocationHandler.handleInvocation(FunctionalReflection.java:117)
 	at com.google.common.reflect.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:87)
 	at com.sun.proxy.$Proxy49.listInstances(Unknown Source)
-	at org.jclouds.ecs.features.InstanceApiExpectTest.testInstance(InstanceApiExpectTest.java:55)
+	at org.jclouds.ecs.features.InstanceApiExpectTest.testListInstancesWhenResponseIs2xx(InstanceApiExpectTest.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -127,13 +128,13 @@ GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qc
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace22487767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace22487767'><pre>org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
+</pre></div><a href='#' onClick='toggleBox("stack-trace9403854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9403854'><pre>org.jclouds.http.HttpResponseException: command: GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao HTTP/1.1 failed with response: HTTP/1.1 500 no response configured for request; content: [
 
 ----------------------------------------
 The following request is not configured:
 ----------------------------------------
-GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao&amp;AccessKeyId=bnF9nNdDFCTwM5mF&amp;SignatureMethod=HMAC-SHA1&amp;Timestamp=2016-01-10T12%3A05%3A18Z&amp;SignatureVersion=1.0&amp;SignatureNonce=-1853069535&amp;Signature=Q6vdfMBdCo2w4fYEze4bqnZtMYI%3D HTTP/1.1
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao&amp;AccessKeyId=bnF9nNdDFCTwM5mF&amp;SignatureMethod=HMAC-SHA1&amp;Timestamp=2016-01-10T13%3A41%3A25Z&amp;SignatureVersion=1.0&amp;SignatureNonce=-166195065&amp;Signature=8JInFwzZ6DTcqNWEoze%2B9V7ykvM%3D HTTP/1.1
 Accept: application/json
 
 
@@ -141,7 +142,8 @@ Accept: application/json
 Configured requests:
 
 ----------------------------------------
-GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&amp;Timestamp=2012-06-01T12%3A00%3A00Z HTTP/1.1
+GET https://ecs.aliyuncs.com/?Format=json&amp;Version=2014-05-26&amp;Action=DescribeRegions&amp;RegionId=cn-qingdao&amp;AccessKeyId=bnF9nNdDFCTwM5mF&amp;SignatureMethod=HMAC-SHA1&amp;Timestamp=2016-01-10T13%3A40%3A34Z&amp;SignatureVersion=1.0&amp;SignatureNonce=1630755302&amp;Signature=8HtY1MFN5UufDWgPWNRSJ5OjkFA%3D HTTP/1.1
+Accept: application/json
 
 ]
 	at org.jclouds.ecs.handlers.EcsErrorHandler.handleError(EcsErrorHandler.java:52)
@@ -154,7 +156,7 @@ GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qc
 	at org.jclouds.reflect.FunctionalReflection$FunctionalInvocationHandler.handleInvocation(FunctionalReflection.java:117)
 	at com.google.common.reflect.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:87)
 	at com.sun.proxy.$Proxy49.listInstances(Unknown Source)
-	at org.jclouds.ecs.features.InstanceApiExpectTest.testInstance(InstanceApiExpectTest.java:55)
+	at org.jclouds.ecs.features.InstanceApiExpectTest.testListInstancesWhenResponseIs2xx(InstanceApiExpectTest.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,7 +183,7 @@ GET https://ecs.aliyuncs.com/?Format=json&amp;AccessKeyId=Z1mdYKAUt4q2OzyDhSd5qc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>2</td>
-<td>org.jclouds.ecs.features.InstanceApiExpectTest@299813</td></tr>
+<td>org.jclouds.ecs.features.InstanceApiExpectTest@119015b</td></tr>
 </table><p>
 </body>
 </html>
