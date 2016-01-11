@@ -27,12 +27,11 @@ import org.testng.annotations.Test;
 @Test(groups = "unit", testName = "AliyunEcsContextBuilderTest")
 public class AliyunEcsContextBuilderTest {
 
-	public void testAssignability() {
-		View view = ContextBuilder.newBuilder(new AliyunEcsProviderMetadata())
-				.credentials("foo", "bar")
-				.buildView(typeToken(ComputeServiceContext.class));
-		view.unwrapApi(EcsApi.class);
-		view.unwrapApi(AliyunEcsApi.class);
-	}
+	 public void testAssignability() {
+	      View view = ContextBuilder.newBuilder(new AliyunEcsProviderMetadata()).credentials("foo", "bar")
+	              .buildView(typeToken(ComputeServiceContext.class));
+	      view.unwrapApi(EcsApi.class);
+	      view.unwrapApi(AliyunEcsApi.class);
+	   }
 
 }

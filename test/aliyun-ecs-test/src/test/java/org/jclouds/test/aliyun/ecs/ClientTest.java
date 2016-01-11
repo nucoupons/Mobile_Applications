@@ -18,8 +18,7 @@ public class ClientTest {
 
 		ComputeServiceContext context = ContextBuilder
 				.newBuilder("aliyun-ecs")
-				.credentials("bnF9nNdDFCTwM5mF",
-						"Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD")
+				.credentials("bnF9nNdDFCTwM5mF","Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD")
 				.modules(
 						ImmutableSet.<Module> of(new SLF4JLoggingModule(),
 								new SshjSshClientModule()))

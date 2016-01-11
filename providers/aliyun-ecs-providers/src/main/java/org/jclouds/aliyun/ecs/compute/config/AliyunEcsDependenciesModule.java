@@ -16,12 +16,16 @@
  */
 package org.jclouds.aliyun.ecs.compute.config;
 
-import com.google.inject.AbstractModule;
+import org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService;
+import org.jclouds.compute.ComputeService;
+import org.jclouds.ecs.compute.config.EcsDependenciesModule;
 
-public class AliyunEcsDependenciesModule extends AbstractModule {
+public class AliyunEcsDependenciesModule extends EcsDependenciesModule {
 
 	@Override
 	protected void configure() {
+
+		bind(ComputeService.class).to(AliyunEcsComputeService.class);
 
 	}
 

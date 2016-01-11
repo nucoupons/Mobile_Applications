@@ -69,12 +69,7 @@
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.apache.jclouds.provider</groupId>
-      <artifactId>aws-cloudwatch</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
+  
     <dependency>
       <groupId>org.apache.jclouds</groupId>
       <artifactId>jclouds-core</artifactId>

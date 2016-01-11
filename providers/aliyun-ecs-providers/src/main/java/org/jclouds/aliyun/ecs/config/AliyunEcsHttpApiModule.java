@@ -16,14 +16,23 @@
  */
 package org.jclouds.aliyun.ecs.config;
 
+
+
+import static org.jclouds.Constants.PROPERTY_SESSION_INTERVAL;
+
+import java.text.SimpleDateFormat;
+import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
+
 import org.jclouds.aliyun.ecs.AliyunEcsApi;
-import org.jclouds.ecs.handlers.EcsErrorHandler;
-import org.jclouds.http.HttpErrorHandler;
-import org.jclouds.http.annotation.ClientError;
-import org.jclouds.http.annotation.Redirection;
-import org.jclouds.http.annotation.ServerError;
+import org.jclouds.date.TimeStamp;
 import org.jclouds.rest.ConfiguresHttpApi;
 import org.jclouds.rest.config.HttpApiModule;
+
+import com.google.common.base.Supplier;
+import com.google.common.base.Suppliers;
+import com.google.inject.Provides;
+import com.google.inject.name.Named;
 
 /**
  * Configures the EC2 connection.
@@ -31,25 +40,33 @@ import org.jclouds.rest.config.HttpApiModule;
 @ConfiguresHttpApi
 public class AliyunEcsHttpApiModule extends HttpApiModule<AliyunEcsApi> {
 
-	@Override
-	protected void configure() {
-		super.configure();
+	private final SimpleDateFormat iso8601 = new SimpleDateFormat(
+			"yyyyMMdd'T'HHmmss'Z'");
 
+	public AliyunEcsHttpApiModule() {
+		iso8601.setTimeZone(TimeZone.getTimeZone("GMT"));
 	}
 
-	@Override
-	protected void bindErrorHandlers() {
-		bind(HttpErrorHandler.class).annotatedWith(Redirection.class).to(
-				EcsErrorHandler.class);
-		bind(HttpErrorHandler.class).annotatedWith(ClientError.class).to(
-				EcsErrorHandler.class);
-		bind(HttpErrorHandler.class).annotatedWith(ServerError.class).to(
-				EcsErrorHandler.class);
+	@Provides
+	@TimeStamp
+	protected Long provideTimeStamp(@TimeStamp Supplier<Long> cache) {
+		return cache.get();
 	}
 
-	@Override
-	protected void bindRetryHandlers() {
-		// TODO
+	/**
+	 * borrowing concurrency code to ensure that caching takes place properly
+	 */
+	@Provides
+	@TimeStamp
+	Supplier<Long> provideTimeStampCache(
+			@Named(PROPERTY_SESSION_INTERVAL) long seconds) {
+		return Suppliers.memoizeWithExpiration(new Supplier<Long>() {
+			public Long get() {
+				return System.currentTimeMillis() / 1000;
+			}
+		}, seconds, TimeUnit.SECONDS);
 	}
+
+
 
 }

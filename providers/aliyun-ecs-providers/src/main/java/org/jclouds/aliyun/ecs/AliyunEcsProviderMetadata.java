@@ -63,7 +63,8 @@ public class AliyunEcsProviderMetadata extends BaseProviderMetadata {
          .endpoint("https://ecs.aliyuncs.com/")
          .homepage(URI.create("http://www.aliyun.com"))
          .console(URI.create("https://ecs.console.aliyun.com/#/"))
-         .defaultProperties(AliyunEcsProviderMetadata.defaultProperties());
+         .defaultProperties(AliyunEcsProviderMetadata.defaultProperties())
+         .linkedServices("aliyun-ecs");
         
       }
 
