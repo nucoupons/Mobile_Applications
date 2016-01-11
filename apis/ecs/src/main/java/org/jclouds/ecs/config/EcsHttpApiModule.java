@@ -41,8 +41,6 @@ public class EcsHttpApiModule extends HttpApiModule<EcsApi> {
 
 	@Override
 	protected void configure() {
-
-		
 		super.configure();
 
 	}

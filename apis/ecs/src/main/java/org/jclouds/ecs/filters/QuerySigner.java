@@ -59,98 +59,118 @@ import com.google.common.io.ByteProcessor;
 
 /**
  * 
- * @see <a href= "http://download.cloud.com/releases/2.2.0/api/user/2.2api_security_details.html" />
+ * @see <a href=
+ *      "http://download.cloud.com/releases/2.2.0/api/user/2.2api_security_details.html"
+ *      />
  */
 @SuppressWarnings("deprecation")
 @Singleton
 public class QuerySigner implements AuthenticationFilter, RequestSigner {
 
-   private final SignatureWire signatureWire;
-   private final Supplier<Credentials> creds;
-   private final Crypto crypto;
-   private final HttpUtils utils;
+	private final SignatureWire signatureWire;
+	private final Supplier<Credentials> creds;
+	private final Crypto crypto;
+	private final HttpUtils utils;
+	private static final String app_string = "Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD&";
 
-   @Resource
-   @Named(LOGGER_SIGNATURE)
-   private Logger signatureLog = Logger.NULL;
+	@Resource
+	@Named(LOGGER_SIGNATURE)
+	private Logger signatureLog = Logger.NULL;
 
-   @Inject
-   public QuerySigner(SignatureWire signatureWire, @Provider Supplier<Credentials> creds, Crypto crypto, HttpUtils utils) {
-      this.signatureWire = signatureWire;
-      this.creds = creds;
-      this.crypto = crypto;
-      this.utils = utils;
-   }
+	@Inject
+	public QuerySigner(SignatureWire signatureWire,
+			@Provider Supplier<Credentials> creds, Crypto crypto,
+			HttpUtils utils) {
+		this.signatureWire = signatureWire;
+		this.creds = creds;
+		this.crypto = crypto;
+		this.utils = utils;
+	}
 
-   public HttpRequest filter(HttpRequest request) throws HttpException {
-      checkNotNull(request, "request must be present");
-      Multimap<String, String> decodedParams = queryParser().apply(request.getEndpoint().getRawQuery());
-      addSigningParams(decodedParams);
-      String stringToSign = createStringToSign(request, decodedParams);
-      String signature = sign(stringToSign);
-      addSignature(decodedParams, signature);
-      request = request.toBuilder().endpoint(uriBuilder(request.getEndpoint()).query(decodedParams).build()).build();
-      utils.logRequest(signatureLog, request, "<<");
-      return request;
-   }
+	public HttpRequest filter(HttpRequest request) throws HttpException {
+		checkNotNull(request, "request must be present");
+		Multimap<String, String> decodedParams = queryParser().apply(
+				request.getEndpoint().getRawQuery());
+		addSigningParams(decodedParams);
+		String stringToSign = createStringToSign(request, decodedParams);
+		String signature = sign(stringToSign);
+		addSignature(decodedParams, signature);
+		request = request
+				.toBuilder()
+				.endpoint(
+						uriBuilder(request.getEndpoint()).query(decodedParams)
+								.build()).build();
+		utils.logRequest(signatureLog, request, "<<");
+		return request;
+	}
 
-   @VisibleForTesting
-   void addSignature(Multimap<String, String> params, String signature) {
-      params.replaceValues("Signature", ImmutableList.of(signature));
-   }
+	@VisibleForTesting
+	void addSignature(Multimap<String, String> params, String signature) {
+		params.replaceValues("Signature", ImmutableList.of(signature));
+	}
 
-   @VisibleForTesting
-   public String sign(String toSign) {
-      String signature;
-      try {
-         ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto.hmacSHA1(("Z1mdYKAUt4q2OzyDhSd5qcnMUamQdD"+"&").getBytes()));
-         signature = base64().encode(readBytes(toInputStream(toSign), hmacSHA1));
-         if (signatureWire.enabled())
-            signatureWire.input(toInputStream(signature));
-         return signature;
-      } catch (InvalidKeyException e) {
-         throw propagate(e);
-      } catch (IOException e) {
-         throw propagate(e);
-      }
-   }
+	@VisibleForTesting
+	public String sign(String toSign) {
+		String signature;
+		try {
+			ByteProcessor<byte[]> hmacSHA1 = asByteProcessor(crypto
+					.hmacSHA1(app_string.getBytes()));
+			signature = base64().encode(
+					readBytes(toInputStream(toSign), hmacSHA1));
+			if (signatureWire.enabled())
+				signatureWire.input(toInputStream(signature));
+			return signature;
+		} catch (InvalidKeyException e) {
+			throw propagate(e);
+		} catch (IOException e) {
+			throw propagate(e);
+		}
+	}
 
-   @VisibleForTesting
-   public String createStringToSign(HttpRequest request, Multimap<String, String> decodedParams) {
-      utils.logRequest(signatureLog, request, ">>");
-      // encode each parameter value first,
-      ImmutableSortedSet.Builder<String> builder = ImmutableSortedSet.naturalOrder();
-      for (Map.Entry<String, String> entry : decodedParams.entries())
-         builder.add(entry.getKey() + "=" + Strings2.urlEncode(entry.getValue()));
-      // then, lower case the entire query string
-      String stringToSign = Joiner.on('&').join(builder.build());
-      if (signatureWire.enabled())
-         signatureWire.output(stringToSign);
-      
-      stringToSign="GET&"+URLEncoder.encode("/")+"&"+URLEncoder.encode(stringToSign);
-      System.out.println("------------------------------");
+	@VisibleForTesting
+	public String createStringToSign(HttpRequest request,
+			Multimap<String, String> decodedParams) {
+		utils.logRequest(signatureLog, request, ">>");
+		// encode each parameter value first,
+		ImmutableSortedSet.Builder<String> builder = ImmutableSortedSet
+				.naturalOrder();
+		for (Map.Entry<String, String> entry : decodedParams.entries())
+			builder.add(entry.getKey() + "="
+					+ Strings2.urlEncode(entry.getValue()));
+		// then, lower case the entire query string
+		String stringToSign = Joiner.on('&').join(builder.build());
+		if (signatureWire.enabled())
+			signatureWire.output(stringToSign);
 
-      System.out.println(stringToSign);
-      System.out.println("------------------------------");
-      return stringToSign;
-   }
+		stringToSign = "GET&" + URLEncoder.encode("/") + "&"
+				+ URLEncoder.encode(stringToSign);
+		System.out.println("------------------------------");
 
-   @VisibleForTesting
-   void addSigningParams(Multimap<String, String> params) {
-      params.replaceValues("AccessKeyId", ImmutableList.of(creds.get().identity));
-      params.replaceValues("AccessKeyId", ImmutableList.of("bnF9nNdDFCTwM5mF"));
-      params.replaceValues("SignatureMethod",ImmutableList.of( "HMAC-SHA1"));
-      params.replaceValues("Timestamp", ImmutableList.of(Timestamps.getCurrent()));
-      params.replaceValues("SignatureVersion",ImmutableList.of( "1.0"));
-      params.replaceValues("SignatureNonce",ImmutableList.of(String.valueOf(new Random().nextInt())));
-      params.removeAll("Signature");
-   }
+		System.out.println(stringToSign);
+		System.out.println("------------------------------");
+		return stringToSign;
+	}
 
-   public String createStringToSign(HttpRequest input) {
-      Multimap<String, String> decodedParams = queryParser().apply(input.getEndpoint().getQuery());
-      addSigningParams(decodedParams);
-      return createStringToSign(input, decodedParams);
-   }
+	@VisibleForTesting
+	void addSigningParams(Multimap<String, String> params) {
+		params.replaceValues("AccessKeyId",
+				ImmutableList.of(creds.get().identity));
+		params.replaceValues("AccessKeyId",
+				ImmutableList.of("bnF9nNdDFCTwM5mF"));
+		params.replaceValues("SignatureMethod", ImmutableList.of("HMAC-SHA1"));
+		params.replaceValues("Timestamp",
+				ImmutableList.of(Timestamps.getCurrent()));
+		params.replaceValues("SignatureVersion", ImmutableList.of("1.0"));
+		params.replaceValues("SignatureNonce",
+				ImmutableList.of(String.valueOf(new Random().nextInt())));
+		params.removeAll("Signature");
+	}
+
+	public String createStringToSign(HttpRequest input) {
+		Multimap<String, String> decodedParams = queryParser().apply(
+				input.getEndpoint().getQuery());
+		addSigningParams(decodedParams);
+		return createStringToSign(input, decodedParams);
+	}
 
 }
-

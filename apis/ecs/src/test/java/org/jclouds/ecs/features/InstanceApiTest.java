@@ -49,12 +49,10 @@ public class InstanceApiTest extends BaseEcsApiTest<InstanceApi> {
 				"GET https://ecs.aliyuncs.com/?Format=json&Version=2014-05-26&Action=listInstances HTTP/1.1");
 		assertNonPayloadHeadersEqual(httpRequest, "Accept: application/json\n");
 		assertPayloadEquals(httpRequest, null, null, false);
-
-		assertResponseParserClassEquals(method, httpRequest,ParseFirstJsonValueNamed.class);
+		assertResponseParserClassEquals(method, httpRequest,
+				ParseFirstJsonValueNamed.class);
 		assertSaxResponseParserClassEquals(method, null);
 		assertFallbackClassEquals(method, EmptySetOnNotFoundOr404.class);
-
-		//checkFilters(httpRequest);
 
 	}
 

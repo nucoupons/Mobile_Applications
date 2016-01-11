@@ -16,13 +16,17 @@
  */
 package org.jclouds.ecs.compute.config;
 
+import org.jclouds.compute.ComputeService;
+import org.jclouds.ecs.compute.EcsComputeService;
+
 import com.google.inject.AbstractModule;
 
 public class EcsDependenciesModule extends AbstractModule {
 
 	@Override
 	protected void configure() {
-		// TODO Auto-generated method stub
+		
+		 bind(ComputeService.class).to(EcsComputeService.class);
 		
 	}
 

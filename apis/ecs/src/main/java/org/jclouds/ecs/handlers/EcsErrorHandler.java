@@ -48,7 +48,6 @@ public class EcsErrorHandler implements HttpErrorHandler {
    public void handleError(HttpCommand command, HttpResponse response) {
       // it is important to always read fully and close streams
       String message = parseMessage(response);
-      System.out.println("message:" +message);
       Exception exception = message != null ? new HttpResponseException(command, response, message)
             : new HttpResponseException(command, response);
       try {

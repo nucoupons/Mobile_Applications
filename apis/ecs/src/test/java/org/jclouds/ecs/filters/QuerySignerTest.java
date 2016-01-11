@@ -17,16 +17,13 @@
 package org.jclouds.ecs.filters;
 
 import static org.testng.Assert.assertEquals;
-
 import org.jclouds.ContextBuilder;
-import org.jclouds.ecs.filters.QuerySigner;
 import org.jclouds.http.HttpRequest;
 import org.jclouds.http.IntegrationTestClient;
 import org.jclouds.logging.config.NullLoggingModule;
 import org.jclouds.providers.AnonymousProviderMetadata;
 import org.jclouds.rest.internal.BaseRestApiTest.MockModule;
 import org.testng.annotations.Test;
-
 import com.google.common.collect.ImmutableList;
 import com.google.inject.Injector;
 import com.google.inject.Module;
