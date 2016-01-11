@@ -19,6 +19,7 @@ package org.jclouds.ecs;
 import java.io.Closeable;
 
 import org.jclouds.ecs.features.InstanceApi;
+import org.jclouds.ecs.features.ServerImageApi;
 import org.jclouds.rest.annotations.Delegate;
 
 import com.google.common.base.Optional;
@@ -47,5 +48,8 @@ public interface EcsApi extends Closeable {
 	    */
 	   @Delegate
 	   Optional<? extends InstanceApi> getInstanceApi();
+	   
+	   @Delegate
+	   Optional<? extends ServerImageApi> getServerImageApi();
 
 }

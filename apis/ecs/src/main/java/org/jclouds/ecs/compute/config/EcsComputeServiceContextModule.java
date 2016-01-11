@@ -16,17 +16,30 @@
  */
 package org.jclouds.ecs.compute.config;
 
+import org.jclouds.compute.ComputeServiceAdapter;
 import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.config.ComputeServiceAdapterContextModule;
 import org.jclouds.compute.domain.Hardware;
+import org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter;
 import org.jclouds.ecs.domain.Option;
 import org.jclouds.ecs.domain.Server;
 import org.jclouds.ecs.domain.ServerImage;
+
+import com.google.inject.TypeLiteral;
 
 /**
  * Configures the {@link ComputeServiceContext}; requires
  * {@link EC2ComputeService} bound.
  */
-public class EcsComputeServiceContextModule extends ComputeServiceAdapterContextModule<Server, Hardware, ServerImage, Option> {
-	
+public class EcsComputeServiceContextModule
+		extends
+		ComputeServiceAdapterContextModule<Server, Hardware, ServerImage, Option> {
+
+	@Override
+	protected void configure() {
+		super.configure();
+		bind(new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
+				}).to(EcsComputeServiceAdapter.class);
+	}
+
 }
