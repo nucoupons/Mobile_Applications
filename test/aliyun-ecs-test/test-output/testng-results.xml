@@ -2,289 +2,217 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2344" started-at="2016-01-11T18:11:08Z" finished-at="2016-01-11T18:11:10Z">
+  <suite name="Default suite" duration-ms="2141" started-at="2016-01-11T18:29:12Z" finished-at="2016-01-11T18:29:14Z">
     <groups>
       <group name="unit">
-        <method signature="ClientTest.test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@d1223d]" name="test1" class="org.jclouds.test.aliyun.ecs.ClientTest"/>
+        <method signature="ClientTest.test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@1ee8c1]" name="test1" class="org.jclouds.test.aliyun.ecs.ClientTest"/>
       </group> <!-- unit -->
     </groups>
-    <test name="Default test" duration-ms="2344" started-at="2016-01-11T18:11:08Z" finished-at="2016-01-11T18:11:10Z">
+    <test name="Default test" duration-ms="2141" started-at="2016-01-11T18:29:12Z" finished-at="2016-01-11T18:29:14Z">
       <class name="org.jclouds.test.aliyun.ecs.ClientTest">
-        <test-method status="FAIL" signature="test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@d1223d]" name="test1" duration-ms="2250" started-at="2016-01-12T02:11:08Z" finished-at="2016-01-12T02:11:10Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:org.jclouds.test.aliyun.ecs.ClientTest@1ee8c1]" name="test1" duration-ms="2062" started-at="2016-01-12T02:29:12Z" finished-at="2016-01-12T02:29:14Z">
           <exception class="com.google.inject.CreationException">
             <message>
               <![CDATA[Guice creation errors:
 
-1) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
-  while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
-    for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
+1) No implementation for com.google.common.base.Function<org.jclouds.compute.domain.Hardware, java.lang.String> was bound.
+  while locating com.google.common.base.Function<org.jclouds.compute.domain.Hardware, java.lang.String>
+    for parameter 1 at org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter.<init>(EcsComputeServiceAdapter.java:53)
+  at org.jclouds.ecs.compute.config.EcsComputeServiceContextModule.configure(EcsComputeServiceContextModule.java:41)
 
 2) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
 
 3) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
 
 4) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
 
 5) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
 
 6) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
 
 7) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
 
 8) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
 
-9) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
-  while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
-    for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
+9) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
+  while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
+    for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
 
 10) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
 
 11) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
 
 12) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
 
 13) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
 
 14) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
 
 15) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
 
 16) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
-
-17) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
-
-18) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
 
-19) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
-
-20) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
-
-21) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
-
-22) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
-
-23) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
+17) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
+  while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
+    for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
 
-24) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
+18) No implementation for org.jclouds.ecs.EcsApi was bound.
+  while locating org.jclouds.ecs.EcsApi
+    for parameter 0 at org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter.<init>(EcsComputeServiceAdapter.java:53)
+  at org.jclouds.ecs.compute.config.EcsComputeServiceContextModule.configure(EcsComputeServiceContextModule.java:41)
 
-25) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
+19) No implementation for com.google.common.base.Function<org.jclouds.compute.domain.Hardware, org.jclouds.compute.domain.Hardware> was bound.
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideHardware(ComputeServiceAdapterContextModule.java:98)
 
-26) No implementation for com.google.common.base.Function<org.jclouds.compute.domain.Hardware, org.jclouds.compute.domain.Hardware> was bound.
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideHardware(ComputeServiceAdapterContextModule.java:98)
-
-27) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
+20) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideImages(ComputeServiceAdapterContextModule.java:118)
 
-28) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideImages(ComputeServiceAdapterContextModule.java:118)
-
-28 errors]]>
+20 errors]]>
             </message>
             <full-stacktrace>
               <![CDATA[com.google.inject.CreationException: Guice creation errors:
 
-1) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
-  while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
-    for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
+1) No implementation for com.google.common.base.Function<org.jclouds.compute.domain.Hardware, java.lang.String> was bound.
+  while locating com.google.common.base.Function<org.jclouds.compute.domain.Hardware, java.lang.String>
+    for parameter 1 at org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter.<init>(EcsComputeServiceAdapter.java:53)
+  at org.jclouds.ecs.compute.config.EcsComputeServiceContextModule.configure(EcsComputeServiceContextModule.java:41)
 
 2) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
 
 3) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
 
 4) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
 
 5) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
 
 6) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
 
 7) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
 
 8) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
     for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
 
-9) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
-  while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
-    for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
+9) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata> was bound.
+  while locating com.google.common.base.Function<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.NodeMetadata>
+    for parameter 3 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
 
 10) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
 
 11) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
 
 12) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
 
 13) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
 
 14) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
 
 15) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
+  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
 
 16) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
     for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
-
-17) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineAddNodeWithTagStrategy(ComputeServiceAdapterContextModule.java:157)
-
-18) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineListNodesStrategy(ComputeServiceAdapterContextModule.java:181)
 
-19) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineRebootNodeStrategy(ComputeServiceAdapterContextModule.java:187)
-
-20) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStartNodeStrategy(ComputeServiceAdapterContextModule.java:193)
-
-21) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineDestroyNodeStrategy(ComputeServiceAdapterContextModule.java:163)
-
-22) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetImageStrategy(ComputeServiceAdapterContextModule.java:175)
-
-23) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
+17) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
+  while locating com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image>
+    for parameter 4 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineStopNodeStrategy(ComputeServiceAdapterContextModule.java:199)
 
-24) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
-  while locating org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option>
-    for parameter 2 at org.jclouds.compute.strategy.impl.AdaptingComputeServiceStrategies.<init>(AdaptingComputeServiceStrategies.java:84)
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.defineGetNodeMetadataStrategy(ComputeServiceAdapterContextModule.java:169)
+18) No implementation for org.jclouds.ecs.EcsApi was bound.
+  while locating org.jclouds.ecs.EcsApi
+    for parameter 0 at org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter.<init>(EcsComputeServiceAdapter.java:53)
+  at org.jclouds.ecs.compute.config.EcsComputeServiceContextModule.configure(EcsComputeServiceContextModule.java:41)
 
-25) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
+19) No implementation for com.google.common.base.Function<org.jclouds.compute.domain.Hardware, org.jclouds.compute.domain.Hardware> was bound.
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideHardware(ComputeServiceAdapterContextModule.java:98)
 
-26) No implementation for com.google.common.base.Function<org.jclouds.compute.domain.Hardware, org.jclouds.compute.domain.Hardware> was bound.
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideHardware(ComputeServiceAdapterContextModule.java:98)
-
-27) No implementation for org.jclouds.compute.ComputeServiceAdapter<org.jclouds.ecs.domain.Server, org.jclouds.compute.domain.Hardware, org.jclouds.ecs.domain.ServerImage, org.jclouds.ecs.domain.Option> was bound.
+20) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
   at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideImages(ComputeServiceAdapterContextModule.java:118)
 
-28) No implementation for com.google.common.base.Function<org.jclouds.ecs.domain.ServerImage, org.jclouds.compute.domain.Image> was bound.
-  at org.jclouds.compute.config.ComputeServiceAdapterContextModule.provideImages(ComputeServiceAdapterContextModule.java:118)
-
-28 errors
+20 errors
 	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:435)
 	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:154)
 	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:106)
