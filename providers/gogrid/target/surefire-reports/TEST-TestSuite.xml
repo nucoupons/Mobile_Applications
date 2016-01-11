@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="3.198" tests="72" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.7.0_17\jre\bin"/>
+    <property name="java.vm.version" value="23.7-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid"/>
+    <property name="java.runtime.version" value="1.7.0_17-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8"/>
+    <property name="classworlds.conf" value="D:\aliyun\test\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7354029711212286960.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:/Program Files (x86)/Java/jre7/lib/i386;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.7.0_17\bin;C:\Program Files (x86)\Subversion\bin;D:\maven\apache-maven-3.2.1\bin;D:\sonar\sonar-runner-2.4/bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apache\apache-ant-1.9.4\bin;D:\Python27;D:\Android\android-sdk\platform-tools;C:\Program Files (x86)\Windows7Master;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\cocos2dx\cocos2d-x-3.4\tools\cocos2d-console\bin;D:\cocos2dx\cocos2d-x-3.4\templates;C:\Users\Administrator\AppData\Roaming\npm;D:\aliyun\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.2"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="java.class.path" value="/D:/aliyun/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.5.0.20140605-2032/jars/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.7.0_17\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.7.0_17"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.7.0_17\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase name="testWithView" classname="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest" time="0.033"/>
+  <testcase name="testWithPrimitive" classname="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest" time="0.033"/>
+  <testcase name="testBinding" classname="org.jclouds.gogrid.binders.BindNamesToQueryParamsTest" time="0"/>
+  <testcase name="testAllStatusCovered" classname="org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest" time="0.047"/>
+  <testcase name="testApplySetsTagFromNameAndCredentialsFromName" classname="org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest" time="0.578"/>
+  <testcase name="testAs" classname="org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest" time="0.015"/>
+  <testcase name="testDeleteById" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0.126"/>
+  <testcase name="testSaveImageFromServerNoOptions" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0"/>
+  <testcase name="testSaveImageOptions" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0"/>
+  <testcase name="testEditImageDescription" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0.047"/>
+  <testcase name="testEditImageFriendlyName" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0.047"/>
+  <testcase name="testGetImageListWithOptions" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0.047"/>
+  <testcase name="testGetImagesByName" classname="org.jclouds.gogrid.features.GridImageApiTest" time="0.047"/>
+  <testcase name="testGetIpListWithOptions" classname="org.jclouds.gogrid.features.GridIpApiTest" time="0.078"/>
+  <testcase name="testGetAssignedIpList" classname="org.jclouds.gogrid.features.GridIpApiTest" time="0.078"/>
+  <testcase name="testGetJobListNoOptions" classname="org.jclouds.gogrid.features.GridJobApiTest" time="0.031"/>
+  <testcase name="testGetJobsById" classname="org.jclouds.gogrid.features.GridJobApiTest" time="0.047"/>
+  <testcase name="testGetJobListWithOptions" classname="org.jclouds.gogrid.features.GridJobApiTest" time="0.047"/>
+  <testcase name="testGetJobsForServerName" classname="org.jclouds.gogrid.features.GridJobApiTest" time="0.047"/>
+  <testcase name="testGetLoadBalancerList" classname="org.jclouds.gogrid.features.GridLoadBalancerApiTest" time="0.078"/>
+  <testcase name="testGetLoadBalancersByName" classname="org.jclouds.gogrid.features.GridLoadBalancerApiTest" time="0"/>
+  <testcase name="testEditLoadBalancer" classname="org.jclouds.gogrid.features.GridLoadBalancerApiTest" time="0.016"/>
+  <testcase name="testDeleteLoadBalancerById" classname="org.jclouds.gogrid.features.GridLoadBalancerApiTest" time="0.016"/>
+  <testcase name="testEditLoadBalancerNamed" classname="org.jclouds.gogrid.features.GridLoadBalancerApiTest" time="0.016"/>
+  <testcase name="testAddLoadBalancer" classname="org.jclouds.gogrid.features.GridLoadBalancerApiTest" time="0.016"/>
+  <testcase name="testEditServerRam" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0.095"/>
+  <testcase name="testEditServerDescription" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0.11"/>
+  <testcase name="testEditServerType" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0"/>
+  <testcase name="testGetServersById" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0"/>
+  <testcase name="testDeleteByName" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0"/>
+  <testcase name="testPowerServer" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0"/>
+  <testcase name="testGetServersByName" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0"/>
+  <testcase name="testTypes" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0.031"/>
+  <testcase name="testGetRamSizes" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0.031"/>
+  <testcase name="testServerCredentials" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0.047"/>
+  <testcase name="testGetServerListWithOptions" classname="org.jclouds.gogrid.features.GridServerApiTest" time="0.047"/>
+  <testcase name="testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage" classname="org.jclouds.gogrid.features.GridServerClientExpectTest" time="0.609"/>
+  <testcase name="testGetServerListWhenReponseIs404IsEmpty" classname="org.jclouds.gogrid.features.GridServerClientExpectTest" time="0"/>
+  <testcase name="testGetServerListWhenResponseIs2xx" classname="org.jclouds.gogrid.features.GridServerClientExpectTest" time="0.063"/>
+  <testcase name="testAddServerWhenResponseIs2xx" classname="org.jclouds.gogrid.features.GridServerClientExpectTest" time="0.063"/>
+  <testcase name="testAddServerWithOptionsWhenResponseIs2xx" classname="org.jclouds.gogrid.features.GridServerClientExpectTest" time="0.078"/>
+  <testcase name="testGetServerListWithOptionsWhenResponseIs2xx" classname="org.jclouds.gogrid.features.GridServerClientExpectTest" time="0.157"/>
+  <testcase name="testValid" classname="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest" time="0.017"/>
+  <testcase name="testFailWhenTooManyPasswords" classname="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest" time="0.017"/>
+  <testcase name="testApplyInputStreamDetails" classname="org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest" time="0.047"/>
+  <testcase name="testApplyInputStreamDetails" classname="org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest" time="0.015"/>
+  <testcase name="testApplyInputStreamDetails" classname="org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest" time="0.016"/>
+  <testcase name="testSync" classname="org.jclouds.gogrid.GoGridApiTest" time="0"/>
+  <testcase name="testAllContains" classname="org.jclouds.gogrid.GoGridProviderTest" time="0"/>
+  <testcase name="testWithId" classname="org.jclouds.gogrid.GoGridProviderTest" time="0"/>
+  <testcase name="testOfApiContains" classname="org.jclouds.gogrid.GoGridProviderTest" time="0"/>
+  <testcase name="testTransformableToContains" classname="org.jclouds.gogrid.GoGridProviderTest" time="0.015"/>
+  <testcase name="testHandler" classname="org.jclouds.gogrid.handlers.GoGridErrorHandlerTest" time="0.015"/>
+  <testcase name="testWith500LengthDescription" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0"/>
+  <testcase name="testAsSandboxType" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0"/>
+  <testcase name="testWith501LengthDescription" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0"/>
+  <testcase name="testWithDescription" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0"/>
+  <testcase name="testAssignability" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0"/>
+  <testcase name="testNullWithDescription" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0"/>
+  <testcase name="testWithDescriptionNPE" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0.031"/>
+  <testcase name="testWithDescriptionStatic" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0.031"/>
+  <testcase name="testAsSandboxTypeStatic" classname="org.jclouds.gogrid.options.AddServerOptionsTest" time="0.031"/>
+  <testcase name="testAssignability" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0"/>
+  <testcase name="testNullWithDescription" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0"/>
+  <testcase name="testWith501LengthDescription" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0"/>
+  <testcase name="testWith500LengthDescription" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0.016"/>
+  <testcase name="testWithDescription" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0.016"/>
+  <testcase name="testWithDescriptionStatic" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0.016"/>
+  <testcase name="testWithDescriptionNPE" classname="org.jclouds.gogrid.options.SaveImageOptionsTest" time="0.016"/>
+  <testcase name="test" classname="org.jclouds.gogrid.parse.ParseServerListTest" time="0.031"/>
+  <testcase name="test" classname="org.jclouds.gogrid.parse.ParseServerTest" time="0.031"/>
+  <testcase name="testPredicate" classname="org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest" time="0.016"/>
+</testsuite>

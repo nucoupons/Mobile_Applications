@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.7">
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\binders\BindIdsToQueryParams.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\binders\BindNamesToQueryParams.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\binders\BindObjectNameToGetJobsRequestQueryParams.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\binders\BindRealIpPortPairsToQueryParams.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\binders\BindVirtualIpPortPairToQueryParams.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\config\GoGridComputeServiceContextModule.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\functions\OptionToLocation.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\functions\ServerImageToImage.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\functions\ServerToNodeMetadata.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\GoGridComputeService.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\options\GoGridTemplateOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\strategy\GoGridComputeServiceAdapter.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\compute\suppliers\GoGridHardwareSupplier.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\config\GoGridHttpApiModule.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\config\GoGridParserModule.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\BillingToken.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\Customer.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\internal\ErrorResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\Ip.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\IpPortPair.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\IpState.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\IpType.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\Job.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\JobProperties.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\JobState.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\LoadBalancer.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\LoadBalancerOs.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\LoadBalancerPersistenceType.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\LoadBalancerState.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\LoadBalancerType.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\ObjectType.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\Option.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\PowerCommand.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\Server.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\ServerImage.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\ServerImageState.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\ServerImageType.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\domain\ServerState.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\features\GridImageApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\features\GridIpApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\features\GridJobApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\features\GridLoadBalancerApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\features\GridServerApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\filters\SharedKeyLiteAuthentication.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\GenericResponseContainer.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\internal\CustomDeserializers.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseCredentialsFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseImageFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseImageListFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseIpListFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseJobListFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseLoadBalancerFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseLoadBalancerListFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseOptionsFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\functions\ParseServerNameToCredentialsMapFromJsonResponse.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\GoGridApi.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\GoGridApiMetadata.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\GoGridProviderMetadata.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\GoGridResponseException.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\handlers\GoGridErrorHandler.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\location\GoGridDefaultLocationSupplier.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\AddLoadBalancerOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\AddServerOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\GetImageListOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\GetIpListOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\GetJobListOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\GetServerListOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\options\SaveImageOptions.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\predicates\LoadBalancerLatestJobCompleted.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\predicates\ServerLatestJobCompleted.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\reference\GoGridHeaders.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\main\java\org\jclouds\gogrid\reference\GoGridQueryParams.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\binders\BindIdsToQueryParamsTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\binders\BindNamesToQueryParamsTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\compute\config\GoGridComputeServiceContextModuleTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\compute\functions\ServerToNodeMetadataTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\compute\GoGridComputeServiceLiveTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\compute\GoGridTemplateBuilderLiveTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\compute\options\GoGridTemplateOptionsTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\BaseGoGridApiLiveTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\BaseGoGridApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\BaseGoGridHttpApiExpectTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridImageApiLiveTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridImageApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridIpApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridJobApiLiveTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridJobApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridLoadBalancerApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridServerApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\features\GridServerClientExpectTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\functions\ParseCredentialsFromJsonResponseTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\functions\ParseJobsFromJsonResponseTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\functions\ParseLoadBalancersFromJsonResponseTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\functions\ParseServerNameToCredentialsMapFromJsonResponseTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\GoGridApiTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\GoGridLiveTestDisabled.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\GoGridProviderTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\handlers\GoGridErrorHandlerTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\options\AddServerOptionsTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\options\SaveImageOptionsTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\parse\ParseServerListTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\parse\ParseServerTest.java">
+</file>
+<file name="C:\Users\Administrator\git\jclouds-aliyun\providers\gogrid\src\test\java\org\jclouds\gogrid\predicates\ServerLatestJobCompletedTest.java">
+</file>
+</checkstyle>

@@ -17,26 +17,16 @@
 package org.jclouds.ecs.compute.config;
 
 import org.jclouds.compute.ComputeServiceContext;
-import org.jclouds.compute.config.BaseComputeServiceContextModule;
-import org.jclouds.ecs.compute.bind.EcsBindComputeStrategiesByClass;
-import org.jclouds.ecs.compute.bind.EcsBindComputeSuppliersByClass;
+import org.jclouds.compute.config.ComputeServiceAdapterContextModule;
+import org.jclouds.compute.domain.Hardware;
+import org.jclouds.ecs.domain.Option;
+import org.jclouds.ecs.domain.Server;
+import org.jclouds.ecs.domain.ServerImage;
 
 /**
  * Configures the {@link ComputeServiceContext}; requires
  * {@link EC2ComputeService} bound.
  */
-public class EcsComputeServiceContextModule extends
-		BaseComputeServiceContextModule {
-	@Override
-	protected void configure() {
-		installDependencies();
-		install(new EcsBindComputeStrategiesByClass());
-		install(new EcsBindComputeSuppliersByClass());
-		super.configure();
-	}
-
-	protected void installDependencies() {
-		install(new EcsDependenciesModule());
-	}
-
+public class EcsComputeServiceContextModule extends ComputeServiceAdapterContextModule<Server, Hardware, ServerImage, Option> {
+	
 }

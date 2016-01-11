@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="72" passed="72">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="5382" started-at="2016-01-11T17:12:03Z" finished-at="2016-01-11T17:12:08Z">
+    <groups>
+      <group name="unit">
+        <method signature="BindIdsToQueryParamsTest.testWithPrimitive()[pri:0, instance:org.jclouds.gogrid.binders.BindIdsToQueryParamsTest@c9a375]" name="testWithPrimitive" class="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest"/>
+        <method signature="BindIdsToQueryParamsTest.testWithView()[pri:0, instance:org.jclouds.gogrid.binders.BindIdsToQueryParamsTest@c9a375]" name="testWithView" class="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest"/>
+        <method signature="BindNamesToQueryParamsTest.testBinding()[pri:0, instance:org.jclouds.gogrid.binders.BindNamesToQueryParamsTest@1ce56f8]" name="testBinding" class="org.jclouds.gogrid.binders.BindNamesToQueryParamsTest"/>
+        <method signature="GoGridComputeServiceContextModuleTest.testAllStatusCovered()[pri:0, instance:org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest@891d76]" name="testAllStatusCovered" class="org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest"/>
+        <method signature="ServerToNodeMetadataTest.testApplySetsTagFromNameAndCredentialsFromName()[pri:0, instance:org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest@b8a0c8]" name="testApplySetsTagFromNameAndCredentialsFromName" class="org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest"/>
+        <method signature="GoGridTemplateOptionsTest.testAs()[pri:0, instance:org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest@695a6a]" name="testAs" class="org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest"/>
+        <method signature="GridImageApiTest.testDeleteById()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testDeleteById" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridImageApiTest.testEditImageDescription()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testEditImageDescription" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridImageApiTest.testEditImageFriendlyName()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testEditImageFriendlyName" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridImageApiTest.testGetImageListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testGetImageListWithOptions" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridImageApiTest.testGetImagesByName()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testGetImagesByName" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridImageApiTest.testSaveImageFromServerNoOptions()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testSaveImageFromServerNoOptions" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridImageApiTest.testSaveImageOptions()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testSaveImageOptions" class="org.jclouds.gogrid.features.GridImageApiTest"/>
+        <method signature="GridIpApiTest.testGetAssignedIpList()[pri:0, instance:org.jclouds.gogrid.features.GridIpApiTest@14a6c40]" name="testGetAssignedIpList" class="org.jclouds.gogrid.features.GridIpApiTest"/>
+        <method signature="GridIpApiTest.testGetIpListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridIpApiTest@14a6c40]" name="testGetIpListWithOptions" class="org.jclouds.gogrid.features.GridIpApiTest"/>
+        <method signature="GridJobApiTest.testGetJobListNoOptions()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobListNoOptions" class="org.jclouds.gogrid.features.GridJobApiTest"/>
+        <method signature="GridJobApiTest.testGetJobListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobListWithOptions" class="org.jclouds.gogrid.features.GridJobApiTest"/>
+        <method signature="GridJobApiTest.testGetJobsById()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobsById" class="org.jclouds.gogrid.features.GridJobApiTest"/>
+        <method signature="GridJobApiTest.testGetJobsForServerName()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobsForServerName" class="org.jclouds.gogrid.features.GridJobApiTest"/>
+        <method signature="GridLoadBalancerApiTest.testAddLoadBalancer()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testAddLoadBalancer" class="org.jclouds.gogrid.features.GridLoadBalancerApiTest"/>
+        <method signature="GridLoadBalancerApiTest.testDeleteLoadBalancerById()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testDeleteLoadBalancerById" class="org.jclouds.gogrid.features.GridLoadBalancerApiTest"/>
+        <method signature="GridLoadBalancerApiTest.testEditLoadBalancer()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testEditLoadBalancer" class="org.jclouds.gogrid.features.GridLoadBalancerApiTest"/>
+        <method signature="GridLoadBalancerApiTest.testEditLoadBalancerNamed()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testEditLoadBalancerNamed" class="org.jclouds.gogrid.features.GridLoadBalancerApiTest"/>
+        <method signature="GridLoadBalancerApiTest.testGetLoadBalancerList()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testGetLoadBalancerList" class="org.jclouds.gogrid.features.GridLoadBalancerApiTest"/>
+        <method signature="GridLoadBalancerApiTest.testGetLoadBalancersByName()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testGetLoadBalancersByName" class="org.jclouds.gogrid.features.GridLoadBalancerApiTest"/>
+        <method signature="GridServerApiTest.testDeleteByName()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testDeleteByName" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testEditServerDescription()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testEditServerDescription" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testEditServerRam()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testEditServerRam" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testEditServerType()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testEditServerType" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testGetRamSizes()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetRamSizes" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testGetServerListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetServerListWithOptions" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testGetServersById()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetServersById" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testGetServersByName()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetServersByName" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testPowerServer()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testPowerServer" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testServerCredentials()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testServerCredentials" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerApiTest.testTypes()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testTypes" class="org.jclouds.gogrid.features.GridServerApiTest"/>
+        <method signature="GridServerClientExpectTest.testAddServerWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testAddServerWhenResponseIs2xx" class="org.jclouds.gogrid.features.GridServerClientExpectTest"/>
+        <method signature="GridServerClientExpectTest.testAddServerWithOptionsWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testAddServerWithOptionsWhenResponseIs2xx" class="org.jclouds.gogrid.features.GridServerClientExpectTest"/>
+        <method signature="GridServerClientExpectTest.testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage" class="org.jclouds.gogrid.features.GridServerClientExpectTest"/>
+        <method signature="GridServerClientExpectTest.testGetServerListWhenReponseIs404IsEmpty()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerListWhenReponseIs404IsEmpty" class="org.jclouds.gogrid.features.GridServerClientExpectTest"/>
+        <method signature="GridServerClientExpectTest.testGetServerListWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerListWhenResponseIs2xx" class="org.jclouds.gogrid.features.GridServerClientExpectTest"/>
+        <method signature="GridServerClientExpectTest.testGetServerListWithOptionsWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerListWithOptionsWhenResponseIs2xx" class="org.jclouds.gogrid.features.GridServerClientExpectTest"/>
+        <method signature="ParseCredentialsFromJsonResponseTest.testFailWhenTooManyPasswords()[pri:0, instance:org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest@6c7407]" name="testFailWhenTooManyPasswords" class="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest"/>
+        <method signature="ParseCredentialsFromJsonResponseTest.testValid()[pri:0, instance:org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest@6c7407]" name="testValid" class="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest"/>
+        <method signature="ParseJobsFromJsonResponseTest.testApplyInputStreamDetails()[pri:0, instance:org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest@8e2e94]" name="testApplyInputStreamDetails" class="org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest"/>
+        <method signature="ParseLoadBalancersFromJsonResponseTest.testApplyInputStreamDetails()[pri:0, instance:org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest@3536fd]" name="testApplyInputStreamDetails" class="org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest"/>
+        <method signature="ParseServerNameToCredentialsMapFromJsonResponseTest.testApplyInputStreamDetails()[pri:0, instance:org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest@4022f3]" name="testApplyInputStreamDetails" class="org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest"/>
+        <method signature="GoGridApiTest.testSync()[pri:0, instance:org.jclouds.gogrid.GoGridApiTest@18f3db0]" name="testSync" class="org.jclouds.gogrid.GoGridApiTest"/>
+        <method signature="BaseProviderMetadataTest.testAllContains()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testAllContains" class="org.jclouds.providers.internal.BaseProviderMetadataTest"/>
+        <method signature="BaseProviderMetadataTest.testOfApiContains()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testOfApiContains" class="org.jclouds.providers.internal.BaseProviderMetadataTest"/>
+        <method signature="BaseProviderMetadataTest.testTransformableToContains()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testTransformableToContains" class="org.jclouds.providers.internal.BaseProviderMetadataTest"/>
+        <method signature="BaseProviderMetadataTest.testWithId()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testWithId" class="org.jclouds.providers.internal.BaseProviderMetadataTest"/>
+        <method signature="GoGridErrorHandlerTest.testHandler()[pri:0, instance:org.jclouds.gogrid.handlers.GoGridErrorHandlerTest@13d58a1]" name="testHandler" class="org.jclouds.gogrid.handlers.GoGridErrorHandlerTest"/>
+        <method signature="AddServerOptionsTest.testAsSandboxType()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testAsSandboxType" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testAsSandboxTypeStatic()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testAsSandboxTypeStatic" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testAssignability()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testAssignability" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testNullWithDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testNullWithDescription" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testWith500LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWith500LengthDescription" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testWith501LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWith501LengthDescription" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testWithDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWithDescription" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testWithDescriptionNPE()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWithDescriptionNPE" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="AddServerOptionsTest.testWithDescriptionStatic()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWithDescriptionStatic" class="org.jclouds.gogrid.options.AddServerOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testAssignability()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testAssignability" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testNullWithDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testNullWithDescription" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testWith500LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWith500LengthDescription" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testWith501LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWith501LengthDescription" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testWithDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWithDescription" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testWithDescriptionNPE()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWithDescriptionNPE" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="SaveImageOptionsTest.testWithDescriptionStatic()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWithDescriptionStatic" class="org.jclouds.gogrid.options.SaveImageOptionsTest"/>
+        <method signature="ServerLatestJobCompletedTest.testPredicate()[pri:0, instance:org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest@c86119]" name="testPredicate" class="org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest"/>
+      </group> <!-- unit -->
+    </groups>
+    <test name="BindIdsToQueryParamsTest" duration-ms="66" started-at="2016-01-11T17:12:03Z" finished-at="2016-01-11T17:12:03Z">
+      <class name="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest">
+        <test-method status="PASS" signature="testWithPrimitive()[pri:0, instance:org.jclouds.gogrid.binders.BindIdsToQueryParamsTest@c9a375]" name="testWithPrimitive" duration-ms="51" started-at="2016-01-12T01:12:03Z" finished-at="2016-01-12T01:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithPrimitive -->
+        <test-method status="PASS" signature="testWithView()[pri:0, instance:org.jclouds.gogrid.binders.BindIdsToQueryParamsTest@c9a375]" name="testWithView" duration-ms="51" started-at="2016-01-12T01:12:03Z" finished-at="2016-01-12T01:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithView -->
+      </class> <!-- org.jclouds.gogrid.binders.BindIdsToQueryParamsTest -->
+    </test> <!-- BindIdsToQueryParamsTest -->
+    <test name="BindNamesToQueryParamsTest" duration-ms="16" started-at="2016-01-11T17:12:03Z" finished-at="2016-01-11T17:12:03Z">
+      <class name="org.jclouds.gogrid.binders.BindNamesToQueryParamsTest">
+        <test-method status="PASS" signature="testBinding()[pri:0, instance:org.jclouds.gogrid.binders.BindNamesToQueryParamsTest@1ce56f8]" name="testBinding" duration-ms="0" started-at="2016-01-12T01:12:03Z" finished-at="2016-01-12T01:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBinding -->
+      </class> <!-- org.jclouds.gogrid.binders.BindNamesToQueryParamsTest -->
+    </test> <!-- BindNamesToQueryParamsTest -->
+    <test name="GoGridComputeServiceContextModuleTest" duration-ms="47" started-at="2016-01-11T17:12:03Z" finished-at="2016-01-11T17:12:03Z">
+      <class name="org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest">
+        <test-method status="PASS" signature="testAllStatusCovered()[pri:0, instance:org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest@891d76]" name="testAllStatusCovered" duration-ms="47" started-at="2016-01-12T01:12:03Z" finished-at="2016-01-12T01:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllStatusCovered -->
+      </class> <!-- org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest -->
+    </test> <!-- GoGridComputeServiceContextModuleTest -->
+    <test name="ServerToNodeMetadataTest" duration-ms="578" started-at="2016-01-11T17:12:03Z" finished-at="2016-01-11T17:12:03Z">
+      <class name="org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest">
+        <test-method status="PASS" signature="testApplySetsTagFromNameAndCredentialsFromName()[pri:0, instance:org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest@b8a0c8]" name="testApplySetsTagFromNameAndCredentialsFromName" duration-ms="562" started-at="2016-01-12T01:12:03Z" finished-at="2016-01-12T01:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplySetsTagFromNameAndCredentialsFromName -->
+      </class> <!-- org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest -->
+    </test> <!-- ServerToNodeMetadataTest -->
+    <test name="GoGridTemplateOptionsTest" duration-ms="15" started-at="2016-01-11T17:12:03Z" finished-at="2016-01-11T17:12:04Z">
+      <class name="org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest">
+        <test-method status="PASS" signature="testAs()[pri:0, instance:org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest@695a6a]" name="testAs" duration-ms="15" started-at="2016-01-12T01:12:03Z" finished-at="2016-01-12T01:12:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAs -->
+      </class> <!-- org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest -->
+    </test> <!-- GoGridTemplateOptionsTest -->
+    <test name="Surefire test" duration-ms="0" started-at="2016-01-11T17:12:04Z" finished-at="2016-01-11T17:12:04Z">
+    </test> <!-- Surefire test -->
+    <test name="GridImageApiTest" duration-ms="1729" started-at="2016-01-11T17:12:04Z" finished-at="2016-01-11T17:12:05Z">
+      <class name="org.jclouds.gogrid.features.GridImageApiTest">
+        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="setupFactory" is-config="true" duration-ms="1547" started-at="2016-01-12T01:12:04Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupFactory -->
+        <test-method status="PASS" signature="testEditImageDescription()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testEditImageDescription" duration-ms="182" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditImageDescription -->
+        <test-method status="PASS" signature="testGetImageListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testGetImageListWithOptions" duration-ms="182" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetImageListWithOptions -->
+        <test-method status="PASS" signature="testEditImageFriendlyName()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testEditImageFriendlyName" duration-ms="182" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditImageFriendlyName -->
+        <test-method status="PASS" signature="testGetImagesByName()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testGetImagesByName" duration-ms="182" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetImagesByName -->
+        <test-method status="PASS" signature="testDeleteById()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testDeleteById" duration-ms="126" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteById -->
+        <test-method status="PASS" signature="testSaveImageOptions()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testSaveImageOptions" duration-ms="0" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveImageOptions -->
+        <test-method status="PASS" signature="testSaveImageFromServerNoOptions()[pri:0, instance:org.jclouds.gogrid.features.GridImageApiTest@1bdc777]" name="testSaveImageFromServerNoOptions" duration-ms="0" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveImageFromServerNoOptions -->
+      </class> <!-- org.jclouds.gogrid.features.GridImageApiTest -->
+    </test> <!-- GridImageApiTest -->
+    <test name="GridIpApiTest" duration-ms="250" started-at="2016-01-11T17:12:05Z" finished-at="2016-01-11T17:12:06Z">
+      <class name="org.jclouds.gogrid.features.GridIpApiTest">
+        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.gogrid.features.GridIpApiTest@14a6c40]" name="setupFactory" is-config="true" duration-ms="172" started-at="2016-01-12T01:12:05Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupFactory -->
+        <test-method status="PASS" signature="testGetIpListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridIpApiTest@14a6c40]" name="testGetIpListWithOptions" duration-ms="78" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetIpListWithOptions -->
+        <test-method status="PASS" signature="testGetAssignedIpList()[pri:0, instance:org.jclouds.gogrid.features.GridIpApiTest@14a6c40]" name="testGetAssignedIpList" duration-ms="78" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAssignedIpList -->
+      </class> <!-- org.jclouds.gogrid.features.GridIpApiTest -->
+    </test> <!-- GridIpApiTest -->
+    <test name="GridJobApiTest" duration-ms="203" started-at="2016-01-11T17:12:06Z" finished-at="2016-01-11T17:12:06Z">
+      <class name="org.jclouds.gogrid.features.GridJobApiTest">
+        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="setupFactory" is-config="true" duration-ms="156" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupFactory -->
+        <test-method status="PASS" signature="testGetJobsForServerName()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobsForServerName" duration-ms="47" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetJobsForServerName -->
+        <test-method status="PASS" signature="testGetJobsById()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobsById" duration-ms="47" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetJobsById -->
+        <test-method status="PASS" signature="testGetJobListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobListWithOptions" duration-ms="47" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetJobListWithOptions -->
+        <test-method status="PASS" signature="testGetJobListNoOptions()[pri:0, instance:org.jclouds.gogrid.features.GridJobApiTest@14f6d51]" name="testGetJobListNoOptions" duration-ms="31" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetJobListNoOptions -->
+      </class> <!-- org.jclouds.gogrid.features.GridJobApiTest -->
+    </test> <!-- GridJobApiTest -->
+    <test name="GridLoadBalancerApiTest" duration-ms="235" started-at="2016-01-11T17:12:06Z" finished-at="2016-01-11T17:12:06Z">
+      <class name="org.jclouds.gogrid.features.GridLoadBalancerApiTest">
+        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="setupFactory" is-config="true" duration-ms="141" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupFactory -->
+        <test-method status="PASS" signature="testGetLoadBalancerList()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testGetLoadBalancerList" duration-ms="78" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetLoadBalancerList -->
+        <test-method status="PASS" signature="testDeleteLoadBalancerById()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testDeleteLoadBalancerById" duration-ms="94" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteLoadBalancerById -->
+        <test-method status="PASS" signature="testAddLoadBalancer()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testAddLoadBalancer" duration-ms="94" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddLoadBalancer -->
+        <test-method status="PASS" signature="testEditLoadBalancer()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testEditLoadBalancer" duration-ms="78" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditLoadBalancer -->
+        <test-method status="PASS" signature="testEditLoadBalancerNamed()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testEditLoadBalancerNamed" duration-ms="94" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditLoadBalancerNamed -->
+        <test-method status="PASS" signature="testGetLoadBalancersByName()[pri:0, instance:org.jclouds.gogrid.features.GridLoadBalancerApiTest@19a13d9]" name="testGetLoadBalancersByName" duration-ms="0" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetLoadBalancersByName -->
+      </class> <!-- org.jclouds.gogrid.features.GridLoadBalancerApiTest -->
+    </test> <!-- GridLoadBalancerApiTest -->
+    <test name="GridServerApiTest" duration-ms="296" started-at="2016-01-11T17:12:06Z" finished-at="2016-01-11T17:12:06Z">
+      <class name="org.jclouds.gogrid.features.GridServerApiTest">
+        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="setupFactory" is-config="true" duration-ms="125" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupFactory -->
+        <test-method status="PASS" signature="testDeleteByName()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testDeleteByName" duration-ms="124" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteByName -->
+        <test-method status="PASS" signature="testEditServerDescription()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testEditServerDescription" duration-ms="109" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditServerDescription -->
+        <test-method status="PASS" signature="testEditServerType()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testEditServerType" duration-ms="109" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditServerType -->
+        <test-method status="PASS" signature="testGetRamSizes()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetRamSizes" duration-ms="142" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRamSizes -->
+        <test-method status="PASS" signature="testEditServerRam()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testEditServerRam" duration-ms="96" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditServerRam -->
+        <test-method status="PASS" signature="testGetServersByName()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetServersByName" duration-ms="15" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServersByName -->
+        <test-method status="PASS" signature="testGetServersById()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetServersById" duration-ms="0" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServersById -->
+        <test-method status="PASS" signature="testGetServerListWithOptions()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testGetServerListWithOptions" duration-ms="62" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServerListWithOptions -->
+        <test-method status="PASS" signature="testServerCredentials()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testServerCredentials" duration-ms="47" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testServerCredentials -->
+        <test-method status="PASS" signature="testPowerServer()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testPowerServer" duration-ms="0" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPowerServer -->
+        <test-method status="PASS" signature="testTypes()[pri:0, instance:org.jclouds.gogrid.features.GridServerApiTest@c88c75]" name="testTypes" duration-ms="16" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTypes -->
+      </class> <!-- org.jclouds.gogrid.features.GridServerApiTest -->
+    </test> <!-- GridServerApiTest -->
+    <test name="GridServerClientExpectTest" duration-ms="766" started-at="2016-01-11T17:12:06Z" finished-at="2016-01-11T17:12:07Z">
+      <class name="org.jclouds.gogrid.features.GridServerClientExpectTest">
+        <test-method status="PASS" signature="testAddServerWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testAddServerWhenResponseIs2xx" duration-ms="672" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddServerWhenResponseIs2xx -->
+        <test-method status="PASS" signature="testGetServerListWhenReponseIs404IsEmpty()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerListWhenReponseIs404IsEmpty" duration-ms="609" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServerListWhenReponseIs404IsEmpty -->
+        <test-method status="PASS" signature="testAddServerWithOptionsWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testAddServerWithOptionsWhenResponseIs2xx" duration-ms="687" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddServerWithOptionsWhenResponseIs2xx -->
+        <test-method status="PASS" signature="testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage" duration-ms="609" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage -->
+        <test-method status="PASS" signature="testGetServerListWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerListWhenResponseIs2xx" duration-ms="656" started-at="2016-01-12T01:12:06Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServerListWhenResponseIs2xx -->
+        <test-method status="PASS" signature="testGetServerListWithOptionsWhenResponseIs2xx()[pri:0, instance:org.jclouds.gogrid.features.GridServerClientExpectTest@1c5fd5]" name="testGetServerListWithOptionsWhenResponseIs2xx" duration-ms="157" started-at="2016-01-12T01:12:07Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServerListWithOptionsWhenResponseIs2xx -->
+      </class> <!-- org.jclouds.gogrid.features.GridServerClientExpectTest -->
+    </test> <!-- GridServerClientExpectTest -->
+    <test name="ParseCredentialsFromJsonResponseTest" duration-ms="25" started-at="2016-01-11T17:12:07Z" finished-at="2016-01-11T17:12:07Z">
+      <class name="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest">
+        <test-method status="PASS" signature="testFailWhenTooManyPasswords()[pri:0, instance:org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest@6c7407]" name="testFailWhenTooManyPasswords" duration-ms="25" started-at="2016-01-12T01:12:07Z" finished-at="2016-01-12T01:12:07Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[expecting only 1 credential in response, but had more: [gogrid-7461, gogrid-7210, gogrid-19, gogrid-5288, gogridalex-201, gogridalex-200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: expecting only 1 credential in response, but had more: [gogrid-7461, gogrid-7210, gogrid-19, gogrid-5288, gogridalex-201, gogridalex-200]
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:176)
+	at org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponse.apply(ParseCredentialsFromJsonResponse.java:47)
+	at org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest.testFailWhenTooManyPasswords(ParseCredentialsFromJsonResponseTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFailWhenTooManyPasswords -->
+        <test-method status="PASS" signature="testValid()[pri:0, instance:org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest@6c7407]" name="testValid" duration-ms="18" started-at="2016-01-12T01:12:07Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValid -->
+      </class> <!-- org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest -->
+    </test> <!-- ParseCredentialsFromJsonResponseTest -->
+    <test name="ParseJobsFromJsonResponseTest" duration-ms="47" started-at="2016-01-11T17:12:07Z" finished-at="2016-01-11T17:12:07Z">
+      <class name="org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest">
+        <test-method status="PASS" signature="testApplyInputStreamDetails()[pri:0, instance:org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest@8e2e94]" name="testApplyInputStreamDetails" duration-ms="47" started-at="2016-01-12T01:12:07Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyInputStreamDetails -->
+      </class> <!-- org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest -->
+    </test> <!-- ParseJobsFromJsonResponseTest -->
+    <test name="ParseLoadBalancersFromJsonResponseTest" duration-ms="31" started-at="2016-01-11T17:12:07Z" finished-at="2016-01-11T17:12:07Z">
+      <class name="org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest">
+        <test-method status="PASS" signature="testApplyInputStreamDetails()[pri:0, instance:org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest@3536fd]" name="testApplyInputStreamDetails" duration-ms="31" started-at="2016-01-12T01:12:07Z" finished-at="2016-01-12T01:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyInputStreamDetails -->
+      </class> <!-- org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest -->
+    </test> <!-- ParseLoadBalancersFromJsonResponseTest -->
+    <test name="ParseServerNameToCredentialsMapFromJsonResponseTest" duration-ms="16" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest">
+        <test-method status="PASS" signature="testApplyInputStreamDetails()[pri:0, instance:org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest@4022f3]" name="testApplyInputStreamDetails" duration-ms="16" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyInputStreamDetails -->
+      </class> <!-- org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest -->
+    </test> <!-- ParseServerNameToCredentialsMapFromJsonResponseTest -->
+    <test name="GoGridApiTest" duration-ms="140" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.GoGridApiTest">
+        <test-method status="PASS" signature="setupFactory()[pri:0, instance:org.jclouds.gogrid.GoGridApiTest@18f3db0]" name="setupFactory" is-config="true" duration-ms="125" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupFactory -->
+        <test-method status="PASS" signature="testSync()[pri:0, instance:org.jclouds.gogrid.GoGridApiTest@18f3db0]" name="testSync" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSync -->
+      </class> <!-- org.jclouds.gogrid.GoGridApiTest -->
+    </test> <!-- GoGridApiTest -->
+    <test name="GoGridProviderTest" duration-ms="15" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.GoGridProviderTest">
+        <test-method status="PASS" signature="testAllContains()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testAllContains" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllContains -->
+        <test-method status="PASS" signature="testOfApiContains()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testOfApiContains" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOfApiContains -->
+        <test-method status="PASS" signature="testTransformableToContains()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testTransformableToContains" duration-ms="15" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTransformableToContains -->
+        <test-method status="PASS" signature="testWithId()[pri:0, instance:org.jclouds.gogrid.GoGridProviderTest@10ad7e]" name="testWithId" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithId -->
+      </class> <!-- org.jclouds.gogrid.GoGridProviderTest -->
+    </test> <!-- GoGridProviderTest -->
+    <test name="GoGridErrorHandlerTest" duration-ms="15" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.handlers.GoGridErrorHandlerTest">
+        <test-method status="PASS" signature="testHandler()[pri:0, instance:org.jclouds.gogrid.handlers.GoGridErrorHandlerTest@13d58a1]" name="testHandler" duration-ms="15" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHandler -->
+      </class> <!-- org.jclouds.gogrid.handlers.GoGridErrorHandlerTest -->
+    </test> <!-- GoGridErrorHandlerTest -->
+    <test name="AddServerOptionsTest" duration-ms="31" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.options.AddServerOptionsTest">
+        <test-method status="PASS" signature="testWithDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWithDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithDescription -->
+        <test-method status="PASS" signature="testWithDescriptionNPE()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWithDescriptionNPE" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.jclouds.gogrid.options.AddServerOptions.withDescription(AddServerOptions.java:29)
+	at org.jclouds.gogrid.options.AddServerOptions$Builder.withDescription(AddServerOptions.java:54)
+	at org.jclouds.gogrid.options.AddServerOptionsTest.testWithDescriptionNPE(AddServerOptionsTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithDescriptionNPE -->
+        <test-method status="PASS" signature="testWith501LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWith501LengthDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Description cannot be longer than 500 characters]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Description cannot be longer than 500 characters
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:125)
+	at org.jclouds.gogrid.options.AddServerOptions.withDescription(AddServerOptions.java:29)
+	at org.jclouds.gogrid.options.AddServerOptionsTest.testWith501LengthDescription(AddServerOptionsTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWith501LengthDescription -->
+        <test-method status="PASS" signature="testWithDescriptionStatic()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWithDescriptionStatic" duration-ms="31" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithDescriptionStatic -->
+        <test-method status="PASS" signature="testNullWithDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testNullWithDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNullWithDescription -->
+        <test-method status="PASS" signature="testAsSandboxType()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testAsSandboxType" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAsSandboxType -->
+        <test-method status="PASS" signature="testWith500LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testWith500LengthDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWith500LengthDescription -->
+        <test-method status="PASS" signature="testAsSandboxTypeStatic()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testAsSandboxTypeStatic" duration-ms="31" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAsSandboxTypeStatic -->
+        <test-method status="PASS" signature="testAssignability()[pri:0, instance:org.jclouds.gogrid.options.AddServerOptionsTest@da2253]" name="testAssignability" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAssignability -->
+      </class> <!-- org.jclouds.gogrid.options.AddServerOptionsTest -->
+    </test> <!-- AddServerOptionsTest -->
+    <test name="SaveImageOptionsTest" duration-ms="16" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.options.SaveImageOptionsTest">
+        <test-method status="PASS" signature="testNullWithDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testNullWithDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNullWithDescription -->
+        <test-method status="PASS" signature="testWith500LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWith500LengthDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWith500LengthDescription -->
+        <test-method status="PASS" signature="testWithDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWithDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithDescription -->
+        <test-method status="PASS" signature="testWithDescriptionStatic()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWithDescriptionStatic" duration-ms="16" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithDescriptionStatic -->
+        <test-method status="PASS" signature="testWithDescriptionNPE()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWithDescriptionNPE" duration-ms="16" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.jclouds.gogrid.options.SaveImageOptions.withDescription(SaveImageOptions.java:28)
+	at org.jclouds.gogrid.options.SaveImageOptions$Builder.withDescription(SaveImageOptions.java:40)
+	at org.jclouds.gogrid.options.SaveImageOptionsTest.testWithDescriptionNPE(SaveImageOptionsTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithDescriptionNPE -->
+        <test-method status="PASS" signature="testAssignability()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testAssignability" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAssignability -->
+        <test-method status="PASS" signature="testWith501LengthDescription()[pri:0, instance:org.jclouds.gogrid.options.SaveImageOptionsTest@117a5b]" name="testWith501LengthDescription" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Description cannot be longer than 500 characters]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Description cannot be longer than 500 characters
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:125)
+	at org.jclouds.gogrid.options.SaveImageOptions.withDescription(SaveImageOptions.java:28)
+	at org.jclouds.gogrid.options.SaveImageOptionsTest.testWith501LengthDescription(SaveImageOptionsTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWith501LengthDescription -->
+      </class> <!-- org.jclouds.gogrid.options.SaveImageOptionsTest -->
+    </test> <!-- SaveImageOptionsTest -->
+    <test name="ParseServerListTest" duration-ms="31" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.parse.ParseServerListTest">
+        <test-method status="PASS" signature="test()[pri:0, instance:org.jclouds.gogrid.parse.ParseServerListTest@144719c]" name="test" duration-ms="31" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- org.jclouds.gogrid.parse.ParseServerListTest -->
+    </test> <!-- ParseServerListTest -->
+    <test name="ParseServerTest" duration-ms="47" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.parse.ParseServerTest">
+        <test-method status="PASS" signature="test()[pri:0, instance:org.jclouds.gogrid.parse.ParseServerTest@1f4c39d]" name="test" duration-ms="31" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- org.jclouds.gogrid.parse.ParseServerTest -->
+    </test> <!-- ParseServerTest -->
+    <test name="ServerLatestJobCompletedTest" duration-ms="16" started-at="2016-01-11T17:12:08Z" finished-at="2016-01-11T17:12:08Z">
+      <class name="org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest">
+        <test-method status="PASS" signature="testPredicate()[pri:0, instance:org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest@c86119]" name="testPredicate" duration-ms="0" started-at="2016-01-12T01:12:08Z" finished-at="2016-01-12T01:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPredicate -->
+      </class> <!-- org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest -->
+    </test> <!-- ServerLatestJobCompletedTest -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

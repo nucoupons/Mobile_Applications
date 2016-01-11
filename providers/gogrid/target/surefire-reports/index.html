@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
+                    <span class="test-stats">24 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">72 methods,   72 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.parse.ParseServerListTest" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.parse.ParseServerTest" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridLoadBalancerApiTest" hash-for-method="testAddLoadBalancer">testAddLoadBalancer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerClientExpectTest" hash-for-method="testAddServerWhenResponseIs2xx">testAddServerWhenResponseIs2xx</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerClientExpectTest" hash-for-method="testAddServerWithOptionsWhenResponseIs2xx">testAddServerWithOptionsWhenResponseIs2xx</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.GoGridProviderTest" hash-for-method="testAllContains">testAllContains</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest" hash-for-method="testAllStatusCovered">testAllStatusCovered</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest" hash-for-method="testApplyInputStreamDetails">testApplyInputStreamDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest" hash-for-method="testApplyInputStreamDetails">testApplyInputStreamDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest" hash-for-method="testApplyInputStreamDetails">testApplyInputStreamDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest" hash-for-method="testApplySetsTagFromNameAndCredentialsFromName">testApplySetsTagFromNameAndCredentialsFromName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest" hash-for-method="testAs">testAs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testAsSandboxType">testAsSandboxType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testAsSandboxTypeStatic">testAsSandboxTypeStatic</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testAssignability">testAssignability</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testAssignability">testAssignability</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.binders.BindNamesToQueryParamsTest" hash-for-method="testBinding">testBinding</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testDeleteById">testDeleteById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testDeleteByName">testDeleteByName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridLoadBalancerApiTest" hash-for-method="testDeleteLoadBalancerById">testDeleteLoadBalancerById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testEditImageDescription">testEditImageDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testEditImageFriendlyName">testEditImageFriendlyName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridLoadBalancerApiTest" hash-for-method="testEditLoadBalancer">testEditLoadBalancer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridLoadBalancerApiTest" hash-for-method="testEditLoadBalancerNamed">testEditLoadBalancerNamed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testEditServerDescription">testEditServerDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testEditServerRam">testEditServerRam</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testEditServerType">testEditServerType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest" hash-for-method="testFailWhenTooManyPasswords">testFailWhenTooManyPasswords</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridIpApiTest" hash-for-method="testGetAssignedIpList">testGetAssignedIpList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testGetImageListWithOptions">testGetImageListWithOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testGetImagesByName">testGetImagesByName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridIpApiTest" hash-for-method="testGetIpListWithOptions">testGetIpListWithOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridJobApiTest" hash-for-method="testGetJobListNoOptions">testGetJobListNoOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridJobApiTest" hash-for-method="testGetJobListWithOptions">testGetJobListWithOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridJobApiTest" hash-for-method="testGetJobsById">testGetJobsById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridJobApiTest" hash-for-method="testGetJobsForServerName">testGetJobsForServerName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridLoadBalancerApiTest" hash-for-method="testGetLoadBalancerList">testGetLoadBalancerList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridLoadBalancerApiTest" hash-for-method="testGetLoadBalancersByName">testGetLoadBalancersByName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testGetRamSizes">testGetRamSizes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerClientExpectTest" hash-for-method="testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage">testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerClientExpectTest" hash-for-method="testGetServerListWhenReponseIs404IsEmpty">testGetServerListWhenReponseIs404IsEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerClientExpectTest" hash-for-method="testGetServerListWhenResponseIs2xx">testGetServerListWhenResponseIs2xx</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testGetServerListWithOptions">testGetServerListWithOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerClientExpectTest" hash-for-method="testGetServerListWithOptionsWhenResponseIs2xx">testGetServerListWithOptionsWhenResponseIs2xx</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testGetServersById">testGetServersById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testGetServersByName">testGetServersByName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.handlers.GoGridErrorHandlerTest" hash-for-method="testHandler">testHandler</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testNullWithDescription">testNullWithDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testNullWithDescription">testNullWithDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.GoGridProviderTest" hash-for-method="testOfApiContains">testOfApiContains</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testPowerServer">testPowerServer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest" hash-for-method="testPredicate">testPredicate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testSaveImageFromServerNoOptions">testSaveImageFromServerNoOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridImageApiTest" hash-for-method="testSaveImageOptions">testSaveImageOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testServerCredentials">testServerCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.GoGridApiTest" hash-for-method="testSync">testSync</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.GoGridProviderTest" hash-for-method="testTransformableToContains">testTransformableToContains</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.features.GridServerApiTest" hash-for-method="testTypes">testTypes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest" hash-for-method="testValid">testValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testWith500LengthDescription">testWith500LengthDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testWith500LengthDescription">testWith500LengthDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testWith501LengthDescription">testWith501LengthDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testWith501LengthDescription">testWith501LengthDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testWithDescription">testWithDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testWithDescription">testWithDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testWithDescriptionNPE">testWithDescriptionNPE</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testWithDescriptionNPE">testWithDescriptionNPE</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.AddServerOptionsTest" hash-for-method="testWithDescriptionStatic">testWithDescriptionStatic</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.options.SaveImageOptionsTest" hash-for-method="testWithDescriptionStatic">testWithDescriptionStatic</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.GoGridProviderTest" hash-for-method="testWithId">testWithId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest" hash-for-method="testWithPrimitive">testWithPrimitive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jclouds.gogrid.binders.BindIdsToQueryParamsTest" hash-for-method="testWithView">testWithView</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.options.AddServerOptionsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAsSandboxType">
+                  </a> <!-- testAsSandboxType -->
+                  <span class="method-name">testAsSandboxType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAsSandboxTypeStatic">
+                  </a> <!-- testAsSandboxTypeStatic -->
+                  <span class="method-name">testAsSandboxTypeStatic</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAssignability">
+                  </a> <!-- testAssignability -->
+                  <span class="method-name">testAssignability</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNullWithDescription">
+                  </a> <!-- testNullWithDescription -->
+                  <span class="method-name">testNullWithDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWith500LengthDescription">
+                  </a> <!-- testWith500LengthDescription -->
+                  <span class="method-name">testWith500LengthDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWith501LengthDescription">
+                  </a> <!-- testWith501LengthDescription -->
+                  <span class="method-name">testWith501LengthDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithDescription">
+                  </a> <!-- testWithDescription -->
+                  <span class="method-name">testWithDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithDescriptionNPE">
+                  </a> <!-- testWithDescriptionNPE -->
+                  <span class="method-name">testWithDescriptionNPE</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithDescriptionStatic">
+                  </a> <!-- testWithDescriptionStatic -->
+                  <span class="method-name">testWithDescriptionStatic</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.options.SaveImageOptionsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAssignability">
+                  </a> <!-- testAssignability -->
+                  <span class="method-name">testAssignability</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNullWithDescription">
+                  </a> <!-- testNullWithDescription -->
+                  <span class="method-name">testNullWithDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWith500LengthDescription">
+                  </a> <!-- testWith500LengthDescription -->
+                  <span class="method-name">testWith500LengthDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWith501LengthDescription">
+                  </a> <!-- testWith501LengthDescription -->
+                  <span class="method-name">testWith501LengthDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithDescription">
+                  </a> <!-- testWithDescription -->
+                  <span class="method-name">testWithDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithDescriptionNPE">
+                  </a> <!-- testWithDescriptionNPE -->
+                  <span class="method-name">testWithDescriptionNPE</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithDescriptionStatic">
+                  </a> <!-- testWithDescriptionStatic -->
+                  <span class="method-name">testWithDescriptionStatic</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.features.GridImageApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteById">
+                  </a> <!-- testDeleteById -->
+                  <span class="method-name">testDeleteById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditImageDescription">
+                  </a> <!-- testEditImageDescription -->
+                  <span class="method-name">testEditImageDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditImageFriendlyName">
+                  </a> <!-- testEditImageFriendlyName -->
+                  <span class="method-name">testEditImageFriendlyName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetImageListWithOptions">
+                  </a> <!-- testGetImageListWithOptions -->
+                  <span class="method-name">testGetImageListWithOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetImagesByName">
+                  </a> <!-- testGetImagesByName -->
+                  <span class="method-name">testGetImagesByName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSaveImageFromServerNoOptions">
+                  </a> <!-- testSaveImageFromServerNoOptions -->
+                  <span class="method-name">testSaveImageFromServerNoOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSaveImageOptions">
+                  </a> <!-- testSaveImageOptions -->
+                  <span class="method-name">testSaveImageOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.features.GridIpApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAssignedIpList">
+                  </a> <!-- testGetAssignedIpList -->
+                  <span class="method-name">testGetAssignedIpList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetIpListWithOptions">
+                  </a> <!-- testGetIpListWithOptions -->
+                  <span class="method-name">testGetIpListWithOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApplyInputStreamDetails">
+                  </a> <!-- testApplyInputStreamDetails -->
+                  <span class="method-name">testApplyInputStreamDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.handlers.GoGridErrorHandlerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHandler">
+                  </a> <!-- testHandler -->
+                  <span class="method-name">testHandler</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.binders.BindNamesToQueryParamsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testBinding">
+                  </a> <!-- testBinding -->
+                  <span class="method-name">testBinding</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.features.GridJobApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetJobListNoOptions">
+                  </a> <!-- testGetJobListNoOptions -->
+                  <span class="method-name">testGetJobListNoOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetJobListWithOptions">
+                  </a> <!-- testGetJobListWithOptions -->
+                  <span class="method-name">testGetJobListWithOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetJobsById">
+                  </a> <!-- testGetJobsById -->
+                  <span class="method-name">testGetJobsById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetJobsForServerName">
+                  </a> <!-- testGetJobsForServerName -->
+                  <span class="method-name">testGetJobsForServerName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAllStatusCovered">
+                  </a> <!-- testAllStatusCovered -->
+                  <span class="method-name">testAllStatusCovered</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.parse.ParseServerListTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApplyInputStreamDetails">
+                  </a> <!-- testApplyInputStreamDetails -->
+                  <span class="method-name">testApplyInputStreamDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.parse.ParseServerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.binders.BindIdsToQueryParamsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithPrimitive">
+                  </a> <!-- testWithPrimitive -->
+                  <span class="method-name">testWithPrimitive</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithView">
+                  </a> <!-- testWithView -->
+                  <span class="method-name">testWithView</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFailWhenTooManyPasswords">
+                  </a> <!-- testFailWhenTooManyPasswords -->
+                  <span class="method-name">testFailWhenTooManyPasswords</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValid">
+                  </a> <!-- testValid -->
+                  <span class="method-name">testValid</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.GoGridProviderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAllContains">
+                  </a> <!-- testAllContains -->
+                  <span class="method-name">testAllContains</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfApiContains">
+                  </a> <!-- testOfApiContains -->
+                  <span class="method-name">testOfApiContains</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTransformableToContains">
+                  </a> <!-- testTransformableToContains -->
+                  <span class="method-name">testTransformableToContains</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithId">
+                  </a> <!-- testWithId -->
+                  <span class="method-name">testWithId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.features.GridServerApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteByName">
+                  </a> <!-- testDeleteByName -->
+                  <span class="method-name">testDeleteByName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditServerDescription">
+                  </a> <!-- testEditServerDescription -->
+                  <span class="method-name">testEditServerDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditServerRam">
+                  </a> <!-- testEditServerRam -->
+                  <span class="method-name">testEditServerRam</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditServerType">
+                  </a> <!-- testEditServerType -->
+                  <span class="method-name">testEditServerType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetRamSizes">
+                  </a> <!-- testGetRamSizes -->
+                  <span class="method-name">testGetRamSizes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServerListWithOptions">
+                  </a> <!-- testGetServerListWithOptions -->
+                  <span class="method-name">testGetServerListWithOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServersById">
+                  </a> <!-- testGetServersById -->
+                  <span class="method-name">testGetServersById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServersByName">
+                  </a> <!-- testGetServersByName -->
+                  <span class="method-name">testGetServersByName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPowerServer">
+                  </a> <!-- testPowerServer -->
+                  <span class="method-name">testPowerServer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testServerCredentials">
+                  </a> <!-- testServerCredentials -->
+                  <span class="method-name">testServerCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTypes">
+                  </a> <!-- testTypes -->
+                  <span class="method-name">testTypes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApplySetsTagFromNameAndCredentialsFromName">
+                  </a> <!-- testApplySetsTagFromNameAndCredentialsFromName -->
+                  <span class="method-name">testApplySetsTagFromNameAndCredentialsFromName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.features.GridServerClientExpectTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddServerWhenResponseIs2xx">
+                  </a> <!-- testAddServerWhenResponseIs2xx -->
+                  <span class="method-name">testAddServerWhenResponseIs2xx</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddServerWithOptionsWhenResponseIs2xx">
+                  </a> <!-- testAddServerWithOptionsWhenResponseIs2xx -->
+                  <span class="method-name">testAddServerWithOptionsWhenResponseIs2xx</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage">
+                  </a> <!-- testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage -->
+                  <span class="method-name">testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServerListWhenReponseIs404IsEmpty">
+                  </a> <!-- testGetServerListWhenReponseIs404IsEmpty -->
+                  <span class="method-name">testGetServerListWhenReponseIs404IsEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServerListWhenResponseIs2xx">
+                  </a> <!-- testGetServerListWhenResponseIs2xx -->
+                  <span class="method-name">testGetServerListWhenResponseIs2xx</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServerListWithOptionsWhenResponseIs2xx">
+                  </a> <!-- testGetServerListWithOptionsWhenResponseIs2xx -->
+                  <span class="method-name">testGetServerListWithOptionsWhenResponseIs2xx</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.GoGridApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSync">
+                  </a> <!-- testSync -->
+                  <span class="method-name">testSync</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPredicate">
+                  </a> <!-- testPredicate -->
+                  <span class="method-name">testPredicate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAs">
+                  </a> <!-- testAs -->
+                  <span class="method-name">testAs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApplyInputStreamDetails">
+                  </a> <!-- testApplyInputStreamDetails -->
+                  <span class="method-name">testApplyInputStreamDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jclouds.gogrid.features.GridLoadBalancerApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddLoadBalancer">
+                  </a> <!-- testAddLoadBalancer -->
+                  <span class="method-name">testAddLoadBalancer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteLoadBalancerById">
+                  </a> <!-- testDeleteLoadBalancerById -->
+                  <span class="method-name">testDeleteLoadBalancerById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditLoadBalancer">
+                  </a> <!-- testEditLoadBalancer -->
+                  <span class="method-name">testEditLoadBalancer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditLoadBalancerNamed">
+                  </a> <!-- testEditLoadBalancerNamed -->
+                  <span class="method-name">testEditLoadBalancerNamed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetLoadBalancerList">
+                  </a> <!-- testGetLoadBalancerList -->
+                  <span class="method-name">testGetLoadBalancerList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetLoadBalancersByName">
+                  </a> <!-- testGetLoadBalancersByName -->
+                  <span class="method-name">testGetLoadBalancersByName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;Surefire suite&quot; parallel=&quot;methods&quot;&gt;
+  &lt;test name=&quot;BindIdsToQueryParamsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.binders.BindIdsToQueryParamsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- BindIdsToQueryParamsTest --&gt;
+  &lt;test name=&quot;BindNamesToQueryParamsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.binders.BindNamesToQueryParamsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- BindNamesToQueryParamsTest --&gt;
+  &lt;test name=&quot;GoGridComputeServiceContextModuleTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GoGridComputeServiceContextModuleTest --&gt;
+  &lt;test name=&quot;ServerToNodeMetadataTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ServerToNodeMetadataTest --&gt;
+  &lt;test name=&quot;GoGridTemplateOptionsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GoGridTemplateOptionsTest --&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.BaseGoGridApiTest&quot;/&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.BaseGoGridHttpApiExpectTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+  &lt;test name=&quot;GridImageApiTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.GridImageApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GridImageApiTest --&gt;
+  &lt;test name=&quot;GridIpApiTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.GridIpApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GridIpApiTest --&gt;
+  &lt;test name=&quot;GridJobApiTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.GridJobApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GridJobApiTest --&gt;
+  &lt;test name=&quot;GridLoadBalancerApiTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.GridLoadBalancerApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GridLoadBalancerApiTest --&gt;
+  &lt;test name=&quot;GridServerApiTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.GridServerApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GridServerApiTest --&gt;
+  &lt;test name=&quot;GridServerClientExpectTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.features.GridServerClientExpectTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GridServerClientExpectTest --&gt;
+  &lt;test name=&quot;ParseCredentialsFromJsonResponseTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ParseCredentialsFromJsonResponseTest --&gt;
+  &lt;test name=&quot;ParseJobsFromJsonResponseTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ParseJobsFromJsonResponseTest --&gt;
+  &lt;test name=&quot;ParseLoadBalancersFromJsonResponseTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ParseLoadBalancersFromJsonResponseTest --&gt;
+  &lt;test name=&quot;ParseServerNameToCredentialsMapFromJsonResponseTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ParseServerNameToCredentialsMapFromJsonResponseTest --&gt;
+  &lt;test name=&quot;GoGridApiTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.GoGridApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GoGridApiTest --&gt;
+  &lt;test name=&quot;GoGridProviderTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.GoGridProviderTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GoGridProviderTest --&gt;
+  &lt;test name=&quot;GoGridErrorHandlerTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.handlers.GoGridErrorHandlerTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GoGridErrorHandlerTest --&gt;
+  &lt;test name=&quot;AddServerOptionsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.options.AddServerOptionsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- AddServerOptionsTest --&gt;
+  &lt;test name=&quot;SaveImageOptionsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.options.SaveImageOptionsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SaveImageOptionsTest --&gt;
+  &lt;test name=&quot;ParseServerListTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.parse.ParseServerListTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ParseServerListTest --&gt;
+  &lt;test name=&quot;ParseServerTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.parse.ParseServerTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ParseServerTest --&gt;
+  &lt;test name=&quot;ServerLatestJobCompletedTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ServerLatestJobCompletedTest --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">BindIdsToQueryParamsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">BindNamesToQueryParamsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GoGridComputeServiceContextModuleTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ServerToNodeMetadataTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GoGridTemplateOptionsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Surefire test (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">GridImageApiTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GridIpApiTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GridJobApiTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GridLoadBalancerApiTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GridServerApiTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GridServerClientExpectTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ParseCredentialsFromJsonResponseTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ParseJobsFromJsonResponseTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ParseLoadBalancersFromJsonResponseTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ParseServerNameToCredentialsMapFromJsonResponseTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GoGridApiTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GoGridProviderTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">GoGridErrorHandlerTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">AddServerOptionsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SaveImageOptionsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ParseServerListTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ParseServerTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ServerLatestJobCompletedTest (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">unit</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddLoadBalancer</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddServerWhenResponseIs2xx</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddServerWithOptionsWhenResponseIs2xx</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAllContains</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAllStatusCovered</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testApplyInputStreamDetails</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testApplySetsTagFromNameAndCredentialsFromName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAsSandboxType</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAsSandboxTypeStatic</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAssignability</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testBinding</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testDeleteById</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testDeleteByName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testDeleteLoadBalancerById</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditImageDescription</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditImageFriendlyName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditLoadBalancer</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditLoadBalancerNamed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditServerDescription</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditServerRam</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testEditServerType</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testFailWhenTooManyPasswords</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetAssignedIpList</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetImageListWithOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetImagesByName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetIpListWithOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetJobListNoOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetJobListWithOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetJobsById</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetJobsForServerName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetLoadBalancerList</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetLoadBalancersByName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetRamSizes</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServerListWhenReponseIs404IsEmpty</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServerListWhenResponseIs2xx</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServerListWithOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServerListWithOptionsWhenResponseIs2xx</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServersById</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testGetServersByName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testHandler</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testNullWithDescription</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testOfApiContains</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testPowerServer</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testPredicate</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testSaveImageFromServerNoOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testSaveImageOptions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testServerCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testSync</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testTransformableToContains</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testTypes</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testValid</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWith500LengthDescription</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWith501LengthDescription</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWithDescription</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWithDescriptionNPE</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWithDescriptionStatic</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWithId</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWithPrimitive</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testWithView</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(72);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testAddServerWithOptionsWhenResponseIs2xx')
+data.setCell(0, 2, 'org.jclouds.gogrid.features.GridServerClientExpectTest')
+data.setCell(0, 3, 687);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testAddServerWhenResponseIs2xx')
+data.setCell(1, 2, 'org.jclouds.gogrid.features.GridServerClientExpectTest')
+data.setCell(1, 3, 672);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testGetServerListWhenResponseIs2xx')
+data.setCell(2, 2, 'org.jclouds.gogrid.features.GridServerClientExpectTest')
+data.setCell(2, 3, 656);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage')
+data.setCell(3, 2, 'org.jclouds.gogrid.features.GridServerClientExpectTest')
+data.setCell(3, 3, 609);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testGetServerListWhenReponseIs404IsEmpty')
+data.setCell(4, 2, 'org.jclouds.gogrid.features.GridServerClientExpectTest')
+data.setCell(4, 3, 609);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testApplySetsTagFromNameAndCredentialsFromName')
+data.setCell(5, 2, 'org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest')
+data.setCell(5, 3, 562);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testEditImageFriendlyName')
+data.setCell(6, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(6, 3, 182);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testGetImageListWithOptions')
+data.setCell(7, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(7, 3, 182);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testEditImageDescription')
+data.setCell(8, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(8, 3, 182);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testGetImagesByName')
+data.setCell(9, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(9, 3, 182);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testGetServerListWithOptionsWhenResponseIs2xx')
+data.setCell(10, 2, 'org.jclouds.gogrid.features.GridServerClientExpectTest')
+data.setCell(10, 3, 157);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testGetRamSizes')
+data.setCell(11, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(11, 3, 142);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testDeleteById')
+data.setCell(12, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(12, 3, 126);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testDeleteByName')
+data.setCell(13, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(13, 3, 124);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testEditServerDescription')
+data.setCell(14, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(14, 3, 109);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testEditServerType')
+data.setCell(15, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(15, 3, 109);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testEditServerRam')
+data.setCell(16, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(16, 3, 96);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testDeleteLoadBalancerById')
+data.setCell(17, 2, 'org.jclouds.gogrid.features.GridLoadBalancerApiTest')
+data.setCell(17, 3, 94);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testEditLoadBalancerNamed')
+data.setCell(18, 2, 'org.jclouds.gogrid.features.GridLoadBalancerApiTest')
+data.setCell(18, 3, 94);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testAddLoadBalancer')
+data.setCell(19, 2, 'org.jclouds.gogrid.features.GridLoadBalancerApiTest')
+data.setCell(19, 3, 94);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testGetAssignedIpList')
+data.setCell(20, 2, 'org.jclouds.gogrid.features.GridIpApiTest')
+data.setCell(20, 3, 78);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testGetIpListWithOptions')
+data.setCell(21, 2, 'org.jclouds.gogrid.features.GridIpApiTest')
+data.setCell(21, 3, 78);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testGetLoadBalancerList')
+data.setCell(22, 2, 'org.jclouds.gogrid.features.GridLoadBalancerApiTest')
+data.setCell(22, 3, 78);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testEditLoadBalancer')
+data.setCell(23, 2, 'org.jclouds.gogrid.features.GridLoadBalancerApiTest')
+data.setCell(23, 3, 78);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testGetServerListWithOptions')
+data.setCell(24, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(24, 3, 62);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testWithView')
+data.setCell(25, 2, 'org.jclouds.gogrid.binders.BindIdsToQueryParamsTest')
+data.setCell(25, 3, 51);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testWithPrimitive')
+data.setCell(26, 2, 'org.jclouds.gogrid.binders.BindIdsToQueryParamsTest')
+data.setCell(26, 3, 51);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testAllStatusCovered')
+data.setCell(27, 2, 'org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest')
+data.setCell(27, 3, 47);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testGetJobListWithOptions')
+data.setCell(28, 2, 'org.jclouds.gogrid.features.GridJobApiTest')
+data.setCell(28, 3, 47);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testGetJobsForServerName')
+data.setCell(29, 2, 'org.jclouds.gogrid.features.GridJobApiTest')
+data.setCell(29, 3, 47);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testGetJobsById')
+data.setCell(30, 2, 'org.jclouds.gogrid.features.GridJobApiTest')
+data.setCell(30, 3, 47);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testServerCredentials')
+data.setCell(31, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(31, 3, 47);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testApplyInputStreamDetails')
+data.setCell(32, 2, 'org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest')
+data.setCell(32, 3, 47);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testGetJobListNoOptions')
+data.setCell(33, 2, 'org.jclouds.gogrid.features.GridJobApiTest')
+data.setCell(33, 3, 31);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testApplyInputStreamDetails')
+data.setCell(34, 2, 'org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest')
+data.setCell(34, 3, 31);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testAsSandboxTypeStatic')
+data.setCell(35, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(35, 3, 31);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'testWithDescriptionStatic')
+data.setCell(36, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(36, 3, 31);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'test')
+data.setCell(37, 2, 'org.jclouds.gogrid.parse.ParseServerListTest')
+data.setCell(37, 3, 31);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'test')
+data.setCell(38, 2, 'org.jclouds.gogrid.parse.ParseServerTest')
+data.setCell(38, 3, 31);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testFailWhenTooManyPasswords')
+data.setCell(39, 2, 'org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest')
+data.setCell(39, 3, 25);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'testValid')
+data.setCell(40, 2, 'org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest')
+data.setCell(40, 3, 18);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testTypes')
+data.setCell(41, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(41, 3, 16);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'testApplyInputStreamDetails')
+data.setCell(42, 2, 'org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest')
+data.setCell(42, 3, 16);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'testWithDescriptionStatic')
+data.setCell(43, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(43, 3, 16);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'testWithDescriptionNPE')
+data.setCell(44, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(44, 3, 16);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'testAs')
+data.setCell(45, 2, 'org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest')
+data.setCell(45, 3, 15);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'testGetServersByName')
+data.setCell(46, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(46, 3, 15);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'testTransformableToContains')
+data.setCell(47, 2, 'org.jclouds.gogrid.GoGridProviderTest')
+data.setCell(47, 3, 15);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'testHandler')
+data.setCell(48, 2, 'org.jclouds.gogrid.handlers.GoGridErrorHandlerTest')
+data.setCell(48, 3, 15);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'testBinding')
+data.setCell(49, 2, 'org.jclouds.gogrid.binders.BindNamesToQueryParamsTest')
+data.setCell(49, 3, 0);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'testSaveImageFromServerNoOptions')
+data.setCell(50, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(50, 3, 0);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'testSaveImageOptions')
+data.setCell(51, 2, 'org.jclouds.gogrid.features.GridImageApiTest')
+data.setCell(51, 3, 0);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'testGetLoadBalancersByName')
+data.setCell(52, 2, 'org.jclouds.gogrid.features.GridLoadBalancerApiTest')
+data.setCell(52, 3, 0);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'testGetServersById')
+data.setCell(53, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(53, 3, 0);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'testPowerServer')
+data.setCell(54, 2, 'org.jclouds.gogrid.features.GridServerApiTest')
+data.setCell(54, 3, 0);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'testSync')
+data.setCell(55, 2, 'org.jclouds.gogrid.GoGridApiTest')
+data.setCell(55, 3, 0);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'testAllContains')
+data.setCell(56, 2, 'org.jclouds.gogrid.GoGridProviderTest')
+data.setCell(56, 3, 0);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'testWithId')
+data.setCell(57, 2, 'org.jclouds.gogrid.GoGridProviderTest')
+data.setCell(57, 3, 0);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'testOfApiContains')
+data.setCell(58, 2, 'org.jclouds.gogrid.GoGridProviderTest')
+data.setCell(58, 3, 0);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'testWithDescriptionNPE')
+data.setCell(59, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(59, 3, 0);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'testWith501LengthDescription')
+data.setCell(60, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(60, 3, 0);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'testAssignability')
+data.setCell(61, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(61, 3, 0);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'testWith500LengthDescription')
+data.setCell(62, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(62, 3, 0);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'testNullWithDescription')
+data.setCell(63, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(63, 3, 0);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'testWithDescription')
+data.setCell(64, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(64, 3, 0);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'testAsSandboxType')
+data.setCell(65, 2, 'org.jclouds.gogrid.options.AddServerOptionsTest')
+data.setCell(65, 3, 0);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'testWith501LengthDescription')
+data.setCell(66, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(66, 3, 0);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'testWithDescription')
+data.setCell(67, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(67, 3, 0);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'testAssignability')
+data.setCell(68, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(68, 3, 0);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'testNullWithDescription')
+data.setCell(69, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(69, 3, 0);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'testWith500LengthDescription')
+data.setCell(70, 2, 'org.jclouds.gogrid.options.SaveImageOptionsTest')
+data.setCell(70, 3, 0);
+data.setCell(71, 0, 71)
+data.setCell(71, 1, 'testPredicate')
+data.setCell(71, 2, 'org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest')
+data.setCell(71, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.binders.BindIdsToQueryParamsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testWithPrimitive</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithView</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.binders.BindNamesToQueryParamsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testBinding</span>
+                <span class="method-start">113 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.compute.config.GoGridComputeServiceContextModuleTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAllStatusCovered</span>
+                <span class="method-start">145 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.compute.functions.ServerToNodeMetadataTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testApplySetsTagFromNameAndCredentialsFromName</span>
+                <span class="method-start">223 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.compute.options.GoGridTemplateOptionsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAs</span>
+                <span class="method-start">817 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.features.GridImageApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupFactory</span>
+                <span class="method-start">895 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testEditImageDescription</span>
+                <span class="method-start">2442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditImageFriendlyName</span>
+                <span class="method-start">2442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetImageListWithOptions</span>
+                <span class="method-start">2442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetImagesByName</span>
+                <span class="method-start">2442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteById</span>
+                <span class="method-start">2451 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSaveImageFromServerNoOptions</span>
+                <span class="method-start">2577 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSaveImageOptions</span>
+                <span class="method-start">2577 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.features.GridIpApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupFactory</span>
+                <span class="method-start">2686 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGetAssignedIpList</span>
+                <span class="method-start">2858 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetIpListWithOptions</span>
+                <span class="method-start">2858 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.features.GridJobApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupFactory</span>
+                <span class="method-start">2952 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGetJobListNoOptions</span>
+                <span class="method-start">3108 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetJobListWithOptions</span>
+                <span class="method-start">3108 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetJobsById</span>
+                <span class="method-start">3108 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetJobsForServerName</span>
+                <span class="method-start">3108 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.features.GridLoadBalancerApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupFactory</span>
+                <span class="method-start">3186 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testAddLoadBalancer</span>
+                <span class="method-start">3327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteLoadBalancerById</span>
+                <span class="method-start">3327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditLoadBalancer</span>
+                <span class="method-start">3327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditLoadBalancerNamed</span>
+                <span class="method-start">3327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetLoadBalancerList</span>
+                <span class="method-start">3327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetLoadBalancersByName</span>
+                <span class="method-start">3405 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.features.GridServerApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupFactory</span>
+                <span class="method-start">3452 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testDeleteByName</span>
+                <span class="method-start">3577 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditServerDescription</span>
+                <span class="method-start">3577 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditServerType</span>
+                <span class="method-start">3577 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditServerRam</span>
+                <span class="method-start">3590 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetRamSizes</span>
+                <span class="method-start">3590 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServerListWithOptions</span>
+                <span class="method-start">3686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServersById</span>
+                <span class="method-start">3686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServersByName</span>
+                <span class="method-start">3686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPowerServer</span>
+                <span class="method-start">3701 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testServerCredentials</span>
+                <span class="method-start">3701 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testTypes</span>
+                <span class="method-start">3701 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.features.GridServerClientExpectTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAddServerWhenResponseIs2xx</span>
+                <span class="method-start">3795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddServerWithOptionsWhenResponseIs2xx</span>
+                <span class="method-start">3795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServerCredentialsWhenNotFoundThrowsResourceNotFoundExceptionWithNiceMessage</span>
+                <span class="method-start">3795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServerListWhenReponseIs404IsEmpty</span>
+                <span class="method-start">3795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServerListWhenResponseIs2xx</span>
+                <span class="method-start">3795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServerListWithOptionsWhenResponseIs2xx</span>
+                <span class="method-start">4404 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.functions.ParseCredentialsFromJsonResponseTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testFailWhenTooManyPasswords</span>
+                <span class="method-start">4654 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testValid</span>
+                <span class="method-start">4661 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.functions.ParseJobsFromJsonResponseTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testApplyInputStreamDetails</span>
+                <span class="method-start">4710 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.functions.ParseLoadBalancersFromJsonResponseTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testApplyInputStreamDetails</span>
+                <span class="method-start">4773 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.functions.ParseServerNameToCredentialsMapFromJsonResponseTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testApplyInputStreamDetails</span>
+                <span class="method-start">4835 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.GoGridApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupFactory</span>
+                <span class="method-start">4882 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testSync</span>
+                <span class="method-start">5007 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.GoGridProviderTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAllContains</span>
+                <span class="method-start">5039 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfApiContains</span>
+                <span class="method-start">5039 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testTransformableToContains</span>
+                <span class="method-start">5039 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithId</span>
+                <span class="method-start">5039 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.handlers.GoGridErrorHandlerTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testHandler</span>
+                <span class="method-start">5070 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.options.AddServerOptionsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAsSandboxType</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAsSandboxTypeStatic</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAssignability</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNullWithDescription</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWith500LengthDescription</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWith501LengthDescription</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithDescription</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithDescriptionNPE</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithDescriptionStatic</span>
+                <span class="method-start">5117 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.options.SaveImageOptionsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAssignability</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNullWithDescription</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWith500LengthDescription</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWith501LengthDescription</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithDescription</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithDescriptionNPE</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithDescriptionStatic</span>
+                <span class="method-start">5179 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.parse.ParseServerListTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">5226 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.parse.ParseServerTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">5289 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jclouds.gogrid.predicates.ServerLatestJobCompletedTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testPredicate</span>
+                <span class="method-start">5351 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

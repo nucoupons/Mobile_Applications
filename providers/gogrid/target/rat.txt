@@ -1,0 +1,141 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2016-01-12T01:12:25+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 104
+
+Apache Licensed: 104
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    pom.xml
+  AL    src/main/java/org/jclouds/gogrid/binders/BindIdsToQueryParams.java
+  AL    src/main/java/org/jclouds/gogrid/binders/BindNamesToQueryParams.java
+  AL    src/main/java/org/jclouds/gogrid/binders/BindObjectNameToGetJobsRequestQueryParams.java
+  AL    src/main/java/org/jclouds/gogrid/binders/BindRealIpPortPairsToQueryParams.java
+  AL    src/main/java/org/jclouds/gogrid/binders/BindVirtualIpPortPairToQueryParams.java
+  AL    src/main/java/org/jclouds/gogrid/compute/config/GoGridComputeServiceContextModule.java
+  AL    src/main/java/org/jclouds/gogrid/compute/functions/OptionToLocation.java
+  AL    src/main/java/org/jclouds/gogrid/compute/functions/ServerImageToImage.java
+  AL    src/main/java/org/jclouds/gogrid/compute/functions/ServerToNodeMetadata.java
+  AL    src/main/java/org/jclouds/gogrid/compute/GoGridComputeService.java
+  AL    src/main/java/org/jclouds/gogrid/compute/options/GoGridTemplateOptions.java
+  AL    src/main/java/org/jclouds/gogrid/compute/strategy/GoGridComputeServiceAdapter.java
+  AL    src/main/java/org/jclouds/gogrid/compute/suppliers/GoGridHardwareSupplier.java
+  AL    src/main/java/org/jclouds/gogrid/config/GoGridHttpApiModule.java
+  AL    src/main/java/org/jclouds/gogrid/config/GoGridParserModule.java
+  AL    src/main/java/org/jclouds/gogrid/domain/BillingToken.java
+  AL    src/main/java/org/jclouds/gogrid/domain/Customer.java
+  AL    src/main/java/org/jclouds/gogrid/domain/internal/ErrorResponse.java
+  AL    src/main/java/org/jclouds/gogrid/domain/Ip.java
+  AL    src/main/java/org/jclouds/gogrid/domain/IpPortPair.java
+  AL    src/main/java/org/jclouds/gogrid/domain/IpState.java
+  AL    src/main/java/org/jclouds/gogrid/domain/IpType.java
+  AL    src/main/java/org/jclouds/gogrid/domain/Job.java
+  AL    src/main/java/org/jclouds/gogrid/domain/JobProperties.java
+  AL    src/main/java/org/jclouds/gogrid/domain/JobState.java
+  AL    src/main/java/org/jclouds/gogrid/domain/LoadBalancer.java
+  AL    src/main/java/org/jclouds/gogrid/domain/LoadBalancerOs.java
+  AL    src/main/java/org/jclouds/gogrid/domain/LoadBalancerPersistenceType.java
+  AL    src/main/java/org/jclouds/gogrid/domain/LoadBalancerState.java
+  AL    src/main/java/org/jclouds/gogrid/domain/LoadBalancerType.java
+  AL    src/main/java/org/jclouds/gogrid/domain/ObjectType.java
+  AL    src/main/java/org/jclouds/gogrid/domain/Option.java
+  AL    src/main/java/org/jclouds/gogrid/domain/PowerCommand.java
+  AL    src/main/java/org/jclouds/gogrid/domain/Server.java
+  AL    src/main/java/org/jclouds/gogrid/domain/ServerImage.java
+  AL    src/main/java/org/jclouds/gogrid/domain/ServerImageState.java
+  AL    src/main/java/org/jclouds/gogrid/domain/ServerImageType.java
+  AL    src/main/java/org/jclouds/gogrid/domain/ServerState.java
+  AL    src/main/java/org/jclouds/gogrid/features/GridImageApi.java
+  AL    src/main/java/org/jclouds/gogrid/features/GridIpApi.java
+  AL    src/main/java/org/jclouds/gogrid/features/GridJobApi.java
+  AL    src/main/java/org/jclouds/gogrid/features/GridLoadBalancerApi.java
+  AL    src/main/java/org/jclouds/gogrid/features/GridServerApi.java
+  AL    src/main/java/org/jclouds/gogrid/filters/SharedKeyLiteAuthentication.java
+  AL    src/main/java/org/jclouds/gogrid/functions/GenericResponseContainer.java
+  AL    src/main/java/org/jclouds/gogrid/functions/internal/CustomDeserializers.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseCredentialsFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseImageFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseImageListFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseIpListFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseJobListFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseLoadBalancerFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseLoadBalancerListFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseOptionsFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/functions/ParseServerNameToCredentialsMapFromJsonResponse.java
+  AL    src/main/java/org/jclouds/gogrid/GoGridApi.java
+  AL    src/main/java/org/jclouds/gogrid/GoGridApiMetadata.java
+  AL    src/main/java/org/jclouds/gogrid/GoGridProviderMetadata.java
+  AL    src/main/java/org/jclouds/gogrid/GoGridResponseException.java
+  AL    src/main/java/org/jclouds/gogrid/handlers/GoGridErrorHandler.java
+  AL    src/main/java/org/jclouds/gogrid/location/GoGridDefaultLocationSupplier.java
+  AL    src/main/java/org/jclouds/gogrid/options/AddLoadBalancerOptions.java
+  AL    src/main/java/org/jclouds/gogrid/options/AddServerOptions.java
+  AL    src/main/java/org/jclouds/gogrid/options/GetImageListOptions.java
+  AL    src/main/java/org/jclouds/gogrid/options/GetIpListOptions.java
+  AL    src/main/java/org/jclouds/gogrid/options/GetJobListOptions.java
+  AL    src/main/java/org/jclouds/gogrid/options/GetServerListOptions.java
+  AL    src/main/java/org/jclouds/gogrid/options/SaveImageOptions.java
+  AL    src/main/java/org/jclouds/gogrid/predicates/LoadBalancerLatestJobCompleted.java
+  AL    src/main/java/org/jclouds/gogrid/predicates/ServerLatestJobCompleted.java
+  AL    src/main/java/org/jclouds/gogrid/reference/GoGridHeaders.java
+  AL    src/main/java/org/jclouds/gogrid/reference/GoGridQueryParams.java
+  AL    src/test/java/org/jclouds/gogrid/binders/BindIdsToQueryParamsTest.java
+  AL    src/test/java/org/jclouds/gogrid/binders/BindNamesToQueryParamsTest.java
+  AL    src/test/java/org/jclouds/gogrid/compute/config/GoGridComputeServiceContextModuleTest.java
+  AL    src/test/java/org/jclouds/gogrid/compute/functions/ServerToNodeMetadataTest.java
+  AL    src/test/java/org/jclouds/gogrid/compute/GoGridComputeServiceLiveTest.java
+  AL    src/test/java/org/jclouds/gogrid/compute/GoGridTemplateBuilderLiveTest.java
+  AL    src/test/java/org/jclouds/gogrid/compute/options/GoGridTemplateOptionsTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/BaseGoGridApiLiveTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/BaseGoGridApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/BaseGoGridHttpApiExpectTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridImageApiLiveTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridImageApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridIpApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridJobApiLiveTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridJobApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridLoadBalancerApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridServerApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/features/GridServerClientExpectTest.java
+  AL    src/test/java/org/jclouds/gogrid/functions/ParseCredentialsFromJsonResponseTest.java
+  AL    src/test/java/org/jclouds/gogrid/functions/ParseJobsFromJsonResponseTest.java
+  AL    src/test/java/org/jclouds/gogrid/functions/ParseLoadBalancersFromJsonResponseTest.java
+  AL    src/test/java/org/jclouds/gogrid/functions/ParseServerNameToCredentialsMapFromJsonResponseTest.java
+  AL    src/test/java/org/jclouds/gogrid/GoGridApiTest.java
+  AL    src/test/java/org/jclouds/gogrid/GoGridLiveTestDisabled.java
+  AL    src/test/java/org/jclouds/gogrid/GoGridProviderTest.java
+  AL    src/test/java/org/jclouds/gogrid/handlers/GoGridErrorHandlerTest.java
+  AL    src/test/java/org/jclouds/gogrid/options/AddServerOptionsTest.java
+  AL    src/test/java/org/jclouds/gogrid/options/SaveImageOptionsTest.java
+  AL    src/test/java/org/jclouds/gogrid/parse/ParseServerListTest.java
+  AL    src/test/java/org/jclouds/gogrid/parse/ParseServerTest.java
+  AL    src/test/java/org/jclouds/gogrid/predicates/ServerLatestJobCompletedTest.java
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 
