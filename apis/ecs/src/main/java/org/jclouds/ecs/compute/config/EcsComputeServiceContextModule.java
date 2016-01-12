@@ -20,16 +20,27 @@ import org.jclouds.compute.ComputeServiceAdapter;
 import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.config.ComputeServiceAdapterContextModule;
 import org.jclouds.compute.domain.Hardware;
+import org.jclouds.compute.domain.Image;
+import org.jclouds.compute.domain.NodeMetadata;
+import org.jclouds.compute.options.TemplateOptions;
+import org.jclouds.domain.Location;
+import org.jclouds.ecs.compute.EcsComputeService;
+import org.jclouds.ecs.compute.functions.HardwareToString;
+import org.jclouds.ecs.compute.functions.OptionToLocation;
+import org.jclouds.ecs.compute.functions.ServerImageToImage;
+import org.jclouds.ecs.compute.functions.ServerToNodeMetadata;
+import org.jclouds.ecs.compute.options.EcsTemplateOptions;
 import org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter;
 import org.jclouds.ecs.domain.Option;
 import org.jclouds.ecs.domain.Server;
 import org.jclouds.ecs.domain.ServerImage;
 
+import com.google.common.base.Function;
 import com.google.inject.TypeLiteral;
 
 /**
  * Configures the {@link ComputeServiceContext}; requires
- * {@link EC2ComputeService} bound.
+ * {@link EcsComputeService} bound.
  */
 public class EcsComputeServiceContextModule
 		extends
@@ -38,8 +49,29 @@ public class EcsComputeServiceContextModule
 	@Override
 	protected void configure() {
 		super.configure();
-		bind(new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
+
+		bind(
+				new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
 				}).to(EcsComputeServiceAdapter.class);
+
+		bind(new TypeLiteral<Function<Server, NodeMetadata>>() {
+		}).to(ServerToNodeMetadata.class);
+
+		bind(new TypeLiteral<Function<ServerImage, Image>>() {
+		}).to(ServerImageToImage.class);
+
+		bind(new TypeLiteral<Function<Option, Location>>() {
+		}).to(OptionToLocation.class);
+
+		bind(new TypeLiteral<Function<Hardware, String>>() {
+		}).to(HardwareToString.class);
+
+		bind(TemplateOptions.class).to(EcsTemplateOptions.class);
+
+		// to have the compute service adapter override default locations
+		install(new LocationsFromComputeServiceAdapterModule<Server, Hardware, ServerImage, Option>() {
+		});
+
 	}
 
 }

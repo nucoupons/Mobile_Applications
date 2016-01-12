@@ -18,6 +18,8 @@ package org.jclouds.ecs.compute.strategy;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.util.Set;
+
 import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -34,6 +36,8 @@ import org.jclouds.ecs.domain.ServerImage;
 import org.jclouds.logging.Logger;
 
 import com.google.common.base.Function;
+import com.google.common.collect.FluentIterable;
+import com.google.common.primitives.Longs;
 
 /**
  * defines the connection between the {@link org.jclouds.gogrid.GoGridApi}
@@ -101,13 +105,15 @@ public class EcsComputeServiceAdapter implements
 	@Override
 	public Iterable<Server> listNodes() {
 		// TODO Auto-generated method stub
-		return null;
+		return client.getServerApi().get().listServers();
 	}
 
 	@Override
-	public Iterable<Server> listNodesByIds(Iterable<String> arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public Iterable<Server> listNodesByIds(final Iterable<String> ids) {
+		Set<Long> idsAsLongs = FluentIterable.from(ids).transform(toLong())
+				.toSet();
+		return client.getServerApi().get().getServersById(Longs.toArray(idsAsLongs));
+
 	}
 
 	@Override
@@ -126,6 +132,16 @@ public class EcsComputeServiceAdapter implements
 	public void suspendNode(String arg0) {
 		// TODO Auto-generated method stub
 
+	}
+
+	private Function<String, Long> toLong() {
+		return new Function<String, Long>() {
+
+			@Override
+			public Long apply(String id) {
+				return Long.valueOf(checkNotNull(id, "id"));
+			}
+		};
 	}
 
 }
