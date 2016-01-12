@@ -25,6 +25,7 @@ import org.jclouds.compute.domain.NodeMetadata;
 import org.jclouds.compute.options.TemplateOptions;
 import org.jclouds.domain.Location;
 import org.jclouds.ecs.compute.EcsComputeService;
+import org.jclouds.ecs.compute.functions.HardwareToHardware;
 import org.jclouds.ecs.compute.functions.HardwareToString;
 import org.jclouds.ecs.compute.functions.OptionToLocation;
 import org.jclouds.ecs.compute.functions.ServerImageToImage;
@@ -50,8 +51,7 @@ public class EcsComputeServiceContextModule
 	protected void configure() {
 		super.configure();
 
-		bind(
-				new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
+		bind(new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
 				}).to(EcsComputeServiceAdapter.class);
 
 		bind(new TypeLiteral<Function<Server, NodeMetadata>>() {
@@ -65,13 +65,15 @@ public class EcsComputeServiceContextModule
 
 		bind(new TypeLiteral<Function<Hardware, String>>() {
 		}).to(HardwareToString.class);
+		
+		
+		bind(new TypeLiteral<Function<Hardware, Hardware>>() {
+		}).to(HardwareToHardware.class);
+
 
 		bind(TemplateOptions.class).to(EcsTemplateOptions.class);
 
-		// to have the compute service adapter override default locations
-		install(new LocationsFromComputeServiceAdapterModule<Server, Hardware, ServerImage, Option>() {
-		});
-
+		
 	}
 
 }

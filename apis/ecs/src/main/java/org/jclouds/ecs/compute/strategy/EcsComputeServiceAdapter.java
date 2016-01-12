@@ -16,28 +16,23 @@
  */
 package org.jclouds.ecs.compute.strategy;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
-import java.util.Set;
-
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.ComputeServiceAdapter;
 import org.jclouds.compute.domain.Hardware;
 import org.jclouds.compute.domain.Template;
+import org.jclouds.compute.reference.ComputeServiceConstants;
 import org.jclouds.compute.reference.ComputeServiceConstants.Timeouts;
-import org.jclouds.ecs.EcsApi;
 import org.jclouds.ecs.domain.Option;
 import org.jclouds.ecs.domain.Server;
 import org.jclouds.ecs.domain.ServerImage;
 import org.jclouds.logging.Logger;
 
 import com.google.common.base.Function;
-import com.google.common.collect.FluentIterable;
-import com.google.common.primitives.Longs;
 
 /**
  * defines the connection between the {@link org.jclouds.gogrid.GoGridApi}
@@ -48,16 +43,19 @@ public class EcsComputeServiceAdapter implements
 		ComputeServiceAdapter<Server, Hardware, ServerImage, Option> {
 
 	@Resource
+	@Named(ComputeServiceConstants.COMPUTE_LOGGER)
 	protected Logger logger = Logger.NULL;
 
-	private final EcsApi client;
+
 
 	@Inject
-	protected EcsComputeServiceAdapter(EcsApi client,
+	protected EcsComputeServiceAdapter(
 			Function<Hardware, String> sizeToRam, Timeouts timeouts) {
-		this.client = checkNotNull(client, "client");
+		
 
 	}
+
+
 
 	@Override
 	public org.jclouds.compute.ComputeServiceAdapter.NodeAndInitialCredentials<Server> createNodeWithGroupEncodedIntoName(
@@ -66,17 +64,23 @@ public class EcsComputeServiceAdapter implements
 		return null;
 	}
 
+
+
 	@Override
 	public void destroyNode(String arg0) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+
 
 	@Override
 	public ServerImage getImage(String arg0) {
 		// TODO Auto-generated method stub
-		return client.getServerImageApi().get().getServerImage();
+		return null;
 	}
+
+
 
 	@Override
 	public Server getNode(String arg0) {
@@ -84,17 +88,23 @@ public class EcsComputeServiceAdapter implements
 		return null;
 	}
 
+
+
 	@Override
 	public Iterable<Hardware> listHardwareProfiles() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+
+
 	@Override
 	public Iterable<ServerImage> listImages() {
 		// TODO Auto-generated method stub
-		return client.getServerImageApi().get().listServerImages();
+		return null;
 	}
+
+
 
 	@Override
 	public Iterable<Option> listLocations() {
@@ -102,46 +112,45 @@ public class EcsComputeServiceAdapter implements
 		return null;
 	}
 
+
+
 	@Override
 	public Iterable<Server> listNodes() {
 		// TODO Auto-generated method stub
-		return client.getServerApi().get().listServers();
+		return null;
 	}
+
+
 
 	@Override
-	public Iterable<Server> listNodesByIds(final Iterable<String> ids) {
-		Set<Long> idsAsLongs = FluentIterable.from(ids).transform(toLong())
-				.toSet();
-		return client.getServerApi().get().getServersById(Longs.toArray(idsAsLongs));
-
+	public Iterable<Server> listNodesByIds(Iterable<String> arg0) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+
 
 	@Override
 	public void rebootNode(String arg0) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+
 
 	@Override
 	public void resumeNode(String arg0) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+
 
 	@Override
 	public void suspendNode(String arg0) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
-	private Function<String, Long> toLong() {
-		return new Function<String, Long>() {
-
-			@Override
-			public Long apply(String id) {
-				return Long.valueOf(checkNotNull(id, "id"));
-			}
-		};
-	}
-
+	
 }
