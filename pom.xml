@@ -44,7 +44,6 @@
     <module>allblobstore</module>
     <module>allloadbalancer</module>
     <module>all</module>
-    <module>atest</module>
   </modules>
   
   <profiles>
