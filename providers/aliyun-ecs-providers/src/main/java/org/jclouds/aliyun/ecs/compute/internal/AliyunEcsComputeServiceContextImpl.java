@@ -20,6 +20,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import org.jclouds.Context;
+import org.jclouds.aliyun.ecs.AliyunEcsApi;
 import org.jclouds.aliyun.ecs.compute.AliyunEcsComputeService;
 import org.jclouds.aliyun.ecs.compute.AliyunEcsComputeServiceContext;
 import org.jclouds.compute.Utils;
@@ -33,8 +34,9 @@ public class AliyunEcsComputeServiceContextImpl extends EcsComputeServiceContext
          AliyunEcsComputeServiceContext {
    @Inject
    public AliyunEcsComputeServiceContextImpl(@Provider Context backend,
-            @Provider TypeToken<? extends Context> backendType, AliyunEcsComputeService computeService, Utils utils) {
+            @Provider TypeToken<? extends Context> backendType, AliyunEcsComputeService computeService, Utils utils, AliyunEcsApi api) {
       super(backend, backendType, computeService, utils);
+      
    }
 
    @Override

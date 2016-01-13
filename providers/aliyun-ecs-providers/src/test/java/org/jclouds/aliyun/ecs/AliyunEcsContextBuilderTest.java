@@ -32,6 +32,7 @@ public class AliyunEcsContextBuilderTest {
 	              .buildView(typeToken(ComputeServiceContext.class));
 	      view.unwrapApi(EcsApi.class);
 	      view.unwrapApi(AliyunEcsApi.class);
+	      
 	   }
 
 }

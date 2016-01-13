@@ -16,8 +16,25 @@
  */
 package org.jclouds.aliyun.ecs.compute.config;
 
+import org.jclouds.aliyun.ecs.compute.strategy.AliyunEcsComputeServiceAdapter;
+import org.jclouds.compute.ComputeServiceAdapter;
+import org.jclouds.compute.domain.Hardware;
 import org.jclouds.ecs.compute.config.EcsComputeServiceContextModule;
+import org.jclouds.ecs.domain.Option;
+import org.jclouds.ecs.domain.Server;
+import org.jclouds.ecs.domain.ServerImage;
 
-public class AliyunEcsComputeServiceContextModule extends EcsComputeServiceContextModule  {
+import com.google.inject.TypeLiteral;
+
+public class AliyunEcsComputeServiceContextModule extends
+		EcsComputeServiceContextModule {
+
+	@Override
+	protected void configure() {
+		
+		super.configure();
+		bind(new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
+		}).to(AliyunEcsComputeServiceAdapter.class);
+	}
 
 }

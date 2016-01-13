@@ -29,6 +29,7 @@ import javax.inject.Provider;
 import javax.inject.Singleton;
 
 import org.jclouds.Constants;
+import org.jclouds.aliyun.ecs.AliyunEcsApi;
 import org.jclouds.collect.Memoized;
 import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.callables.RunScriptOnNode;
@@ -63,6 +64,8 @@ import com.google.inject.Inject;
 
 @Singleton
 public class AliyunEcsComputeService extends EcsComputeService {
+	
+	private final AliyunEcsApi api;
 
 	@Inject
 	protected AliyunEcsComputeService(
@@ -84,15 +87,16 @@ public class AliyunEcsComputeService extends EcsComputeService {
 			@Named(TIMEOUT_NODE_RUNNING) Predicate<AtomicReference<NodeMetadata>> nodeRunning,
 			@Named(TIMEOUT_NODE_TERMINATED) Predicate<AtomicReference<NodeMetadata>> nodeTerminated,
 			@Named(TIMEOUT_NODE_SUSPENDED) Predicate<AtomicReference<NodeMetadata>> nodeSuspended,
-			InitializeRunScriptOnNodeOrPlaceInBadMap.Factory initScriptRunnerFactory,
+			InitializeRunScriptOnNodeOrPlaceInBadMap.Factory initScriptRunnerFactory, 
 			RunScriptOnNode.Factory runScriptOnNodeFactory,
 			InitAdminAccess initAdminAccess,
 			PersistNodeCredentials persistNodeCredentials,
 			Timeouts timeouts,
 			@Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor,
+			AliyunEcsApi api,
 			Optional<ImageExtension> imageExtension,
 			Optional<SecurityGroupExtension> securityGroupExtension) {
-
+		
 		super(context, credentialStore, images, sizes, locations,
 				listNodesStrategy, getImageStrategy, getNodeMetadataStrategy,
 				runNodesAndAddToSetStrategy, rebootNodeStrategy,
@@ -100,8 +104,11 @@ public class AliyunEcsComputeService extends EcsComputeService {
 				templateBuilderProvider, templateOptionsProvider, nodeRunning,
 				nodeTerminated, nodeSuspended, initScriptRunnerFactory,
 				runScriptOnNodeFactory, initAdminAccess,
-				persistNodeCredentials, timeouts, userExecutor, imageExtension,
+				persistNodeCredentials, timeouts, userExecutor,api, imageExtension,
 				securityGroupExtension);
+		
+		 this.api=api;
+
 
 	}
 
