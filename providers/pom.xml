@@ -73,6 +73,5 @@
     <module>dynect</module>
     <module>enterprisechef</module>
     <module>aliyun-ecs-providers</module>
-    <module>aliyun-ecs</module>
   </modules>
 </project>
