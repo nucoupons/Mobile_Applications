@@ -53,6 +53,7 @@ import org.jclouds.compute.strategy.ResumeNodeStrategy;
 import org.jclouds.compute.strategy.SuspendNodeStrategy;
 import org.jclouds.domain.Credentials;
 import org.jclouds.domain.Location;
+import org.jclouds.ecs.EcsApi;
 import org.jclouds.scriptbuilder.functions.InitAdminAccess;
 
 import com.google.common.base.Optional;
@@ -63,6 +64,8 @@ import com.google.inject.Inject;
 
 @Singleton
 public class EcsComputeService extends BaseComputeService {
+
+	private final EcsApi api;
 
 	@Inject
 	protected EcsComputeService(
@@ -90,8 +93,7 @@ public class EcsComputeService extends BaseComputeService {
 			PersistNodeCredentials persistNodeCredentials,
 			Timeouts timeouts,
 			@Named(Constants.PROPERTY_USER_THREADS) ListeningExecutorService userExecutor,
-
-			Optional<ImageExtension> imageExtension,
+			EcsApi api, Optional<ImageExtension> imageExtension,
 			Optional<SecurityGroupExtension> securityGroupExtension) {
 		super(context, credentialStore, images, sizes, locations,
 				listNodesStrategy, getImageStrategy, getNodeMetadataStrategy,
@@ -102,6 +104,8 @@ public class EcsComputeService extends BaseComputeService {
 				initAdminAccess, runScriptOnNodeFactory,
 				persistNodeCredentials, timeouts, userExecutor, imageExtension,
 				securityGroupExtension);
+
+		this.api = api;
 
 	}
 

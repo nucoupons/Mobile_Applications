@@ -16,7 +16,6 @@
  */
 package org.jclouds.ecs.compute.config;
 
-import org.jclouds.compute.ComputeServiceAdapter;
 import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.config.ComputeServiceAdapterContextModule;
 import org.jclouds.compute.domain.Hardware;
@@ -31,7 +30,6 @@ import org.jclouds.ecs.compute.functions.OptionToLocation;
 import org.jclouds.ecs.compute.functions.ServerImageToImage;
 import org.jclouds.ecs.compute.functions.ServerToNodeMetadata;
 import org.jclouds.ecs.compute.options.EcsTemplateOptions;
-import org.jclouds.ecs.compute.strategy.EcsComputeServiceAdapter;
 import org.jclouds.ecs.domain.Option;
 import org.jclouds.ecs.domain.Server;
 import org.jclouds.ecs.domain.ServerImage;
@@ -51,9 +49,6 @@ public class EcsComputeServiceContextModule
 	protected void configure() {
 		super.configure();
 
-		bind(new TypeLiteral<ComputeServiceAdapter<Server, Hardware, ServerImage, Option>>() {
-				}).to(EcsComputeServiceAdapter.class);
-
 		bind(new TypeLiteral<Function<Server, NodeMetadata>>() {
 		}).to(ServerToNodeMetadata.class);
 
@@ -65,15 +60,15 @@ public class EcsComputeServiceContextModule
 
 		bind(new TypeLiteral<Function<Hardware, String>>() {
 		}).to(HardwareToString.class);
-		
-		
+
 		bind(new TypeLiteral<Function<Hardware, Hardware>>() {
 		}).to(HardwareToHardware.class);
 
-
 		bind(TemplateOptions.class).to(EcsTemplateOptions.class);
 
-		
+		install(new LocationsFromComputeServiceAdapterModule<Server, Hardware, ServerImage, Option>() {
+		});
+
 	}
 
 }
